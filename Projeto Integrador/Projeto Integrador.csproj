@@ -1,0 +1,364 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E99EB1C9-DE56-4741-B8DB-DF5EA763D4FF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Projeto_Integrador</RootNamespace>
+    <AssemblyName>Projeto Integrador</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clCartas.cs" />
+    <Compile Include="clSalas.cs" />
+    <Compile Include="clCliente.cs" />
+    <Compile Include="clUsuario.cs" />
+    <Compile Include="conectaBD.cs" />
+    <Compile Include="frmJogoo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJogoo.Designer.cs">
+      <DependentUpon>frmJogoo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGerenciamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGerenciamento.Designer.cs">
+      <DependentUpon>frmGerenciamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLobby.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLobby.Designer.cs">
+      <DependentUpon>frmLobby.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_de_salas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_de_salas.Designer.cs">
+      <DependentUpon>Menu_de_salas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="models\Jogo.cs" />
+    <Compile Include="models\Player.cs" />
+    <Compile Include="Tela_de_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tela_de_login.Designer.cs">
+      <DependentUpon>Tela_de_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tela_de_cadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tela_de_cadastro.Designer.cs">
+      <DependentUpon>Tela_de_cadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmJogoo.resx">
+      <DependentUpon>frmJogoo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGerenciamento.resx">
+      <DependentUpon>frmGerenciamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLobby.resx">
+      <DependentUpon>frmLobby.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_de_salas.resx">
+      <DependentUpon>Menu_de_salas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tela_de_login.resx">
+      <DependentUpon>Tela_de_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tela_de_cadastro.resx">
+      <DependentUpon>Tela_de_cadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Firefly logo jogo de cartas medieval fundo preto 76245 copiar.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Firefly logo jogo de cartas medieval fundo preto 76245 copiar1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fundo copiar.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sem Título-1 copiar.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sem Título-1 %281%29 copiar.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sem Título-1 %282%29 copiar.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guilty copiar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guilty login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guilty login1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guilty copiar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guilty senha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sem Título-1 %281%29 copiar1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sem Título-1 %282%29 copiar1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Guilty Configurações.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Config icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Voltar icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\X icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guilty Sala.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Voltar icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Voltar icon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Voltar icon3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Voltar icon4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Voltar icon5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\X icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\X icon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Voltar icon6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Config icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Voltar icon7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\moeda copiar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\entrada.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\engrenagem %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download copiar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download copiar1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download copiar11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\entrada1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3d21c3b9-6dbf-4045-90c3-746dad8e30c6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aaaaa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6134003927561012240_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6134003927561012240_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8-bit-factory-forest-cute-aesthetic-pc-au2735qwvpz5kiea.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\110-1108877_start-button-start-button-png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pixel-art-metallic-style-start-button-icon-for-8bit-game-on-white-background-vector-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pergaminho8bits.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pergaminho8bits1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images-removebg-preview %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ss_5babb1938467e77c1e472da3d875a2c2f229fd4a.1920x1080.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8-bit-factory-forest-cute-aesthetic-pc-au2735qwvpz5kiea1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9877907-pixel-art-card-ace-of-spades-playing-card-icon-for-8bit-game-on-white-background-vetor-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images-removebg-preview %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images-removebg-preview %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12fda182e5c34df-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12fda182e5c34df-removebg-preview1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MicrosoftTeams-image %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MicrosoftTeams-image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\test.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\test1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\test2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\testleft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\testleft1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\test3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sem Título-1 copiar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sem Título-1 copiar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sem Título-1 copiar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sem Título-1 copiar3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sem Título-1 copiar4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button-for-8-bit-games-start-beginning-vector-44158843-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\244f29ee-b3c2-4b7f-80ab-d65848da7946.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sem título.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sem título %281%29.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
