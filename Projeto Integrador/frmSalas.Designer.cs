@@ -137,7 +137,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
-            this.BackgroundImage = global::Projeto_Integrador.Properties.Resources._8_bit_factory_forest_cute_aesthetic_pc_au2735qwvpz5kiea1;
+            this.BackgroundImage = global::Projeto_Integrador.Properties.Resources._8_bit_factory_forest_cute_aesthetic_pc_au2735qwvpz5kiea;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1058, 767);
             this.Controls.Add(this.pbLogo);

@@ -250,7 +250,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Black;
-            this.BackgroundImage = global::Projeto_Integrador.Properties.Resources.Sem_título__1_;
+            this.BackgroundImage = global::Projeto_Integrador.Properties.Resources.Sem_título__1_1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(700, 600);
             this.ControlBox = false;

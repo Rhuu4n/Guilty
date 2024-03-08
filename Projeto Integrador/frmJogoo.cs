@@ -22,7 +22,6 @@ namespace Projeto_Integrador
         public frmJogoo()
         {
             InitializeComponent();
-
             pbFundomesa.Load("https://i.imgur.com/Gk2e30F.jpg");
             pbFundomesa.SizeMode = PictureBoxSizeMode.StretchImage;
             pb1j1.Load("https://i.imgur.com/zx9oyXi.jpg");
