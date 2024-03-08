@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmJogoo));
-            this.btnCadastrar = new System.Windows.Forms.Button();
+            this.btnOpcoes = new System.Windows.Forms.Button();
             this.btnEncerrar = new System.Windows.Forms.Button();
             this.btn1j1 = new System.Windows.Forms.Button();
             this.lblVez = new System.Windows.Forms.Label();
@@ -62,6 +62,9 @@
             this.pbSaq1 = new System.Windows.Forms.PictureBox();
             this.pbMiner2 = new System.Windows.Forms.PictureBox();
             this.pbFundomesa = new System.Windows.Forms.PictureBox();
+            this.btnSairjogo = new System.Windows.Forms.Button();
+            this.btnSair = new System.Windows.Forms.Button();
+            this.btnResumir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudPlayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb1j4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb2j4)).BeginInit();
@@ -84,20 +87,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbFundomesa)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnCadastrar
+            // btnOpcoes
             // 
-            this.btnCadastrar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrar.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCadastrar.Location = new System.Drawing.Point(12, 12);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(123, 44);
-            this.btnCadastrar.TabIndex = 14;
-            this.btnCadastrar.Text = "Opções";
-            this.btnCadastrar.UseVisualStyleBackColor = false;
-            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
+            this.btnOpcoes.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnOpcoes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOpcoes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOpcoes.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOpcoes.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnOpcoes.Location = new System.Drawing.Point(12, 12);
+            this.btnOpcoes.Name = "btnOpcoes";
+            this.btnOpcoes.Size = new System.Drawing.Size(123, 44);
+            this.btnOpcoes.TabIndex = 14;
+            this.btnOpcoes.Text = "Opções";
+            this.btnOpcoes.UseVisualStyleBackColor = false;
+            this.btnOpcoes.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // btnEncerrar
             // 
@@ -105,11 +108,11 @@
             this.btnEncerrar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnEncerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEncerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEncerrar.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEncerrar.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEncerrar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnEncerrar.Location = new System.Drawing.Point(1065, 726);
+            this.btnEncerrar.Location = new System.Drawing.Point(1051, 723);
             this.btnEncerrar.Name = "btnEncerrar";
-            this.btnEncerrar.Size = new System.Drawing.Size(123, 62);
+            this.btnEncerrar.Size = new System.Drawing.Size(137, 65);
             this.btnEncerrar.TabIndex = 16;
             this.btnEncerrar.Text = "Encerrar Turno";
             this.btnEncerrar.UseVisualStyleBackColor = false;
@@ -121,11 +124,11 @@
             this.btn1j1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn1j1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn1j1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn1j1.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn1j1.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn1j1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn1j1.Location = new System.Drawing.Point(451, 409);
+            this.btn1j1.Location = new System.Drawing.Point(424, 409);
             this.btn1j1.Name = "btn1j1";
-            this.btn1j1.Size = new System.Drawing.Size(123, 51);
+            this.btn1j1.Size = new System.Drawing.Size(150, 51);
             this.btn1j1.TabIndex = 22;
             this.btn1j1.Text = "Selecionar";
             this.btn1j1.UseVisualStyleBackColor = false;
@@ -138,11 +141,11 @@
             this.lblVez.BackColor = System.Drawing.Color.Black;
             this.lblVez.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblVez.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.lblVez.Font = new System.Drawing.Font("Georgia", 32.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVez.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVez.ForeColor = System.Drawing.Color.White;
             this.lblVez.Location = new System.Drawing.Point(975, 9);
             this.lblVez.Name = "lblVez";
-            this.lblVez.Size = new System.Drawing.Size(207, 51);
+            this.lblVez.Size = new System.Drawing.Size(120, 23);
             this.lblVez.TabIndex = 40;
             this.lblVez.Text = "Jogador 1";
             // 
@@ -153,11 +156,11 @@
             this.lblMoedaP1.BackColor = System.Drawing.Color.Black;
             this.lblMoedaP1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblMoedaP1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.lblMoedaP1.Font = new System.Drawing.Font("Georgia", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMoedaP1.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMoedaP1.ForeColor = System.Drawing.Color.White;
             this.lblMoedaP1.Location = new System.Drawing.Point(335, 738);
             this.lblMoedaP1.Name = "lblMoedaP1";
-            this.lblMoedaP1.Size = new System.Drawing.Size(55, 40);
+            this.lblMoedaP1.Size = new System.Drawing.Size(40, 23);
             this.lblMoedaP1.TabIndex = 42;
             this.lblMoedaP1.Text = "x0";
             // 
@@ -168,11 +171,11 @@
             this.lblMoedaP2.BackColor = System.Drawing.Color.Black;
             this.lblMoedaP2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblMoedaP2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.lblMoedaP2.Font = new System.Drawing.Font("Georgia", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMoedaP2.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMoedaP2.ForeColor = System.Drawing.Color.White;
             this.lblMoedaP2.Location = new System.Drawing.Point(1135, 636);
             this.lblMoedaP2.Name = "lblMoedaP2";
-            this.lblMoedaP2.Size = new System.Drawing.Size(55, 40);
+            this.lblMoedaP2.Size = new System.Drawing.Size(40, 23);
             this.lblMoedaP2.TabIndex = 44;
             this.lblMoedaP2.Text = "x0";
             // 
@@ -183,11 +186,11 @@
             this.lblMoedaP3.BackColor = System.Drawing.Color.Black;
             this.lblMoedaP3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblMoedaP3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.lblMoedaP3.Font = new System.Drawing.Font("Georgia", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMoedaP3.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMoedaP3.ForeColor = System.Drawing.Color.White;
             this.lblMoedaP3.Location = new System.Drawing.Point(838, 11);
             this.lblMoedaP3.Name = "lblMoedaP3";
-            this.lblMoedaP3.Size = new System.Drawing.Size(55, 40);
+            this.lblMoedaP3.Size = new System.Drawing.Size(40, 23);
             this.lblMoedaP3.TabIndex = 46;
             this.lblMoedaP3.Text = "x0";
             // 
@@ -197,11 +200,11 @@
             this.lblMoedaP4.BackColor = System.Drawing.Color.Black;
             this.lblMoedaP4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblMoedaP4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.lblMoedaP4.Font = new System.Drawing.Font("Georgia", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMoedaP4.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMoedaP4.ForeColor = System.Drawing.Color.White;
             this.lblMoedaP4.Location = new System.Drawing.Point(68, 109);
             this.lblMoedaP4.Name = "lblMoedaP4";
-            this.lblMoedaP4.Size = new System.Drawing.Size(55, 40);
+            this.lblMoedaP4.Size = new System.Drawing.Size(40, 23);
             this.lblMoedaP4.TabIndex = 48;
             this.lblMoedaP4.Text = "x0";
             // 
@@ -211,11 +214,11 @@
             this.btn2j1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn2j1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn2j1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn2j1.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn2j1.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn2j1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn2j1.Location = new System.Drawing.Point(626, 409);
             this.btn2j1.Name = "btn2j1";
-            this.btn2j1.Size = new System.Drawing.Size(123, 51);
+            this.btn2j1.Size = new System.Drawing.Size(150, 51);
             this.btn2j1.TabIndex = 51;
             this.btn2j1.Text = "Selecionar";
             this.btn2j1.UseVisualStyleBackColor = false;
@@ -406,7 +409,7 @@
             this.btnRoubar3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnRoubar3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRoubar3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRoubar3.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRoubar3.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRoubar3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnRoubar3.Location = new System.Drawing.Point(218, 403);
             this.btnRoubar3.Name = "btnRoubar3";
@@ -423,7 +426,7 @@
             this.btnRoubar2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnRoubar2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRoubar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRoubar2.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRoubar2.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRoubar2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnRoubar2.Location = new System.Drawing.Point(540, 218);
             this.btnRoubar2.Name = "btnRoubar2";
@@ -439,7 +442,7 @@
             this.btnRoubar1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnRoubar1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRoubar1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRoubar1.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRoubar1.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRoubar1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnRoubar1.Location = new System.Drawing.Point(859, 403);
             this.btnRoubar1.Name = "btnRoubar1";
@@ -490,12 +493,67 @@
             this.pbFundomesa.TabIndex = 62;
             this.pbFundomesa.TabStop = false;
             // 
+            // btnSairjogo
+            // 
+            this.btnSairjogo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSairjogo.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnSairjogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSairjogo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSairjogo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSairjogo.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSairjogo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSairjogo.Location = new System.Drawing.Point(539, 389);
+            this.btnSairjogo.Name = "btnSairjogo";
+            this.btnSairjogo.Size = new System.Drawing.Size(123, 65);
+            this.btnSairjogo.TabIndex = 63;
+            this.btnSairjogo.Text = "Sair do jogo";
+            this.btnSairjogo.UseVisualStyleBackColor = false;
+            this.btnSairjogo.Visible = false;
+            // 
+            // btnSair
+            // 
+            this.btnSair.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSair.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSair.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSair.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSair.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSair.Location = new System.Drawing.Point(539, 332);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(123, 51);
+            this.btnSair.TabIndex = 64;
+            this.btnSair.Text = "Sair";
+            this.btnSair.UseVisualStyleBackColor = false;
+            this.btnSair.Visible = false;
+            // 
+            // btnResumir
+            // 
+            this.btnResumir.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnResumir.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnResumir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnResumir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnResumir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnResumir.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnResumir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnResumir.Location = new System.Drawing.Point(539, 275);
+            this.btnResumir.Name = "btnResumir";
+            this.btnResumir.Size = new System.Drawing.Size(123, 51);
+            this.btnResumir.TabIndex = 65;
+            this.btnResumir.Text = "Resumir";
+            this.btnResumir.UseVisualStyleBackColor = false;
+            this.btnResumir.Visible = false;
+            this.btnResumir.Click += new System.EventHandler(this.btnResumir_Click);
+            // 
             // frmJogoo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1200, 800);
+            this.Controls.Add(this.btnResumir);
+            this.Controls.Add(this.btnSair);
+            this.Controls.Add(this.btnSairjogo);
             this.Controls.Add(this.num1);
             this.Controls.Add(this.nudPlayer);
             this.Controls.Add(this.pb1j4);
@@ -513,7 +571,7 @@
             this.Controls.Add(this.pb2j3);
             this.Controls.Add(this.btn1j1);
             this.Controls.Add(this.btnEncerrar);
-            this.Controls.Add(this.btnCadastrar);
+            this.Controls.Add(this.btnOpcoes);
             this.Controls.Add(this.pb1j2);
             this.Controls.Add(this.pb2j2);
             this.Controls.Add(this.pictureBox9);
@@ -567,7 +625,7 @@
         private System.Windows.Forms.PictureBox pb2j2;
         private System.Windows.Forms.PictureBox pbSaq2;
         private System.Windows.Forms.PictureBox pbMiner1;
-        private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.Button btnOpcoes;
         private System.Windows.Forms.Button btnEncerrar;
         private System.Windows.Forms.Button btn1j1;
         private System.Windows.Forms.PictureBox pb1j3;
@@ -594,5 +652,8 @@
         private System.Windows.Forms.PictureBox pbSaq1;
         private System.Windows.Forms.PictureBox pbMiner2;
         private System.Windows.Forms.PictureBox pbFundomesa;
+        private System.Windows.Forms.Button btnSairjogo;
+        private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.Button btnResumir;
     }
 }

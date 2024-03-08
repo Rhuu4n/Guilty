@@ -127,5 +127,10 @@ namespace Projeto_Integrador
             frm.ShowDialog();
             this.Show();
         }
+
+        private void pbLogo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

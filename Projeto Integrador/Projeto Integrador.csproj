@@ -69,25 +69,25 @@
     <Compile Include="frmLobby.Designer.cs">
       <DependentUpon>frmLobby.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu_de_salas.cs">
+    <Compile Include="frmSalas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu_de_salas.Designer.cs">
-      <DependentUpon>Menu_de_salas.cs</DependentUpon>
+    <Compile Include="frmSalas.Designer.cs">
+      <DependentUpon>frmSalas.cs</DependentUpon>
     </Compile>
     <Compile Include="models\Jogo.cs" />
     <Compile Include="models\Player.cs" />
-    <Compile Include="Tela_de_login.cs">
+    <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tela_de_login.Designer.cs">
-      <DependentUpon>Tela_de_login.cs</DependentUpon>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tela_de_cadastro.cs">
+    <Compile Include="frmCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tela_de_cadastro.Designer.cs">
-      <DependentUpon>Tela_de_cadastro.cs</DependentUpon>
+    <Compile Include="frmCadastro.Designer.cs">
+      <DependentUpon>frmCadastro.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -100,14 +100,14 @@
     <EmbeddedResource Include="frmLobby.resx">
       <DependentUpon>frmLobby.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu_de_salas.resx">
-      <DependentUpon>Menu_de_salas.cs</DependentUpon>
+    <EmbeddedResource Include="frmSalas.resx">
+      <DependentUpon>frmSalas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tela_de_login.resx">
-      <DependentUpon>Tela_de_login.cs</DependentUpon>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tela_de_cadastro.resx">
-      <DependentUpon>Tela_de_cadastro.cs</DependentUpon>
+    <EmbeddedResource Include="frmCadastro.resx">
+      <DependentUpon>frmCadastro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

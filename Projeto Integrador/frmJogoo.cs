@@ -139,12 +139,14 @@ namespace Projeto_Integrador
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            //btnResumir.Visible = true;
-            //btnSair.Visible = true;
-            //btnSairjogo.Visible = true;
-            //btn1j1.Visible = false;
-            //btn2j1.Visible = false;
-            //btnEncerrar.Visible = false;
+            pbFundomesa.Load("");
+            btnOpcoes.Visible = false;
+            btnResumir.Visible = true;
+            btnSair.Visible = true;
+            btnSairjogo.Visible = true;
+            btn1j1.Visible = false;
+            btn2j1.Visible = false;
+            btnEncerrar.Visible = false;
 
             //frmOpcoes frm = new frmOpcoes();
             //frm.ShowDialog();
@@ -396,6 +398,11 @@ namespace Projeto_Integrador
         }
 
         private void btnRoubar3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnResumir_Click(object sender, EventArgs e)
         {
 
         }
