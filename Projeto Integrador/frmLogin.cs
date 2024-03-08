@@ -263,6 +263,16 @@ namespace Projeto_Integrador
 
         private void btnConfirmar_Click_1(object sender, EventArgs e)
         {
+            if (txtUsuario.Text == "admin")
+            {
+                btnTeste.Visible = true;
+                btnGerenciador.Visible = true;
+            }
+            else
+            {
+                btnTeste.Visible = false;
+                btnGerenciador.Visible = false;
+            }
 
             //ELDES{{
             try
@@ -338,16 +348,7 @@ namespace Projeto_Integrador
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            if (txtUsuario.Text == "admin")
-            {
-                btnTeste.Visible = true;
-                btnGerenciador.Visible = true;
-            }
-            else
-            {
-                btnTeste.Visible = false;
-                btnGerenciador.Visible = false;
-            }
+            
         }
     }
 }

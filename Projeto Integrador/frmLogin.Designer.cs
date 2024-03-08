@@ -43,7 +43,6 @@
             this.btnConfirmar = new System.Windows.Forms.PictureBox();
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.btnCadastro = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbGuilty)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSenha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogin)).BeginInit();
@@ -51,7 +50,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnConfirmar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCadastro)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pbGuilty
@@ -232,18 +230,6 @@
             this.btnCadastro.TabStop = false;
             this.btnCadastro.Click += new System.EventHandler(this.btnCadastro_Click_1);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Location = new System.Drawing.Point(516, 407);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(119, 44);
-            this.pictureBox1.TabIndex = 52;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -254,7 +240,6 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(700, 600);
             this.ControlBox = false;
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnCadastro);
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.pbGuilty);
@@ -287,7 +272,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnConfirmar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCadastro)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -308,7 +292,6 @@
         private System.Windows.Forms.PictureBox btnConfirmar;
         private System.Windows.Forms.PictureBox pbLogo;
         private System.Windows.Forms.PictureBox btnCadastro;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
