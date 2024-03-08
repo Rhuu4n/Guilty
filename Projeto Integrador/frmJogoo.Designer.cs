@@ -39,6 +39,13 @@
             this.lblMoedaP4 = new System.Windows.Forms.Label();
             this.btn2j1 = new System.Windows.Forms.Button();
             this.nudPlayer = new System.Windows.Forms.NumericUpDown();
+            this.btnRoubar3 = new System.Windows.Forms.Button();
+            this.btnRoubar2 = new System.Windows.Forms.Button();
+            this.btnRoubar1 = new System.Windows.Forms.Button();
+            this.num1 = new System.Windows.Forms.Label();
+            this.btnSairjogo = new System.Windows.Forms.Button();
+            this.btnSair = new System.Windows.Forms.Button();
+            this.btnResumir = new System.Windows.Forms.Button();
             this.pb1j4 = new System.Windows.Forms.PictureBox();
             this.pb2j4 = new System.Windows.Forms.PictureBox();
             this.pbMoeda4 = new System.Windows.Forms.PictureBox();
@@ -55,15 +62,9 @@
             this.pbMiner1 = new System.Windows.Forms.PictureBox();
             this.pb2j1 = new System.Windows.Forms.PictureBox();
             this.pbSaq2 = new System.Windows.Forms.PictureBox();
-            this.btnRoubar3 = new System.Windows.Forms.Button();
-            this.btnRoubar2 = new System.Windows.Forms.Button();
-            this.btnRoubar1 = new System.Windows.Forms.Button();
-            this.num1 = new System.Windows.Forms.Label();
             this.pbSaq1 = new System.Windows.Forms.PictureBox();
             this.pbMiner2 = new System.Windows.Forms.PictureBox();
-            this.btnSairjogo = new System.Windows.Forms.Button();
-            this.btnSair = new System.Windows.Forms.Button();
-            this.btnResumir = new System.Windows.Forms.Button();
+            this.pbFundomesa = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudPlayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb1j4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb2j4)).BeginInit();
@@ -83,6 +84,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbSaq2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSaq1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMiner2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFundomesa)).BeginInit();
             this.SuspendLayout();
             // 
             // btnOpcoes
@@ -230,6 +232,118 @@
             this.nudPlayer.Size = new System.Drawing.Size(120, 20);
             this.nudPlayer.TabIndex = 55;
             this.nudPlayer.Visible = false;
+            // 
+            // btnRoubar3
+            // 
+            this.btnRoubar3.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnRoubar3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnRoubar3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRoubar3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRoubar3.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRoubar3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnRoubar3.Location = new System.Drawing.Point(218, 403);
+            this.btnRoubar3.Name = "btnRoubar3";
+            this.btnRoubar3.Size = new System.Drawing.Size(123, 51);
+            this.btnRoubar3.TabIndex = 56;
+            this.btnRoubar3.Text = "Roubar";
+            this.btnRoubar3.UseVisualStyleBackColor = false;
+            this.btnRoubar3.Visible = false;
+            this.btnRoubar3.Click += new System.EventHandler(this.btnRoubar3_Click);
+            // 
+            // btnRoubar2
+            // 
+            this.btnRoubar2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnRoubar2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnRoubar2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRoubar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRoubar2.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRoubar2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnRoubar2.Location = new System.Drawing.Point(540, 218);
+            this.btnRoubar2.Name = "btnRoubar2";
+            this.btnRoubar2.Size = new System.Drawing.Size(123, 51);
+            this.btnRoubar2.TabIndex = 57;
+            this.btnRoubar2.Text = "Roubar";
+            this.btnRoubar2.UseVisualStyleBackColor = false;
+            this.btnRoubar2.Visible = false;
+            // 
+            // btnRoubar1
+            // 
+            this.btnRoubar1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnRoubar1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnRoubar1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRoubar1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRoubar1.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRoubar1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnRoubar1.Location = new System.Drawing.Point(859, 403);
+            this.btnRoubar1.Name = "btnRoubar1";
+            this.btnRoubar1.Size = new System.Drawing.Size(123, 51);
+            this.btnRoubar1.TabIndex = 58;
+            this.btnRoubar1.Text = "Roubar";
+            this.btnRoubar1.UseVisualStyleBackColor = false;
+            this.btnRoubar1.Visible = false;
+            this.btnRoubar1.Click += new System.EventHandler(this.btnRoubar1_Click);
+            // 
+            // num1
+            // 
+            this.num1.AutoSize = true;
+            this.num1.Location = new System.Drawing.Point(843, 147);
+            this.num1.Name = "num1";
+            this.num1.Size = new System.Drawing.Size(35, 13);
+            this.num1.TabIndex = 59;
+            this.num1.Text = "label1";
+            // 
+            // btnSairjogo
+            // 
+            this.btnSairjogo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSairjogo.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnSairjogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSairjogo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSairjogo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSairjogo.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSairjogo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSairjogo.Location = new System.Drawing.Point(539, 389);
+            this.btnSairjogo.Name = "btnSairjogo";
+            this.btnSairjogo.Size = new System.Drawing.Size(123, 65);
+            this.btnSairjogo.TabIndex = 63;
+            this.btnSairjogo.Text = "Sair do jogo";
+            this.btnSairjogo.UseVisualStyleBackColor = false;
+            this.btnSairjogo.Visible = false;
+            // 
+            // btnSair
+            // 
+            this.btnSair.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSair.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSair.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSair.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSair.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSair.Location = new System.Drawing.Point(539, 332);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(123, 51);
+            this.btnSair.TabIndex = 64;
+            this.btnSair.Text = "Sair";
+            this.btnSair.UseVisualStyleBackColor = false;
+            this.btnSair.Visible = false;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            // 
+            // btnResumir
+            // 
+            this.btnResumir.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnResumir.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnResumir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnResumir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnResumir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnResumir.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnResumir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnResumir.Location = new System.Drawing.Point(539, 275);
+            this.btnResumir.Name = "btnResumir";
+            this.btnResumir.Size = new System.Drawing.Size(123, 51);
+            this.btnResumir.TabIndex = 65;
+            this.btnResumir.Text = "Resumir";
+            this.btnResumir.UseVisualStyleBackColor = false;
+            this.btnResumir.Visible = false;
+            this.btnResumir.Click += new System.EventHandler(this.btnResumir_Click);
             // 
             // pb1j4
             // 
@@ -401,65 +515,6 @@
             this.pbSaq2.TabIndex = 13;
             this.pbSaq2.TabStop = false;
             // 
-            // btnRoubar3
-            // 
-            this.btnRoubar3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnRoubar3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnRoubar3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRoubar3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRoubar3.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRoubar3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnRoubar3.Location = new System.Drawing.Point(218, 403);
-            this.btnRoubar3.Name = "btnRoubar3";
-            this.btnRoubar3.Size = new System.Drawing.Size(123, 51);
-            this.btnRoubar3.TabIndex = 56;
-            this.btnRoubar3.Text = "Roubar";
-            this.btnRoubar3.UseVisualStyleBackColor = false;
-            this.btnRoubar3.Visible = false;
-            this.btnRoubar3.Click += new System.EventHandler(this.btnRoubar3_Click);
-            // 
-            // btnRoubar2
-            // 
-            this.btnRoubar2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnRoubar2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnRoubar2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRoubar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRoubar2.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRoubar2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnRoubar2.Location = new System.Drawing.Point(540, 218);
-            this.btnRoubar2.Name = "btnRoubar2";
-            this.btnRoubar2.Size = new System.Drawing.Size(123, 51);
-            this.btnRoubar2.TabIndex = 57;
-            this.btnRoubar2.Text = "Roubar";
-            this.btnRoubar2.UseVisualStyleBackColor = false;
-            this.btnRoubar2.Visible = false;
-            // 
-            // btnRoubar1
-            // 
-            this.btnRoubar1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnRoubar1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnRoubar1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRoubar1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRoubar1.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRoubar1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnRoubar1.Location = new System.Drawing.Point(859, 403);
-            this.btnRoubar1.Name = "btnRoubar1";
-            this.btnRoubar1.Size = new System.Drawing.Size(123, 51);
-            this.btnRoubar1.TabIndex = 58;
-            this.btnRoubar1.Text = "Roubar";
-            this.btnRoubar1.UseVisualStyleBackColor = false;
-            this.btnRoubar1.Visible = false;
-            this.btnRoubar1.Click += new System.EventHandler(this.btnRoubar1_Click);
-            // 
-            // num1
-            // 
-            this.num1.AutoSize = true;
-            this.num1.Location = new System.Drawing.Point(843, 147);
-            this.num1.Name = "num1";
-            this.num1.Size = new System.Drawing.Size(35, 13);
-            this.num1.TabIndex = 59;
-            this.num1.Text = "label1";
-            // 
             // pbSaq1
             // 
             this.pbSaq1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -480,58 +535,17 @@
             this.pbMiner2.TabIndex = 61;
             this.pbMiner2.TabStop = false;
             // 
-            // btnSairjogo
+            // pbFundomesa
             // 
-            this.btnSairjogo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSairjogo.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnSairjogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnSairjogo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSairjogo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSairjogo.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSairjogo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSairjogo.Location = new System.Drawing.Point(539, 389);
-            this.btnSairjogo.Name = "btnSairjogo";
-            this.btnSairjogo.Size = new System.Drawing.Size(123, 65);
-            this.btnSairjogo.TabIndex = 63;
-            this.btnSairjogo.Text = "Sair do jogo";
-            this.btnSairjogo.UseVisualStyleBackColor = false;
-            this.btnSairjogo.Visible = false;
-            // 
-            // btnSair
-            // 
-            this.btnSair.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSair.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnSair.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSair.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSair.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSair.Location = new System.Drawing.Point(539, 332);
-            this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(123, 51);
-            this.btnSair.TabIndex = 64;
-            this.btnSair.Text = "Sair";
-            this.btnSair.UseVisualStyleBackColor = false;
-            this.btnSair.Visible = false;
-            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
-            // 
-            // btnResumir
-            // 
-            this.btnResumir.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnResumir.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnResumir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnResumir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnResumir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnResumir.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnResumir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnResumir.Location = new System.Drawing.Point(539, 275);
-            this.btnResumir.Name = "btnResumir";
-            this.btnResumir.Size = new System.Drawing.Size(123, 51);
-            this.btnResumir.TabIndex = 65;
-            this.btnResumir.Text = "Resumir";
-            this.btnResumir.UseVisualStyleBackColor = false;
-            this.btnResumir.Visible = false;
-            this.btnResumir.Click += new System.EventHandler(this.btnResumir_Click);
+            this.pbFundomesa.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbFundomesa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbFundomesa.Location = new System.Drawing.Point(0, 0);
+            this.pbFundomesa.Name = "pbFundomesa";
+            this.pbFundomesa.Size = new System.Drawing.Size(1200, 800);
+            this.pbFundomesa.TabIndex = 66;
+            this.pbFundomesa.TabStop = false;
             // 
             // frmJogoo
             // 
@@ -574,6 +588,7 @@
             this.Controls.Add(this.btnRoubar1);
             this.Controls.Add(this.pbSaq1);
             this.Controls.Add(this.pbMiner2);
+            this.Controls.Add(this.pbFundomesa);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmJogoo";
@@ -599,6 +614,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbSaq2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSaq1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMiner2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFundomesa)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -640,5 +656,6 @@
         private System.Windows.Forms.Button btnSairjogo;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Button btnResumir;
+        private System.Windows.Forms.PictureBox pbFundomesa;
     }
 }
