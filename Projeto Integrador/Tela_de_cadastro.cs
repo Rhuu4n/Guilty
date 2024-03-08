@@ -190,6 +190,11 @@ namespace Projeto_Integrador
 
         private void btnCadastrar_Click_1(object sender, EventArgs e)
         {
+           
+        }
+
+        private void btnCadastrar_Click_2(object sender, EventArgs e)
+        {
             try
             {
                 if (txtSenha2.Text == txtSenha.Text)
@@ -222,11 +227,6 @@ namespace Projeto_Integrador
             {
                 MessageBox.Show("Preencha todos os campos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Stop, MessageBoxDefaultButton.Button2);
             }
-        }
-
-        private void btnCadastrar_Click_2(object sender, EventArgs e)
-        {
-
         }
 
         private void label1_Click(object sender, EventArgs e)

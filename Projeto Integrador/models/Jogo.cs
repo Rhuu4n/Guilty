@@ -45,11 +45,13 @@ namespace Projeto_Integrador.models
             try
             {
                 DataTable dt = usuario.EfetuarLogin();
-                id = dt.Rows[0]["id_usuario"].ToString();
+                
 
 
                 if (dt.Rows.Count > 0 )
                 {
+                    id = dt.Rows[0]["id_usuario"].ToString();
+
                     string dbSenha = dt.Rows[0]["senha"].ToString();
                     if (dbSenha == senha)
                     {

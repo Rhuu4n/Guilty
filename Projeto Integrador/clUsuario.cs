@@ -33,10 +33,10 @@ namespace Projeto_Integrador
             {
                 //ELDES{{
                 throw new BdException(ex);
-                /*
+                
                 MessageBox.Show("Erro.: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
-                */
+                
                 //}}ELDES
 
             }
