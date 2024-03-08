@@ -139,7 +139,7 @@ namespace Projeto_Integrador
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            pbFundomesa.Load("");
+            pbFundomesa.Load("https://i.imgur.com/MU36yPp.jpg");
             btnOpcoes.Visible = false;
             btnResumir.Visible = true;
             btnSair.Visible = true;
@@ -404,7 +404,19 @@ namespace Projeto_Integrador
 
         private void btnResumir_Click(object sender, EventArgs e)
         {
+            pbFundomesa.Load("https://i.imgur.com/Gk2e30F.jpg");
+            btnOpcoes.Visible = true;
+            btnResumir.Visible = false;
+            btnSair.Visible = false;
+            btnSairjogo.Visible = false;
+            btn1j1.Visible = true;
+            btn2j1.Visible = true;
+            btnEncerrar.Visible = true;
+        }
 
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
