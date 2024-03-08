@@ -17,17 +17,20 @@ namespace Projeto_Integrador
         {
             InitializeComponent();
 
-            btnCancelar.Load("https://i.imgur.com/6kwBR2L.png");
+            btnCancelar.Load("https://i.imgur.com/ugKj9Rj.png");
             btnCancelar.SizeMode = PictureBoxSizeMode.StretchImage;
 
-            btnEntrar.Load("https://i.imgur.com/XODZjw8.png");
+            btnEntrar.Load("https://i.imgur.com/AgYr59d.png");
             btnEntrar.SizeMode = PictureBoxSizeMode.StretchImage;
 
             pbEntrar.Load("https://i.imgur.com/srJs85d.png");
             pbEntrar.SizeMode = PictureBoxSizeMode.StretchImage;
 
-            btnCriar.Load("https://i.imgur.com/ALrel1d.png");
+            btnCriar.Load("https://i.imgur.com/mc4z2Z6.png");
             btnCriar.SizeMode= PictureBoxSizeMode.StretchImage;
+
+            pbLogo.Load("https://i.imgur.com/4M8Eu4t.png");
+            pbLogo.SizeMode = PictureBoxSizeMode.StretchImage;
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
