@@ -38,7 +38,6 @@
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.pbGuilty = new System.Windows.Forms.PictureBox();
-            this.btnVoltar = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -50,6 +49,7 @@
             this.pb3 = new System.Windows.Forms.PictureBox();
             this.pb5 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.btnVoltar = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbGuilty)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCadastrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb2)).BeginInit();
@@ -57,6 +57,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).BeginInit();
             this.SuspendLayout();
             // 
             // txtID
@@ -161,21 +162,6 @@
             this.pbGuilty.Size = new System.Drawing.Size(233, 222);
             this.pbGuilty.TabIndex = 39;
             this.pbGuilty.TabStop = false;
-            // 
-            // btnVoltar
-            // 
-            this.btnVoltar.BackColor = System.Drawing.Color.Transparent;
-            this.btnVoltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnVoltar.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVoltar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnVoltar.Location = new System.Drawing.Point(12, 12);
-            this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(118, 118);
-            this.btnVoltar.TabIndex = 40;
-            this.btnVoltar.UseVisualStyleBackColor = false;
-            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // btnCadastrar
             // 
@@ -314,6 +300,19 @@
             this.label8.Text = "nascimento";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnVoltar
+            // 
+            this.btnVoltar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnVoltar.BackColor = System.Drawing.Color.Transparent;
+            this.btnVoltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVoltar.Location = new System.Drawing.Point(12, 21);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(119, 44);
+            this.btnVoltar.TabIndex = 64;
+            this.btnVoltar.TabStop = false;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click_1);
+            // 
             // frmCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -323,6 +322,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(700, 600);
             this.ControlBox = false;
+            this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.pb5);
             this.Controls.Add(this.label4);
@@ -334,7 +334,6 @@
             this.Controls.Add(this.pb2);
             this.Controls.Add(this.pb1);
             this.Controls.Add(this.btnCadastrar);
-            this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.pbGuilty);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.txtSenha2);
@@ -358,6 +357,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnVoltar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -370,7 +370,6 @@
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.PictureBox pbGuilty;
-        private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.TextBox txtIdade;
         private System.Windows.Forms.TextBox txtSenha2;
         private System.Windows.Forms.TextBox txtID;
@@ -385,5 +384,6 @@
         private System.Windows.Forms.PictureBox pb3;
         private System.Windows.Forms.PictureBox pb5;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.PictureBox btnVoltar;
     }
 }

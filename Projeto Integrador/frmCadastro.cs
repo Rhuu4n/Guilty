@@ -17,6 +17,9 @@ namespace Projeto_Integrador
         {
             InitializeComponent();
 
+            btnVoltar.Load("https://i.imgur.com/J4XhCAH.png");
+            btnVoltar.SizeMode = PictureBoxSizeMode.StretchImage;
+
             btnCadastrar.Load("https://i.imgur.com/hZRjJ4T.png");
             btnCadastrar.SizeMode = PictureBoxSizeMode.StretchImage;
 
@@ -232,6 +235,11 @@ namespace Projeto_Integrador
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnVoltar_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
