@@ -199,39 +199,46 @@ namespace Projeto_Integrador
 
         private void btnCadastrar_Click_2(object sender, EventArgs e)
         {
-            try
+            if (txtUsuario.Text != "")
             {
-                if (txtSenha2.Text == txtSenha.Text && txtUsuario.Text != "")
+                try
                 {
-
-
-                    Jogo.GetInstance().cadastro(txtUsuario.Text, txtSenha.Text, txtEmail.Text, txtIdade.Text);
-
-                    // txtID.Text = Convert.ToString(cliente.Salvar());
-                    /*
-                    if (txtID.Text == "")
+                    if (txtSenha2.Text == txtSenha.Text)
                     {
 
+
+                        Jogo.GetInstance().cadastro(txtUsuario.Text, txtSenha.Text, txtEmail.Text, txtIdade.Text);
+
+                        // txtID.Text = Convert.ToString(cliente.Salvar());
+                        /*
+                        if (txtID.Text == "")
+                        {
+
+                        }
+                        else
+                        {
+                            cliente.idcliente = int.Parse(txtID.Text);
+                         //   cliente.Atualizar();
+                        }
+                        //MessageBox.Show("Você foi cadastrado com sucesso");
+                        */
                     }
                     else
                     {
-                        cliente.idcliente = int.Parse(txtID.Text);
-                     //   cliente.Atualizar();
+                        MessageBox.Show("As Senhas não correspondem", "Confirme sua senha", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                    //MessageBox.Show("Você foi cadastrado com sucesso");
-                    */
                 }
-                else
+
+                catch (Exception ex)
                 {
-                    MessageBox.Show("As Senhas não correspondem", "Confirme sua senha", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Preencha todos os campos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Stop, MessageBoxDefaultButton.Button2);
                 }
             }
-
-            catch (Exception ex)
+            else
             {
                 MessageBox.Show("Preencha todos os campos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Stop, MessageBoxDefaultButton.Button2);
             }
-        
+                
 
         }
 
