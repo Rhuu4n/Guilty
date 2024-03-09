@@ -10,6 +10,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
 using System.Threading;
 using Projeto_Integrador.models;
 using System.Diagnostics;
+using System.Drawing.Imaging;
 
 namespace Projeto_Integrador
 {
@@ -32,6 +33,10 @@ namespace Projeto_Integrador
         public frmLobby()
         {
             InitializeComponent();
+
+            btnVoltar.Load("https://i.imgur.com/J4XhCAH.png");
+            btnVoltar.SizeMode = PictureBoxSizeMode.StretchImage;
+
             Thread thread = new Thread(new ThreadStart(ExecutarTarefa));
 
             // Iniciando a execução da thread
@@ -128,6 +133,11 @@ namespace Projeto_Integrador
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnVoltar_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
