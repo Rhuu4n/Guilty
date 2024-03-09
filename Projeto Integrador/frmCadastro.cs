@@ -108,6 +108,7 @@ namespace Projeto_Integrador
                 MessageBox.Show("Este Campo só aceita até 12 caracteres");
             }
 
+
         }
 
         private void frmCadastro_Resize(object sender, EventArgs e)
@@ -197,7 +198,7 @@ namespace Projeto_Integrador
         {
             try
             {
-                if (txtSenha2.Text == txtSenha.Text)
+                if (txtSenha2.Text == txtSenha.Text && txtUsuario.Text != "")
                 {
 
 
@@ -227,6 +228,8 @@ namespace Projeto_Integrador
             {
                 MessageBox.Show("Preencha todos os campos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Stop, MessageBoxDefaultButton.Button2);
             }
+        
+
         }
 
         private void label1_Click(object sender, EventArgs e)
