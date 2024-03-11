@@ -36,6 +36,22 @@ namespace Projeto_Integrador
 
             btnVoltar.Load("https://i.imgur.com/J4XhCAH.png");
             btnVoltar.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbJogadores.Load("https://i.imgur.com/srJs85d.png");
+            pbJogadores.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbJ1.Load("https://i.imgur.com/srJs85d.png");
+            pbJ1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbJ2.Load("https://i.imgur.com/srJs85d.png");
+            pbJ2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbJ3.Load("https://i.imgur.com/srJs85d.png");
+            pbJ3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbJ4.Load("https://i.imgur.com/srJs85d.png");
+            pbJ4.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbID.Load("https://i.imgur.com/srJs85d.png");
+            pbID.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbLbl.Load("https://i.imgur.com/srJs85d.png");
+            pbLbl.SizeMode = PictureBoxSizeMode.StretchImage;
+            btnIniciar.Load("https://i.imgur.com/BWlFdCI.png");
+            btnIniciar.SizeMode = PictureBoxSizeMode.StretchImage;
 
             Thread thread = new Thread(new ThreadStart(ExecutarTarefa));
 
@@ -138,6 +154,19 @@ namespace Projeto_Integrador
         private void btnVoltar_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void pbJ4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnIniciar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmJogoo frm = new frmJogoo();
+            frm.ShowDialog();
+            this.Show();
         }
     }
 }
