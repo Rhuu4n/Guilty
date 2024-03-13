@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Text;
+using System.IO;
 using System.Linq;
 using System.Security.Policy;
 using System.Text;
@@ -55,7 +56,7 @@ namespace Projeto_Integrador
         private void LoadCustomFont()
         {
             // Caminho para o arquivo .ttf (considere ajustar conforme necessário)
-            string fontPath = $"{Application.StartupPath}\\Debug\\Minecraft.ttf";
+            string fontPath = Path.Combine(Application.StartupPath, "..", "..", "Resources", "Minecraft.ttf");
 
             // Verifica se o arquivo da fonte existe
             if (System.IO.File.Exists(fontPath))
@@ -67,8 +68,13 @@ namespace Projeto_Integrador
                 // Define a fonte personalizada para o controle Label
                 if (privateFonts.Families.Length > 0)
                 {
-                    Font customFont = new Font(privateFonts.Families[0], 12f);
+                    Font customFont = new Font(privateFonts.Families[0], 16f);
                     label1.Font = customFont;
+                    label2.Font = customFont;
+                    btnTeste.Font = customFont;
+                    btnTeste.Font = new Font(privateFonts.Families[0], 12f);
+                    btnGerenciador.Font = customFont;
+                    btnGerenciador.Font = new Font(privateFonts.Families[0], 12f);
                 }
                 else
                 {

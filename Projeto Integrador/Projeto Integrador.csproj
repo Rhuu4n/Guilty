@@ -139,6 +139,7 @@
     <None Include="Resources\8-bit-factory-forest-cute-aesthetic-pc-au2735qwvpz5kiea1.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Minecraft.ttf" />
     <None Include="Resources\Sem título %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
