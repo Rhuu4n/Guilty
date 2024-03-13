@@ -157,21 +157,9 @@ namespace Projeto_Integrador.models
             clSalas sala = new clSalas();
             sala.idSala = id_sala; 
             DataTable dt = sala.Pesquisar();
+            nj = Convert.ToInt32(dt.Rows[0]["Numero_jogadores"]);
 
-            Console.WriteLine(Convert.ToString(dt));
-            return -1;
-
-            /*if (dt.Rows ==  null)
-            {
-                MessageBox.Show("Erro", "Sala não encontrada");
-                return -1;
-            }
-            else
-            {
-                nj = Convert.ToInt32(dt.Rows[0]["Numero_jogadores"]);
-                return nj;
-            }*/
-            
+            return nj;
         }
 
         public string[] atualizarSala(int nj) {
