@@ -64,7 +64,8 @@ namespace Projeto_Integrador
                 try
                 {
                     BD._sql = "SELECT * FROM Sala " +
-                             " WHERE ID_Sala LIKE " + idSala + "";
+                             " WHERE ID_Sala = " + idSala + "";
+
 
                     return BD.ExecutaSelect();
                 }

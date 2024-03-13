@@ -112,17 +112,18 @@ namespace Projeto_Integrador
         {
             if (txtEntrar.Text != "")
             {
-                Jogo.GetInstance().setIdSala(Convert.ToInt32(txtEntrar.Text));
+                if (Jogo.GetInstance().setIdSala(Convert.ToInt32(txtEntrar.Text)))
+                {
+                    this.Hide();
+                    frmLobby frm = new frmLobby();
+                    frm.ShowDialog();
+                    this.Show();
+                    return;
+                }
 
-                this.Hide();
-                frmLobby frm = new frmLobby();
-                frm.ShowDialog();
-                this.Show();
             }
-            else
-            {
-                MessageBox.Show("Sala não encontrada", "Erro");
-            }
+            MessageBox.Show("Sala não encontrada", "Erro");
+            
             
         }
 

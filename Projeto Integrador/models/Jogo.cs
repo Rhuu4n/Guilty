@@ -111,9 +111,17 @@ namespace Projeto_Integrador.models
             return numeroJogadores;
         }
 
-        public void setIdSala(int id)
+        public bool setIdSala(int id)
         {
-            id_sala = id;
+            clSalas sala = new clSalas();
+            sala.idSala = id;
+            DataTable dt = sala.Pesquisar();
+            if (dt.Rows.Count < 1)
+            {
+                return false;
+            }
+            this.id_sala = id;
+            return true;
         }
 
         public string getID()
@@ -157,8 +165,13 @@ namespace Projeto_Integrador.models
             clSalas sala = new clSalas();
             sala.idSala = id_sala; 
             DataTable dt = sala.Pesquisar();
-            nj = Convert.ToInt32(dt.Rows[0]["Numero_jogadores"]);
 
+            if (dt.Rows.Count < 1)
+            {
+                MessageBox.Show("erro");
+                return -1;
+            }
+            nj = Convert.ToInt32(dt.Rows[0]["Numero_jogadores"]);
             return nj;
         }
 
