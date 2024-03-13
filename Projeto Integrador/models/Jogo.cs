@@ -157,6 +157,10 @@ namespace Projeto_Integrador.models
             sala.idSala = id_sala; 
             DataTable dt = sala.Pesquisar();
 
+            if (dt.Rows == null)
+            {
+                MessageBox.Show("erro");
+            }
             nj = Convert.ToInt32(dt.Rows[0]["Numero_jogadores"]);
             return nj;
         }
