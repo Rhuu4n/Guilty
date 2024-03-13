@@ -46,6 +46,14 @@ namespace Projeto_Integrador
             pb5.Load("https://i.imgur.com/srJs85d.png");
             pb5.SizeMode = PictureBoxSizeMode.StretchImage;
             pb5.BackColor = Color.Transparent;
+
+            pbMsenha1.Load("https://i.imgur.com/srJs85d.png");
+            pbMsenha1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbMsenha1.BackColor = Color.Transparent;
+
+            pbMsenha2.Load("https://i.imgur.com/srJs85d.png");
+            pbMsenha2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbMsenha2.BackColor = Color.Transparent;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

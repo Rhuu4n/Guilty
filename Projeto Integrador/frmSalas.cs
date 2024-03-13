@@ -110,12 +110,20 @@ namespace Projeto_Integrador
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            Jogo.GetInstance().setIdSala(Convert.ToInt32(txtEntrar.Text));
+            if (txtEntrar.Text != "")
+            {
+                Jogo.GetInstance().setIdSala(Convert.ToInt32(txtEntrar.Text));
 
-            this.Hide();
-            frmLobby frm = new frmLobby();
-            frm.ShowDialog();
-            this.Show();
+                this.Hide();
+                frmLobby frm = new frmLobby();
+                frm.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Sala não encontrada", "Erro");
+            }
+            
         }
 
         private void btnCriar_Click_1(object sender, EventArgs e)

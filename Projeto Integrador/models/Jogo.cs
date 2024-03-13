@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics;
 using System.Linq;
 using System.Reflection.Emit;
 using System.Text;
@@ -157,8 +158,20 @@ namespace Projeto_Integrador.models
             sala.idSala = id_sala; 
             DataTable dt = sala.Pesquisar();
 
-            nj = Convert.ToInt32(dt.Rows[0]["Numero_jogadores"]);
-            return nj;
+            Console.WriteLine(Convert.ToString(dt));
+            return -1;
+
+            /*if (dt.Rows ==  null)
+            {
+                MessageBox.Show("Erro", "Sala não encontrada");
+                return -1;
+            }
+            else
+            {
+                nj = Convert.ToInt32(dt.Rows[0]["Numero_jogadores"]);
+                return nj;
+            }*/
+            
         }
 
         public string[] atualizarSala(int nj) {
