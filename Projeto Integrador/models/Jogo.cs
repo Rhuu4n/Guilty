@@ -99,7 +99,26 @@ namespace Projeto_Integrador.models
             }
 
             return false;
+
         } 
+
+
+        public static class emailvalido
+        {
+            public static bool verificaemail(string email)
+            {
+                try
+                {
+                    var enderecoemail = new System.Net.Mail.MailAddress(email);
+                    return enderecoemail.Address == email;
+                }
+
+                catch
+                {
+                    return false;
+                }
+            }
+        }
 
         public int getIdSala()
         {

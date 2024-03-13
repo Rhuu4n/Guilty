@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Projeto_Integrador.models.Jogo;
 
 namespace Projeto_Integrador
 {
@@ -116,9 +117,8 @@ namespace Projeto_Integrador
             if (txtUsuario.Text.Length >= 12 && e.KeyChar != 8)
             {
                 e.Handled = true;
-                MessageBox.Show("Este Campo só aceita até 12 caracteres");
+                MessageBox.Show("Este Campo só aceita até 12 caracteres", "Erro");
             }
-
 
         }
 
@@ -146,35 +146,35 @@ namespace Projeto_Integrador
         {
             try
             {
-            if (txtSenha2.Text == txtSenha.Text)
-            {
+                if (txtSenha2.Text == txtSenha.Text)
+                {
 
 
-            Jogo.GetInstance().cadastro(txtUsuario.Text, txtSenha.Text, txtEmail.Text, txtIdade.Text);
+                    Jogo.GetInstance().cadastro(txtUsuario.Text, txtSenha.Text, txtEmail.Text, txtIdade.Text);
 
-            // txtID.Text = Convert.ToString(cliente.Salvar());
-            /*
-            if (txtID.Text == "")
-            {
-                
-            }
-            else
-            {
-                cliente.idcliente = int.Parse(txtID.Text);
-             //   cliente.Atualizar();
-            }
-            //MessageBox.Show("Você foi cadastrado com sucesso");
-            */
-            }
-            else
-            {
-                MessageBox.Show ("As Senhas não correspondem", "Confirme sua senha", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+                    // txtID.Text = Convert.ToString(cliente.Salvar());
+                    /*
+                    if (txtID.Text == "")
+                    {
+
+                    }
+                    else
+                    {
+                        cliente.idcliente = int.Parse(txtID.Text);
+                     //   cliente.Atualizar();
+                    }
+                    //MessageBox.Show("Você foi cadastrado com sucesso");
+                    */
+                }
+                else
+                {
+                    MessageBox.Show("As Senhas não correspondem", "Confirme sua senha", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
 
             catch (Exception ex)
             {
-                MessageBox.Show ("Preencha todos os campos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Stop, MessageBoxDefaultButton.Button2);
+                MessageBox.Show("Preencha todos os campos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Stop, MessageBoxDefaultButton.Button2);
             }
 
         }
@@ -191,7 +191,7 @@ namespace Projeto_Integrador
             {
                 e.Handled = true;
                 MessageBox.Show("Este Campo só aceita até 8 caracteres", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-               
+
             }
         }
 
@@ -202,19 +202,17 @@ namespace Projeto_Integrador
 
         private void btnCadastrar_Click_1(object sender, EventArgs e)
         {
-           
+
         }
 
         private void btnCadastrar_Click_2(object sender, EventArgs e)
         {
-            if (txtUsuario.Text != "")
+            if (Jogo.emailvalido.verificaemail(txtEmail.Text) && txtUsuario.Text != "")
             {
                 try
-                {
+                { 
                     if (txtSenha2.Text == txtSenha.Text)
                     {
-
-
                         Jogo.GetInstance().cadastro(txtUsuario.Text, txtSenha.Text, txtEmail.Text, txtIdade.Text);
 
                         // txtID.Text = Convert.ToString(cliente.Salvar());
@@ -231,29 +229,26 @@ namespace Projeto_Integrador
                         //MessageBox.Show("Você foi cadastrado com sucesso");
                         */
                     }
+
                     else
                     {
-                        MessageBox.Show("As Senhas não correspondem", "Confirme sua senha", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("As senhas não correspondem ", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
 
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Preencha todos os campos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Stop, MessageBoxDefaultButton.Button2);
+                    MessageBox.Show("Preencha teste todos os campos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Stop, MessageBoxDefaultButton.Button2);
                 }
             }
             else
             {
-                MessageBox.Show("Preencha todos os campos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Stop, MessageBoxDefaultButton.Button2);
+                MessageBox.Show("Email ou Nome de Usuario inválido", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Stop, MessageBoxDefaultButton.Button2);
             }
-                
-
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
 
-        }
+
 
         private void btnVoltar_Click_1(object sender, EventArgs e)
         {
@@ -261,3 +256,4 @@ namespace Projeto_Integrador
         }
     }
 }
+
