@@ -96,6 +96,7 @@
             this.txtIdade.Size = new System.Drawing.Size(186, 26);
             this.txtIdade.TabIndex = 41;
             this.txtIdade.Text = "10/10/2010";
+            this.txtIdade.TextChanged += new System.EventHandler(this.txtIdade_TextChanged);
             // 
             // cbSenha2
             // 

@@ -267,6 +267,11 @@ namespace Projeto_Integrador
                 e.Handled = true;
             }
         }
+
+        private void txtIdade_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

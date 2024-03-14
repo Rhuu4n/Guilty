@@ -392,5 +392,10 @@ namespace Projeto_Integrador
         {
 
         }
+
+        private void txtSenha_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
