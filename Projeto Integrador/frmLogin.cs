@@ -300,79 +300,46 @@ namespace Projeto_Integrador
 
         private void btnConfirmar_Click_1(object sender, EventArgs e)
         {
-            if (txtUsuario.Text == "admin")
-            {
-                btnTeste.Visible = true;
-                btnGerenciador.Visible = true;
-            }
-            else
-            {
-                btnTeste.Visible = false;
-                btnGerenciador.Visible = false;
-            }
 
-            //ELDES{{
-            try
+            if (txtUsuario.Text != "" || txtSenha.Text != "")
             {
-                Jogo.GetInstance().login(txtUsuario.Text, txtSenha.Text);
-                if (Jogo.GetInstance().getUsuarioLogado() != null)
+                if (txtUsuario.Text == "admin")
                 {
-                    logado = true;
-                    this.Close();
+                    btnTeste.Visible = true;
+                    btnGerenciador.Visible = true;
+                }
+                else
+                {
+                    btnTeste.Visible = false;
+                    btnGerenciador.Visible = false;
                 }
 
-            }
-            catch (LoginIncorretoException ex)
-            {
-                MessageBox.Show("Erro, usúario ou senha inválidos", "Dados inválidos", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-            }
-            catch (BdException ex)
-            {
-                MessageBox.Show(ex.ToString(), "Erro de conexão com servidor", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-            }
-
-
-            /*
-            usuario.nome = txtUsuario.Text;
-            DataTable dt = usuario.EfetuarLogin();
-
-            frmLogin.id = dt.Rows[0]["id_usuario"].ToString();
-            frmLogin.nome = dt.Rows[0]["nome"].ToString();
-
-            try
-            {
-
-                if (dt.Rows.Count > 0)
+                //ELDES{{
+                try
                 {
-                    string senha = dt.Rows[0]["senha"].ToString();
-                    if (txtSenha.Text == senha)
+                    Jogo.GetInstance().login(txtUsuario.Text, txtSenha.Text);
+                    if (Jogo.GetInstance().getUsuarioLogado() != null)
                     {
                         logado = true;
                         this.Close();
                     }
-                    else
-                    {
-                        MessageBox.Show("Erro, senha inválida", "Dados inválidos", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                    }
+
                 }
-                else
+                catch (LoginIncorretoException ex)
                 {
-                    MessageBox.Show("Erro, login inválido", "Dados inválidos", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    MessageBox.Show("Erro, usúario ou senha inválidos", "Dados inválidos", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 }
-
-                //this.Hide();
-                //frmSalas frm = new frmSalas();
-                //frm.ShowDialog();
-                //this.Show();
+                catch (BdException ex)
+                {
+                    MessageBox.Show(ex.ToString(), "Erro de conexão com servidor", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                }
             }
 
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Preencha todos os campos", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Erro, Preencha todos os campos", "Login Inválido", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            */
 
-            //}}ELDES
         }
 
         private void btnCadastro_Click_1(object sender, EventArgs e)
