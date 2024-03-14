@@ -254,6 +254,19 @@ namespace Projeto_Integrador
         {
             this.Close();
         }
+
+        private void txtID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+         
+        }
+
+        private void txtEmail_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (txtEmail.Text.Contains("@") && txtEmail.Text.EndsWith(".com") && e.KeyChar != 8 || txtEmail.Text.Contains("@") && txtEmail.Text.EndsWith(".Com") && e.KeyChar != 8)
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
 
