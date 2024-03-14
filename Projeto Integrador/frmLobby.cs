@@ -18,18 +18,18 @@ namespace Projeto_Integrador
     {
 
         public static int qnt_j;
-        public static string newJ;
         public static int nj;
+        public static string newJ;
         public static string nj1;
         public static string nj2;
         public static string nj3;
         public static string nj4;
-
         public static string idj1;
         public static string idj2;
         public static string idj3;
         public static string idj4;
-        
+        string[] nomes;
+
         public frmLobby()
         {
             InitializeComponent();
@@ -52,22 +52,6 @@ namespace Projeto_Integrador
             pbLbl.SizeMode = PictureBoxSizeMode.StretchImage;
             btnIniciar.Load("https://i.imgur.com/BWlFdCI.png");
             btnIniciar.SizeMode = PictureBoxSizeMode.StretchImage;
-
-            Thread thread = new Thread(new ThreadStart(ExecutarTarefa));
-
-            // Iniciando a execução da thread
-            thread.Start();
-
-            for (int j = 0; j < 5; j++)
-            {
-                Debug.WriteLine("Principal executando... " + j);
-                Thread.Sleep(1000); // Espera 1 segundo antes de imprimir a próxima mensagem
-            }
-
-            // Espera a thread terminar antes de encerrar o programa
-            thread.Join();
-
-            Debug.WriteLine("Programa principal terminou.");
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -99,15 +83,6 @@ namespace Projeto_Integrador
             }
         }
 
-        static void ExecutarTarefa()
-        {
-            for (int j = 0; j < 5; j++)
-            {
-                Debug.WriteLine("Thread executando... " + j);
-                Thread.Sleep(1000); // Espera 1 segundo antes de imprimir a próxima mensagem
-
-            }
-        }
 
         private void btnCriar_Click(object sender, EventArgs e)
         {
@@ -122,8 +97,8 @@ namespace Projeto_Integrador
             if(Jogo.GetInstance().getIdSala() == 0)
             {
                 lblJ1.Text = Jogo.GetInstance().getNome();
-
-                label5.Text = Convert.ToString(Jogo.GetInstance().criaSala());
+                Jogo.GetInstance().setIdSala(Jogo.GetInstance().criaSala());
+                label5.Text = Jogo.GetInstance().getIdSala().ToString();
             }
             else
             {   
@@ -137,8 +112,45 @@ namespace Projeto_Integrador
                 atualizar_nomes(idj[0], idj[1], idj[2], idj[3]);
             }
 
-            Jogo.GetInstance().entraSala(this);
 
+
+            Thread threadAtualizacaoNomes = new Thread(new ThreadStart(threadAtualizarNomes));
+            threadAtualizacaoNomes.Start();
+
+
+//            Jogo.GetInstance().entraSala(this);
+
+        }
+
+
+        private void threadAtualizarNomes()
+        {
+            while (!Jogo.GetInstance().getCheio())
+            {
+                nomes = Jogo.GetInstance().verificarJogadores();
+                AtualizarNomesNaThread(nomes[0]);
+
+                Thread.Sleep(800);
+
+            }
+        }
+
+        private void AtualizarNomesNaThread(string Texto)
+        {
+            if(lblJ1.InvokeRequired)
+            {
+                lblJ1.BeginInvoke(new Action<string>(AtualizarNomesNaThread), nomes[0]);
+                lblJ1.BeginInvoke(new Action<string>(AtualizarNomesNaThread), nomes[1]);
+                lblJ1.BeginInvoke(new Action<string>(AtualizarNomesNaThread), nomes[2]);
+                lblJ1.BeginInvoke(new Action<string>(AtualizarNomesNaThread), nomes[3]);
+            }
+            else
+            {
+                lblJ1.Text = nomes[0];
+                lblJ2.Text = nomes[1];
+                lblJ3.Text = nomes[2];
+                lblJ4.Text = nomes[3];
+            }
         }
 
         private void label5_Click(object sender, EventArgs e)
