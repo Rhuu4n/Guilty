@@ -214,20 +214,6 @@ namespace Projeto_Integrador
                     if (txtSenha2.Text == txtSenha.Text)
                     {
                         Jogo.GetInstance().cadastro(txtUsuario.Text, txtSenha.Text, txtEmail.Text, txtIdade.Text);
-
-                        // txtID.Text = Convert.ToString(cliente.Salvar());
-                        /*
-                        if (txtID.Text == "")
-                        {
-
-                        }
-                        else
-                        {
-                            cliente.idcliente = int.Parse(txtID.Text);
-                         //   cliente.Atualizar();
-                        }
-                        //MessageBox.Show("Você foi cadastrado com sucesso");
-                        */
                     }
 
                     else
@@ -238,7 +224,7 @@ namespace Projeto_Integrador
 
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Preencha teste todos os campos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Stop, MessageBoxDefaultButton.Button2);
+                    MessageBox.Show("Preencha todos os campos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Stop, MessageBoxDefaultButton.Button2);
                 }
             }
             else

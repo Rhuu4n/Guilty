@@ -107,24 +107,19 @@ namespace Projeto_Integrador.models
         {
             public static bool verificaemail(string email)
             {
-                if(email.Contains(".com") || email.Contains(".Com"))
-                {
-                    try
-                    {
-                        var enderecoemail = new System.Net.Mail.MailAddress(email);
-                        return enderecoemail.Address == email;
-                    }
+            try
+            {
+                var enderecoemail = new System.Net.Mail.MailAddress(email);
+                return enderecoemail.Address == email;
+            }
 
-                    catch
-                    {
-                        return false;
-                    }
+            catch
+            {
+                return false;
+            }
                     
-                }
-                else
-                {
-                    return false;
-                }
+                
+                
 
             }
         }
