@@ -127,10 +127,13 @@ namespace Projeto_Integrador
                         this.Show();
                         return;
                     }
-                    MessageBox.Show("Sala Não encontrada", "Erro");
                 }
+                MessageBox.Show("Sala Cheia", "Erro");
             }
-            MessageBox.Show("Sala Cheia", "Erro");
+            else
+            {
+                MessageBox.Show("Sala Não Existente", "Erro");
+            }
         }
 
         private void btnCriar_Click_1(object sender, EventArgs e)
