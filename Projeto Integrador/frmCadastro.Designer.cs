@@ -70,6 +70,7 @@
             this.txtID.Enabled = false;
             this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtID.Location = new System.Drawing.Point(291, 518);
+            this.txtID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(186, 26);
             this.txtID.TabIndex = 49;
@@ -79,7 +80,8 @@
             // 
             this.txtSenha2.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSenha2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenha2.Location = new System.Drawing.Point(291, 361);
+            this.txtSenha2.Location = new System.Drawing.Point(291, 360);
+            this.txtSenha2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSenha2.Name = "txtSenha2";
             this.txtSenha2.Size = new System.Drawing.Size(186, 26);
             this.txtSenha2.TabIndex = 42;
@@ -94,6 +96,7 @@
             this.cbSenha2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbSenha2.ForeColor = System.Drawing.Color.Black;
             this.cbSenha2.Location = new System.Drawing.Point(512, 363);
+            this.cbSenha2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbSenha2.Name = "cbSenha2";
             this.cbSenha2.Size = new System.Drawing.Size(143, 24);
             this.cbSenha2.TabIndex = 38;
@@ -109,6 +112,7 @@
             this.cbSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbSenha.ForeColor = System.Drawing.Color.Black;
             this.cbSenha.Location = new System.Drawing.Point(512, 308);
+            this.cbSenha.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbSenha.Name = "cbSenha";
             this.cbSenha.Size = new System.Drawing.Size(143, 24);
             this.cbSenha.TabIndex = 36;
@@ -120,7 +124,8 @@
             // 
             this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(291, 413);
+            this.txtEmail.Location = new System.Drawing.Point(291, 412);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(186, 26);
             this.txtEmail.TabIndex = 31;
@@ -131,6 +136,7 @@
             this.txtSenha.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSenha.Location = new System.Drawing.Point(291, 303);
+            this.txtSenha.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(186, 26);
             this.txtSenha.TabIndex = 27;
@@ -144,6 +150,7 @@
             this.txtUsuario.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.Location = new System.Drawing.Point(291, 241);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(186, 26);
             this.txtUsuario.TabIndex = 26;
@@ -154,6 +161,7 @@
             this.pbGuilty.BackColor = System.Drawing.Color.Transparent;
             this.pbGuilty.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbGuilty.Location = new System.Drawing.Point(234, -1);
+            this.pbGuilty.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pbGuilty.Name = "pbGuilty";
             this.pbGuilty.Size = new System.Drawing.Size(233, 222);
             this.pbGuilty.TabIndex = 39;
@@ -166,6 +174,7 @@
             this.btnCadastrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCadastrar.Location = new System.Drawing.Point(291, 544);
+            this.btnCadastrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(119, 44);
             this.btnCadastrar.TabIndex = 52;
@@ -206,6 +215,7 @@
             this.pb2.BackColor = System.Drawing.Color.Transparent;
             this.pb2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pb2.Location = new System.Drawing.Point(177, 290);
+            this.pb2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pb2.Name = "pb2";
             this.pb2.Size = new System.Drawing.Size(108, 50);
             this.pb2.TabIndex = 54;
@@ -216,6 +226,7 @@
             this.pb1.BackColor = System.Drawing.Color.Transparent;
             this.pb1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pb1.Location = new System.Drawing.Point(155, 234);
+            this.pb1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pb1.Name = "pb1";
             this.pb1.Size = new System.Drawing.Size(130, 50);
             this.pb1.TabIndex = 53;
@@ -243,7 +254,7 @@
             this.lblCsenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCsenha.ForeColor = System.Drawing.Color.Black;
             this.lblCsenha.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblCsenha.Location = new System.Drawing.Point(60, 361);
+            this.lblCsenha.Location = new System.Drawing.Point(60, 360);
             this.lblCsenha.Name = "lblCsenha";
             this.lblCsenha.Size = new System.Drawing.Size(181, 20);
             this.lblCsenha.TabIndex = 59;
@@ -255,6 +266,7 @@
             this.pb4.BackColor = System.Drawing.Color.Transparent;
             this.pb4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pb4.Location = new System.Drawing.Point(177, 402);
+            this.pb4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pb4.Name = "pb4";
             this.pb4.Size = new System.Drawing.Size(108, 50);
             this.pb4.TabIndex = 58;
@@ -265,6 +277,7 @@
             this.pb3.BackColor = System.Drawing.Color.Transparent;
             this.pb3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pb3.Location = new System.Drawing.Point(27, 346);
+            this.pb3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pb3.Name = "pb3";
             this.pb3.Size = new System.Drawing.Size(258, 50);
             this.pb3.TabIndex = 57;
@@ -274,7 +287,8 @@
             // 
             this.pb5.BackColor = System.Drawing.Color.Transparent;
             this.pb5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pb5.Location = new System.Drawing.Point(114, 458);
+            this.pb5.Location = new System.Drawing.Point(114, 459);
+            this.pb5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pb5.Name = "pb5";
             this.pb5.Size = new System.Drawing.Size(171, 50);
             this.pb5.TabIndex = 61;
@@ -302,6 +316,7 @@
             this.btnVoltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVoltar.Location = new System.Drawing.Point(12, 21);
+            this.btnVoltar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(119, 44);
             this.btnVoltar.TabIndex = 64;
@@ -313,6 +328,7 @@
             this.pbMsenha1.BackColor = System.Drawing.Color.Transparent;
             this.pbMsenha1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbMsenha1.Location = new System.Drawing.Point(483, 290);
+            this.pbMsenha1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pbMsenha1.Name = "pbMsenha1";
             this.pbMsenha1.Size = new System.Drawing.Size(205, 50);
             this.pbMsenha1.TabIndex = 65;
@@ -323,6 +339,7 @@
             this.pbMsenha2.BackColor = System.Drawing.Color.Transparent;
             this.pbMsenha2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbMsenha2.Location = new System.Drawing.Point(483, 346);
+            this.pbMsenha2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pbMsenha2.Name = "pbMsenha2";
             this.pbMsenha2.Size = new System.Drawing.Size(205, 50);
             this.pbMsenha2.TabIndex = 66;
@@ -334,6 +351,7 @@
             this.txtIdade.Font = new System.Drawing.Font("Minecraft", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIdade.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.txtIdade.Location = new System.Drawing.Point(291, 472);
+            this.txtIdade.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtIdade.MaxDate = new System.DateTime(2024, 12, 25, 23, 59, 59, 0);
             this.txtIdade.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.txtIdade.MinimumSize = new System.Drawing.Size(185, 25);
@@ -376,6 +394,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmCadastro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Guilty";
