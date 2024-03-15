@@ -61,7 +61,7 @@
             this.pbGuilty.Size = new System.Drawing.Size(222, 221);
             this.pbGuilty.TabIndex = 9;
             this.pbGuilty.TabStop = false;
-            this.pbGuilty.Click += new System.EventHandler(this.pbGuilty_Click);
+//            this.pbGuilty.Click += new System.EventHandler(this.pbGuilty_Click);
             // 
             // label2
             // 

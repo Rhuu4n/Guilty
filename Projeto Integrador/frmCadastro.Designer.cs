@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastro));
             this.txtID = new System.Windows.Forms.TextBox();
             this.txtSenha2 = new System.Windows.Forms.TextBox();
-            this.txtIdade = new System.Windows.Forms.TextBox();
+            this.txtIdad = new System.Windows.Forms.TextBox();
             this.cbSenha2 = new System.Windows.Forms.CheckBox();
             this.cbSenha = new System.Windows.Forms.CheckBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -52,6 +52,7 @@
             this.btnVoltar = new System.Windows.Forms.PictureBox();
             this.pbMsenha1 = new System.Windows.Forms.PictureBox();
             this.pbMsenha2 = new System.Windows.Forms.PictureBox();
+            this.txtIdade = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pbGuilty)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCadastrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb2)).BeginInit();
@@ -87,15 +88,16 @@
             this.txtSenha2.UseSystemPasswordChar = true;
             this.txtSenha2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSenha2_KeyPress_1);
             // 
-            // txtIdade
+            // txtIdad
             // 
-            this.txtIdade.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtIdade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdade.Location = new System.Drawing.Point(291, 469);
-            this.txtIdade.Name = "txtIdade";
-            this.txtIdade.Size = new System.Drawing.Size(186, 26);
-            this.txtIdade.TabIndex = 41;
-            this.txtIdade.Text = "10/10/2010";
+            this.txtIdad.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtIdad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdad.Location = new System.Drawing.Point(483, 65);
+            this.txtIdad.Name = "txtIdad";
+            this.txtIdad.Size = new System.Drawing.Size(186, 26);
+            this.txtIdad.TabIndex = 41;
+            this.txtIdad.Text = "10/10/2010";
+            this.txtIdad.Visible = false;
             // 
             // cbSenha2
             // 
@@ -340,6 +342,14 @@
             this.pbMsenha2.TabIndex = 66;
             this.pbMsenha2.TabStop = false;
             // 
+            // txtIdade
+            // 
+            this.txtIdade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdade.Location = new System.Drawing.Point(291, 467);
+            this.txtIdade.Name = "txtIdade";
+            this.txtIdade.Size = new System.Drawing.Size(186, 26);
+            this.txtIdade.TabIndex = 67;
+            // 
             // frmCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -349,6 +359,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(700, 600);
             this.ControlBox = false;
+            this.Controls.Add(this.txtIdade);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.pb5);
@@ -364,7 +375,7 @@
             this.Controls.Add(this.pbGuilty);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.txtSenha2);
-            this.Controls.Add(this.txtIdade);
+            this.Controls.Add(this.txtIdad);
             this.Controls.Add(this.cbSenha2);
             this.Controls.Add(this.cbSenha);
             this.Controls.Add(this.txtEmail);
@@ -401,7 +412,7 @@
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.PictureBox pbGuilty;
-        private System.Windows.Forms.TextBox txtIdade;
+        private System.Windows.Forms.TextBox txtIdad;
         private System.Windows.Forms.TextBox txtSenha2;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.PictureBox btnCadastrar;
@@ -418,5 +429,6 @@
         private System.Windows.Forms.PictureBox btnVoltar;
         private System.Windows.Forms.PictureBox pbMsenha1;
         private System.Windows.Forms.PictureBox pbMsenha2;
+        private System.Windows.Forms.DateTimePicker txtIdade;
     }
 }

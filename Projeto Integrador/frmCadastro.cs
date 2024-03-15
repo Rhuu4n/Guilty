@@ -150,7 +150,7 @@ namespace Projeto_Integrador
                 {
 
 
-                    Jogo.GetInstance().cadastro(txtUsuario.Text, txtSenha.Text, txtEmail.Text, txtIdade.Text);
+                    Jogo.GetInstance().cadastro(txtUsuario.Text, txtSenha.Text, txtEmail.Text, txtIdad.Text);
 
                     // txtID.Text = Convert.ToString(cliente.Salvar());
                     /*
@@ -213,7 +213,7 @@ namespace Projeto_Integrador
                 { 
                     if (txtSenha2.Text == txtSenha.Text)
                     {
-                        Jogo.GetInstance().cadastro(txtUsuario.Text, txtSenha.Text, txtEmail.Text, txtIdade.Text);
+                        Jogo.GetInstance().cadastro(txtUsuario.Text, txtSenha.Text, txtEmail.Text, txtIdad.Text);
                     }
 
                     else
@@ -248,10 +248,7 @@ namespace Projeto_Integrador
 
         private void txtEmail_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (txtEmail.Text.Contains("@") && txtEmail.Text.EndsWith(".com") && e.KeyChar != 8 || txtEmail.Text.Contains("@") && txtEmail.Text.EndsWith(".Com") && e.KeyChar != 8)
-            {
-                e.Handled = true;
-            }
+
         }
     }
 }
