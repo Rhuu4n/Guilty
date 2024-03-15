@@ -79,6 +79,7 @@
             this.btnCancelar.Size = new System.Drawing.Size(233, 75);
             this.btnCancelar.TabIndex = 46;
             this.btnCancelar.TabStop = false;
+            this.btnCancelar.Visible = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click_1);
             // 
             // txtEntrar
@@ -130,6 +131,7 @@
             this.pbLogo.Size = new System.Drawing.Size(300, 300);
             this.pbLogo.TabIndex = 49;
             this.pbLogo.TabStop = false;
+            this.pbLogo.Visible = false;
             this.pbLogo.Click += new System.EventHandler(this.pbLogo_Click);
             // 
             // frmSalas
