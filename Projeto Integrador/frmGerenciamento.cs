@@ -58,7 +58,7 @@ namespace Projeto_Integrador
                 if (resposta == DialogResult.Yes)
                 {
                     cliente.Excluir();
-                    txtPesquisa_TextChanged(null, null);
+                    //txtPesquisa_TextChanged(null, null);
                 }
             }
             else
