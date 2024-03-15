@@ -51,7 +51,7 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.label1.Font = new System.Drawing.Font("Minecraft", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(446, 592);
+            this.label1.Location = new System.Drawing.Point(433, 592);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(189, 21);
             this.label1.TabIndex = 45;
@@ -60,11 +60,11 @@
             // pbEntrar
             // 
             this.pbEntrar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pbEntrar.BackColor = System.Drawing.Color.Transparent;
+            this.pbEntrar.BackColor = System.Drawing.Color.Black;
             this.pbEntrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbEntrar.Location = new System.Drawing.Point(405, 573);
+            this.pbEntrar.Location = new System.Drawing.Point(392, 573);
             this.pbEntrar.Name = "pbEntrar";
-            this.pbEntrar.Size = new System.Drawing.Size(248, 65);
+            this.pbEntrar.Size = new System.Drawing.Size(274, 65);
             this.pbEntrar.TabIndex = 43;
             this.pbEntrar.TabStop = false;
             // 
@@ -96,7 +96,7 @@
             // btnEntrar
             // 
             this.btnEntrar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnEntrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnEntrar.BackColor = System.Drawing.Color.Black;
             this.btnEntrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnEntrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEntrar.Location = new System.Drawing.Point(570, 658);
@@ -109,7 +109,7 @@
             // btnCriar
             // 
             this.btnCriar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnCriar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCriar.BackColor = System.Drawing.Color.Black;
             this.btnCriar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnCriar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCriar.Location = new System.Drawing.Point(386, 416);
@@ -122,7 +122,7 @@
             // pbLogo
             // 
             this.pbLogo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pbLogo.BackColor = System.Drawing.Color.Transparent;
+            this.pbLogo.BackColor = System.Drawing.Color.Black;
             this.pbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbLogo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbLogo.Location = new System.Drawing.Point(379, 103);

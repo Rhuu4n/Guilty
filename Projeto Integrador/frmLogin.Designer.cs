@@ -1,4 +1,10 @@
-﻿namespace Projeto_Integrador
+﻿using System.Drawing.Text;
+using System.Drawing;
+using System.IO;
+using System;
+using System.Windows.Forms;
+
+namespace Projeto_Integrador
 {
     partial class frmLogin
     {
@@ -54,7 +60,7 @@
             // 
             // pbGuilty
             // 
-            this.pbGuilty.BackColor = System.Drawing.Color.Transparent;
+            this.pbGuilty.BackColor = System.Drawing.Color.Black;
             this.pbGuilty.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbGuilty.Location = new System.Drawing.Point(239, 158);
             this.pbGuilty.Name = "pbGuilty";
@@ -94,7 +100,7 @@
             // 
             // pbSenha
             // 
-            this.pbSenha.BackColor = System.Drawing.Color.Transparent;
+            this.pbSenha.BackColor = System.Drawing.Color.Black;
             this.pbSenha.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbSenha.Location = new System.Drawing.Point(203, 472);
             this.pbSenha.Name = "pbSenha";
@@ -113,7 +119,7 @@
             // 
             // pbLogin
             // 
-            this.pbLogin.BackColor = System.Drawing.Color.Transparent;
+            this.pbLogin.BackColor = System.Drawing.Color.Black;
             this.pbLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbLogin.Location = new System.Drawing.Point(203, 401);
             this.pbLogin.Name = "pbLogin";
@@ -185,7 +191,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancelar.BackColor = System.Drawing.Color.Black;
             this.btnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancelar.Location = new System.Drawing.Point(560, 532);
@@ -198,7 +204,7 @@
             // btnConfirmar
             // 
             this.btnConfirmar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnConfirmar.BackColor = System.Drawing.Color.Transparent;
+            this.btnConfirmar.BackColor = System.Drawing.Color.Black;
             this.btnConfirmar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnConfirmar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnConfirmar.Location = new System.Drawing.Point(291, 532);
@@ -210,7 +216,7 @@
             // 
             // pbLogo
             // 
-            this.pbLogo.BackColor = System.Drawing.Color.Transparent;
+            this.pbLogo.BackColor = System.Drawing.Color.Black;
             this.pbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbLogo.Location = new System.Drawing.Point(65, -1);
             this.pbLogo.Name = "pbLogo";
@@ -221,7 +227,7 @@
             // btnCadastro
             // 
             this.btnCadastro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnCadastro.BackColor = System.Drawing.Color.Transparent;
+            this.btnCadastro.BackColor = System.Drawing.Color.Black;
             this.btnCadastro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCadastro.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCadastro.Location = new System.Drawing.Point(30, 532);

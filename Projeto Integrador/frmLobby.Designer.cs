@@ -152,7 +152,7 @@
             // 
             // btnVoltar
             // 
-            this.btnVoltar.BackColor = System.Drawing.Color.Transparent;
+            this.btnVoltar.BackColor = System.Drawing.Color.Black;
             this.btnVoltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVoltar.Location = new System.Drawing.Point(12, 12);
@@ -164,7 +164,7 @@
             // 
             // pbJogadores
             // 
-            this.pbJogadores.BackColor = System.Drawing.Color.Transparent;
+            this.pbJogadores.BackColor = System.Drawing.Color.Black;
             this.pbJogadores.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbJogadores.Location = new System.Drawing.Point(237, 199);
             this.pbJogadores.Name = "pbJogadores";
@@ -174,7 +174,7 @@
             // 
             // pbJ1
             // 
-            this.pbJ1.BackColor = System.Drawing.Color.Transparent;
+            this.pbJ1.BackColor = System.Drawing.Color.Black;
             this.pbJ1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbJ1.Location = new System.Drawing.Point(237, 320);
             this.pbJ1.Name = "pbJ1";
@@ -184,7 +184,7 @@
             // 
             // pbJ2
             // 
-            this.pbJ2.BackColor = System.Drawing.Color.Transparent;
+            this.pbJ2.BackColor = System.Drawing.Color.Black;
             this.pbJ2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbJ2.Location = new System.Drawing.Point(237, 440);
             this.pbJ2.Name = "pbJ2";
@@ -194,7 +194,7 @@
             // 
             // pbJ3
             // 
-            this.pbJ3.BackColor = System.Drawing.Color.Transparent;
+            this.pbJ3.BackColor = System.Drawing.Color.Black;
             this.pbJ3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbJ3.Location = new System.Drawing.Point(237, 566);
             this.pbJ3.Name = "pbJ3";
@@ -204,7 +204,7 @@
             // 
             // pbJ4
             // 
-            this.pbJ4.BackColor = System.Drawing.Color.Transparent;
+            this.pbJ4.BackColor = System.Drawing.Color.Black;
             this.pbJ4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbJ4.Location = new System.Drawing.Point(237, 691);
             this.pbJ4.Name = "pbJ4";
@@ -216,7 +216,7 @@
             // pbID
             // 
             this.pbID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbID.BackColor = System.Drawing.Color.Transparent;
+            this.pbID.BackColor = System.Drawing.Color.Black;
             this.pbID.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbID.Location = new System.Drawing.Point(189, 12);
             this.pbID.Name = "pbID";
@@ -227,7 +227,7 @@
             // pbLbl
             // 
             this.pbLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbLbl.BackColor = System.Drawing.Color.Transparent;
+            this.pbLbl.BackColor = System.Drawing.Color.Black;
             this.pbLbl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbLbl.Location = new System.Drawing.Point(621, 12);
             this.pbLbl.Name = "pbLbl";

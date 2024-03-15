@@ -39,16 +39,16 @@
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.pbGuilty = new System.Windows.Forms.PictureBox();
             this.btnCadastrar = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblSenha = new System.Windows.Forms.Label();
+            this.lblUser = new System.Windows.Forms.Label();
             this.pb2 = new System.Windows.Forms.PictureBox();
             this.pb1 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblCsenha = new System.Windows.Forms.Label();
             this.pb4 = new System.Windows.Forms.PictureBox();
             this.pb3 = new System.Windows.Forms.PictureBox();
             this.pb5 = new System.Windows.Forms.PictureBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblNascimento = new System.Windows.Forms.Label();
             this.btnVoltar = new System.Windows.Forms.PictureBox();
             this.pbMsenha1 = new System.Windows.Forms.PictureBox();
             this.pbMsenha2 = new System.Windows.Forms.PictureBox();
@@ -172,7 +172,7 @@
             // btnCadastrar
             // 
             this.btnCadastrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnCadastrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCadastrar.BackColor = System.Drawing.Color.Black;
             this.btnCadastrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCadastrar.Location = new System.Drawing.Point(291, 544);
@@ -182,35 +182,35 @@
             this.btnCadastrar.TabStop = false;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click_2);
             // 
-            // label2
+            // lblSenha
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(232)))), ((int)(((byte)(208)))));
-            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label2.Font = new System.Drawing.Font("Minecraft", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(196, 303);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 16);
-            this.label2.TabIndex = 56;
-            this.label2.Text = "SENHA";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSenha.AutoSize = true;
+            this.lblSenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(232)))), ((int)(((byte)(208)))));
+            this.lblSenha.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.lblSenha.Font = new System.Drawing.Font("Minecraft", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSenha.ForeColor = System.Drawing.Color.Black;
+            this.lblSenha.Location = new System.Drawing.Point(196, 303);
+            this.lblSenha.Name = "lblSenha";
+            this.lblSenha.Size = new System.Drawing.Size(65, 16);
+            this.lblSenha.TabIndex = 56;
+            this.lblSenha.Text = "SENHA";
+            this.lblSenha.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label1
+            // lblUser
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(232)))), ((int)(((byte)(208)))));
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label1.Font = new System.Drawing.Font("Minecraft", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(173, 249);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 16);
-            this.label1.TabIndex = 55;
-            this.label1.Text = "USUARIO";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.lblUser.AutoSize = true;
+            this.lblUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(232)))), ((int)(((byte)(208)))));
+            this.lblUser.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.lblUser.Font = new System.Drawing.Font("Minecraft", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.ForeColor = System.Drawing.Color.Black;
+            this.lblUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblUser.Location = new System.Drawing.Point(173, 249);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(88, 16);
+            this.lblUser.TabIndex = 55;
+            this.lblUser.Text = "USUARIO";
+            this.lblUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblUser.Click += new System.EventHandler(this.label1_Click);
             // 
             // pb2
             // 
@@ -232,34 +232,34 @@
             this.pb1.TabIndex = 53;
             this.pb1.TabStop = false;
             // 
-            // label4
+            // lblEmail
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(232)))), ((int)(((byte)(208)))));
-            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label4.Font = new System.Drawing.Font("Minecraft", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(190, 416);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 16);
-            this.label4.TabIndex = 60;
-            this.label4.Text = "E-MAIL";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(232)))), ((int)(((byte)(208)))));
+            this.lblEmail.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.lblEmail.Font = new System.Drawing.Font("Minecraft", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.ForeColor = System.Drawing.Color.Black;
+            this.lblEmail.Location = new System.Drawing.Point(190, 416);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(67, 16);
+            this.lblEmail.TabIndex = 60;
+            this.lblEmail.Text = "E-MAIL";
+            this.lblEmail.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label5
+            // lblCsenha
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(232)))), ((int)(((byte)(208)))));
-            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label5.Font = new System.Drawing.Font("Minecraft", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label5.Location = new System.Drawing.Point(60, 361);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(179, 16);
-            this.label5.TabIndex = 59;
-            this.label5.Text = "CONFIRMAR SENHA";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblCsenha.AutoSize = true;
+            this.lblCsenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(232)))), ((int)(((byte)(208)))));
+            this.lblCsenha.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.lblCsenha.Font = new System.Drawing.Font("Minecraft", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCsenha.ForeColor = System.Drawing.Color.Black;
+            this.lblCsenha.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblCsenha.Location = new System.Drawing.Point(60, 361);
+            this.lblCsenha.Name = "lblCsenha";
+            this.lblCsenha.Size = new System.Drawing.Size(179, 16);
+            this.lblCsenha.TabIndex = 59;
+            this.lblCsenha.Text = "CONFIRMAR SENHA";
+            this.lblCsenha.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pb4
             // 
@@ -291,20 +291,20 @@
             this.pb5.TabIndex = 61;
             this.pb5.TabStop = false;
             // 
-            // label8
+            // lblNascimento
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(232)))), ((int)(((byte)(208)))));
-            this.label8.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label8.Font = new System.Drawing.Font("Minecraft", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label8.Location = new System.Drawing.Point(135, 472);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(123, 16);
-            this.label8.TabIndex = 63;
-            this.label8.Text = "NASCIMENTO";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblNascimento.AutoSize = true;
+            this.lblNascimento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(232)))), ((int)(((byte)(208)))));
+            this.lblNascimento.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.lblNascimento.Font = new System.Drawing.Font("Minecraft", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNascimento.ForeColor = System.Drawing.Color.Black;
+            this.lblNascimento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblNascimento.Location = new System.Drawing.Point(135, 472);
+            this.lblNascimento.Name = "lblNascimento";
+            this.lblNascimento.Size = new System.Drawing.Size(123, 16);
+            this.lblNascimento.TabIndex = 63;
+            this.lblNascimento.Text = "NASCIMENTO";
+            this.lblNascimento.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnVoltar
             // 
@@ -349,14 +349,14 @@
             this.ClientSize = new System.Drawing.Size(700, 600);
             this.ControlBox = false;
             this.Controls.Add(this.btnVoltar);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.lblNascimento);
             this.Controls.Add(this.pb5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblEmail);
+            this.Controls.Add(this.lblCsenha);
             this.Controls.Add(this.pb4);
             this.Controls.Add(this.pb3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblSenha);
+            this.Controls.Add(this.lblUser);
             this.Controls.Add(this.pb2);
             this.Controls.Add(this.pb1);
             this.Controls.Add(this.btnCadastrar);
@@ -404,16 +404,16 @@
         private System.Windows.Forms.TextBox txtSenha2;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.PictureBox btnCadastrar;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblSenha;
+        private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.PictureBox pb2;
         private System.Windows.Forms.PictureBox pb1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label lblCsenha;
         private System.Windows.Forms.PictureBox pb4;
         private System.Windows.Forms.PictureBox pb3;
         private System.Windows.Forms.PictureBox pb5;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblNascimento;
         private System.Windows.Forms.PictureBox btnVoltar;
         private System.Windows.Forms.PictureBox pbMsenha1;
         private System.Windows.Forms.PictureBox pbMsenha2;
