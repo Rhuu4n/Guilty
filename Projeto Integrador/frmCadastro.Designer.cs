@@ -51,7 +51,7 @@
             this.btnVoltar = new System.Windows.Forms.PictureBox();
             this.pbMsenha1 = new System.Windows.Forms.PictureBox();
             this.pbMsenha2 = new System.Windows.Forms.PictureBox();
-            this.txtIdade = new System.Windows.Forms.TextBox();
+            this.txtIdade = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pbGuilty)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCadastrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb2)).BeginInit();
@@ -74,7 +74,6 @@
             this.txtID.Size = new System.Drawing.Size(186, 26);
             this.txtID.TabIndex = 49;
             this.txtID.Visible = false;
-//            this.txtID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtID_KeyPress);
             // 
             // txtSenha2
             // 
@@ -126,7 +125,6 @@
             this.txtEmail.Size = new System.Drawing.Size(186, 26);
             this.txtEmail.TabIndex = 31;
             this.txtEmail.Text = "Email@email.com";
- //           this.txtEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmail_KeyPress);
             // 
             // txtSenha
             // 
@@ -332,14 +330,16 @@
             // 
             // txtIdade
             // 
-            this.txtIdade.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtIdade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdade.Location = new System.Drawing.Point(291, 466);
+            this.txtIdade.CalendarFont = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdade.Font = new System.Drawing.Font("Minecraft", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdade.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.txtIdade.Location = new System.Drawing.Point(291, 472);
+            this.txtIdade.MaxDate = new System.DateTime(2024, 12, 25, 23, 59, 59, 0);
+            this.txtIdade.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
+            this.txtIdade.MinimumSize = new System.Drawing.Size(185, 25);
             this.txtIdade.Name = "txtIdade";
-            this.txtIdade.Size = new System.Drawing.Size(186, 26);
-            this.txtIdade.TabIndex = 41;
-            this.txtIdade.Text = "10/10/2010";
-            this.txtIdade.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdade_KeyPress);
+            this.txtIdade.Size = new System.Drawing.Size(186, 25);
+            this.txtIdade.TabIndex = 67;
             // 
             // frmCadastro
             // 
@@ -350,6 +350,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(700, 600);
             this.ControlBox = false;
+            this.Controls.Add(this.txtIdade);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.lblNascimento);
             this.Controls.Add(this.pb5);
@@ -365,7 +366,6 @@
             this.Controls.Add(this.pbGuilty);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.txtSenha2);
-            this.Controls.Add(this.txtIdade);
             this.Controls.Add(this.cbSenha2);
             this.Controls.Add(this.cbSenha);
             this.Controls.Add(this.txtEmail);
@@ -418,6 +418,6 @@
         private System.Windows.Forms.PictureBox btnVoltar;
         private System.Windows.Forms.PictureBox pbMsenha1;
         private System.Windows.Forms.PictureBox pbMsenha2;
-        private System.Windows.Forms.TextBox txtIdade;
+        private System.Windows.Forms.DateTimePicker txtIdade;
     }
 }
