@@ -62,6 +62,11 @@ namespace Projeto_Integrador
                 e.Handled = true;
                 MessageBox.Show("Este Campo só aceita até 6 caracteres");
             }
+            if (!char.IsDigit(e.KeyChar) & e.KeyChar != 8)
+            {
+                e.Handled = true;
+                MessageBox.Show("insira apenas números");
+            }
         }
 
         private void txtEntrar_TextChanged(object sender, EventArgs e)
@@ -112,19 +117,23 @@ namespace Projeto_Integrador
         {
             if (txtEntrar.Text != "")
             {
-                if (Jogo.GetInstance().setIdSala(Convert.ToInt32(txtEntrar.Text)))
+                if (txtEntrar.Text == Jogo.GetInstance().getIdSala().ToString() && Jogo.GetInstance().numeroJogadores < 4)
                 {
-                    this.Hide();
-                    frmLobby frm = new frmLobby();
-                    frm.ShowDialog();
-                    this.Show();
-                    return;
+                    if (Jogo.GetInstance().setIdSala(Convert.ToInt32(txtEntrar.Text)))
+                    {
+                        this.Hide();
+                        frmLobby frm = new frmLobby();
+                        frm.ShowDialog();
+                        this.Show();
+                        return;
+                    }
                 }
-
+                MessageBox.Show("Sala Cheia", "Erro");
             }
-            MessageBox.Show("Sala não encontrada", "Erro");
-            
-            
+            else
+            {
+                MessageBox.Show("Sala Não Existente", "Erro");
+            }
         }
 
         private void btnCriar_Click_1(object sender, EventArgs e)

@@ -418,6 +418,11 @@ namespace Projeto_Integrador
             this.Close();
         }
 
+        private void btnSairjogo_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void pbFundomesa_Click(object sender, EventArgs e)
         {
 

@@ -51,7 +51,7 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.label1.Font = new System.Drawing.Font("Minecraft", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(446, 592);
+            this.label1.Location = new System.Drawing.Point(433, 592);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(189, 21);
             this.label1.TabIndex = 45;
@@ -62,9 +62,9 @@
             this.pbEntrar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pbEntrar.BackColor = System.Drawing.Color.Transparent;
             this.pbEntrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbEntrar.Location = new System.Drawing.Point(405, 573);
+            this.pbEntrar.Location = new System.Drawing.Point(392, 573);
             this.pbEntrar.Name = "pbEntrar";
-            this.pbEntrar.Size = new System.Drawing.Size(248, 65);
+            this.pbEntrar.Size = new System.Drawing.Size(274, 65);
             this.pbEntrar.TabIndex = 43;
             this.pbEntrar.TabStop = false;
             // 
@@ -85,10 +85,10 @@
             // 
             this.txtEntrar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtEntrar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtEntrar.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEntrar.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEntrar.Location = new System.Drawing.Point(395, 658);
             this.txtEntrar.Name = "txtEntrar";
-            this.txtEntrar.Size = new System.Drawing.Size(169, 31);
+            this.txtEntrar.Size = new System.Drawing.Size(169, 30);
             this.txtEntrar.TabIndex = 33;
             this.txtEntrar.TextChanged += new System.EventHandler(this.txtEntrar_TextChanged);
             this.txtEntrar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);

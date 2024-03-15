@@ -4,7 +4,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
+using System.IO;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -207,8 +210,10 @@ namespace Projeto_Integrador
 
         private void btnCadastrar_Click_2(object sender, EventArgs e)
         {
+
             if (Jogo.emailvalido.verificaemail(txtEmail.Text) && txtUsuario.Text != "")
             {
+                
                 try
                 { 
                     if (txtSenha2.Text == txtSenha.Text)
@@ -241,22 +246,13 @@ namespace Projeto_Integrador
             this.Close();
         }
 
-        private void txtID_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtIdade_KeyPress(object sender, KeyPressEventArgs e)
         {
-         
-        }
-
-        private void txtEmail_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (txtEmail.Text.Contains("@") && txtEmail.Text.EndsWith(".com") && e.KeyChar != 8 || txtEmail.Text.Contains("@") && txtEmail.Text.EndsWith(".Com") && e.KeyChar != 8)
+            if (!char.IsDigit(e.KeyChar) & e.KeyChar != 8)
             {
                 e.Handled = true;
+                MessageBox.Show("insira apenas números");
             }
-        }
-
-        private void txtIdade_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
