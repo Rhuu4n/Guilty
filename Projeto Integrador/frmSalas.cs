@@ -112,19 +112,20 @@ namespace Projeto_Integrador
         {
             if (txtEntrar.Text != "")
             {
-                if (Jogo.GetInstance().setIdSala(Convert.ToInt32(txtEntrar.Text)))
+                if (Jogo.GetInstance().numeroJogadores < 4)
                 {
-                    this.Hide();
-                    frmLobby frm = new frmLobby();
-                    frm.ShowDialog();
-                    this.Show();
-                    return;
+                    if (Jogo.GetInstance().setIdSala(Convert.ToInt32(txtEntrar.Text)))
+                    {
+                        this.Hide();
+                        frmLobby frm = new frmLobby();
+                        frm.ShowDialog();
+                        this.Show();
+                        return;
+                    }
+                    MessageBox.Show("Sala Não encontrada", "Erro");
                 }
-
             }
-            MessageBox.Show("Sala não encontrada", "Erro");
-            
-            
+            MessageBox.Show("Sala Cheia", "Erro");
         }
 
         private void btnCriar_Click_1(object sender, EventArgs e)
