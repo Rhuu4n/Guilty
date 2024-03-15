@@ -133,6 +133,8 @@ namespace Projeto_Integrador
                 Thread.Sleep(800);
 
             }
+
+
         }
 
         private void AtualizarNomesNaThread(string Texto)

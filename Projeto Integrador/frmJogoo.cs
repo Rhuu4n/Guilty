@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Projeto_Integrador.models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -75,6 +76,10 @@ namespace Projeto_Integrador
 
         }
 
+        private void frmJogoo_Load(object sender, EventArgs e)
+        {
+            Jogo.GetInstance().iniciarPartida();
+        }
 
         public void adcCoins(int player)
         {
@@ -378,11 +383,6 @@ namespace Projeto_Integrador
 
         }
 
-        private void frmJogoo_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnRoubar1_Click(object sender, EventArgs e)
         {
             int player = (int)nudPlayer.Value;
@@ -421,6 +421,16 @@ namespace Projeto_Integrador
         private void btnSairjogo_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void pbFundomesa_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSairjogo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

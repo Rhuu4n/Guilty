@@ -14,7 +14,8 @@ namespace Projeto_Integrador.models
     internal sealed class Jogo
     {
         private static Jogo _instance;
-        int id_sala; 
+        int id_sala;
+        int id_partida;
         public string J1ID = "jogador1";
         public string J2ID = "jogador2";
         public string J3ID = "jogador3";
@@ -179,6 +180,7 @@ namespace Projeto_Integrador.models
                 Thread.Sleep(1000);
             }*/
 
+            numeroJogadores = 1;
             return salas.CriarSala();
         }
 
@@ -261,7 +263,7 @@ namespace Projeto_Integrador.models
 
                 if (nj != numeroJogadores)
                 {
-                    switch (nj)
+                    switch (numeroJogadores + 1)
                     {
                         case 2:
                             this.J2ID = Convert.ToString(dt.Rows[0]["jogador2"]);
@@ -282,6 +284,26 @@ namespace Projeto_Integrador.models
                 string[] nomesJogadores = new string[] { J1ID, J2ID, J3ID, J4ID };
             return nomesJogadores;
 
+        }
+
+        public void iniciarPartida()
+        {
+            clSalas sala = new clSalas();
+            sala.idSala = id_sala;
+            DataTable dt = sala.Pesquisar();
+
+            string j1Verifica = Convert.ToString(dt.Rows[0]["jogador1"]);
+
+            if (j1Verifica == id)
+            {
+                Debug.WriteLine("Funfou " + j1Verifica);
+
+                clPartida partida = new clPartida();
+                partida.idSala = id_sala;
+                partida.Num_jogadores = numeroJogadores;
+                partida.Jogador_atual = 1;
+                id_partida = partida.CriarPartida();
+            }
         }
 
 

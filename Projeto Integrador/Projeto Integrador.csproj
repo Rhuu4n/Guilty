@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clCartas.cs" />
+    <Compile Include="clPartida.cs" />
     <Compile Include="clSalas.cs" />
     <Compile Include="clCliente.cs" />
     <Compile Include="clUsuario.cs" />
