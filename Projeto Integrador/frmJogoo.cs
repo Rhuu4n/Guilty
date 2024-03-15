@@ -417,5 +417,10 @@ namespace Projeto_Integrador
         {
             this.Close();
         }
+
+        private void btnSairjogo_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

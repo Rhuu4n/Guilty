@@ -308,6 +308,7 @@
             this.btnSairjogo.Text = "Sair do jogo";
             this.btnSairjogo.UseVisualStyleBackColor = false;
             this.btnSairjogo.Visible = false;
+            this.btnSairjogo.Click += new System.EventHandler(this.btnSairjogo_Click);
             // 
             // btnSair
             // 
