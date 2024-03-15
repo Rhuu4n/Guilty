@@ -152,6 +152,10 @@ namespace Projeto_Integrador.models
         {
             return nome;
         }
+        public bool getCheio()
+        {
+            return cheio;
+        }
 
         public string getNovoJogador()
         {
@@ -242,19 +246,13 @@ namespace Projeto_Integrador.models
             return minhaArrayDeStrings;
         }
 
-        public void verificarJogadores()
+        public string[] verificarJogadores()
         {
-            while (!cheio)
-            {
                 int nj;
-
-
 
                 clSalas sala = new clSalas();
                 sala.idSala = id_sala;
                 DataTable dt = sala.Pesquisar();
-
-
 
                 nj = Convert.ToInt32(dt.Rows[0]["Numero_jogadores"]);
                 this.J1ID = Convert.ToString(dt.Rows[0]["jogador1"]);
@@ -265,40 +263,26 @@ namespace Projeto_Integrador.models
                 {
                     switch (nj)
                     {
-                        case 1:
+                        case 2:
                             this.J2ID = Convert.ToString(dt.Rows[0]["jogador2"]);
                             numeroJogadores++;
                             break;
-                        case 2:
+                        case 3:
                             this.J3ID = Convert.ToString(dt.Rows[0]["jogador3"]);
                             numeroJogadores++;
                             break;
-                        case 3:
+                        case 4:
                             this.J4ID = Convert.ToString(dt.Rows[0]["jogador4"]);
                             numeroJogadores++;
-                            break;
-                        case 4:
                             cheio = true;
                             break;
                     }
 
-                }
-                this.frmLobby.atualizar_nomes(J1ID, J2ID, J3ID, J4ID);
-                Thread.Sleep(1000); // Espera 1 segundo antes de imprimir a próxima mensagem
-            }
+                   }
+                string[] nomesJogadores = new string[] { J1ID, J2ID, J3ID, J4ID };
+            return nomesJogadores;
 
         }
-
-        public void entraSala(frmLobby pai)
-        {
-
-
-
-            this.frmLobby = pai;
-            Thread thread = new Thread(new ThreadStart(verificarJogadores));
-        }
-
-
 
 
         public clUsuario getUsuarioLogado() {

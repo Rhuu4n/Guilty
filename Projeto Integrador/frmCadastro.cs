@@ -4,7 +4,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
+using System.IO;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -247,6 +250,11 @@ namespace Projeto_Integrador
         }
 
         private void txtEmail_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void txtIdade_TextChanged(object sender, EventArgs e)
         {
 
         }

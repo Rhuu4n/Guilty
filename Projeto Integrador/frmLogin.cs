@@ -21,7 +21,6 @@ namespace Projeto_Integrador
         public frmLogin()
         {
             InitializeComponent();
-            LoadCustomFont();
 
             /*imagem fundo
             pbLoginfundo.Load("https://i.imgur.com/f0xYqNO.jpg");
@@ -51,41 +50,6 @@ namespace Projeto_Integrador
 
             pbLogo.Load("https://i.imgur.com/K771TBD.png");
             pbLogo.SizeMode = PictureBoxSizeMode.StretchImage;
-        }
-
-        private void LoadCustomFont()
-        {
-            // Caminho para o arquivo .ttf (considere ajustar conforme necessário)
-            string fontPath = Path.Combine(Application.StartupPath, "..", "..", "Resources", "Minecraft.ttf");
-
-            // Verifica se o arquivo da fonte existe
-            if (System.IO.File.Exists(fontPath))
-            {
-                // Carrega a fonte personalizada
-                PrivateFontCollection privateFonts = new PrivateFontCollection();
-                privateFonts.AddFontFile(fontPath);
-
-                // Define a fonte personalizada para o controle Label
-                if (privateFonts.Families.Length > 0)
-                {
-                    Font customFont = new Font(privateFonts.Families[0], 16f);
-                    label1.Font = customFont;
-                    label2.Font = customFont;
-                    btnTeste.Font = customFont;
-                    btnTeste.Font = new Font(privateFonts.Families[0], 12f);
-                    btnGerenciador.Font = customFont;
-                    btnGerenciador.Font = new Font(privateFonts.Families[0], 12f);
-                }
-                else
-                {
-                    MessageBox.Show("Falha ao carregar a fonte personalizada.");
-                }
-            }
-            else
-            {
-                MessageBox.Show("O arquivo da fonte personalizada não foi encontrado.");
-            }
-
         }
 
         bool logado = false;
