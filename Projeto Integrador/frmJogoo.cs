@@ -420,7 +420,7 @@ namespace Projeto_Integrador
 
         private void btnSairjogo_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            //Application.Exit();
         }
 
         private void pbFundomesa_Click(object sender, EventArgs e)
