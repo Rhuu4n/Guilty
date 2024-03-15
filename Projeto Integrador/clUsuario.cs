@@ -55,7 +55,7 @@ namespace Projeto_Integrador
 
                 if (id > 0)
                 {
-                    MessageBox.Show("Cliente cadastrado com sucesso!", "Usuario com sucesso",
+                    MessageBox.Show("Usuario cadastrado com sucesso!", "Usuario com sucesso",
                                      MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else

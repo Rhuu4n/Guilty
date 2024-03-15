@@ -62,6 +62,11 @@ namespace Projeto_Integrador
                 e.Handled = true;
                 MessageBox.Show("Este Campo só aceita até 6 caracteres");
             }
+            if (!char.IsDigit(e.KeyChar) & e.KeyChar != 8)
+            {
+                e.Handled = true;
+                MessageBox.Show("insira apenas números");
+            }
         }
 
         private void txtEntrar_TextChanged(object sender, EventArgs e)
