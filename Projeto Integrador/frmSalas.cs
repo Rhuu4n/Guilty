@@ -117,7 +117,7 @@ namespace Projeto_Integrador
         {
             if (txtEntrar.Text != "")
             {
-                if (Jogo.GetInstance().numeroJogadores < 4)
+                if (txtEntrar.Text == Jogo.GetInstance().getIdSala().ToString() && Jogo.GetInstance().numeroJogadores < 4)
                 {
                     if (Jogo.GetInstance().setIdSala(Convert.ToInt32(txtEntrar.Text)))
                     {
