@@ -267,7 +267,7 @@ namespace Projeto_Integrador
 
             if (txtUsuario.Text != "" || txtSenha.Text != "")
             {
-                if (txtUsuario.Text == "admin")
+                if (txtUsuario.Text == "admin" && txtSenha.Text == "admin" )
                 {
                     btnTeste.Visible = true;
                     btnGerenciador.Visible = true;
@@ -276,26 +276,26 @@ namespace Projeto_Integrador
                 {
                     btnTeste.Visible = false;
                     btnGerenciador.Visible = false;
-                }
 
-                //ELDES{{
-                try
-                {
-                    Jogo.GetInstance().login(txtUsuario.Text, txtSenha.Text);
-                    if (Jogo.GetInstance().getUsuarioLogado() != null)
+                    //ELDES{{
+                    try
                     {
-                        logado = true;
-                        this.Close();
-                    }
+                        Jogo.GetInstance().login(txtUsuario.Text, txtSenha.Text);
+                        if (Jogo.GetInstance().getUsuarioLogado() != null)
+                        {
+                            logado = true;
+                            this.Close();
+                        }
 
-                }
-                catch (LoginIncorretoException ex)
-                {
-                    MessageBox.Show("Erro, usúario ou senha inválidos", "Dados inválidos", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                }
-                catch (BdException ex)
-                {
-                    MessageBox.Show(ex.ToString(), "Erro de conexão com servidor", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    }
+                    catch (LoginIncorretoException ex)
+                    {
+                        MessageBox.Show("Erro, usúario ou senha inválidos", "Dados inválidos", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    }
+                    catch (BdException ex)
+                    {
+                        MessageBox.Show(ex.ToString(), "Erro de conexão com servidor", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    }
                 }
             }
 
@@ -312,21 +312,6 @@ namespace Projeto_Integrador
             frmCadastro frm = new frmCadastro();
             frm.ShowDialog();
             this.Show();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void pbGuilty_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtSenha_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

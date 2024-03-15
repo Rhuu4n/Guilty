@@ -67,7 +67,7 @@ namespace Projeto_Integrador
             this.pbGuilty.Size = new System.Drawing.Size(222, 221);
             this.pbGuilty.TabIndex = 9;
             this.pbGuilty.TabStop = false;
-            this.pbGuilty.Click += new System.EventHandler(this.pbGuilty_Click);
+//            this.pbGuilty.Click += new System.EventHandler(this.pbGuilty_Click);
             // 
             // label2
             // 
@@ -151,7 +151,7 @@ namespace Projeto_Integrador
             this.txtSenha.Size = new System.Drawing.Size(149, 25);
             this.txtSenha.TabIndex = 12;
             this.txtSenha.UseSystemPasswordChar = true;
-            this.txtSenha.TextChanged += new System.EventHandler(this.txtSenha_TextChanged);
+            //this.txtSenha.TextChanged += new System.EventHandler(this.txtSenha_TextChanged);
             this.txtSenha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSenha_KeyPress);
             // 
             // btnTeste
