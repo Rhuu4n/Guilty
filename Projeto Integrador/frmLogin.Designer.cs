@@ -151,7 +151,7 @@ namespace Projeto_Integrador
             this.txtSenha.Size = new System.Drawing.Size(149, 25);
             this.txtSenha.TabIndex = 12;
             this.txtSenha.UseSystemPasswordChar = true;
-            this.txtSenha.TextChanged += new System.EventHandler(this.txtSenha_TextChanged);
+            //this.txtSenha.TextChanged += new System.EventHandler(this.txtSenha_TextChanged);
             this.txtSenha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSenha_KeyPress);
             // 
             // btnTeste

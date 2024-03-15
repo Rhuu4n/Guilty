@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastro));
             this.txtID = new System.Windows.Forms.TextBox();
             this.txtSenha2 = new System.Windows.Forms.TextBox();
-            this.txtIdad = new System.Windows.Forms.TextBox();
             this.cbSenha2 = new System.Windows.Forms.CheckBox();
             this.cbSenha = new System.Windows.Forms.CheckBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -52,7 +51,7 @@
             this.btnVoltar = new System.Windows.Forms.PictureBox();
             this.pbMsenha1 = new System.Windows.Forms.PictureBox();
             this.pbMsenha2 = new System.Windows.Forms.PictureBox();
-            this.txtIdade = new System.Windows.Forms.DateTimePicker();
+            this.txtIdade = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbGuilty)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCadastrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb2)).BeginInit();
@@ -69,46 +68,35 @@
             // 
             this.txtID.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtID.Enabled = false;
-            this.txtID.Font = new System.Drawing.Font("Minecraft", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtID.Location = new System.Drawing.Point(291, 518);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(186, 25);
+            this.txtID.Size = new System.Drawing.Size(186, 26);
             this.txtID.TabIndex = 49;
             this.txtID.Visible = false;
-            this.txtID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtID_KeyPress);
+//            this.txtID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtID_KeyPress);
             // 
             // txtSenha2
             // 
             this.txtSenha2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSenha2.Font = new System.Drawing.Font("Minecraft", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSenha2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSenha2.Location = new System.Drawing.Point(291, 361);
             this.txtSenha2.Name = "txtSenha2";
-            this.txtSenha2.Size = new System.Drawing.Size(186, 25);
+            this.txtSenha2.Size = new System.Drawing.Size(186, 26);
             this.txtSenha2.TabIndex = 42;
             this.txtSenha2.UseSystemPasswordChar = true;
             this.txtSenha2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSenha2_KeyPress_1);
-            // 
-            // txtIdad
-            // 
-            this.txtIdad.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtIdad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdad.Location = new System.Drawing.Point(483, 65);
-            this.txtIdad.Name = "txtIdad";
-            this.txtIdad.Size = new System.Drawing.Size(186, 26);
-            this.txtIdad.TabIndex = 41;
-            this.txtIdad.Text = "10/10/2010";
-            this.txtIdad.Visible = false;
             // 
             // cbSenha2
             // 
             this.cbSenha2.AutoSize = true;
             this.cbSenha2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(232)))), ((int)(((byte)(208)))));
             this.cbSenha2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbSenha2.Font = new System.Drawing.Font("Minecraft", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbSenha2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbSenha2.ForeColor = System.Drawing.Color.Black;
             this.cbSenha2.Location = new System.Drawing.Point(512, 363);
             this.cbSenha2.Name = "cbSenha2";
-            this.cbSenha2.Size = new System.Drawing.Size(150, 20);
+            this.cbSenha2.Size = new System.Drawing.Size(143, 24);
             this.cbSenha2.TabIndex = 38;
             this.cbSenha2.Text = "Mostrar senha";
             this.cbSenha2.UseVisualStyleBackColor = false;
@@ -119,11 +107,11 @@
             this.cbSenha.AutoSize = true;
             this.cbSenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(232)))), ((int)(((byte)(208)))));
             this.cbSenha.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbSenha.Font = new System.Drawing.Font("Minecraft", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbSenha.ForeColor = System.Drawing.Color.Black;
             this.cbSenha.Location = new System.Drawing.Point(512, 308);
             this.cbSenha.Name = "cbSenha";
-            this.cbSenha.Size = new System.Drawing.Size(150, 20);
+            this.cbSenha.Size = new System.Drawing.Size(143, 24);
             this.cbSenha.TabIndex = 36;
             this.cbSenha.Text = "Mostrar senha";
             this.cbSenha.UseVisualStyleBackColor = false;
@@ -132,21 +120,21 @@
             // txtEmail
             // 
             this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtEmail.Font = new System.Drawing.Font("Minecraft", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(291, 413);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(186, 25);
+            this.txtEmail.Size = new System.Drawing.Size(186, 26);
             this.txtEmail.TabIndex = 31;
             this.txtEmail.Text = "Email@email.com";
-            this.txtEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmail_KeyPress);
+ //           this.txtEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmail_KeyPress);
             // 
             // txtSenha
             // 
             this.txtSenha.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSenha.Font = new System.Drawing.Font("Minecraft", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSenha.Location = new System.Drawing.Point(291, 303);
             this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(186, 25);
+            this.txtSenha.Size = new System.Drawing.Size(186, 26);
             this.txtSenha.TabIndex = 27;
             this.txtSenha.Text = "1234";
             this.txtSenha.UseSystemPasswordChar = true;
@@ -156,10 +144,10 @@
             // txtUsuario
             // 
             this.txtUsuario.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtUsuario.Font = new System.Drawing.Font("Minecraft", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.Location = new System.Drawing.Point(291, 241);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(186, 25);
+            this.txtUsuario.Size = new System.Drawing.Size(186, 26);
             this.txtUsuario.TabIndex = 26;
             this.txtUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsuario_KeyPress);
             // 
@@ -191,11 +179,11 @@
             this.lblSenha.AutoSize = true;
             this.lblSenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(232)))), ((int)(((byte)(208)))));
             this.lblSenha.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.lblSenha.Font = new System.Drawing.Font("Minecraft", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSenha.ForeColor = System.Drawing.Color.Black;
             this.lblSenha.Location = new System.Drawing.Point(196, 303);
             this.lblSenha.Name = "lblSenha";
-            this.lblSenha.Size = new System.Drawing.Size(65, 16);
+            this.lblSenha.Size = new System.Drawing.Size(70, 20);
             this.lblSenha.TabIndex = 56;
             this.lblSenha.Text = "SENHA";
             this.lblSenha.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -205,12 +193,12 @@
             this.lblUser.AutoSize = true;
             this.lblUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(232)))), ((int)(((byte)(208)))));
             this.lblUser.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.lblUser.Font = new System.Drawing.Font("Minecraft", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUser.ForeColor = System.Drawing.Color.Black;
             this.lblUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblUser.Location = new System.Drawing.Point(173, 249);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(88, 16);
+            this.lblUser.Size = new System.Drawing.Size(91, 20);
             this.lblUser.TabIndex = 55;
             this.lblUser.Text = "USUARIO";
             this.lblUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -240,11 +228,11 @@
             this.lblEmail.AutoSize = true;
             this.lblEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(232)))), ((int)(((byte)(208)))));
             this.lblEmail.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.lblEmail.Font = new System.Drawing.Font("Minecraft", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.Color.Black;
             this.lblEmail.Location = new System.Drawing.Point(190, 416);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(67, 16);
+            this.lblEmail.Size = new System.Drawing.Size(69, 20);
             this.lblEmail.TabIndex = 60;
             this.lblEmail.Text = "E-MAIL";
             this.lblEmail.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -254,12 +242,12 @@
             this.lblCsenha.AutoSize = true;
             this.lblCsenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(232)))), ((int)(((byte)(208)))));
             this.lblCsenha.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.lblCsenha.Font = new System.Drawing.Font("Minecraft", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCsenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCsenha.ForeColor = System.Drawing.Color.Black;
             this.lblCsenha.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblCsenha.Location = new System.Drawing.Point(60, 361);
             this.lblCsenha.Name = "lblCsenha";
-            this.lblCsenha.Size = new System.Drawing.Size(179, 16);
+            this.lblCsenha.Size = new System.Drawing.Size(181, 20);
             this.lblCsenha.TabIndex = 59;
             this.lblCsenha.Text = "CONFIRMAR SENHA";
             this.lblCsenha.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -299,12 +287,12 @@
             this.lblNascimento.AutoSize = true;
             this.lblNascimento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(232)))), ((int)(((byte)(208)))));
             this.lblNascimento.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.lblNascimento.Font = new System.Drawing.Font("Minecraft", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNascimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNascimento.ForeColor = System.Drawing.Color.Black;
             this.lblNascimento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblNascimento.Location = new System.Drawing.Point(135, 472);
             this.lblNascimento.Name = "lblNascimento";
-            this.lblNascimento.Size = new System.Drawing.Size(123, 16);
+            this.lblNascimento.Size = new System.Drawing.Size(124, 20);
             this.lblNascimento.TabIndex = 63;
             this.lblNascimento.Text = "NASCIMENTO";
             this.lblNascimento.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -344,11 +332,14 @@
             // 
             // txtIdade
             // 
-            this.txtIdade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdade.Location = new System.Drawing.Point(291, 467);
+            this.txtIdade.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtIdade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdade.Location = new System.Drawing.Point(291, 466);
             this.txtIdade.Name = "txtIdade";
             this.txtIdade.Size = new System.Drawing.Size(186, 26);
-            this.txtIdade.TabIndex = 67;
+            this.txtIdade.TabIndex = 41;
+            this.txtIdade.Text = "10/10/2010";
+            this.txtIdade.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdade_KeyPress);
             // 
             // frmCadastro
             // 
@@ -359,7 +350,6 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(700, 600);
             this.ControlBox = false;
-            this.Controls.Add(this.txtIdade);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.lblNascimento);
             this.Controls.Add(this.pb5);
@@ -375,7 +365,7 @@
             this.Controls.Add(this.pbGuilty);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.txtSenha2);
-            this.Controls.Add(this.txtIdad);
+            this.Controls.Add(this.txtIdade);
             this.Controls.Add(this.cbSenha2);
             this.Controls.Add(this.cbSenha);
             this.Controls.Add(this.txtEmail);
@@ -412,7 +402,6 @@
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.PictureBox pbGuilty;
-        private System.Windows.Forms.TextBox txtIdad;
         private System.Windows.Forms.TextBox txtSenha2;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.PictureBox btnCadastrar;
@@ -429,6 +418,6 @@
         private System.Windows.Forms.PictureBox btnVoltar;
         private System.Windows.Forms.PictureBox pbMsenha1;
         private System.Windows.Forms.PictureBox pbMsenha2;
-        private System.Windows.Forms.DateTimePicker txtIdade;
+        private System.Windows.Forms.TextBox txtIdade;
     }
 }

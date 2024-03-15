@@ -153,7 +153,7 @@ namespace Projeto_Integrador
                 {
 
 
-                    Jogo.GetInstance().cadastro(txtUsuario.Text, txtSenha.Text, txtEmail.Text, txtIdad.Text);
+                    Jogo.GetInstance().cadastro(txtUsuario.Text, txtSenha.Text, txtEmail.Text, txtIdade.Text);
 
                     // txtID.Text = Convert.ToString(cliente.Salvar());
                     /*
@@ -210,13 +210,15 @@ namespace Projeto_Integrador
 
         private void btnCadastrar_Click_2(object sender, EventArgs e)
         {
+
             if (Jogo.emailvalido.verificaemail(txtEmail.Text) && txtUsuario.Text != "")
             {
+                
                 try
                 { 
                     if (txtSenha2.Text == txtSenha.Text)
                     {
-                        Jogo.GetInstance().cadastro(txtUsuario.Text, txtSenha.Text, txtEmail.Text, txtIdad.Text);
+                        Jogo.GetInstance().cadastro(txtUsuario.Text, txtSenha.Text, txtEmail.Text, txtIdade.Text);
                     }
 
                     else
@@ -244,19 +246,13 @@ namespace Projeto_Integrador
             this.Close();
         }
 
-        private void txtID_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtIdade_KeyPress(object sender, KeyPressEventArgs e)
         {
-         
-        }
-
-        private void txtEmail_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
-
-        private void txtIdade_TextChanged(object sender, EventArgs e)
-        {
-
+            if (!char.IsDigit(e.KeyChar) & e.KeyChar != 8)
+            {
+                e.Handled = true;
+                MessageBox.Show("insira apenas números");
+            }
         }
     }
 }
