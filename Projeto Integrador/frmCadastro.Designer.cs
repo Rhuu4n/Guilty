@@ -68,10 +68,10 @@
             // 
             this.txtID.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtID.Enabled = false;
-            this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtID.Font = new System.Drawing.Font("Minecraft", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtID.Location = new System.Drawing.Point(291, 518);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(186, 26);
+            this.txtID.Size = new System.Drawing.Size(186, 25);
             this.txtID.TabIndex = 49;
             this.txtID.Visible = false;
             this.txtID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtID_KeyPress);
@@ -79,10 +79,10 @@
             // txtSenha2
             // 
             this.txtSenha2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSenha2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSenha2.Font = new System.Drawing.Font("Minecraft", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSenha2.Location = new System.Drawing.Point(291, 361);
             this.txtSenha2.Name = "txtSenha2";
-            this.txtSenha2.Size = new System.Drawing.Size(186, 26);
+            this.txtSenha2.Size = new System.Drawing.Size(186, 25);
             this.txtSenha2.TabIndex = 42;
             this.txtSenha2.UseSystemPasswordChar = true;
             this.txtSenha2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSenha2_KeyPress_1);
@@ -90,10 +90,10 @@
             // txtIdade
             // 
             this.txtIdade.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtIdade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdade.Font = new System.Drawing.Font("Minecraft", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIdade.Location = new System.Drawing.Point(291, 469);
             this.txtIdade.Name = "txtIdade";
-            this.txtIdade.Size = new System.Drawing.Size(186, 26);
+            this.txtIdade.Size = new System.Drawing.Size(186, 25);
             this.txtIdade.TabIndex = 41;
             this.txtIdade.Text = "10/10/2010";
             this.txtIdade.TextChanged += new System.EventHandler(this.txtIdade_TextChanged);
@@ -103,11 +103,11 @@
             this.cbSenha2.AutoSize = true;
             this.cbSenha2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(232)))), ((int)(((byte)(208)))));
             this.cbSenha2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbSenha2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbSenha2.Font = new System.Drawing.Font("Minecraft", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbSenha2.ForeColor = System.Drawing.Color.Black;
             this.cbSenha2.Location = new System.Drawing.Point(512, 363);
             this.cbSenha2.Name = "cbSenha2";
-            this.cbSenha2.Size = new System.Drawing.Size(143, 24);
+            this.cbSenha2.Size = new System.Drawing.Size(150, 20);
             this.cbSenha2.TabIndex = 38;
             this.cbSenha2.Text = "Mostrar senha";
             this.cbSenha2.UseVisualStyleBackColor = false;
@@ -118,11 +118,11 @@
             this.cbSenha.AutoSize = true;
             this.cbSenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(232)))), ((int)(((byte)(208)))));
             this.cbSenha.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbSenha.Font = new System.Drawing.Font("Minecraft", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbSenha.ForeColor = System.Drawing.Color.Black;
             this.cbSenha.Location = new System.Drawing.Point(512, 308);
             this.cbSenha.Name = "cbSenha";
-            this.cbSenha.Size = new System.Drawing.Size(143, 24);
+            this.cbSenha.Size = new System.Drawing.Size(150, 20);
             this.cbSenha.TabIndex = 36;
             this.cbSenha.Text = "Mostrar senha";
             this.cbSenha.UseVisualStyleBackColor = false;
@@ -131,10 +131,10 @@
             // txtEmail
             // 
             this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Font = new System.Drawing.Font("Minecraft", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(291, 413);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(186, 26);
+            this.txtEmail.Size = new System.Drawing.Size(186, 25);
             this.txtEmail.TabIndex = 31;
             this.txtEmail.Text = "Email@email.com";
             this.txtEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmail_KeyPress);
@@ -142,10 +142,10 @@
             // txtSenha
             // 
             this.txtSenha.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSenha.Font = new System.Drawing.Font("Minecraft", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSenha.Location = new System.Drawing.Point(291, 303);
             this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(186, 26);
+            this.txtSenha.Size = new System.Drawing.Size(186, 25);
             this.txtSenha.TabIndex = 27;
             this.txtSenha.Text = "1234";
             this.txtSenha.UseSystemPasswordChar = true;
@@ -155,16 +155,16 @@
             // txtUsuario
             // 
             this.txtUsuario.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.Font = new System.Drawing.Font("Minecraft", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.Location = new System.Drawing.Point(291, 241);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(186, 26);
+            this.txtUsuario.Size = new System.Drawing.Size(186, 25);
             this.txtUsuario.TabIndex = 26;
             this.txtUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsuario_KeyPress);
             // 
             // pbGuilty
             // 
-            this.pbGuilty.BackColor = System.Drawing.Color.Black;
+            this.pbGuilty.BackColor = System.Drawing.Color.Transparent;
             this.pbGuilty.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbGuilty.Location = new System.Drawing.Point(234, -1);
             this.pbGuilty.Name = "pbGuilty";
@@ -175,7 +175,7 @@
             // btnCadastrar
             // 
             this.btnCadastrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnCadastrar.BackColor = System.Drawing.Color.Black;
+            this.btnCadastrar.BackColor = System.Drawing.Color.Transparent;
             this.btnCadastrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCadastrar.Location = new System.Drawing.Point(291, 544);
@@ -213,11 +213,10 @@
             this.lblUser.TabIndex = 55;
             this.lblUser.Text = "USUARIO";
             this.lblUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblUser.Click += new System.EventHandler(this.label1_Click);
             // 
             // pb2
             // 
-            this.pb2.BackColor = System.Drawing.Color.Black;
+            this.pb2.BackColor = System.Drawing.Color.Transparent;
             this.pb2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pb2.Location = new System.Drawing.Point(177, 290);
             this.pb2.Name = "pb2";
@@ -227,7 +226,7 @@
             // 
             // pb1
             // 
-            this.pb1.BackColor = System.Drawing.Color.Black;
+            this.pb1.BackColor = System.Drawing.Color.Transparent;
             this.pb1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pb1.Location = new System.Drawing.Point(155, 234);
             this.pb1.Name = "pb1";
@@ -266,7 +265,7 @@
             // 
             // pb4
             // 
-            this.pb4.BackColor = System.Drawing.Color.Black;
+            this.pb4.BackColor = System.Drawing.Color.Transparent;
             this.pb4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pb4.Location = new System.Drawing.Point(177, 402);
             this.pb4.Name = "pb4";
@@ -276,7 +275,7 @@
             // 
             // pb3
             // 
-            this.pb3.BackColor = System.Drawing.Color.Black;
+            this.pb3.BackColor = System.Drawing.Color.Transparent;
             this.pb3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pb3.Location = new System.Drawing.Point(27, 346);
             this.pb3.Name = "pb3";
@@ -286,7 +285,7 @@
             // 
             // pb5
             // 
-            this.pb5.BackColor = System.Drawing.Color.Black;
+            this.pb5.BackColor = System.Drawing.Color.Transparent;
             this.pb5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pb5.Location = new System.Drawing.Point(114, 458);
             this.pb5.Name = "pb5";
@@ -324,7 +323,7 @@
             // 
             // pbMsenha1
             // 
-            this.pbMsenha1.BackColor = System.Drawing.Color.Black;
+            this.pbMsenha1.BackColor = System.Drawing.Color.Transparent;
             this.pbMsenha1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbMsenha1.Location = new System.Drawing.Point(483, 290);
             this.pbMsenha1.Name = "pbMsenha1";
@@ -334,7 +333,7 @@
             // 
             // pbMsenha2
             // 
-            this.pbMsenha2.BackColor = System.Drawing.Color.Black;
+            this.pbMsenha2.BackColor = System.Drawing.Color.Transparent;
             this.pbMsenha2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbMsenha2.Location = new System.Drawing.Point(483, 346);
             this.pbMsenha2.Name = "pbMsenha2";

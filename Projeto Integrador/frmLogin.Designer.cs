@@ -60,7 +60,7 @@ namespace Projeto_Integrador
             // 
             // pbGuilty
             // 
-            this.pbGuilty.BackColor = System.Drawing.Color.Black;
+            this.pbGuilty.BackColor = System.Drawing.Color.Transparent;
             this.pbGuilty.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbGuilty.Location = new System.Drawing.Point(239, 158);
             this.pbGuilty.Name = "pbGuilty";
@@ -74,11 +74,11 @@ namespace Projeto_Integrador
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(232)))), ((int)(((byte)(208)))));
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(223, 484);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 24);
+            this.label2.Size = new System.Drawing.Size(83, 21);
             this.label2.TabIndex = 47;
             this.label2.Text = "SENHA";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -88,19 +88,19 @@ namespace Projeto_Integrador
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(232)))), ((int)(((byte)(208)))));
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label1.Location = new System.Drawing.Point(223, 412);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 24);
+            this.label1.Size = new System.Drawing.Size(83, 21);
             this.label1.TabIndex = 46;
             this.label1.Text = "LOGIN";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pbSenha
             // 
-            this.pbSenha.BackColor = System.Drawing.Color.Black;
+            this.pbSenha.BackColor = System.Drawing.Color.Transparent;
             this.pbSenha.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbSenha.Location = new System.Drawing.Point(203, 472);
             this.pbSenha.Name = "pbSenha";
@@ -110,16 +110,16 @@ namespace Projeto_Integrador
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.Font = new System.Drawing.Font("Minecraft", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.Location = new System.Drawing.Point(340, 412);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(149, 31);
+            this.txtUsuario.Size = new System.Drawing.Size(149, 25);
             this.txtUsuario.TabIndex = 11;
             this.txtUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // pbLogin
             // 
-            this.pbLogin.BackColor = System.Drawing.Color.Black;
+            this.pbLogin.BackColor = System.Drawing.Color.Transparent;
             this.pbLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbLogin.Location = new System.Drawing.Point(203, 401);
             this.pbLogin.Name = "pbLogin";
@@ -145,10 +145,10 @@ namespace Projeto_Integrador
             // 
             // txtSenha
             // 
-            this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSenha.Font = new System.Drawing.Font("Minecraft", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSenha.Location = new System.Drawing.Point(340, 484);
             this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(149, 31);
+            this.txtSenha.Size = new System.Drawing.Size(149, 25);
             this.txtSenha.TabIndex = 12;
             this.txtSenha.UseSystemPasswordChar = true;
             this.txtSenha.TextChanged += new System.EventHandler(this.txtSenha_TextChanged);
@@ -161,7 +161,7 @@ namespace Projeto_Integrador
             this.btnTeste.BackColor = System.Drawing.Color.Black;
             this.btnTeste.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTeste.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTeste.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTeste.Font = new System.Drawing.Font("Minecraft", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTeste.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnTeste.Location = new System.Drawing.Point(30, 412);
             this.btnTeste.Name = "btnTeste";
@@ -179,7 +179,7 @@ namespace Projeto_Integrador
             this.btnGerenciador.BackColor = System.Drawing.Color.Black;
             this.btnGerenciador.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGerenciador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGerenciador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGerenciador.Font = new System.Drawing.Font("Minecraft", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGerenciador.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnGerenciador.Location = new System.Drawing.Point(28, 468);
             this.btnGerenciador.Name = "btnGerenciador";
@@ -192,7 +192,7 @@ namespace Projeto_Integrador
             // 
             // btnCancelar
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.Black;
+            this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
             this.btnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancelar.Location = new System.Drawing.Point(560, 532);
@@ -205,7 +205,7 @@ namespace Projeto_Integrador
             // btnConfirmar
             // 
             this.btnConfirmar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnConfirmar.BackColor = System.Drawing.Color.Black;
+            this.btnConfirmar.BackColor = System.Drawing.Color.Transparent;
             this.btnConfirmar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnConfirmar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnConfirmar.Location = new System.Drawing.Point(291, 532);
@@ -217,7 +217,7 @@ namespace Projeto_Integrador
             // 
             // pbLogo
             // 
-            this.pbLogo.BackColor = System.Drawing.Color.Black;
+            this.pbLogo.BackColor = System.Drawing.Color.Transparent;
             this.pbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbLogo.Location = new System.Drawing.Point(65, -1);
             this.pbLogo.Name = "pbLogo";
@@ -228,7 +228,7 @@ namespace Projeto_Integrador
             // btnCadastro
             // 
             this.btnCadastro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnCadastro.BackColor = System.Drawing.Color.Black;
+            this.btnCadastro.BackColor = System.Drawing.Color.Transparent;
             this.btnCadastro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCadastro.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCadastro.Location = new System.Drawing.Point(30, 532);
