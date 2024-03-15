@@ -175,10 +175,17 @@ namespace Projeto_Integrador
 
         private void btnIniciar_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            frmJogoo frm = new frmJogoo();
-            frm.ShowDialog();
-            this.Show();
+            if (Jogo.GetInstance().numeroJogadores > 4)
+            {
+                this.Hide();
+                frmJogoo frm = new frmJogoo();
+                frm.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("A sala ainda não está cheia");
+            }
         }
     }
 }
