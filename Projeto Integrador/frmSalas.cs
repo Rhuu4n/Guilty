@@ -128,7 +128,7 @@ namespace Projeto_Integrador
                         return;
                     }
                 }
-                MessageBox.Show("Sala Cheia", "Erro");
+                MessageBox.Show("Sala cheia", "Erro");
             }
             else
             {

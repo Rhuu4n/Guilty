@@ -79,7 +79,6 @@
             this.btnCancelar.Size = new System.Drawing.Size(233, 75);
             this.btnCancelar.TabIndex = 46;
             this.btnCancelar.TabStop = false;
-            this.btnCancelar.Visible = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click_1);
             // 
             // txtEntrar
