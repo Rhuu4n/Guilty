@@ -427,10 +427,5 @@ namespace Projeto_Integrador
         {
 
         }
-
-        private void btnSairjogo_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
