@@ -177,7 +177,7 @@ namespace Projeto_Integrador
 
         private void btnIniciar_Click(object sender, EventArgs e)
         {
-            if (Jogo.GetInstance().numeroJogadores == 4)
+            if (Jogo.GetInstance().pesquisarNumeroPlayers() == 4)
             {
                 this.Hide();
                 frmJogoo frm = new frmJogoo();

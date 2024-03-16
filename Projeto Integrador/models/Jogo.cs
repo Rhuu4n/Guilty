@@ -288,7 +288,7 @@ namespace Projeto_Integrador.models
 
         public void iniciarPartida()
         {
-            clSalas sala = new clSalas();
+            /*clSalas sala = new clSalas();
             sala.idSala = id_sala;
             DataTable dt = sala.Pesquisar();
 
@@ -303,7 +303,7 @@ namespace Projeto_Integrador.models
                 partida.Num_jogadores = numeroJogadores;
                 partida.Jogador_atual = 1;
                 id_partida = partida.CriarPartida();
-            }
+            }*/
         }
 
 
