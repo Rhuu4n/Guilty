@@ -114,7 +114,6 @@ namespace Projeto_Integrador
             }
 
 
-
             Thread threadAtualizacaoNomes = new Thread(new ThreadStart(threadAtualizarNomes));
             threadAtualizacaoNomes.Start();
             /*threadAtualizacaoNomes += () => {
@@ -201,7 +200,8 @@ namespace Projeto_Integrador
 
         private void btnIniciar_Click(object sender, EventArgs e)
         {
-            if (Jogo.GetInstance().numeroJogadores >= 4)
+
+            if (Jogo.GetInstance().numeroJogadores == 4)
             {
                 this.Hide();
                 frmJogoo frm = new frmJogoo();
