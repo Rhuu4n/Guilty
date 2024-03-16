@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
@@ -54,6 +55,23 @@ namespace Projeto_Integrador
 
             return id;
 
+        }
+
+        public DataTable Pesquisar()
+        {
+            try
+            {
+                BD._sql = "SELECT * FROM Partida " +
+                         " WHERE ID_sala = " + idSala + "";
+
+
+                return BD.ExecutaSelect();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro.: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
         }
     }
 }

@@ -137,6 +137,22 @@ namespace Projeto_Integrador
             }
         }
 
+        public DataTable PesquisaPorID()
+        {
+            try
+            {
+                BD._sql = "SELECT * FROM CADASTRO " +
+                         " WHERE ID_Usuario LIKE '%" + idusuario + "%' ";
+
+                return BD.ExecutaSelect();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro.: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
         public void PesquisaPorCPFCNPJ()
         {
 

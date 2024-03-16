@@ -262,24 +262,35 @@ namespace Projeto_Integrador.models
                 DataTable dt = sala.Pesquisar();
 
                 nj = Convert.ToInt32(dt.Rows[0]["Numero_jogadores"]);
-                this.J1ID = Convert.ToString(dt.Rows[0]["jogador1"]);
 
 
+                clCliente cliente = new clCliente();
 
-                if (nj != numeroJogadores)
+                cliente.idusuario = Convert.ToInt32(dt.Rows[0]["jogador1"]);
+                DataTable dt1 = cliente.PesquisaPorID();
+                this.J1ID = Convert.ToString(dt1.Rows[0]["Nome"]);
+
+
+            if (nj != numeroJogadores)
                 {
                     switch (numeroJogadores + 1)
                     {
                         case 2:
-                            this.J2ID = Convert.ToString(dt.Rows[0]["jogador2"]);
+                            cliente.idusuario = Convert.ToInt32(dt.Rows[0]["jogador2"]);
+                            DataTable dt2 = cliente.PesquisaPorID();
+                            this.J2ID = Convert.ToString(dt2.Rows[0]["Nome"]);
                             numeroJogadores++;
                             break;
                         case 3:
-                            this.J3ID = Convert.ToString(dt.Rows[0]["jogador3"]);
+                            cliente.idusuario = Convert.ToInt32(dt.Rows[0]["jogador3"]);
+                            DataTable dt3 = cliente.PesquisaPorID();
+                            this.J3ID = Convert.ToString(dt3.Rows[0]["Nome"]);
                             numeroJogadores++;
                             break;
                         case 4:
-                            this.J4ID = Convert.ToString(dt.Rows[0]["jogador4"]);
+                            cliente.idusuario = Convert.ToInt32(dt.Rows[0]["jogador4"]);
+                            DataTable dt4 = cliente.PesquisaPorID();
+                            this.J4ID = Convert.ToString(dt4.Rows[0]["Nome"]);
                             numeroJogadores++;
                             cheio = true;
                             break;
@@ -304,7 +315,7 @@ namespace Projeto_Integrador.models
 
         public void iniciarPartida()
         {
-            /*clSalas sala = new clSalas();
+            clSalas sala = new clSalas();
             sala.idSala = id_sala;
             sala.AtivarSala();
             DataTable dt = sala.Pesquisar();
@@ -323,7 +334,11 @@ namespace Projeto_Integrador.models
             }
             else
             {
-                MessageBox.Show("Jogador comum");
+                clPartida partida = new clPartida();
+                partida.idSala = id_sala;
+                DataTable dtS = partida.Pesquisar();
+
+                id_partida = Convert.ToInt32(dt.Rows[0]["ID_partida"]);
             }
         }
 
