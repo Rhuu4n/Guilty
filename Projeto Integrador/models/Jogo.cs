@@ -304,7 +304,7 @@ namespace Projeto_Integrador.models
 
         public void iniciarPartida()
         {
-            /*clSalas sala = new clSalas();
+            clSalas sala = new clSalas();
             sala.idSala = id_sala;
             sala.AtivarSala();
             DataTable dt = sala.Pesquisar();
