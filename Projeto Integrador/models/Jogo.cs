@@ -24,6 +24,7 @@ namespace Projeto_Integrador.models
         public string id;
         public string nome;
         public int numeroJogadores;
+        public bool estadoSala = false;
         public string novoJogador;
         clUsuario usuarioLogado = null;
         frmLobby frmLobby = null;
@@ -157,6 +158,10 @@ namespace Projeto_Integrador.models
         {
             return cheio;
         }
+        public bool getEstadoSala()
+        {
+            return estadoSala;
+        }
 
         public string getNovoJogador()
         {
@@ -286,10 +291,22 @@ namespace Projeto_Integrador.models
 
         }
 
-        public void iniciarPartida()
-        {
+        public void verificaEstadoSala() {
             clSalas sala = new clSalas();
             sala.idSala = id_sala;
+            DataTable dt = sala.Pesquisar();
+
+            if (Convert.ToInt32(dt.Rows[0]["ID_ESTADO_SALA"]) == 2)
+            {
+                estadoSala = true;
+            }
+        }
+
+        public void iniciarPartida()
+        {
+            /*clSalas sala = new clSalas();
+            sala.idSala = id_sala;
+            sala.AtivarSala();
             DataTable dt = sala.Pesquisar();
 
             string j1Verifica = Convert.ToString(dt.Rows[0]["jogador1"]);
@@ -303,6 +320,10 @@ namespace Projeto_Integrador.models
                 partida.Num_jogadores = numeroJogadores;
                 partida.Jogador_atual = 1;
                 id_partida = partida.CriarPartida();
+            }
+            else
+            {
+                MessageBox.Show("Jogador comum");
             }
         }
 

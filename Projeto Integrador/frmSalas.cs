@@ -117,16 +117,13 @@ namespace Projeto_Integrador
         {
             if (txtEntrar.Text != "")
             {
-                if (txtEntrar.Text == Jogo.GetInstance().getIdSala().ToString() && Jogo.GetInstance().numeroJogadores < 4)
+                if (Jogo.GetInstance().setIdSala(Convert.ToInt32(txtEntrar.Text)) && Jogo.GetInstance().pesquisarNumeroPlayers() < 4)
                 {
-                    if (Jogo.GetInstance().setIdSala(Convert.ToInt32(txtEntrar.Text)))
-                    {
-                        this.Hide();
-                        frmLobby frm = new frmLobby();
-                        frm.ShowDialog();
-                        this.Show();
-                        return;
-                    }
+                      this.Hide();
+                      frmLobby frm = new frmLobby();
+                      frm.ShowDialog();
+                      this.Show();
+                      return;
                 }
                 MessageBox.Show("Sala cheia", "Erro");
             }

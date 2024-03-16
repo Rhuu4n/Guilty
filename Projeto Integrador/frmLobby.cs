@@ -11,6 +11,7 @@ using System.Threading;
 using Projeto_Integrador.models;
 using System.Diagnostics;
 using System.Drawing.Imaging;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Projeto_Integrador
 {
@@ -115,6 +116,9 @@ namespace Projeto_Integrador
 
             Thread threadAtualizacaoNomes = new Thread(new ThreadStart(threadAtualizarNomes));
             threadAtualizacaoNomes.Start();
+            /*threadAtualizacaoNomes += () => {
+                this.Hide();
+            };*/
 
 
 //            Jogo.GetInstance().entraSala(this);
@@ -133,7 +137,27 @@ namespace Projeto_Integrador
 
             }
 
+            while (!Jogo.GetInstance().getEstadoSala())
+            {
+                Jogo.GetInstance().verificaEstadoSala();
+                Thread.Sleep(800);
+            }
 
+
+            this.BeginInvoke(new Action(fechaForm)); 
+            frmJogoo frm = new frmJogoo();
+            frm.ShowDialog();
+            this.Show();
+
+
+        }
+
+        public void fechaForm()
+        {
+            this.Hide();
+            frmJogoo frm = new frmJogoo();
+            frm.ShowDialog();
+            this.Show();
         }
 
         private void AtualizarNomesNaThread(string Texto)

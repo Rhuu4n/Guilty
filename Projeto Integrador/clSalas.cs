@@ -82,7 +82,7 @@ namespace Projeto_Integrador
                 {
                     int exOK = 0;
 
-                BD._sql = "UPDATE Sala SET Numero_jogadores = '" + (Jogo.GetInstance().getNumeroJogadores() + 1) + "'," + Jogo.GetInstance().getNovoJogador() + " = '" + Jogo.GetInstance().getID() + "' where ID_Sala = " + Jogo.GetInstance().getIdSala();
+                    BD._sql = "UPDATE Sala SET Numero_jogadores = '" + (Jogo.GetInstance().getNumeroJogadores() + 1) + "'," + Jogo.GetInstance().getNovoJogador() + " = '" + Jogo.GetInstance().getID() + "' where ID_Sala = " + Jogo.GetInstance().getIdSala();
 
                     exOK = BD.ExecutaComando(false);
 
@@ -105,6 +105,25 @@ namespace Projeto_Integrador
 
 
             }
+
+
+        public void AtivarSala()
+        {
+            try
+            {
+                int exOK = 0;
+
+                BD._sql = "UPDATE Sala SET ID_ESTADO_SALA = '" + 2 + "' where ID_Sala = " + Jogo.GetInstance().getIdSala();
+
+                exOK = BD.ExecutaComando(false);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro.: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+        }
 
     }
         

@@ -130,7 +130,6 @@
             this.pbLogo.Size = new System.Drawing.Size(300, 300);
             this.pbLogo.TabIndex = 49;
             this.pbLogo.TabStop = false;
-            this.pbLogo.Visible = false;
             this.pbLogo.Click += new System.EventHandler(this.pbLogo_Click);
             // 
             // frmSalas
