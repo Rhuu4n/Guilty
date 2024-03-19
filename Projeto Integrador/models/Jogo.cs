@@ -25,6 +25,7 @@ namespace Projeto_Integrador.models
         public string nome;
         public int numeroJogadores;
         public bool estadoSala = false;
+        bool criador = false;
         public string novoJogador;
         clUsuario usuarioLogado = null;
         frmLobby frmLobby = null;
@@ -168,6 +169,11 @@ namespace Projeto_Integrador.models
             return novoJogador;
         }
 
+        public bool getCriador()
+        {
+            return criador;
+        }
+
         public int criaSala()
         {
             clSalas salas = new clSalas();
@@ -261,6 +267,12 @@ namespace Projeto_Integrador.models
                 sala.idSala = id_sala;
                 DataTable dt = sala.Pesquisar();
 
+                if(Convert.ToString(dt.Rows[0]["jogador1"]) == id)
+                {
+                    criador = true;
+                }
+
+
                 nj = Convert.ToInt32(dt.Rows[0]["Numero_jogadores"]);
 
 
@@ -336,9 +348,9 @@ namespace Projeto_Integrador.models
             {
                 clPartida partida = new clPartida();
                 partida.idSala = id_sala;
-                DataTable dtS = partida.Pesquisar();
+                DataTable dts = partida.Pesquisar();
 
-                id_partida = Convert.ToInt32(dt.Rows[0]["ID_partida"]);
+                id_partida = Convert.ToInt32(dts.Rows[0]["ID_partida"]);
             }
         }
 

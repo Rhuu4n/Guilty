@@ -143,12 +143,10 @@ namespace Projeto_Integrador
                 Thread.Sleep(800);
             }
 
-
-            this.BeginInvoke(new Action(fechaForm)); 
-            frmJogoo frm = new frmJogoo();
-            frm.ShowDialog();
-            this.Show();
-
+            if (!Jogo.GetInstance().getCriador())
+            {
+                this.BeginInvoke(new Action(fechaForm));
+            }
 
         }
 
