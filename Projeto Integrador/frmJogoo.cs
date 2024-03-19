@@ -433,5 +433,11 @@ namespace Projeto_Integrador
             Application.Exit();
             System.Environment.Exit(1);
         }
+
+        private void btnSairjogo_Click_2(object sender, EventArgs e)
+        {
+            Application.Exit();
+            System.Environment.Exit(1);
+        }
     }
 }

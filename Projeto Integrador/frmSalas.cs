@@ -135,7 +135,7 @@ namespace Projeto_Integrador
 
         private void btnCriar_Click_1(object sender, EventArgs e)
         {
-            Jogo.GetInstance().setIdSala(0);
+            Jogo.GetInstance().criaSala();
 
             this.Hide();
             frmLobby frm = new frmLobby();
