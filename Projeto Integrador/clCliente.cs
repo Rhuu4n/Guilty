@@ -34,7 +34,7 @@ namespace Projeto_Integrador
             int id = 0;
             try
             {
-                BD._sql = String.Format(new CultureInfo("en-US"), "INSERT INTO CADASTRO (NOME,NASCIMENTO, EMAIL, SENHA) " +
+                BD._sql = String.Format(new CultureInfo("en-US"), "INSERT INTO Cadastro (Nome,Nascimento, Email, Senha) " +
                                               " values ('{0}','{1}','{2}','{3}' )",
                                               nome, nascimento, email, senha) + "; SELECT SCOPE_IDENTITY();";
 
@@ -48,7 +48,7 @@ namespace Projeto_Integrador
                 }
                 else
                 {
-                    MessageBox.Show("Erro ao cadastrar Usuário", "Erro", MessageBoxButtons.OK, 
+                    MessageBox.Show("Erro ao cadastrar UsuárioTESTE", "Erro", MessageBoxButtons.OK, 
                                      MessageBoxIcon.Error);
                 }
             }
@@ -70,7 +70,7 @@ namespace Projeto_Integrador
             {
                 int exOK = 0;
 
-                BD._sql = "DELETE FROM CADASTRO WHERE ID_USUARIO = " + idusuario;
+                BD._sql = "DELETE FROM CADASTRO WHERE ID = " + idusuario;
                 
                 exOK = BD.ExecutaComando(false);
 
