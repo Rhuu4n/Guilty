@@ -177,22 +177,21 @@ namespace Projeto_Integrador.models
         public int criaSala()
         {
             clSalas salas = new clSalas();
-            salas.idEstadoSala = 1;
+            salas.EstadoSala = 1;
             salas.Numero_jogadores = 1;
-            salas.J1 = Convert.ToInt32(id);
-
-            /*while (qnt_j < 4)
-            {
-                salas.idSala = Convert.ToInt32(label5.Text); DataTable dt = salas.Pesquisar();
-                nj = Convert.ToInt32(dt.Rows[0]["Numero_jogadores"]);
-
-                qnt_j = nj;
-
-                Thread.Sleep(1000);
-            }*/
+            id_sala = salas.CriarSala();
 
             numeroJogadores = 1;
-            return salas.CriarSala();
+
+            clPartida partida = new clPartida();
+            partida.idPartida = id_sala;
+            partida.Jogador_ID = Convert.ToInt32(id);
+            partida.moedas = 0;
+
+            DataTable dt =  salas.Pesquisar();
+            partida.idSala = Convert.ToInt32(dt.Rows[0]["id_sala"]);
+
+            return id_sala;
         }
 
         public int pesquisarNumeroPlayers()
