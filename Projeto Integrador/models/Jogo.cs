@@ -83,7 +83,7 @@ namespace Projeto_Integrador.models
 
         public bool cadastro(string nome, string senha, string email, string nascimento)
         {
-            // código que já tem e salva no b
+            // código que já tem e salva no bd
 
             clCliente cliente = new clCliente();
             cliente.nome = nome;
