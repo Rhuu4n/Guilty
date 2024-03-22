@@ -15,11 +15,14 @@ namespace Projeto_Integrador
     {
         // atributos
         public int idPartida;
+        public int Jogador_ID;
         public int idSala;
         public int Num_jogadores;
         public int Jogador_atual;
         public int Acao;
         public int Jogador_afetado;
+        public int moedas;
+        public int ordem;
 
         private string[] players;
         private int currentPlayerIndex;
@@ -35,8 +38,8 @@ namespace Projeto_Integrador
 
                 Debug.WriteLine("Funfou ");
 
-                BD._sql = String.Format(new CultureInfo("en-US"), "INSERT INTO Partida  (ID_sala, Num_jogadores, Jogador_atual) " +
-                " values ('{0}','{1}','{2}')", idSala, Num_jogadores, Jogador_atual) + "; SELECT SCOPE_IDENTITY();";
+                BD._sql = String.Format(new CultureInfo("en-US"), "INSERT INTO Partida  (id_sala, Jogador_ID, Ordem, Moedas) " +
+                " values ('{0}','{1}','{2}', '{3}')", idSala, Jogador_ID, ordem, moedas) + "; SELECT SCOPE_IDENTITY();";
 
                 BD.ExecutaComando(false, out id);
 
