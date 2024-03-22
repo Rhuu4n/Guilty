@@ -392,6 +392,7 @@
             this.pbMoeda2.Size = new System.Drawing.Size(50, 50);
             this.pbMoeda2.TabIndex = 43;
             this.pbMoeda2.TabStop = false;
+            this.pbMoeda2.Click += new System.EventHandler(this.pbMoeda2_Click);
             // 
             // pbMoeda1
             // 

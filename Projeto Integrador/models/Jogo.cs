@@ -54,7 +54,7 @@ namespace Projeto_Integrador.models
 
                 if (dt.Rows.Count > 0 )
                 {
-                    id = dt.Rows[0]["id_usuario"].ToString();
+                    id = dt.Rows[0]["ID"].ToString();
 
                     string dbSenha = dt.Rows[0]["senha"].ToString();
                     if (dbSenha == senha)
@@ -362,6 +362,6 @@ namespace Projeto_Integrador.models
 
         public class LoginIncorretoException : Exception {
 
-            public LoginIncorretoException() : base("Nome de usuário ou senha incorretos") { }
+            public LoginIncorretoException() : base("usuário ou senha incorreta") { }
         }
     }

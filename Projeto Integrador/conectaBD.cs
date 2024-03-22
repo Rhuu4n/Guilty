@@ -39,7 +39,7 @@ namespace Projeto_Integrador
 
         {
             StreamReader str = new StreamReader("conexao.ini");
-            _strConexao = str.ReadLine() + "Initial Catalog=ProjetoInt;Persist Security Info=True;User ID=sa;Password=senac";
+            _strConexao = str.ReadLine() + "Initial Catalog=ProjetoIntegrador;Persist Security Info=True;User ID=sa;Password=senac";
             _conn = new SqlConnection(_strConexao);
             _comandoSQL = new SqlCommand();
             _comandoSQL.Connection = _conn;

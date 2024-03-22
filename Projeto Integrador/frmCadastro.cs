@@ -254,6 +254,11 @@ namespace Projeto_Integrador
                 MessageBox.Show("insira apenas números");
             }
         }
+
+        private void frmCadastro_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

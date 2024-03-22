@@ -96,7 +96,7 @@ namespace Projeto_Integrador
 
                     //números aleatórios
 
-
+                    clPartida.adcCoins(player, playerCoins[player], Jogo.GetInstance().getIdSala());
 
                 }
                 else
@@ -438,6 +438,11 @@ namespace Projeto_Integrador
         {
             Application.Exit();
             System.Environment.Exit(1);
+        }
+
+        private void pbMoeda2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

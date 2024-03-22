@@ -398,6 +398,7 @@
             this.Name = "frmCadastro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Guilty";
+            this.Load += new System.EventHandler(this.frmCadastro_Load);
             this.Resize += new System.EventHandler(this.frmCadastro_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.pbGuilty)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCadastrar)).EndInit();

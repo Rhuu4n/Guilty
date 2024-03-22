@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Projeto_Integrador.models;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Diagnostics;
@@ -19,6 +20,10 @@ namespace Projeto_Integrador
         public int Jogador_atual;
         public int Acao;
         public int Jogador_afetado;
+
+        private string[] players;
+        private int currentPlayerIndex;
+        private int[] playerCoins = new int[4];
 
         conectaBD BD = new conectaBD();
 
@@ -73,5 +78,71 @@ namespace Projeto_Integrador
                 return null;
             }
         }
+
+
+
+
+
+        public static void adcCoins(int player, int moedas, int idSala)
+        {
+            conectaBD BD = new conectaBD();
+            try
+            {
+                int exOK = 0;
+
+                BD._sql = "UPDATE Partida SET Moedas = '" + moedas + "'where id_sala = " + idSala + "' and Jogador_ID ='" + player;
+
+                exOK = BD.ExecutaComando(false);
+
+                
+
+                if (exOK == 1)
+                {
+                }
+                else
+                {
+                    MessageBox.Show("Erro ao alterar Cliente, contate o desenvolvedor!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro.: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+
+        public void removeCoins(int player, int player2)
+        {
+            if (player >= 0 && player < 4)
+            {
+                if (playerCoins[player] < 10)
+                {
+                    playerCoins[player]++;
+                    MessageBox.Show($"O jogador {player + 1} agora possui {playerCoins[player]} moeda(s).", "Moedas Atualizadas");
+
+                    // Atualizar o rótulo correspondente
+                    Label[] coinLabels = {  };
+                    coinLabels[player].Text = $"x{playerCoins[player]}";
+
+                    //números aleatórios
+
+
+
+                }
+                else
+                {
+                    MessageBox.Show($"O Jogador {player + 1} juntou 10 moedas e ganhou o jogo, parabéns!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Jogador inválido. Escolha um número de jogador entre 1 e 4.", "Jogador Inválido");
+            }
+        }
+
     }
+
+
 }

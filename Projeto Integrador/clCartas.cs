@@ -21,13 +21,24 @@ namespace Projeto_Integrador
         conectaBD BD = new conectaBD();
 
 
+
+      /*clCliente cliente = new clCliente();
+        cliente.nome = nome;
+        cliente.senha = Convert.ToInt32(senha);
+        cliente.email = email;
+        cliente.nascimento = nascimento;*/
+
+
         public void Mineradora()
         {
+
+            clPartida carta = new clPartida();
+
             try
             {
                 int exOK = 0;
 
-                BD._sql = "UPDATE Partida SET Acao = '" + Acao + "', Jogador_afetado = '" + Jogador_afetado + "', where ID_partida = " + ID_partida;
+                BD._sql = "UPDATE Partida SET Acao = '" + Acao + "', Afetado = '" + Jogador_afetado + "' where id_partida = " + ID_partida;
 
                 exOK = BD.ExecutaComando(false);
 
@@ -35,7 +46,6 @@ namespace Projeto_Integrador
 
                 if (exOK == 1)
                 {
-
                 }
                 else
                 {
