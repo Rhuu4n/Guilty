@@ -177,7 +177,7 @@ namespace Projeto_Integrador.models
         public int criaSala()
         {
             clSalas salas = new clSalas();
-            salas.idEstadoSala = 1;
+            salas.EstadoSala = 1;
             salas.Numero_jogadores = 1;
             salas.J1 = Convert.ToInt32(id);
 
@@ -207,7 +207,7 @@ namespace Projeto_Integrador.models
                 MessageBox.Show("erro");
                 return -1;
             }
-            nj = Convert.ToInt32(dt.Rows[0]["Numero_jogadores"]);
+            nj = Convert.ToInt32(dt.Rows[0]["numeroJogadores"]);
             return nj;
         }
 
@@ -319,7 +319,7 @@ namespace Projeto_Integrador.models
             sala.idSala = id_sala;
             DataTable dt = sala.Pesquisar();
 
-            if (Convert.ToInt32(dt.Rows[0]["ID_ESTADO_SALA"]) == 2)
+            if (Convert.ToInt32(dt.Rows[0]["estadoSala"]) == 2)
             {
                 estadoSala = true;
             }
