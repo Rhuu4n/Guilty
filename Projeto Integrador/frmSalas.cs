@@ -68,17 +68,6 @@ namespace Projeto_Integrador
                 MessageBox.Show("insira apenas números");
             }
         }
-
-        private void txtEntrar_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-           
-        }
-
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             frmLogin formulario = new frmLogin();
@@ -89,11 +78,6 @@ namespace Projeto_Integrador
         {
             frmLogin formulario = new frmLogin();
             formulario.ShowDialog();
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-
         }
 
         private void button1_Click_2(object sender, EventArgs e)
@@ -141,11 +125,6 @@ namespace Projeto_Integrador
             frmLobby frm = new frmLobby();
             frm.ShowDialog();
             this.Show();
-        }
-
-        private void pbLogo_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -198,16 +198,6 @@ namespace Projeto_Integrador
             }
         }
 
-        private void txtSenha_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnCadastrar_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCadastrar_Click_2(object sender, EventArgs e)
         {
 
@@ -253,11 +243,6 @@ namespace Projeto_Integrador
                 e.Handled = true;
                 MessageBox.Show("insira apenas números");
             }
-        }
-
-        private void frmCadastro_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

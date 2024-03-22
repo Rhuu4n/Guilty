@@ -176,24 +176,9 @@ namespace Projeto_Integrador
             }
         }
 
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnVoltar_Click_1(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void pbJ4_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnIniciar_Click(object sender, EventArgs e)

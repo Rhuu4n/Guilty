@@ -152,16 +152,6 @@ namespace Projeto_Integrador
                 return null;
             }
         }
-
-        public void PesquisaPorCPFCNPJ()
-        {
-
-        }
-
-        public void PesquisaPorRGIE()
-        {
-
-        }
         public DataTable CarregaClientes()
         {
             try

@@ -195,15 +195,6 @@ namespace Projeto_Integrador
             this.Close();
         }
 
-        private void button7_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void pictureBox8_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             currentPlayerIndex = (currentPlayerIndex + 1) % players.Length;
@@ -232,11 +223,6 @@ namespace Projeto_Integrador
             btnRoubar1.Visible = false;
             btnRoubar2.Visible = false;
             btnRoubar3.Visible = false;
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
 
         }
 
@@ -342,47 +328,6 @@ namespace Projeto_Integrador
             
             //Application.Exit();
         }
-
-        private void pictureBox10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pbFundo1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pbFundo2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox12_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnRoubar1_Click(object sender, EventArgs e)
         {
             int player = (int)nudPlayer.Value;
@@ -423,11 +368,6 @@ namespace Projeto_Integrador
             //Application.Exit();
         }
 
-        private void pbFundomesa_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnSairjogo_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
@@ -438,11 +378,6 @@ namespace Projeto_Integrador
         {
             Application.Exit();
             System.Environment.Exit(1);
-        }
-
-        private void pbMoeda2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

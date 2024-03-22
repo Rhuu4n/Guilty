@@ -90,7 +90,7 @@
             this.txtEntrar.Name = "txtEntrar";
             this.txtEntrar.Size = new System.Drawing.Size(169, 30);
             this.txtEntrar.TabIndex = 33;
-            this.txtEntrar.TextChanged += new System.EventHandler(this.txtEntrar_TextChanged);
+//            this.txtEntrar.TextChanged += new System.EventHandler(this.txtEntrar_TextChanged);
             this.txtEntrar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // btnEntrar
@@ -130,7 +130,7 @@
             this.pbLogo.Size = new System.Drawing.Size(300, 300);
             this.pbLogo.TabIndex = 49;
             this.pbLogo.TabStop = false;
-            this.pbLogo.Click += new System.EventHandler(this.pbLogo_Click);
+  //          this.pbLogo.Click += new System.EventHandler(this.pbLogo_Click);
             // 
             // frmSalas
             // 
