@@ -17,7 +17,7 @@ namespace Projeto_Integrador
 
             // atributos
             public int idSala;
-            public int idEstadoSala;
+            public int EstadoSala;
             public int Numero_jogadores;
             public int J1;
             public int J2;
@@ -31,8 +31,8 @@ namespace Projeto_Integrador
                 int id = 0;
                 try
                 {
-                    BD._sql = String.Format(new CultureInfo("en-US"), "INSERT INTO Sala  (ID_ESTADO_SALA, Numero_jogadores, jogador1  ) " +
-                    " values ('{0}','{1}','{2}')", idEstadoSala, Numero_jogadores, J1) + "; SELECT SCOPE_IDENTITY();";
+                    BD._sql = String.Format(new CultureInfo("en-US"), "INSERT INTO Sala  (estadoSala, numeroJogadores, jogadorAtual " +
+                    " values ('{0}','{1}','{2}')", EstadoSala, Numero_jogadores, 1) + "; SELECT SCOPE_IDENTITY();";
 
                     BD.ExecutaComando(false, out id);
 
@@ -64,7 +64,7 @@ namespace Projeto_Integrador
                 try
                 {
                     BD._sql = "SELECT * FROM Sala " +
-                             " WHERE ID_Sala = " + idSala + "";
+                             " WHERE id_sala = " + idSala + "";
 
 
                     return BD.ExecutaSelect();
@@ -82,7 +82,7 @@ namespace Projeto_Integrador
                 {
                     int exOK = 0;
 
-                    BD._sql = "UPDATE Sala SET Numero_jogadores = '" + (Jogo.GetInstance().getNumeroJogadores() + 1) + "'," + Jogo.GetInstance().getNovoJogador() + " = '" + Jogo.GetInstance().getID() + "' where ID_Sala = " + Jogo.GetInstance().getIdSala();
+                    BD._sql = "UPDATE Sala SET numeroJogadores = '" + (Jogo.GetInstance().getNumeroJogadores() + 1) + "'," + Jogo.GetInstance().getNovoJogador() + " = '" + Jogo.GetInstance().getID() + "' where id_sala = " + Jogo.GetInstance().getIdSala();
 
                     exOK = BD.ExecutaComando(false);
 
@@ -113,7 +113,7 @@ namespace Projeto_Integrador
             {
                 int exOK = 0;
 
-                BD._sql = "UPDATE Sala SET ID_ESTADO_SALA = '" + 2 + "' where ID_Sala = " + Jogo.GetInstance().getIdSala();
+                BD._sql = "UPDATE Sala SET estadoSala = '" + 2 + "' where id_sala = " + Jogo.GetInstance().getIdSala();
 
                 exOK = BD.ExecutaComando(false);
             }
