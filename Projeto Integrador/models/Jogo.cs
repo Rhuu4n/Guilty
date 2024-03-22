@@ -267,13 +267,13 @@ namespace Projeto_Integrador.models
                 sala.idSala = id_sala;
                 DataTable dt = sala.Pesquisar();
 
-                if(Convert.ToString(dt.Rows[0]["jogador1"]) == id)
+                /*if(Convert.ToString(dt.Rows[0]["jogador1"]) == id)
                 {
                     criador = true;
-                }
+                }*/
 
 
-                nj = Convert.ToInt32(dt.Rows[0]["Numero_jogadores"]);
+                nj = Convert.ToInt32(dt.Rows[0]["numeroJogadores"]);
 
 
                 clCliente cliente = new clCliente();
