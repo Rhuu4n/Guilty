@@ -177,19 +177,19 @@ namespace Projeto_Integrador.models
         public int criaSala()
         {
             clSalas salas = new clSalas();
-            salas.EstadoSala = 1;
-            salas.Numero_jogadores = 1;
             id_sala = salas.CriarSala();
 
             numeroJogadores = 1;
 
             clPartida partida = new clPartida();
-            partida.idPartida = id_sala;
+            partida.idSala = id_sala;
             partida.Jogador_ID = Convert.ToInt32(id);
             partida.moedas = 0;
 
+            salas.idSala = id_sala;
             DataTable dt =  salas.Pesquisar();
-            partida.idSala = Convert.ToInt32(dt.Rows[0]["id_sala"]);
+            partida.ordem = Convert.ToInt32(dt.Rows[0]["numeroJogadores"]);
+            partida.CriarPartida();
 
             return id_sala;
         }
@@ -221,38 +221,38 @@ namespace Projeto_Integrador.models
             sala.idSala = id_sala;
             DataTable dt = sala.Pesquisar();
 
-            if (nj == 1)
-            {
-                idj1 = dt.Rows[0]["jogador1"].ToString();
-                idj2 = id;
-                idj3 = "";
-                idj4 = "";
-                sala.J2 = Convert.ToInt32(id);
-                novoJogador = "jogador2";
-            }
-            else if (nj == 2)
-            {
-                idj1 = dt.Rows[0]["jogador1"].ToString();
-                idj2 = dt.Rows[0]["jogador2"].ToString();
-                idj3 = id;
-                idj4 = "";
+            clPartida partida = new clPartida();
+            partida.idSala = id_sala;
+            DataTable dtPartida = partida.Pesquisar();
 
-                sala.J3 = Convert.ToInt32(id);
-                novoJogador = "jogador3";
-            }
-            else if (nj == 3)
+            for(int i = 0; i < nj; i++)
             {
-                idj1 = dt.Rows[0]["jogador1"].ToString();
-                idj2 = dt.Rows[0]["jogador2"].ToString();
-                idj3 = dt.Rows[0]["jogador3"].ToString();
-                idj4 = id;
+                Debug.WriteLine("Funfou ");
 
-                sala.J4 = Convert.ToInt32(id);
-                novoJogador = "jogador4";
+                int ordem = Convert.ToInt32(dtPartida.Rows[i]["ordem"]);
+                if (ordem == 1)
+                {
+                    idj1 = Convert.ToString(dtPartida.Rows[i]["Jogador_ID"]);
+                }else if (ordem == 2)
+                {
+                    idj2 = Convert.ToString(dtPartida.Rows[i]["Jogador_ID"]);
+                }else if (ordem == 3)
+                {
+                    idj3 = Convert.ToString(dtPartida.Rows[i]["Jogador_ID"]);
+                }else if(ordem == 4)
+                {
+                    idj4 = Convert.ToString(dtPartida.Rows[i]["Jogador_ID"]);
+                }
             }
 
-            numeroJogadores = nj;
+            numeroJogadores = nj + 1;
+            sala.Numero_jogadores = nj + 1;
             sala.Atualizar();
+
+            partida.Jogador_ID = Convert.ToInt32(id);
+            partida.moedas = 0;
+            partida.ordem = nj + 1;
+            partida.CriarPartida();
 
             string[] minhaArrayDeStrings = new string[] { idj1, idj2, idj3, idj4 };
             return minhaArrayDeStrings;
@@ -274,8 +274,11 @@ namespace Projeto_Integrador.models
 
                 nj = Convert.ToInt32(dt.Rows[0]["numeroJogadores"]);
 
+                clPartida partida = new clPartida();
+                partida.idSala = id_sala;
+                DataTable dtPartida = partida.Pesquisar();
 
-                clCliente cliente = new clCliente();
+            clCliente cliente = new clCliente();
 
                 cliente.idusuario = Convert.ToInt32(dt.Rows[0]["jogador1"]);
                 DataTable dt1 = cliente.PesquisaPorID();

@@ -31,8 +31,8 @@ namespace Projeto_Integrador
                 int id = 0;
                 try
                 {
-                    BD._sql = String.Format(new CultureInfo("en-US"), "INSERT INTO Sala  (estadoSala, numeroJogadores, jogadorAtual " +
-                    " values ('{0}','{1}','{2}')", EstadoSala, Numero_jogadores, 1) + "; SELECT SCOPE_IDENTITY();";
+                    BD._sql = String.Format(new CultureInfo("en-US"), "INSERT INTO Sala  (estadoSala, numeroJogadores, jogadorAtual) " +
+                    " values ('{0}','{1}','{2}')", 1, 1, 1) + "; SELECT SCOPE_IDENTITY();";
 
                     BD.ExecutaComando(false, out id);
 
@@ -82,7 +82,7 @@ namespace Projeto_Integrador
                 {
                     int exOK = 0;
 
-                    BD._sql = "UPDATE Sala SET numeroJogadores = '" + (Jogo.GetInstance().getNumeroJogadores() + 1) + "'," + Jogo.GetInstance().getNovoJogador() + " = '" + Jogo.GetInstance().getID() + "' where id_sala = " + Jogo.GetInstance().getIdSala();
+                    BD._sql = "UPDATE Sala SET numeroJogadores = " + Numero_jogadores + "  where id_sala = " + Jogo.GetInstance().getIdSala();
 
                     exOK = BD.ExecutaComando(false);
 
