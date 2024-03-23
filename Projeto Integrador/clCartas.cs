@@ -42,16 +42,6 @@ namespace Projeto_Integrador
 
                 exOK = BD.ExecutaComando(false);
 
-
-
-                if (exOK == 1)
-                {
-                }
-                else
-                {
-                    MessageBox.Show("Erro ao alterar Cliente, contate o desenvolvedor!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
             }
             catch (Exception ex)
             {

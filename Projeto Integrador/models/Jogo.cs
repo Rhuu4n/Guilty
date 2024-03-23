@@ -177,7 +177,7 @@ namespace Projeto_Integrador.models
         public int criaSala()
         {
             clSalas salas = new clSalas();
-            salas.idEstadoSala = 1;
+            //salas.idEstadoSala = 1;
             salas.Numero_jogadores = 1;
             salas.J1 = Convert.ToInt32(id);
 
