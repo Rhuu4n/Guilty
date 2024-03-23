@@ -313,5 +313,10 @@ namespace Projeto_Integrador
             frm.ShowDialog();
             this.Show();
         }
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
