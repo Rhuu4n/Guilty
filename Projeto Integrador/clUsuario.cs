@@ -24,8 +24,8 @@ namespace Projeto_Integrador
         {
             try
             {
-                BD._sql = "SELECT * FROM CADASTRO " +
-                         " WHERE NOME LIKE '" + nome + "'";
+                BD._sql = "SELECT * FROM Cadastro " +
+                         " WHERE Nome LIKE '" + nome + "'";
 
                 return BD.ExecutaSelect();
             }
@@ -48,7 +48,7 @@ namespace Projeto_Integrador
             int id = 0;
             try
             {
-                BD._sql = String.Format(new CultureInfo("en-US"), "INSERT INTO USUARIO  ( LOGIN, SENHA ) " +
+                BD._sql = String.Format(new CultureInfo("en-US"), "INSERT INTO Cadastro  ( Nome, Senha ) " +
                 " values ('{0}','{1}')", nome, senha ) + "; SELECT SCOPE_IDENTITY();";
 
                 BD.ExecutaComando(false, out id);
