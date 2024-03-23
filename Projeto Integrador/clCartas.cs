@@ -21,14 +21,6 @@ namespace Projeto_Integrador
         conectaBD BD = new conectaBD();
 
 
-
-      /*clCliente cliente = new clCliente();
-        cliente.nome = nome;
-        cliente.senha = Convert.ToInt32(senha);
-        cliente.email = email;
-        cliente.nascimento = nascimento;*/
-
-
         public void Mineradora()
         {
 
@@ -49,7 +41,7 @@ namespace Projeto_Integrador
                 }
                 else
                 {
-                    MessageBox.Show("Erro ao alterar Cliente, contate o desenvolvedor!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Não foi possivel realizar essa ação", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }
