@@ -245,14 +245,15 @@ namespace Projeto_Integrador.models
                 }
             }
 
-            numeroJogadores = nj + 1;
-            sala.Numero_jogadores = nj + 1;
-            sala.Atualizar();
-
             partida.Jogador_ID = Convert.ToInt32(id);
             partida.moedas = 0;
             partida.ordem = nj + 1;
             partida.CriarPartida();
+
+            numeroJogadores = nj + 1;
+            sala.Numero_jogadores = nj + 1;
+            sala.Atualizar();
+
 
             string[] minhaArrayDeStrings = new string[] { idj1, idj2, idj3, idj4 };
             return minhaArrayDeStrings;
@@ -260,58 +261,88 @@ namespace Projeto_Integrador.models
 
         public string[] verificarJogadores()
         {
-                int nj;
+            int nj;
 
-                clSalas sala = new clSalas();
-                sala.idSala = id_sala;
-                DataTable dt = sala.Pesquisar();
+            clSalas sala = new clSalas();
+            sala.idSala = id_sala;
+            DataTable dt = sala.Pesquisar();
+            nj = Convert.ToInt32(dt.Rows[0]["numeroJogadores"]);
 
-                /*if(Convert.ToString(dt.Rows[0]["jogador1"]) == id)
+            /*if(Convert.ToString(dt.Rows[0]["jogador1"]) == id)
+            {
+                criador = true;
+            }*/
+
+
+            clPartida partida = new clPartida();
+            partida.idSala = id_sala;
+            DataTable dtPartida = partida.Pesquisar();
+
+            int idj1 = 0;
+            int idj2 = 0;
+            int idj3 = 0;
+            int idj4 = 0;
+
+            for (int i = 0; i < nj; i++)
+            {
+                Debug.WriteLine("Funfou ");
+
+                int ordem = Convert.ToInt32(dtPartida.Rows[i]["ordem"]);
+                if (ordem == 1)
                 {
-                    criador = true;
-                }*/
+                    idj1 = Convert.ToInt32(dtPartida.Rows[i]["Jogador_ID"]);
+                }
+                else if (ordem == 2)
+                {
+                    idj2 = Convert.ToInt32(dtPartida.Rows[i]["Jogador_ID"]);
+                }
+                else if (ordem == 3)
+                {
+                    idj3 = Convert.ToInt32(dtPartida.Rows[i]["Jogador_ID"]);
+                }
+                else if (ordem == 4)
+                {
+                    idj4 = Convert.ToInt32(dtPartida.Rows[i]["Jogador_ID"]);
+                }
+            }
 
+            if(! (idj1 == 0))
+            {
+                clCliente cliente = new clCliente();
 
-                nj = Convert.ToInt32(dt.Rows[0]["numeroJogadores"]);
-
-                clPartida partida = new clPartida();
-                partida.idSala = id_sala;
-                DataTable dtPartida = partida.Pesquisar();
-
-            clCliente cliente = new clCliente();
-
-                cliente.idusuario = Convert.ToInt32(dt.Rows[0]["jogador1"]);
+                cliente.idusuario = idj1;
                 DataTable dt1 = cliente.PesquisaPorID();
                 this.J1ID = Convert.ToString(dt1.Rows[0]["Nome"]);
+            }
 
+            if (!(idj2 == 0))
+            {
+                clCliente cliente = new clCliente();
 
-            if (nj != numeroJogadores)
-                {
-                    switch (numeroJogadores + 1)
-                    {
-                        case 2:
-                            cliente.idusuario = Convert.ToInt32(dt.Rows[0]["jogador2"]);
-                            DataTable dt2 = cliente.PesquisaPorID();
-                            this.J2ID = Convert.ToString(dt2.Rows[0]["Nome"]);
-                            numeroJogadores++;
-                            break;
-                        case 3:
-                            cliente.idusuario = Convert.ToInt32(dt.Rows[0]["jogador3"]);
-                            DataTable dt3 = cliente.PesquisaPorID();
-                            this.J3ID = Convert.ToString(dt3.Rows[0]["Nome"]);
-                            numeroJogadores++;
-                            break;
-                        case 4:
-                            cliente.idusuario = Convert.ToInt32(dt.Rows[0]["jogador4"]);
-                            DataTable dt4 = cliente.PesquisaPorID();
-                            this.J4ID = Convert.ToString(dt4.Rows[0]["Nome"]);
-                            numeroJogadores++;
-                            cheio = true;
-                            break;
-                    }
+                cliente.idusuario = idj2;
+                DataTable dt1 = cliente.PesquisaPorID();
+                this.J2ID = Convert.ToString(dt1.Rows[0]["Nome"]);
+            }
 
-                   }
-                string[] nomesJogadores = new string[] { J1ID, J2ID, J3ID, J4ID };
+            if (!(idj3 == 0))
+            {
+                clCliente cliente = new clCliente();
+
+                cliente.idusuario = idj3;
+                DataTable dt1 = cliente.PesquisaPorID();
+                this.J3ID = Convert.ToString(dt1.Rows[0]["Nome"]);
+            }
+
+            if (!(idj4 == 0))
+            {
+                clCliente cliente = new clCliente();
+
+                cliente.idusuario = idj4;
+                DataTable dt1 = cliente.PesquisaPorID();
+                this.J4ID = Convert.ToString(dt1.Rows[0]["Nome"]);
+            }
+
+            string[] nomesJogadores = new string[] { J1ID, J2ID, J3ID, J4ID };
             return nomesJogadores;
 
         }

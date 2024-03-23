@@ -114,8 +114,8 @@ namespace Projeto_Integrador
             }
 
 
-            //Thread threadAtualizacaoNomes = new Thread(new ThreadStart(threadAtualizarNomes));
-            //threadAtualizacaoNomes.Start();
+            Thread threadAtualizacaoNomes = new Thread(new ThreadStart(threadAtualizarNomes));
+            threadAtualizacaoNomes.Start();
             /*threadAtualizacaoNomes += () => {
                 this.Hide();
             };*/
