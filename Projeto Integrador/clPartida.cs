@@ -116,7 +116,7 @@ namespace Projeto_Integrador
 
 
 
-        public void removeCoins(int player, int player2)
+        public  void removeCoins(int player, int player2)
         {
             if (player >= 0 && player < 4)
             {
