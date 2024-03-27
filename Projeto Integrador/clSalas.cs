@@ -23,6 +23,7 @@ namespace Projeto_Integrador
             public int J2;
             public int J3;
             public int J4;
+            public int jogadorAtual;
 
         conectaBD BD = new conectaBD();
 
@@ -32,7 +33,7 @@ namespace Projeto_Integrador
                 try
                 {
                     BD._sql = String.Format(new CultureInfo("en-US"), "INSERT INTO Sala  (estadoSala, numeroJogadores, jogadorAtual) " +
-                    " values ('{0}','{1}','{2}')", 1, 1, 1) + "; SELECT SCOPE_IDENTITY();";
+                    " values ('{0}','{1}','{2}')", 1, 1, jogadorAtual) + "; SELECT SCOPE_IDENTITY();";
 
                     BD.ExecutaComando(false, out id);
 

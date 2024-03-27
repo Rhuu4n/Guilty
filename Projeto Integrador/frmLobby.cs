@@ -183,18 +183,25 @@ namespace Projeto_Integrador
 
         private void btnIniciar_Click(object sender, EventArgs e)
         {
-
-            if (Jogo.GetInstance().numeroJogadores == 4)
+            if (Jogo.GetInstance().verificaUsuarioCriador())
             {
-                this.Hide();
-                frmJogoo frm = new frmJogoo();
-                frm.ShowDialog();
-                this.Show();
+                if (Jogo.GetInstance().numeroJogadores == 4)
+                {
+                    this.Hide();
+                    frmJogoo frm = new frmJogoo();
+                    frm.ShowDialog();
+                    this.Show();
+                }
+                else
+                {
+                    MessageBox.Show("A sala ainda não está cheia");
+                }
             }
             else
             {
-                MessageBox.Show("A sala ainda não está cheia");
+                MessageBox.Show("Você não é o jogador dono da sala!");
             }
+            
         }
     }
 }

@@ -20,6 +20,11 @@ namespace Projeto_Integrador.models
         public string J2ID = "jogador2";
         public string J3ID = "jogador3";
         public string J4ID = "jogador4";
+        public int J1PTID;
+        public int J2PTID;
+        public int J3PTID;
+        public int J4PTID;
+        int minhaOrdem;
         public bool cheio = false;
         public string id;
         public string nome;
@@ -177,6 +182,7 @@ namespace Projeto_Integrador.models
         public int criaSala()
         {
             clSalas salas = new clSalas();
+            salas.jogadorAtual = Convert.ToInt32(id);
             id_sala = salas.CriarSala();
 
             numeroJogadores = 1;
@@ -248,6 +254,7 @@ namespace Projeto_Integrador.models
             partida.Jogador_ID = Convert.ToInt32(id);
             partida.moedas = 0;
             partida.ordem = nj + 1;
+            minhaOrdem = nj + 1;
             partida.CriarPartida();
 
             numeroJogadores = nj + 1;
@@ -360,31 +367,91 @@ namespace Projeto_Integrador.models
 
         public void iniciarPartida()
         {
+            clPartida partida = new clPartida();
+            partida.idSala = id_sala;
+            DataTable dtPartida = partida.Pesquisar();
+
+            for (int i = 0; i < 4; i++)
+            {
+                int ordem = Convert.ToInt32(dtPartida.Rows[i]["ordem"]);
+                if (ordem == 1)
+                {
+                    J1PTID = Convert.ToInt32(dtPartida.Rows[i]["id_partida"]);
+                }
+                else if (ordem == 2)
+                {
+                    J2PTID = Convert.ToInt32(dtPartida.Rows[i]["id_partida"]);
+                }
+                else if (ordem == 3)
+                {
+                    J3PTID = Convert.ToInt32(dtPartida.Rows[i]["id_partida"]);
+                }
+                else if (ordem == 4)
+                {
+                    J4PTID = Convert.ToInt32(dtPartida.Rows[i]["id_partida"]);
+                }
+            }
+
             clSalas sala = new clSalas();
             sala.idSala = id_sala;
-            sala.AtivarSala();
             DataTable dt = sala.Pesquisar();
 
-            string j1Verifica = Convert.ToString(dt.Rows[0]["jogador1"]);
+            string jogadorAtual = Convert.ToString(dt.Rows[0]["jogadorAtual"]);
 
-            if (j1Verifica == id)
+
+            if (jogadorAtual == id)
             {
-                Debug.WriteLine("Funfou " + j1Verifica);
+                sala.AtivarSala();
 
-                clPartida partida = new clPartida();
-                partida.idSala = id_sala;
-                partida.Num_jogadores = numeroJogadores;
-                partida.Jogador_atual = 1;
-                id_partida = partida.CriarPartida();
             }
-            else
+
+            int id1;
+            int id2;
+            int id3;
+            int id4;
+
+            
+
+            if (minhaOrdem == 1)
             {
-                clPartida partida = new clPartida();
-                partida.idSala = id_sala;
-                DataTable dts = partida.Pesquisar();
+                clPartida partida2 = new clPartida();
+                partida.idPartida = J2PTID;
+                DataTable dt2 = partida.PesquisarIDPartida();
 
-                id_partida = Convert.ToInt32(dts.Rows[0]["ID_partida"]);
+                clPartida partida3 = new clPartida();
+                partida.idPartida = J3PTID;
+                DataTable dt3 = partida.PesquisarIDPartida();
+
+                clPartida partida4 = new clPartida();
+                partida.idPartida = J4PTID;
+                DataTable dt4 = partida.PesquisarIDPartida();
+
+                id1 = Convert.ToInt32(id);
+                id2 = Convert.ToInt32(dt2.Rows[0]["Jogador_ID"]);
+                id3 = Convert.ToInt32(dt3.Rows[0]["Jogador_ID"]);
+                id4 = Convert.ToInt32(dt4.Rows[0]["Jogador_ID"]);
             }
+            
+
+
+
+
+            // string[] nomesJogadores = new string[] { J1ID, J2ID, J3ID, J4ID };
+        }
+
+        public bool verificaUsuarioCriador()
+        {
+            clPartida partida = new clPartida();
+            partida.idSala = id_sala;
+            partida.Jogador_ID = Convert.ToInt32(id);
+            DataTable dt = partida.Pesquisar();
+
+            int ordem = Convert.ToInt32(dt.Rows[0]["ordem"]);
+            if((ordem == 1))
+            {
+                return true;
+            }
+            return false;
         }
 
 
