@@ -513,7 +513,6 @@
             this.pbFundomesa.Size = new System.Drawing.Size(1200, 800);
             this.pbFundomesa.TabIndex = 66;
             this.pbFundomesa.TabStop = false;
-            this.pbFundomesa.Click += new System.EventHandler(this.pbFundomesa_Click);
             // 
             // num1
             // 
