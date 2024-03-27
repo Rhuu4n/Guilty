@@ -274,6 +274,10 @@ namespace Projeto_Integrador.models
             sala.idSala = id_sala;
             DataTable dt = sala.Pesquisar();
             nj = Convert.ToInt32(dt.Rows[0]["numeroJogadores"]);
+            if(nj == 4)
+            {
+                cheio = true;
+            }
 
             /*if(Convert.ToString(dt.Rows[0]["jogador1"]) == id)
             {

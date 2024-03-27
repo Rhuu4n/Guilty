@@ -185,7 +185,7 @@ namespace Projeto_Integrador
         {
             if (Jogo.GetInstance().verificaUsuarioCriador())
             {
-                if (Jogo.GetInstance().numeroJogadores == 4)
+                if (Jogo.GetInstance().pesquisarNumeroPlayers() == 4)
                 {
                     this.Hide();
                     frmJogoo frm = new frmJogoo();
