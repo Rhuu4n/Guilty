@@ -347,7 +347,6 @@
             this.pb1j4.Size = new System.Drawing.Size(200, 150);
             this.pb1j4.TabIndex = 54;
             this.pb1j4.TabStop = false;
-//            this.pb1j4.Click += new System.EventHandler(this.pictureBox13_Click);
             // 
             // pb2j4
             // 
@@ -358,7 +357,6 @@
             this.pb2j4.Size = new System.Drawing.Size(200, 150);
             this.pb2j4.TabIndex = 53;
             this.pb2j4.TabStop = false;
- //           this.pb2j4.Click += new System.EventHandler(this.pictureBox12_Click);
             // 
             // pbMoeda4
             // 
@@ -392,7 +390,6 @@
             this.pbMoeda2.Size = new System.Drawing.Size(50, 50);
             this.pbMoeda2.TabIndex = 43;
             this.pbMoeda2.TabStop = false;
- //           this.pbMoeda2.Click += new System.EventHandler(this.pbMoeda2_Click);
             // 
             // pbMoeda1
             // 
@@ -414,7 +411,6 @@
             this.pb1j3.Size = new System.Drawing.Size(150, 200);
             this.pb1j3.TabIndex = 24;
             this.pb1j3.TabStop = false;
- //           this.pb1j3.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pb2j3
             // 
@@ -425,7 +421,6 @@
             this.pb2j3.Size = new System.Drawing.Size(150, 200);
             this.pb2j3.TabIndex = 23;
             this.pb2j3.TabStop = false;
- //           this.pb2j3.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pb1j2
             // 
@@ -436,7 +431,6 @@
             this.pb1j2.Size = new System.Drawing.Size(200, 150);
             this.pb1j2.TabIndex = 10;
             this.pb1j2.TabStop = false;
- //           this.pb1j2.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // pb2j2
             // 
@@ -447,7 +441,6 @@
             this.pb2j2.Size = new System.Drawing.Size(200, 150);
             this.pb2j2.TabIndex = 9;
             this.pb2j2.TabStop = false;
- //           this.pb2j2.Click += new System.EventHandler(this.pictureBox10_Click);
             // 
             // pb1j1
             // 
@@ -458,7 +451,6 @@
             this.pb1j1.Size = new System.Drawing.Size(230, 323);
             this.pb1j1.TabIndex = 50;
             this.pb1j1.TabStop = false;
- //           this.pb1j1.Click += new System.EventHandler(this.pbFundo1_Click);
             // 
             // pbMiner1
             // 
@@ -479,7 +471,6 @@
             this.pb2j1.Size = new System.Drawing.Size(230, 323);
             this.pb2j1.TabIndex = 52;
             this.pb2j1.TabStop = false;
- //           this.pb2j1.Click += new System.EventHandler(this.pbFundo2_Click);
             // 
             // pbSaq2
             // 
@@ -522,7 +513,6 @@
             this.pbFundomesa.Size = new System.Drawing.Size(1200, 800);
             this.pbFundomesa.TabIndex = 66;
             this.pbFundomesa.TabStop = false;
- //           this.pbFundomesa.Click += new System.EventHandler(this.pbFundomesa_Click);
             // 
             // num1
             // 
