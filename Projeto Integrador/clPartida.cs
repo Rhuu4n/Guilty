@@ -82,6 +82,39 @@ namespace Projeto_Integrador
             }
         }
 
+        public DataTable PesquisarPor2Itens()
+        {
+            try
+            {
+                BD._sql = "SELECT * FROM Partida " + "'where id_sala = " + idSala + "' and Jogador_ID ='" + Jogador_ID;
+
+
+                return BD.ExecutaSelect();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro.: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
+        public DataTable PesquisarIDPartida()
+        {
+            try
+            {
+                BD._sql = "SELECT * FROM Partida " +
+                         " WHERE id_partida = " + idPartida + "";
+
+
+                return BD.ExecutaSelect();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro.: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
 
 
 

@@ -141,8 +141,8 @@ namespace Projeto_Integrador
         {
             try
             {
-                BD._sql = "SELECT * FROM CADASTRO " +
-                         " WHERE ID_Usuario LIKE '%" + idusuario + "%' ";
+                BD._sql = "SELECT * FROM Cadastro " +
+                         " WHERE ID LIKE '%" + idusuario + "%' ";
 
                 return BD.ExecutaSelect();
             }

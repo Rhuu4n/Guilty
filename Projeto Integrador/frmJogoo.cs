@@ -41,14 +41,6 @@ namespace Projeto_Integrador
             pb1j4.SizeMode = PictureBoxSizeMode.StretchImage;
             pb2j4.Load("https://i.imgur.com/oEdSdtt.png");
             pb2j4.SizeMode = PictureBoxSizeMode.StretchImage;
-            pbMiner1.Load("https://i.imgur.com/UBNX8Js.jpeg");
-            pbMiner1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pbMiner2.Load("https://i.imgur.com/UBNX8Js.jpeg");
-            pbMiner2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pbSaq1.Load("https://i.imgur.com/wqB1ms3.jpeg"); 
-            pbSaq1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pbSaq2.Load("https://i.imgur.com/wqB1ms3.jpeg");
-            pbSaq2.SizeMode = PictureBoxSizeMode.StretchImage;
             pbMoeda1.Load("https://i.imgur.com/g01U3w0.png");
             pbMoeda1.SizeMode = PictureBoxSizeMode.StretchImage;
             pbMoeda2.Load("https://i.imgur.com/g01U3w0.png");
@@ -57,6 +49,14 @@ namespace Projeto_Integrador
             pbMoeda3.SizeMode = PictureBoxSizeMode.StretchImage;
             pbMoeda4.Load("https://i.imgur.com/g01U3w0.png");
             pbMoeda4.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbMiner1.Load("https://i.imgur.com/q44KeIY.jpeg");
+            pbMiner1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbMiner2.Load("https://i.imgur.com/q44KeIY.jpeg");
+            pbMiner2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbSaq1.Load("https://i.imgur.com/opUd1Kc.jpeg");
+            pbSaq1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbSaq2.Load("https://i.imgur.com/opUd1Kc.jpeg");
+            pbSaq2.SizeMode = PictureBoxSizeMode.StretchImage;
 
 
 
@@ -376,6 +376,11 @@ namespace Projeto_Integrador
         {
             Application.Exit();
             System.Environment.Exit(1);
+        }
+
+        private void pbFundomesa_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
