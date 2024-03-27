@@ -34,8 +34,6 @@ namespace Projeto_Integrador
 
                 exOK = BD.ExecutaComando(false);
 
-
-
                 if (exOK == 1)
                 {
                 }
