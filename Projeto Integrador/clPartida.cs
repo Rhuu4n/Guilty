@@ -70,7 +70,7 @@ namespace Projeto_Integrador
             try
             {
                 BD._sql = "SELECT * FROM Partida " +
-                         " WHERE ID_sala = " + idSala + "";
+                         " WHERE ID_sala = " + idSala + "order by Ordem";
 
 
                 return BD.ExecutaSelect();

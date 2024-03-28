@@ -76,9 +76,20 @@ namespace Projeto_Integrador
 
         }
 
+        public void atualizar_nomes(string j1, string j2, string j3, string j4, string jc)
+        {
+            lblNomej1.Text = j1;
+            lblNomej2.Text = j2;
+            lblNomej3.Text = j3;
+            lblNomej4.Text = j4;
+            lblVez.Text = jc;
+        }
+
+
         private void frmJogoo_Load(object sender, EventArgs e)
         {
-            Jogo.GetInstance().iniciarPartida();
+            string[] idj = Jogo.GetInstance().iniciarPartida();
+            atualizar_nomes(idj[0], idj[1], idj[2], idj[3], idj[4]);
         }
 
         public void adcCoins(int player)
