@@ -513,13 +513,13 @@ namespace Projeto_Integrador.models
 
         public void atualizarPartidaMinhaVez()
         {
-            if(verificaVez() == true)
+            if(verificaVez())
             {
-                partida = false;
+                minhaVez = false;
             }
             else
             {
-                partida = true;
+                minhaVez = true;
             }
         }
 
@@ -528,8 +528,9 @@ namespace Projeto_Integrador.models
             clSalas sala = new clSalas();
             sala.idSala = id_sala;
             DataTable dt = sala.Pesquisar();
-
-            if (dt.Rows[0]["jogadorAtual"].ToString() == id)
+            string atual = dt.Rows[0]["jogadorAtual"].ToString();
+            Debug.WriteLine("A: " + atual + " ID: " + id);
+            if (atual == id)
             {
                 return true;
             }
