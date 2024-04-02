@@ -36,7 +36,6 @@ namespace Projeto_Integrador
             try
             {
 
-                Debug.WriteLine("Funfou ");
 
                 BD._sql = String.Format(new CultureInfo("en-US"), "INSERT INTO Partida  (id_sala, Jogador_ID, Ordem, Moedas) " +
                 " values ('{0}','{1}','{2}', '{3}')", idSala, Jogador_ID, ordem, moedas) + "; SELECT SCOPE_IDENTITY();";

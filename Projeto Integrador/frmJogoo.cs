@@ -3,11 +3,13 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
@@ -67,7 +69,7 @@ namespace Projeto_Integrador
 
 
             // Configurar os rótulos para exibir as moedas dos jogadores
-            Label[] coinLabels = { lblMoedaP1, lblMoedaP2, lblMoedaP3, lblMoedaP4 };
+            Label[] coinLabels = { lblMoedaP1, lblMoedaP4, lblMoedaP3, lblMoedaP2 };
 
             for (int i = 0; i < playerCoins.Length; i++)
             {
@@ -79,9 +81,9 @@ namespace Projeto_Integrador
         public void atualizar_nomes(string j1, string j2, string j3, string j4, string jc)
         {
             lblNomej1.Text = j1;
-            lblNomej2.Text = j2;
+            lblNomej4.Text = j2;
             lblNomej3.Text = j3;
-            lblNomej4.Text = j4;
+            lblNomej2.Text = j4;
             lblVez.Text = jc;
         }
 
@@ -90,6 +92,53 @@ namespace Projeto_Integrador
         {
             string[] idj = Jogo.GetInstance().iniciarPartida();
             atualizar_nomes(idj[0], idj[1], idj[2], idj[3], idj[4]);
+
+
+            // lblJ1.BeginInvoke(new Action<string>(AtualizarNomesNaThread), nomes[0]);
+
+            Thread threadPartida = new Thread(new ThreadStart(atualizacaoPartida));
+            threadPartida.Start();
+        }
+
+        void atualizacaoPartida()
+        {
+            while(!Jogo.GetInstance().getPartida()){
+                Jogo.GetInstance().atualizarPartidaMinhaVez();
+
+                // quando é sua vez
+                while (!Jogo.GetInstance().getMinhaVez())
+                {
+                    Debug.WriteLine("minha vez");
+                    Jogo.GetInstance().atualizarPartidaMinhaVez();
+                    Thread.Sleep(1000);
+                } 
+                
+                // quando não é sua vez
+                while (Jogo.GetInstance().getMinhaVez())
+                {
+                    Debug.WriteLine("n é minha vez ");
+                    string parametro = lblVez.Text;
+                    string resposta = Jogo.GetInstance().verificaVezAlterada(parametro);
+
+                    if(!(parametro == resposta))
+                    {
+                        atualizaVez(resposta);
+                    }
+
+                    Thread.Sleep(1000);
+                }
+            }
+        }
+
+        public void atualizaVez(string param)
+        {
+            if(lblVez.InvokeRequired)
+            {
+                lblVez.BeginInvoke(new Action<string>(atualizaVez), param);
+            }else
+            {
+                lblVez.Text = param;
+            }
         }
 
         public void adcCoins(int player)
@@ -102,7 +151,7 @@ namespace Projeto_Integrador
                     MessageBox.Show($"O jogador {player + 1} agora possui {playerCoins[player]} moeda(s).", "Moedas Atualizadas");
 
                     // Atualizar o rótulo correspondente
-                    Label[] coinLabels = { lblMoedaP1, lblMoedaP2, lblMoedaP3, lblMoedaP4 };
+                    Label[] coinLabels = { lblMoedaP1, lblMoedaP4, lblMoedaP3, lblMoedaP2 };
                     coinLabels[player].Text = $"x{playerCoins[player]}";
 
                     //números aleatórios
@@ -131,7 +180,7 @@ namespace Projeto_Integrador
                     MessageBox.Show($"O jogador {player + 1} agora possui {playerCoins[player]} moeda(s).", "Moedas Atualizadas");
 
                     // Atualizar o rótulo correspondente
-                    Label[] coinLabels = { lblMoedaP1, lblMoedaP2, lblMoedaP3, lblMoedaP4 };
+                    Label[] coinLabels = { lblMoedaP1, lblMoedaP4, lblMoedaP3, lblMoedaP2 };
                     coinLabels[player].Text = $"x{playerCoins[player]}";
 
                     //números aleatórios
@@ -233,6 +282,7 @@ namespace Projeto_Integrador
             btnRoubar2.Visible = false;
             btnRoubar3.Visible = false;
 
+            lblVez.Text = Jogo.GetInstance().PassarVez();
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -265,7 +315,7 @@ namespace Projeto_Integrador
                     btnRoubar3.Visible = true;
 
                     // Atualizar o rótulo correspondente
-                    Label[] coinLabels = { lblMoedaP1, lblMoedaP2, lblMoedaP3, lblMoedaP4 };
+                    Label[] coinLabels = { lblMoedaP1, lblMoedaP4, lblMoedaP3, lblMoedaP2 };
                     coinLabels[player].Text = $"x{playerCoins[player]}";
                 }
                 else
@@ -390,6 +440,16 @@ namespace Projeto_Integrador
         }
 
         private void pbFundomesa_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNomej4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbFundomesa_Click_1(object sender, EventArgs e)
         {
 
         }

@@ -116,13 +116,6 @@ namespace Projeto_Integrador
 
             Thread threadAtualizacaoNomes = new Thread(new ThreadStart(threadAtualizarNomes));
             threadAtualizacaoNomes.Start();
-            /*threadAtualizacaoNomes += () => {
-                this.Hide();
-            };*/
-
-
-//            Jogo.GetInstance().entraSala(this);
-
         }
 
 

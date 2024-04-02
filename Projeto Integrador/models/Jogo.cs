@@ -26,6 +26,8 @@ namespace Projeto_Integrador.models
         public int J4PTID;
         int minhaOrdem = 1;
         public bool cheio = false;
+        public bool partida = false;
+        public bool minhaVez = false;
         public string id;
         public string nome;
         public int numeroJogadores;
@@ -164,6 +166,16 @@ namespace Projeto_Integrador.models
         {
             return cheio;
         }
+
+        public bool getPartida()
+        {
+            return partida;
+        }
+        public bool getMinhaVez()
+        {
+            return minhaVez;
+        }
+
         public bool getEstadoSala()
         {
             return estadoSala;
@@ -233,7 +245,6 @@ namespace Projeto_Integrador.models
 
             for(int i = 0; i < nj; i++)
             {
-                Debug.WriteLine("Funfou ");
 
                 int ordem = Convert.ToInt32(dtPartida.Rows[i]["ordem"]);
                 if (ordem == 1)
@@ -296,7 +307,6 @@ namespace Projeto_Integrador.models
 
             for (int i = 0; i < nj; i++)
             {
-                Debug.WriteLine("Funfou ");
 
                 int ordem = Convert.ToInt32(dtPartida.Rows[i]["ordem"]);
                 if (ordem == 1)
@@ -501,6 +511,75 @@ namespace Projeto_Integrador.models
             return false;
         }
 
+        public void atualizarPartidaMinhaVez()
+        {
+            if(verificaVez() == true)
+            {
+                partida = false;
+            }
+            else
+            {
+                partida = true;
+            }
+        }
+
+        public bool verificaVez()
+        {
+            clSalas sala = new clSalas();
+            sala.idSala = id_sala;
+            DataTable dt = sala.Pesquisar();
+
+            if (dt.Rows[0]["jogadorAtual"].ToString() == id)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public string verificaVezAlterada(string atual)
+        {
+            clSalas sala = new clSalas();
+            sala.idSala = id_sala;
+            DataTable dt = sala.Pesquisar();
+
+            string novo = dt.Rows[0]["jogadorAtual"].ToString();
+
+            if (novo == atual)
+            {
+                return atual;
+            }
+            return novo;
+        }
+
+
+        public string PassarVez()
+        {
+            clPartida partida = new clPartida();
+            partida.idSala = id_sala;
+            DataTable dt = partida.Pesquisar();
+
+            int idProximo;
+
+            if(minhaOrdem == 4)
+            {
+                idProximo = Convert.ToInt32(dt.Rows[0]["Jogador_ID"]);
+            }
+            else
+            {
+                idProximo = Convert.ToInt32(dt.Rows[minhaOrdem]["Jogador_ID"]);
+            }
+
+            clSalas sala = new clSalas();
+            sala.jogadorAtual = idProximo;
+            sala.AtualizarJogadorAtual();
+
+            clCliente cliente = new clCliente();
+            cliente.idusuario = idProximo;
+            DataTable dtProximo = cliente.PesquisaPorID();
+            return Convert.ToString(dtProximo.Rows[0]["Nome"]);
+
+
+        }
 
         public clUsuario getUsuarioLogado() {
                 return this.usuarioLogado;

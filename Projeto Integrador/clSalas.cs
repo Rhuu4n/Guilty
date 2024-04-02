@@ -107,6 +107,36 @@ namespace Projeto_Integrador
 
             }
 
+        public void AtualizarJogadorAtual()
+        {
+            try
+            {
+                int exOK = 0;
+
+                BD._sql = "UPDATE Sala SET jogadorAtual = " + jogadorAtual + "  where id_sala = " + Jogo.GetInstance().getIdSala();
+
+                exOK = BD.ExecutaComando(false);
+
+
+
+                if (exOK == 1)
+                {
+                    MessageBox.Show("Entrou na sala!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Erro ao alterar Usuario, contate o desenvolvedor!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro.: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+        }
+
 
         public void AtivarSala()
         {
