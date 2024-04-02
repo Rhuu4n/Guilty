@@ -256,7 +256,7 @@ namespace Projeto_Integrador
         private void button2_Click(object sender, EventArgs e)
         {
             currentPlayerIndex = (currentPlayerIndex + 1) % players.Length;
-            MessageBox.Show($"{players[currentPlayerIndex]}, é a sua vez.");
+            //MessageBox.Show($"{players[currentPlayerIndex]}, é a sua vez.");
             lblVez.Text = players[currentPlayerIndex];
             nudPlayer.Value = currentPlayerIndex;
 

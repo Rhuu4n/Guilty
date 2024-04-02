@@ -140,9 +140,7 @@
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(186, 25);
             this.txtSenha.TabIndex = 27;
-            this.txtSenha.Text = "1234";
             this.txtSenha.UseSystemPasswordChar = true;
-//            this.txtSenha.TextChanged += new System.EventHandler(this.txtSenha_TextChanged);
             this.txtSenha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSenha_KeyPress);
             // 
             // txtUsuario
@@ -398,7 +396,6 @@
             this.Name = "frmCadastro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Guilty";
- //           this.Load += new System.EventHandler(this.frmCadastro_Load);
             this.Resize += new System.EventHandler(this.frmCadastro_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.pbGuilty)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCadastrar)).EndInit();
