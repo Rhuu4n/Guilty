@@ -26,6 +26,8 @@ namespace Projeto_Integrador.models
         public int J4PTID;
         int minhaOrdem = 1;
         public bool cheio = false;
+        public bool partida = false;
+        public bool minhaVez = false;
         public string id;
         public string nome;
         public int numeroJogadores;
@@ -164,6 +166,16 @@ namespace Projeto_Integrador.models
         {
             return cheio;
         }
+
+        public bool getPartida()
+        {
+            return partida;
+        }
+        public bool getMinhaVez()
+        {
+            return minhaVez;
+        }
+
         public bool getEstadoSala()
         {
             return estadoSala;
@@ -233,7 +245,6 @@ namespace Projeto_Integrador.models
 
             for(int i = 0; i < nj; i++)
             {
-                Debug.WriteLine("Funfou ");
 
                 int ordem = Convert.ToInt32(dtPartida.Rows[i]["ordem"]);
                 if (ordem == 1)
@@ -279,10 +290,16 @@ namespace Projeto_Integrador.models
                 cheio = true;
             }
 
-            /*if(Convert.ToString(dt.Rows[0]["jogador1"]) == id)
+            clPartida partida1 = new clPartida();
+            partida1.idSala = id_sala;
+            partida1.Jogador_ID = Convert.ToInt32(id);
+            DataTable dtPartida1 = partida1.PesquisarPor2Itens();
+
+
+            if (Convert.ToString(dtPartida1.Rows[0]["Ordem"]) == "1")
             {
                 criador = true;
-            }*/
+            }
 
 
             clPartida partida = new clPartida();
@@ -296,7 +313,6 @@ namespace Projeto_Integrador.models
 
             for (int i = 0; i < nj; i++)
             {
-                Debug.WriteLine("Funfou ");
 
                 int ordem = Convert.ToInt32(dtPartida.Rows[i]["ordem"]);
                 if (ordem == 1)
@@ -501,6 +517,80 @@ namespace Projeto_Integrador.models
             return false;
         }
 
+        public void atualizarPartidaMinhaVez()
+        {
+            if(verificaVez())
+            {
+                minhaVez = false;
+            }
+            else
+            {
+                minhaVez = true;
+            }
+        }
+
+        public bool verificaVez()
+        {
+            clSalas sala = new clSalas();
+            sala.idSala = id_sala;
+            DataTable dt = sala.Pesquisar();
+            string atual = dt.Rows[0]["jogadorAtual"].ToString();
+            Debug.WriteLine("A: " + atual + " ID: " + id);
+            if (atual == id)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public string verificaVezAlterada(string atual)
+        {
+            clSalas sala = new clSalas();
+            sala.idSala = id_sala;
+            DataTable dt = sala.Pesquisar();
+
+            clCliente cliente = new clCliente();
+            cliente.idusuario = Convert.ToInt32(dt.Rows[0]["jogadorAtual"]);
+            DataTable dtProximo = cliente.PesquisaPorID();
+
+            string novo = Convert.ToString(dtProximo.Rows[0]["Nome"]);
+
+            if (novo == atual)
+            {
+                return atual;
+            }
+            return novo;
+        }
+
+
+        public string PassarVez()
+        {
+            clPartida partida = new clPartida();
+            partida.idSala = id_sala;
+            DataTable dt = partida.Pesquisar();
+
+            int idProximo;
+
+            if(minhaOrdem == 4)
+            {
+                idProximo = Convert.ToInt32(dt.Rows[0]["Jogador_ID"]);
+            }
+            else
+            {
+                idProximo = Convert.ToInt32(dt.Rows[minhaOrdem]["Jogador_ID"]);
+            }
+
+            clSalas sala = new clSalas();
+            sala.jogadorAtual = idProximo;
+            sala.AtualizarJogadorAtual();
+
+            clCliente cliente = new clCliente();
+            cliente.idusuario = idProximo;
+            DataTable dtProximo = cliente.PesquisaPorID();
+            return Convert.ToString(dtProximo.Rows[0]["Nome"]);
+
+
+        }
 
         public clUsuario getUsuarioLogado() {
                 return this.usuarioLogado;

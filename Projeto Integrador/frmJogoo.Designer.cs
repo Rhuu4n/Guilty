@@ -31,8 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmJogoo));
             this.lblVez = new System.Windows.Forms.Label();
             this.lblMoedaP1 = new System.Windows.Forms.Label();
-            this.lblMoedaP2 = new System.Windows.Forms.Label();
-            this.lblMoedaP3 = new System.Windows.Forms.Label();
             this.lblMoedaP4 = new System.Windows.Forms.Label();
             this.nudPlayer = new System.Windows.Forms.NumericUpDown();
             this.pb1j4 = new System.Windows.Forms.PictureBox();
@@ -53,8 +51,8 @@
             this.pbMiner2 = new System.Windows.Forms.PictureBox();
             this.pbFundomesa = new System.Windows.Forms.PictureBox();
             this.num1 = new System.Windows.Forms.Label();
-            this.lblNomej2 = new System.Windows.Forms.Label();
             this.lblNomej4 = new System.Windows.Forms.Label();
+            this.lblNomej2 = new System.Windows.Forms.Label();
             this.lblNomej1 = new System.Windows.Forms.Label();
             this.lblNomej3 = new System.Windows.Forms.Label();
             this.btnEncerrar = new System.Windows.Forms.PictureBox();
@@ -135,7 +133,7 @@
             this.lblMoedaP1.TabIndex = 42;
             this.lblMoedaP1.Text = "x0";
             // 
-            // lblMoedaP2
+            // lblMoedaP4
             // 
             this.lblMoedaP2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblMoedaP2.AutoSize = true;
@@ -163,7 +161,7 @@
             this.lblMoedaP3.TabIndex = 46;
             this.lblMoedaP3.Text = "x0";
             // 
-            // lblMoedaP4
+            // lblMoedaP2
             // 
             this.lblMoedaP4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblMoedaP4.AutoSize = true;
@@ -374,9 +372,24 @@
             this.num1.Text = "label1";
             this.num1.Visible = false;
             // 
+            // lblNomej4
+            // 
+            this.lblNomej4.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblNomej4.AutoSize = true;
+            this.lblNomej4.BackColor = System.Drawing.Color.Black;
+            this.lblNomej4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblNomej4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lblNomej4.Font = new System.Drawing.Font("Minecraft", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomej4.ForeColor = System.Drawing.Color.White;
+            this.lblNomej4.Location = new System.Drawing.Point(1011, 580);
+            this.lblNomej4.Name = "lblNomej4";
+            this.lblNomej4.Size = new System.Drawing.Size(179, 34);
+            this.lblNomej4.TabIndex = 68;
+            this.lblNomej4.Text = "Jogador 4";
+            // 
             // lblNomej2
             // 
-            this.lblNomej2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblNomej2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblNomej2.AutoSize = true;
             this.lblNomej2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(232)))), ((int)(((byte)(208)))));
             this.lblNomej2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -722,11 +735,11 @@
         private System.Windows.Forms.Label lblVez;
         private System.Windows.Forms.PictureBox pbMoeda1;
         private System.Windows.Forms.Label lblMoedaP1;
-        private System.Windows.Forms.Label lblMoedaP2;
+        private System.Windows.Forms.Label lblMoedaP4;
         private System.Windows.Forms.PictureBox pbMoeda2;
         private System.Windows.Forms.Label lblMoedaP3;
         private System.Windows.Forms.PictureBox pbMoeda3;
-        private System.Windows.Forms.Label lblMoedaP4;
+        private System.Windows.Forms.Label lblMoedaP2;
         private System.Windows.Forms.PictureBox pbMoeda4;
         private System.Windows.Forms.PictureBox pb1j1;
         private System.Windows.Forms.PictureBox pb2j1;
@@ -737,8 +750,8 @@
         private System.Windows.Forms.PictureBox pbMiner2;
         private System.Windows.Forms.PictureBox pbFundomesa;
         private System.Windows.Forms.Label num1;
-        private System.Windows.Forms.Label lblNomej2;
         private System.Windows.Forms.Label lblNomej4;
+        private System.Windows.Forms.Label lblNomej2;
         private System.Windows.Forms.Label lblNomej1;
         private System.Windows.Forms.Label lblNomej3;
         private System.Windows.Forms.PictureBox btnEncerrar;
