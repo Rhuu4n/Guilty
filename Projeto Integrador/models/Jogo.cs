@@ -511,7 +511,7 @@ namespace Projeto_Integrador.models
             DataTable dt = partida.Pesquisar();
 
             int ordem = Convert.ToInt32(dt.Rows[0]["ordem"]);
-            if((ordem == 1))
+            if(ordem == 1)
             {
                 return true;
             }

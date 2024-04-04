@@ -136,7 +136,7 @@ namespace Projeto_Integrador
                 Thread.Sleep(800);
             }
 
-            if (!Jogo.GetInstance().getCriador())
+            if (!Jogo.GetInstance().verificaUsuarioCriador())
             {
                 this.BeginInvoke(new Action(fechaForm));
             }
