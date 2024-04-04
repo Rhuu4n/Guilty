@@ -508,7 +508,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pbFundomesa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbFundomesa.Location = new System.Drawing.Point(12, 12);
+            this.pbFundomesa.Location = new System.Drawing.Point(0, 0);
             this.pbFundomesa.Name = "pbFundomesa";
             this.pbFundomesa.Size = new System.Drawing.Size(1200, 800);
             this.pbFundomesa.TabIndex = 66;

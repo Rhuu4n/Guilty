@@ -290,10 +290,16 @@ namespace Projeto_Integrador.models
                 cheio = true;
             }
 
-            /*if(Convert.ToString(dt.Rows[0]["jogador1"]) == id)
+            clPartida partida1 = new clPartida();
+            partida1.idSala = id_sala;
+            partida1.Jogador_ID = Convert.ToInt32(id);
+            DataTable dtPartida1 = partida1.PesquisarPor2Itens();
+
+
+            if (Convert.ToString(dtPartida1.Rows[0]["Ordem"]) == "1")
             {
                 criador = true;
-            }*/
+            }
 
 
             clPartida partida = new clPartida();
@@ -543,7 +549,11 @@ namespace Projeto_Integrador.models
             sala.idSala = id_sala;
             DataTable dt = sala.Pesquisar();
 
-            string novo = dt.Rows[0]["jogadorAtual"].ToString();
+            clCliente cliente = new clCliente();
+            cliente.idusuario = Convert.ToInt32(dt.Rows[0]["jogadorAtual"]);
+            DataTable dtProximo = cliente.PesquisaPorID();
+
+            string novo = Convert.ToString(dtProximo.Rows[0]["Nome"]);
 
             if (novo == atual)
             {
