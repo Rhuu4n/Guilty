@@ -57,6 +57,37 @@ namespace Projeto_Integrador
             pbSaq1.SizeMode = PictureBoxSizeMode.StretchImage;
             pbSaq2.Load("https://i.imgur.com/opUd1Kc.jpeg");
             pbSaq2.SizeMode = PictureBoxSizeMode.StretchImage;
+            btnEncerrar.Load("https://i.imgur.com/Pnhp3XQ.png");
+            btnEncerrar.SizeMode = PictureBoxSizeMode.StretchImage;
+            btnRoubar1.Load("https://i.imgur.com/ac5gsVo.png");
+            btnRoubar1.SizeMode = PictureBoxSizeMode.StretchImage;
+            btnRoubar2.Load("https://i.imgur.com/ac5gsVo.pngg");
+            btnRoubar2.SizeMode = PictureBoxSizeMode.StretchImage;
+            btnRoubar3.Load("https://i.imgur.com/ac5gsVo.png");
+            btnRoubar3.SizeMode = PictureBoxSizeMode.StretchImage;
+            btnOpcoes.Load("https://i.imgur.com/fh1rTGx.png");
+            btnOpcoes.SizeMode = PictureBoxSizeMode.StretchImage;
+            btn1j1.Load("https://i.imgur.com/6BAQ6UD.png");
+            btn1j1.SizeMode = PictureBoxSizeMode.StretchImage;
+            btn2j1.Load("https://i.imgur.com/6BAQ6UD.png");
+            btn2j1.SizeMode = PictureBoxSizeMode.StretchImage;
+            btnResumir.Load("https://i.imgur.com/mhTTklq.png");
+            btnResumir.SizeMode = PictureBoxSizeMode.StretchImage;
+            btnSair.Load("https://i.imgur.com/EZdHbue.png");
+            btnSair.SizeMode= PictureBoxSizeMode.StretchImage;
+            btnSairjogo.Load("https://i.imgur.com/NwbfW17.png");
+            btnSairjogo.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbfundoJ1.Load("https://i.imgur.com/8GCxhgw.png");
+            pbfundoJ1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbfundoJ2.Load("https://i.imgur.com/8GCxhgw.png");
+            pbfundoJ2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbfundoJ3.Load("https://i.imgur.com/8GCxhgw.png");
+            pbfundoJ3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbfundoJ4.Load("https://i.imgur.com/8GCxhgw.png");
+            pbfundoJ4.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbFundoJatual.Load("https://i.imgur.com/8GCxhgw.png");
+            pbFundoJatual.SizeMode = PictureBoxSizeMode.StretchImage;
+
 
 
 
@@ -390,6 +421,211 @@ namespace Projeto_Integrador
         }
 
         private void pbFundomesa_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            currentPlayerIndex = (currentPlayerIndex + 1) % players.Length;
+            MessageBox.Show($"{players[currentPlayerIndex]}, é a sua vez.");
+            lblVez.Text = players[currentPlayerIndex];
+            nudPlayer.Value = currentPlayerIndex;
+
+            //vez jogador 1
+            if (nudPlayer.Value == 0)
+            {
+                btn1j1.Enabled = true;
+                btn2j1.Enabled = true;
+                btnEncerrar.Enabled = true;
+            }
+            else
+            {
+                btn1j1.Enabled = false;
+                btn2j1.Enabled = false;
+                //btnEncerrar.Enabled = false;
+            }
+            /*btn1j1.Enabled = false;
+            btn2j1.Enabled = false;
+            btnEncerrar.Enabled = false;*/
+            pb1j1.Visible = true;
+            pb2j1.Visible = true;
+            btnRoubar1.Visible = false;
+            btnRoubar2.Visible = false;
+            btnRoubar3.Visible = false;
+        }
+
+        private void btnRoubar2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRoubar2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn1j1_Click_1(object sender, EventArgs e)
+        {
+            if (pb2j1.Visible == true)
+            {
+                pb1j1.Visible = false;
+                btn1j1.Enabled = false;
+                btn2j1.Enabled = false;
+            }
+            else
+            {
+            }
+
+
+            int player = (int)nudPlayer.Value;
+
+            Random RandomClass = new Random();
+
+            num1.Text = RandomClass.Next(1, 4).ToString();
+
+            if (num1.Text == "1") // mineradora
+            {
+                adcCoins(player);
+                clCartas cartas = new clCartas();
+                cartas.Acao = "1";
+                cartas.Jogador_afetado = "1";
+                //cartas.ID_partida = Convert.ToInt32(.id);
+
+                cartas.Mineradora();
+
+            }
+            else if (num1.Text == "2")
+            {
+                if (pb1j1.Visible == true)
+                {
+                    pb2j1.Visible = false;
+                    btn1j1.Enabled = false;
+                    btn2j1.Enabled = false;
+                }
+                else
+                {
+                }
+
+                btnRoubar1.Visible = true;
+                btnRoubar2.Visible = true;
+                btnRoubar3.Visible = true;
+
+
+            }
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            if (pb1j1.Visible == true)
+            {
+                pb2j1.Visible = false;
+                btn1j1.Enabled = false;
+                btn2j1.Enabled = false;
+            }
+            else
+            {
+            }
+
+
+            int player = (int)nudPlayer.Value;
+
+            if (player >= 0 && player < 4)
+            {
+                if (playerCoins[player] < 10)
+                {
+                    playerCoins[player]++;
+                    MessageBox.Show($"O jogador {player + 1} agora possui {playerCoins[player]} moeda(s).", "Moedas Atualizadas");
+
+                    //mostrar botões de roubo
+
+                    btnRoubar1.Visible = true;
+                    btnRoubar2.Visible = true;
+                    btnRoubar3.Visible = true;
+
+                    // Atualizar o rótulo correspondente
+                    Label[] coinLabels = { lblMoedaP1, lblMoedaP2, lblMoedaP3, lblMoedaP4 };
+                    coinLabels[player].Text = $"x{playerCoins[player]}";
+                }
+                else
+                {
+                    MessageBox.Show($"O Jogador {player + 1} juntou 10 moedas e ganhou o jogo, parabéns!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Jogador inválido. Escolha um número de jogador entre 1 e 4.", "Jogador Inválido");
+            }
+        }
+
+        private void btnOpcoes_Click(object sender, EventArgs e)
+        {
+            pbFundomesa.Load("https://i.imgur.com/MU36yPp.jpg");
+            btnOpcoes.Visible = false;
+            btnResumir.Visible = true;
+            btnSair.Visible = true;
+            btnSairjogo.Visible = true;
+            btn1j1.Visible = false;
+            btn2j1.Visible = false;
+            btnEncerrar.Visible = false;
+
+            //frmOpcoes frm = new frmOpcoes();
+            //frm.ShowDialog();
+            //this.Show();
+
+
+
+            /*Image grayscaleImage = new Bitmap(this.BackgroundImage.Width, this.BackgroundImage.Height, this.BackgroundImage.PixelFormat);
+            ImageAttributes attributes = new ImageAttributes();
+            ColorMatrix grayscaleMatrix = new ColorMatrix(new float[][] {
+                new float[] { 0.299f, 0.299f, 0.299f, 0, 0 },
+                new float[] { 0.587f, 0.587f, 0.587f, 0, 0 },
+                new float[] { 0.114f, 0.114f, 0.114f, 0, 0 },
+                new float[] {      0,      0,      0, 1, 0 },
+                new float[] {      0,      0,      0, 0, 1 },
+            });
+
+            attributes.SetColorMatrix(grayscaleMatrix);
+
+            using (Graphics g = Graphics.FromImage(grayscaleImage))
+            {
+                g.DrawImage(this.BackgroundImage, new Rectangle(0, 0, grayscaleImage.Width, grayscaleImage.Height),
+                0, 0, grayscaleImage.Width, grayscaleImage.Height,
+                    GraphicsUnit.Pixel, attributes);
+            }
+            */
+            //this.BackgroundImage = grayscaleImage;
+        }
+
+        private void btnResumir_Click_1(object sender, EventArgs e)
+        {
+            pbFundomesa.Load("https://i.imgur.com/Gk2e30F.jpg");
+            btnOpcoes.Visible = true;
+            btnResumir.Visible = false;
+            btnSair.Visible = false;
+            btnSairjogo.Visible = false;
+            btn1j1.Visible = true;
+            btn2j1.Visible = true;
+            btnEncerrar.Visible = true;
+        }
+
+        private void btnSair_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnSairjogo_Click_3(object sender, EventArgs e)
+        {
+            Application.Exit();
+            System.Environment.Exit(1);
+        }
+
+        private void pbMoeda2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click_2(object sender, EventArgs e)
         {
 
         }
