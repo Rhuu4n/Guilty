@@ -92,7 +92,7 @@ namespace Projeto_Integrador
 
 
 
-
+            /*
             // Sistema de passar a vez
 
             players = new string[] { "Jogador 1", "Jogador 2", "Jogador 3", "Jogador 4" };
@@ -106,7 +106,7 @@ namespace Projeto_Integrador
             {
                 coinLabels[i].Text = $"x{playerCoins[i]}";
             }
-
+            */
         }
 
         public void atualizar_nomes(string j1, string j2, string j3, string j4, string jc)
@@ -477,10 +477,10 @@ namespace Projeto_Integrador
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            currentPlayerIndex = (currentPlayerIndex + 1) % players.Length;
+           /* currentPlayerIndex = (currentPlayerIndex + 1) % players.Length;
             MessageBox.Show($"{players[currentPlayerIndex]}, é a sua vez.");
             lblVez.Text = players[currentPlayerIndex];
-            nudPlayer.Value = currentPlayerIndex;
+            nudPlayer.Value = currentPlayerIndex;*/
 
             //vez jogador 1
             if (nudPlayer.Value == 0)

@@ -113,7 +113,7 @@
             this.lblVez.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblVez.Font = new System.Drawing.Font("Minecraft", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVez.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(97)))), ((int)(((byte)(40)))), ((int)(((byte)(80)))));
-            this.lblVez.Location = new System.Drawing.Point(959, 12);
+            this.lblVez.Location = new System.Drawing.Point(1160, 12);
             this.lblVez.Name = "lblVez";
             this.lblVez.Size = new System.Drawing.Size(171, 32);
             this.lblVez.TabIndex = 40;
@@ -127,41 +127,13 @@
             this.lblMoedaP1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblMoedaP1.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMoedaP1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(97)))), ((int)(((byte)(40)))), ((int)(((byte)(80)))));
-            this.lblMoedaP1.Location = new System.Drawing.Point(72, 663);
+            this.lblMoedaP1.Location = new System.Drawing.Point(172, 663);
             this.lblMoedaP1.Name = "lblMoedaP1";
             this.lblMoedaP1.Size = new System.Drawing.Size(38, 21);
             this.lblMoedaP1.TabIndex = 42;
             this.lblMoedaP1.Text = "x0";
             // 
             // lblMoedaP4
-            // 
-            this.lblMoedaP2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblMoedaP2.AutoSize = true;
-            this.lblMoedaP2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(232)))), ((int)(((byte)(208)))));
-            this.lblMoedaP2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.lblMoedaP2.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMoedaP2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(97)))), ((int)(((byte)(40)))), ((int)(((byte)(80)))));
-            this.lblMoedaP2.Location = new System.Drawing.Point(915, 663);
-            this.lblMoedaP2.Name = "lblMoedaP2";
-            this.lblMoedaP2.Size = new System.Drawing.Size(38, 21);
-            this.lblMoedaP2.TabIndex = 44;
-            this.lblMoedaP2.Text = "x0";
-            // 
-            // lblMoedaP3
-            // 
-            this.lblMoedaP3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblMoedaP3.AutoSize = true;
-            this.lblMoedaP3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(232)))), ((int)(((byte)(208)))));
-            this.lblMoedaP3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.lblMoedaP3.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMoedaP3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(97)))), ((int)(((byte)(40)))), ((int)(((byte)(80)))));
-            this.lblMoedaP3.Location = new System.Drawing.Point(820, 156);
-            this.lblMoedaP3.Name = "lblMoedaP3";
-            this.lblMoedaP3.Size = new System.Drawing.Size(38, 21);
-            this.lblMoedaP3.TabIndex = 46;
-            this.lblMoedaP3.Text = "x0";
-            // 
-            // lblMoedaP2
             // 
             this.lblMoedaP4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblMoedaP4.AutoSize = true;
@@ -178,7 +150,7 @@
             // nudPlayer
             // 
             this.nudPlayer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.nudPlayer.Location = new System.Drawing.Point(1069, 63);
+            this.nudPlayer.Location = new System.Drawing.Point(1270, 63);
             this.nudPlayer.Name = "nudPlayer";
             this.nudPlayer.Size = new System.Drawing.Size(120, 20);
             this.nudPlayer.TabIndex = 55;
@@ -220,7 +192,7 @@
             this.pbMoeda3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pbMoeda3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(232)))), ((int)(((byte)(208)))));
             this.pbMoeda3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbMoeda3.Location = new System.Drawing.Point(864, 133);
+            this.pbMoeda3.Location = new System.Drawing.Point(964, 133);
             this.pbMoeda3.Name = "pbMoeda3";
             this.pbMoeda3.Size = new System.Drawing.Size(50, 50);
             this.pbMoeda3.TabIndex = 45;
@@ -231,7 +203,7 @@
             this.pbMoeda2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pbMoeda2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(232)))), ((int)(((byte)(208)))));
             this.pbMoeda2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbMoeda2.Location = new System.Drawing.Point(959, 634);
+            this.pbMoeda2.Location = new System.Drawing.Point(1160, 634);
             this.pbMoeda2.Name = "pbMoeda2";
             this.pbMoeda2.Size = new System.Drawing.Size(50, 50);
             this.pbMoeda2.TabIndex = 43;
@@ -243,7 +215,7 @@
             this.pbMoeda1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.pbMoeda1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(232)))), ((int)(((byte)(208)))));
             this.pbMoeda1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbMoeda1.Location = new System.Drawing.Point(116, 634);
+            this.pbMoeda1.Location = new System.Drawing.Point(216, 634);
             this.pbMoeda1.Name = "pbMoeda1";
             this.pbMoeda1.Size = new System.Drawing.Size(50, 50);
             this.pbMoeda1.TabIndex = 41;
@@ -253,7 +225,7 @@
             // 
             this.pb1j3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pb1j3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pb1j3.Location = new System.Drawing.Point(603, 12);
+            this.pb1j3.Location = new System.Drawing.Point(703, 12);
             this.pb1j3.Name = "pb1j3";
             this.pb1j3.Size = new System.Drawing.Size(150, 200);
             this.pb1j3.TabIndex = 24;
@@ -263,7 +235,7 @@
             // 
             this.pb2j3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pb2j3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pb2j3.Location = new System.Drawing.Point(447, 12);
+            this.pb2j3.Location = new System.Drawing.Point(547, 12);
             this.pb2j3.Name = "pb2j3";
             this.pb2j3.Size = new System.Drawing.Size(150, 200);
             this.pb2j3.TabIndex = 23;
@@ -273,7 +245,7 @@
             // 
             this.pb1j2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pb1j2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pb1j2.Location = new System.Drawing.Point(989, 403);
+            this.pb1j2.Location = new System.Drawing.Point(1190, 403);
             this.pb1j2.Name = "pb1j2";
             this.pb1j2.Size = new System.Drawing.Size(200, 150);
             this.pb1j2.TabIndex = 10;
@@ -283,7 +255,7 @@
             // 
             this.pb2j2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pb2j2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pb2j2.Location = new System.Drawing.Point(988, 247);
+            this.pb2j2.Location = new System.Drawing.Point(1189, 247);
             this.pb2j2.Name = "pb2j2";
             this.pb2j2.Size = new System.Drawing.Size(200, 150);
             this.pb2j2.TabIndex = 9;
@@ -293,7 +265,7 @@
             // 
             this.pb1j1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.pb1j1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pb1j1.Location = new System.Drawing.Point(367, 465);
+            this.pb1j1.Location = new System.Drawing.Point(467, 465);
             this.pb1j1.Name = "pb1j1";
             this.pb1j1.Size = new System.Drawing.Size(230, 323);
             this.pb1j1.TabIndex = 50;
@@ -303,7 +275,7 @@
             // 
             this.pbMiner1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.pbMiner1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbMiner1.Location = new System.Drawing.Point(367, 465);
+            this.pbMiner1.Location = new System.Drawing.Point(467, 465);
             this.pbMiner1.Name = "pbMiner1";
             this.pbMiner1.Size = new System.Drawing.Size(230, 323);
             this.pbMiner1.TabIndex = 12;
@@ -313,7 +285,7 @@
             // 
             this.pb2j1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.pb2j1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pb2j1.Location = new System.Drawing.Point(602, 466);
+            this.pb2j1.Location = new System.Drawing.Point(702, 466);
             this.pb2j1.Name = "pb2j1";
             this.pb2j1.Size = new System.Drawing.Size(230, 323);
             this.pb2j1.TabIndex = 52;
@@ -323,7 +295,7 @@
             // 
             this.pbSaq2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.pbSaq2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbSaq2.Location = new System.Drawing.Point(603, 466);
+            this.pbSaq2.Location = new System.Drawing.Point(703, 466);
             this.pbSaq2.Name = "pbSaq2";
             this.pbSaq2.Size = new System.Drawing.Size(230, 323);
             this.pbSaq2.TabIndex = 13;
@@ -333,7 +305,7 @@
             // 
             this.pbSaq1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.pbSaq1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbSaq1.Location = new System.Drawing.Point(367, 465);
+            this.pbSaq1.Location = new System.Drawing.Point(467, 465);
             this.pbSaq1.Name = "pbSaq1";
             this.pbSaq1.Size = new System.Drawing.Size(230, 323);
             this.pbSaq1.TabIndex = 60;
@@ -343,7 +315,7 @@
             // 
             this.pbMiner2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.pbMiner2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbMiner2.Location = new System.Drawing.Point(603, 465);
+            this.pbMiner2.Location = new System.Drawing.Point(703, 465);
             this.pbMiner2.Name = "pbMiner2";
             this.pbMiner2.Size = new System.Drawing.Size(230, 323);
             this.pbMiner2.TabIndex = 61;
@@ -358,7 +330,7 @@
             this.pbFundomesa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbFundomesa.Location = new System.Drawing.Point(0, 0);
             this.pbFundomesa.Name = "pbFundomesa";
-            this.pbFundomesa.Size = new System.Drawing.Size(1200, 800);
+            this.pbFundomesa.Size = new System.Drawing.Size(1401, 800);
             this.pbFundomesa.TabIndex = 66;
             this.pbFundomesa.TabStop = false;
             // 
@@ -374,17 +346,17 @@
             // 
             // lblNomej4
             // 
-            this.lblNomej4.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblNomej4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblNomej4.AutoSize = true;
-            this.lblNomej4.BackColor = System.Drawing.Color.Black;
+            this.lblNomej4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(232)))), ((int)(((byte)(208)))));
             this.lblNomej4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblNomej4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblNomej4.Font = new System.Drawing.Font("Minecraft", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomej4.ForeColor = System.Drawing.Color.White;
-            this.lblNomej4.Location = new System.Drawing.Point(1011, 580);
+            this.lblNomej4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(97)))), ((int)(((byte)(40)))), ((int)(((byte)(80)))));
+            this.lblNomej4.Location = new System.Drawing.Point(70, 127);
             this.lblNomej4.Name = "lblNomej4";
             this.lblNomej4.Size = new System.Drawing.Size(179, 34);
-            this.lblNomej4.TabIndex = 68;
+            this.lblNomej4.TabIndex = 69;
             this.lblNomej4.Text = "Jogador 4";
             // 
             // lblNomej2
@@ -395,25 +367,11 @@
             this.lblNomej2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblNomej2.Font = new System.Drawing.Font("Minecraft", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomej2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(97)))), ((int)(((byte)(40)))), ((int)(((byte)(80)))));
-            this.lblNomej2.Location = new System.Drawing.Point(915, 599);
+            this.lblNomej2.Location = new System.Drawing.Point(1150, 599);
             this.lblNomej2.Name = "lblNomej2";
             this.lblNomej2.Size = new System.Drawing.Size(175, 32);
             this.lblNomej2.TabIndex = 68;
             this.lblNomej2.Text = "Jogador 2";
-            // 
-            // lblNomej4
-            // 
-            this.lblNomej4.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblNomej4.AutoSize = true;
-            this.lblNomej4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(232)))), ((int)(((byte)(208)))));
-            this.lblNomej4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.lblNomej4.Font = new System.Drawing.Font("Minecraft", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomej4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(97)))), ((int)(((byte)(40)))), ((int)(((byte)(80)))));
-            this.lblNomej4.Location = new System.Drawing.Point(70, 127);
-            this.lblNomej4.Name = "lblNomej4";
-            this.lblNomej4.Size = new System.Drawing.Size(177, 32);
-            this.lblNomej4.TabIndex = 69;
-            this.lblNomej4.Text = "Jogador 4";
             // 
             // lblNomej1
             // 
@@ -423,7 +381,7 @@
             this.lblNomej1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblNomej1.Font = new System.Drawing.Font("Minecraft", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomej1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(97)))), ((int)(((byte)(40)))), ((int)(((byte)(80)))));
-            this.lblNomej1.Location = new System.Drawing.Point(70, 599);
+            this.lblNomej1.Location = new System.Drawing.Point(170, 599);
             this.lblNomej1.Name = "lblNomej1";
             this.lblNomej1.Size = new System.Drawing.Size(171, 32);
             this.lblNomej1.TabIndex = 70;
@@ -437,7 +395,7 @@
             this.lblNomej3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblNomej3.Font = new System.Drawing.Font("Minecraft", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomej3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(97)))), ((int)(((byte)(40)))), ((int)(((byte)(80)))));
-            this.lblNomej3.Location = new System.Drawing.Point(818, 98);
+            this.lblNomej3.Location = new System.Drawing.Point(918, 98);
             this.lblNomej3.Name = "lblNomej3";
             this.lblNomej3.Size = new System.Drawing.Size(175, 32);
             this.lblNomej3.TabIndex = 71;
@@ -449,7 +407,7 @@
             this.btnEncerrar.BackColor = System.Drawing.Color.Transparent;
             this.btnEncerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEncerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEncerrar.Location = new System.Drawing.Point(1051, 723);
+            this.btnEncerrar.Location = new System.Drawing.Point(1252, 723);
             this.btnEncerrar.Name = "btnEncerrar";
             this.btnEncerrar.Size = new System.Drawing.Size(137, 65);
             this.btnEncerrar.TabIndex = 72;
@@ -462,7 +420,7 @@
             this.btnRoubar1.BackColor = System.Drawing.Color.Transparent;
             this.btnRoubar1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnRoubar1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRoubar1.Location = new System.Drawing.Point(859, 403);
+            this.btnRoubar1.Location = new System.Drawing.Point(1060, 403);
             this.btnRoubar1.Name = "btnRoubar1";
             this.btnRoubar1.Size = new System.Drawing.Size(123, 51);
             this.btnRoubar1.TabIndex = 73;
@@ -475,7 +433,7 @@
             this.btnRoubar2.BackColor = System.Drawing.Color.Transparent;
             this.btnRoubar2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnRoubar2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRoubar2.Location = new System.Drawing.Point(539, 218);
+            this.btnRoubar2.Location = new System.Drawing.Point(639, 218);
             this.btnRoubar2.Name = "btnRoubar2";
             this.btnRoubar2.Size = new System.Drawing.Size(123, 51);
             this.btnRoubar2.TabIndex = 74;
@@ -502,7 +460,7 @@
             this.btn1j1.BackColor = System.Drawing.Color.Transparent;
             this.btn1j1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn1j1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn1j1.Location = new System.Drawing.Point(367, 408);
+            this.btn1j1.Location = new System.Drawing.Point(467, 408);
             this.btn1j1.Name = "btn1j1";
             this.btn1j1.Size = new System.Drawing.Size(230, 51);
             this.btn1j1.TabIndex = 76;
@@ -515,7 +473,7 @@
             this.btn2j1.BackColor = System.Drawing.Color.Transparent;
             this.btn2j1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn2j1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn2j1.Location = new System.Drawing.Point(603, 409);
+            this.btn2j1.Location = new System.Drawing.Point(703, 409);
             this.btn2j1.Name = "btn2j1";
             this.btn2j1.Size = new System.Drawing.Size(230, 51);
             this.btn2j1.TabIndex = 77;
@@ -540,7 +498,7 @@
             this.btnResumir.BackColor = System.Drawing.Color.Transparent;
             this.btnResumir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnResumir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnResumir.Location = new System.Drawing.Point(522, 275);
+            this.btnResumir.Location = new System.Drawing.Point(622, 275);
             this.btnResumir.Name = "btnResumir";
             this.btnResumir.Size = new System.Drawing.Size(155, 51);
             this.btnResumir.TabIndex = 79;
@@ -554,7 +512,7 @@
             this.btnSair.BackColor = System.Drawing.Color.Transparent;
             this.btnSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSair.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSair.Location = new System.Drawing.Point(523, 332);
+            this.btnSair.Location = new System.Drawing.Point(623, 332);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(155, 51);
             this.btnSair.TabIndex = 80;
@@ -568,7 +526,7 @@
             this.btnSairjogo.BackColor = System.Drawing.Color.Transparent;
             this.btnSairjogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSairjogo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSairjogo.Location = new System.Drawing.Point(523, 389);
+            this.btnSairjogo.Location = new System.Drawing.Point(623, 389);
             this.btnSairjogo.Name = "btnSairjogo";
             this.btnSairjogo.Size = new System.Drawing.Size(155, 51);
             this.btnSairjogo.TabIndex = 81;
@@ -581,7 +539,7 @@
             this.pbfundoJ2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pbfundoJ2.BackColor = System.Drawing.Color.Transparent;
             this.pbfundoJ2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbfundoJ2.Location = new System.Drawing.Point(849, 580);
+            this.pbfundoJ2.Location = new System.Drawing.Point(1050, 580);
             this.pbfundoJ2.Name = "pbfundoJ2";
             this.pbfundoJ2.Size = new System.Drawing.Size(339, 137);
             this.pbfundoJ2.TabIndex = 82;
@@ -593,7 +551,7 @@
             this.pbfundoJ1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.pbfundoJ1.BackColor = System.Drawing.Color.Transparent;
             this.pbfundoJ1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbfundoJ1.Location = new System.Drawing.Point(22, 580);
+            this.pbfundoJ1.Location = new System.Drawing.Point(122, 580);
             this.pbfundoJ1.Name = "pbfundoJ1";
             this.pbfundoJ1.Size = new System.Drawing.Size(339, 137);
             this.pbfundoJ1.TabIndex = 83;
@@ -615,7 +573,7 @@
             this.pbfundoJ3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pbfundoJ3.BackColor = System.Drawing.Color.Transparent;
             this.pbfundoJ3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbfundoJ3.Location = new System.Drawing.Point(759, 75);
+            this.pbfundoJ3.Location = new System.Drawing.Point(859, 75);
             this.pbfundoJ3.Name = "pbfundoJ3";
             this.pbfundoJ3.Size = new System.Drawing.Size(339, 137);
             this.pbfundoJ3.TabIndex = 85;
@@ -626,7 +584,7 @@
             this.pbFundoJatual.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbFundoJatual.BackColor = System.Drawing.Color.Transparent;
             this.pbFundoJatual.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbFundoJatual.Location = new System.Drawing.Point(930, 0);
+            this.pbFundoJatual.Location = new System.Drawing.Point(1131, 0);
             this.pbFundoJatual.Name = "pbFundoJatual";
             this.pbFundoJatual.Size = new System.Drawing.Size(270, 69);
             this.pbFundoJatual.TabIndex = 86;
@@ -637,13 +595,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1200, 800);
+            this.ClientSize = new System.Drawing.Size(1401, 800);
             this.Controls.Add(this.num1);
             this.Controls.Add(this.nudPlayer);
             this.Controls.Add(this.lblVez);
             this.Controls.Add(this.pbFundoJatual);
             this.Controls.Add(this.lblNomej3);
-            this.Controls.Add(this.lblMoedaP3);
             this.Controls.Add(this.pbMoeda3);
             this.Controls.Add(this.pbfundoJ3);
             this.Controls.Add(this.lblNomej4);
@@ -654,7 +611,6 @@
             this.Controls.Add(this.lblMoedaP1);
             this.Controls.Add(this.pbMoeda1);
             this.Controls.Add(this.pbfundoJ1);
-            this.Controls.Add(this.lblMoedaP2);
             this.Controls.Add(this.pbMoeda2);
             this.Controls.Add(this.lblNomej2);
             this.Controls.Add(this.pbfundoJ2);
