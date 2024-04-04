@@ -191,6 +191,11 @@ namespace Projeto_Integrador.models
             return criador;
         }
 
+        public void setCriador()
+        {
+            criador = true;
+        }
+
         public int criaSala()
         {
             clSalas salas = new clSalas();
@@ -296,10 +301,6 @@ namespace Projeto_Integrador.models
             DataTable dtPartida1 = partida1.PesquisarPor2Itens();
 
 
-            if (Convert.ToString(dtPartida1.Rows[0]["Ordem"]) == "1")
-            {
-                criador = true;
-            }
 
 
             clPartida partida = new clPartida();
