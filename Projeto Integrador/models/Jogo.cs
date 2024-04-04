@@ -191,9 +191,9 @@ namespace Projeto_Integrador.models
             return criador;
         }
 
-        public void setCriador()
+        public void setCriador(bool t)
         {
-            criador = true;
+            criador = t;
         }
 
         public int criaSala()

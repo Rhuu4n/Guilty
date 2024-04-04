@@ -103,11 +103,12 @@ namespace Projeto_Integrador
             {
                 if (Jogo.GetInstance().setIdSala(Convert.ToInt32(txtEntrar.Text)) && Jogo.GetInstance().pesquisarNumeroPlayers() < 4)
                 {
-                      this.Hide();
-                      frmLobby frm = new frmLobby();
-                      frm.ShowDialog();
-                      this.Show();
-                      return;
+                    Jogo.GetInstance().setCriador(false);
+                    this.Hide();
+                    frmLobby frm = new frmLobby();
+                    frm.ShowDialog();
+                    this.Show();
+                    return;
                 }
                 MessageBox.Show("Sala cheia", "Erro");
             }
@@ -119,6 +120,7 @@ namespace Projeto_Integrador
 
         private void btnCriar_Click_1(object sender, EventArgs e)
         {
+            Jogo.GetInstance().setCriador(true);
             this.Hide();
             frmLobby frm = new frmLobby();
             frm.ShowDialog();

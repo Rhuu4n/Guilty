@@ -136,9 +136,13 @@ namespace Projeto_Integrador
                 Thread.Sleep(800);
             }
 
-            if (!Jogo.GetInstance().verificaUsuarioCriador())
+            if (!Jogo.GetInstance().getCriador())
             {
                 this.BeginInvoke(new Action(fechaForm));
+            }
+            else
+            {
+                MessageBox.Show("erro na thread");
             }
 
         }
@@ -176,7 +180,7 @@ namespace Projeto_Integrador
 
         private void btnIniciar_Click(object sender, EventArgs e)
         {
-            if (Jogo.GetInstance().verificaUsuarioCriador())
+            if (Jogo.GetInstance().getCriador())
             {
                 if (Jogo.GetInstance().pesquisarNumeroPlayers() == 4)
                 {
