@@ -615,7 +615,7 @@ namespace Projeto_Integrador.models
         public string resgataMoeda(int idPt)
         {
             clPartida partida = new clPartida();
-            partida.idSala = id_sala;
+            partida.idPartida = idPt;
             DataTable dt = partida.PesquisarIDPartida();
 
             return dt.Rows[0]["Moedas"].ToString();

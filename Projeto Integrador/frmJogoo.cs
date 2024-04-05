@@ -19,6 +19,7 @@ namespace Projeto_Integrador
     public partial class frmJogoo : Form
     {
         private string[] players;
+        string[] moedas;
         private int currentPlayerIndex;
         private int[] playerCoins = new int[4];
 
@@ -180,8 +181,11 @@ namespace Projeto_Integrador
                     Debug.WriteLine("minha vez");
                     Jogo.GetInstance().atualizarPartidaMinhaVez();
                     Thread.Sleep(1000);
-                } 
-                
+                }
+
+                moedas = Jogo.GetInstance().AtualizaMoedasPartida();
+                atualizaMoedasTela();
+
                 // quando não é sua vez
                 while (Jogo.GetInstance().getMinhaVez())
                 {
@@ -192,7 +196,8 @@ namespace Projeto_Integrador
                     if(!(parametro == resposta))
                     {
                         atualizaVez(resposta);
-                        Jogo.GetInstance().AtualizaMoedasPartida();
+                        moedas = Jogo.GetInstance().AtualizaMoedasPartida();
+                        atualizaMoedasTela();
                     }
 
                     Thread.Sleep(1000);
@@ -208,6 +213,24 @@ namespace Projeto_Integrador
             }else
             {
                 lblVez.Text = param;
+            }
+        }
+
+        public void atualizaMoedasTela()
+        {
+            if (lblMP1.InvokeRequired)
+            {
+                lblMP1.BeginInvoke(new Action(atualizaMoedasTela));
+                lblMP2.BeginInvoke(new Action(atualizaMoedasTela));
+                lblMP3.BeginInvoke(new Action(atualizaMoedasTela));
+                lblMP4.BeginInvoke(new Action(atualizaMoedasTela));
+            }
+            else
+            {
+                lblMP1.Text = moedas[0];
+                lblMP2.Text = moedas[1];
+                lblMP3.Text = moedas[2];
+                lblMP4.Text = moedas[3];
             }
         }
 
@@ -580,6 +603,11 @@ namespace Projeto_Integrador
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbFundomesa_Click_1(object sender, EventArgs e)
         {
 
         }
