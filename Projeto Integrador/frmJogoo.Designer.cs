@@ -69,6 +69,8 @@
             this.pbfundoJ4 = new System.Windows.Forms.PictureBox();
             this.pbfundoJ3 = new System.Windows.Forms.PictureBox();
             this.pbFundoJatual = new System.Windows.Forms.PictureBox();
+            this.lblMP2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pb1j4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb2j4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMoeda4)).BeginInit();
@@ -326,7 +328,7 @@
             // num1
             // 
             this.num1.AutoSize = true;
-            this.num1.Location = new System.Drawing.Point(1153, 86);
+            this.num1.Location = new System.Drawing.Point(1355, 75);
             this.num1.Name = "num1";
             this.num1.Size = new System.Drawing.Size(35, 13);
             this.num1.TabIndex = 67;
@@ -579,12 +581,42 @@
             this.pbFundoJatual.TabIndex = 86;
             this.pbFundoJatual.TabStop = false;
             // 
+            // lblMP2
+            // 
+            this.lblMP2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblMP2.AutoSize = true;
+            this.lblMP2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(232)))), ((int)(((byte)(208)))));
+            this.lblMP2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lblMP2.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMP2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(97)))), ((int)(((byte)(40)))), ((int)(((byte)(80)))));
+            this.lblMP2.Location = new System.Drawing.Point(1152, 663);
+            this.lblMP2.Name = "lblMP2";
+            this.lblMP2.Size = new System.Drawing.Size(38, 21);
+            this.lblMP2.TabIndex = 87;
+            this.lblMP2.Text = "x0";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(232)))), ((int)(((byte)(208)))));
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label1.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(97)))), ((int)(((byte)(40)))), ((int)(((byte)(80)))));
+            this.label1.Location = new System.Drawing.Point(920, 162);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 21);
+            this.label1.TabIndex = 88;
+            this.label1.Text = "x0";
+            // 
             // frmJogoo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1401, 800);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblMP2);
             this.Controls.Add(this.num1);
             this.Controls.Add(this.lblVez);
             this.Controls.Add(this.pbFundoJatual);
@@ -711,5 +743,7 @@
         private System.Windows.Forms.PictureBox pbfundoJ4;
         private System.Windows.Forms.PictureBox pbfundoJ3;
         private System.Windows.Forms.PictureBox pbFundoJatual;
+        private System.Windows.Forms.Label lblMP2;
+        private System.Windows.Forms.Label label1;
     }
 }
