@@ -105,6 +105,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbfundoJ4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbfundoJ3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFundoJatual)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPlayer)).BeginInit();
             this.SuspendLayout();
             // 
             // lblVez
@@ -148,15 +149,6 @@
             this.lblMP4.Size = new System.Drawing.Size(38, 21);
             this.lblMP4.TabIndex = 48;
             this.lblMP4.Text = "x0";
-            // 
-            // nudPlayer
-            // 
-            this.nudPlayer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.nudPlayer.Location = new System.Drawing.Point(1270, 63);
-            this.nudPlayer.Name = "nudPlayer";
-            this.nudPlayer.Size = new System.Drawing.Size(120, 20);
-            this.nudPlayer.TabIndex = 55;
-            this.nudPlayer.Visible = false;
             // 
             // pb1j4
             // 
@@ -592,35 +584,6 @@
             this.pbFundoJatual.TabIndex = 86;
             this.pbFundoJatual.TabStop = false;
             // 
-            // lblMP3
-            // 
-            this.lblMP3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblMP3.AutoSize = true;
-            this.lblMP3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(232)))), ((int)(((byte)(208)))));
-            this.lblMP3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.lblMP3.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMP3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(97)))), ((int)(((byte)(40)))), ((int)(((byte)(80)))));
-            this.lblMP3.Location = new System.Drawing.Point(920, 162);
-            this.lblMP3.Name = "lblMP3";
-            this.lblMP3.Size = new System.Drawing.Size(38, 21);
-            this.lblMP3.TabIndex = 87;
-            this.lblMP3.Text = "x0";
-            this.lblMP3.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // lblMP2
-            // 
-            this.lblMP2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblMP2.AutoSize = true;
-            this.lblMP2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(232)))), ((int)(((byte)(208)))));
-            this.lblMP2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.lblMP2.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMP2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(97)))), ((int)(((byte)(40)))), ((int)(((byte)(80)))));
-            this.lblMP2.Location = new System.Drawing.Point(1152, 663);
-            this.lblMP2.Name = "lblMP2";
-            this.lblMP2.Size = new System.Drawing.Size(38, 21);
-            this.lblMP2.TabIndex = 88;
-            this.lblMP2.Text = "x0";
-            // 
             // frmJogoo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -676,7 +639,6 @@
             this.Text = "Guilty";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmJogoo_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.nudPlayer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb1j4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb2j4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMoeda4)).EndInit();
@@ -709,6 +671,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbfundoJ4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbfundoJ3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFundoJatual)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPlayer)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -734,7 +697,6 @@
         private System.Windows.Forms.PictureBox pb2j1;
         private System.Windows.Forms.PictureBox pb2j4;
         private System.Windows.Forms.PictureBox pb1j4;
-        private System.Windows.Forms.NumericUpDown nudPlayer;
         private System.Windows.Forms.PictureBox pbSaq1;
         private System.Windows.Forms.PictureBox pbMiner2;
         private System.Windows.Forms.PictureBox pbFundomesa;
@@ -758,7 +720,5 @@
         private System.Windows.Forms.PictureBox pbfundoJ4;
         private System.Windows.Forms.PictureBox pbfundoJ3;
         private System.Windows.Forms.PictureBox pbFundoJatual;
-        private System.Windows.Forms.Label lblMP3;
-        private System.Windows.Forms.Label lblMP2;
     }
 }

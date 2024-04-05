@@ -300,9 +300,6 @@ namespace Projeto_Integrador.models
             partida1.Jogador_ID = Convert.ToInt32(id);
             DataTable dtPartida1 = partida1.PesquisarPor2Itens();
 
-
-
-
             clPartida partida = new clPartida();
             partida.idSala = id_sala;
             DataTable dtPartida = partida.Pesquisar();

@@ -477,27 +477,19 @@ namespace Projeto_Integrador
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-           /* currentPlayerIndex = (currentPlayerIndex + 1) % players.Length;
-            MessageBox.Show($"{players[currentPlayerIndex]}, é a sua vez.");
-            lblVez.Text = players[currentPlayerIndex];
-            nudPlayer.Value = currentPlayerIndex;*/
 
-            //vez jogador 1
-            if (nudPlayer.Value == 0)
+            if (Jogo.GetInstance().verificaVez())
             {
                 btn1j1.Enabled = true;
                 btn2j1.Enabled = true;
                 btnEncerrar.Enabled = true;
+                Jogo.GetInstance().PassarVez();
             }
             else
             {
                 btn1j1.Enabled = false;
                 btn2j1.Enabled = false;
-                //btnEncerrar.Enabled = false;
             }
-            /*btn1j1.Enabled = false;
-            btn2j1.Enabled = false;
-            btnEncerrar.Enabled = false;*/
             pb1j1.Visible = true;
             pb2j1.Visible = true;
             btnRoubar1.Visible = false;
