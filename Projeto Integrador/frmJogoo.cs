@@ -154,6 +154,7 @@ namespace Projeto_Integrador
                     if(!(parametro == resposta))
                     {
                         atualizaVez(resposta);
+                        // atualizainfopartida
                     }
 
                     Thread.Sleep(1000);
@@ -174,58 +175,12 @@ namespace Projeto_Integrador
 
         public void adcCoins(int player)
         {
-            if (player >= 0 && player < 4)
-            {
-                if (playerCoins[player] < 10)
-                {
-                    playerCoins[player]++;
-                    MessageBox.Show($"O jogador {player + 1} agora possui {playerCoins[player]} moeda(s).", "Moedas Atualizadas");
 
-                    // Atualizar o rótulo correspondente
-                    Label[] coinLabels = { lblMoedaP1, lblMoedaP4, lblMoedaP3, lblMoedaP2 };
-                    coinLabels[player].Text = $"x{playerCoins[player]}";
-
-                    //números aleatórios
-
-                    clPartida.adcCoins(player, playerCoins[player], Jogo.GetInstance().getIdSala());
-
-                }
-                else
-                {
-                    MessageBox.Show($"O Jogador {player + 1} juntou 10 moedas e ganhou o jogo, parabéns!");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Jogador inválido. Escolha um número de jogador entre 1 e 4.", "Jogador Inválido");
-            }
         }
 
         public void removeCoins(int player, int player2)
         {
-            if (player >= 0 && player < 4)
-            {
-                if (playerCoins[player] < 10)
-                {
-                    playerCoins[player]++;
-                    MessageBox.Show($"O jogador {player + 1} agora possui {playerCoins[player]} moeda(s).", "Moedas Atualizadas");
-
-                    // Atualizar o rótulo correspondente
-                    Label[] coinLabels = { lblMoedaP1, lblMoedaP4, lblMoedaP3, lblMoedaP2 };
-                    coinLabels[player].Text = $"x{playerCoins[player]}";
-
-                    //números aleatórios
-
-                }
-                else
-                {
-                    MessageBox.Show($"O Jogador {player + 1} juntou 10 moedas e ganhou o jogo, parabéns!");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Jogador inválido. Escolha um número de jogador entre 1 e 4.", "Jogador Inválido");
-            }
+            
         }
 
        
@@ -286,34 +241,7 @@ namespace Projeto_Integrador
 
         private void button2_Click(object sender, EventArgs e)
         {
-            currentPlayerIndex = (currentPlayerIndex + 1) % players.Length;
-            //MessageBox.Show($"{players[currentPlayerIndex]}, é a sua vez.");
-            lblVez.Text = players[currentPlayerIndex];
-            nudPlayer.Value = currentPlayerIndex;
-
-            //vez jogador 1
-            if (nudPlayer.Value == 0)
-            {
-                btn1j1.Enabled = true;
-                btn2j1.Enabled = true;
-                btnEncerrar.Enabled = true;
-            }
-            else
-            {
-                btn1j1.Enabled = false;
-                btn2j1.Enabled = false;
-                //btnEncerrar.Enabled = false;
-            }
-            /*btn1j1.Enabled = false;
-            btn2j1.Enabled = false;
-            btnEncerrar.Enabled = false;*/
-            pb1j1.Visible = true;
-            pb2j1.Visible = true;
-            btnRoubar1.Visible = false;
-            btnRoubar2.Visible = false;
-            btnRoubar3.Visible = false;
-
-            lblVez.Text = Jogo.GetInstance().PassarVez();
+         ;
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -330,34 +258,7 @@ namespace Projeto_Integrador
             }
 
 
-            int player = (int)nudPlayer.Value;
-
-            if (player >= 0 && player < 4)
-            {
-                if (playerCoins[player] < 10)
-                {
-                    playerCoins[player]++;
-                    MessageBox.Show($"O jogador {player + 1} agora possui {playerCoins[player]} moeda(s).", "Moedas Atualizadas");
-
-                    //mostrar botões de roubo
-
-                    btnRoubar1.Visible = true;
-                    btnRoubar2.Visible = true;
-                    btnRoubar3.Visible = true;
-
-                    // Atualizar o rótulo correspondente
-                    Label[] coinLabels = { lblMoedaP1, lblMoedaP4, lblMoedaP3, lblMoedaP2 };
-                    coinLabels[player].Text = $"x{playerCoins[player]}";
-                }
-                else
-                {
-                    MessageBox.Show($"O Jogador {player + 1} juntou 10 moedas e ganhou o jogo, parabéns!");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Jogador inválido. Escolha um número de jogador entre 1 e 4.", "Jogador Inválido");
-            }
+            
         }
 
         private void btn1j1_Click(object sender, EventArgs e)
@@ -373,7 +274,6 @@ namespace Projeto_Integrador
             }
 
 
-            int player = (int)nudPlayer.Value;
 
             Random RandomClass = new Random();
 
@@ -381,7 +281,6 @@ namespace Projeto_Integrador
 
             if (num1.Text == "1") // mineradora
             {
-                adcCoins(player);
                 clCartas cartas = new clCartas();
                 cartas.Acao = "1";
                 cartas.Jogador_afetado = "1";
@@ -420,9 +319,7 @@ namespace Projeto_Integrador
         }
         private void btnRoubar1_Click(object sender, EventArgs e)
         {
-            int player = (int)nudPlayer.Value;
 
-            removeCoins(player, player);
             clCartas cartas = new clCartas();
             cartas.Acao = "1";
             cartas.Jogador_afetado = "1";
@@ -477,27 +374,19 @@ namespace Projeto_Integrador
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-           /* currentPlayerIndex = (currentPlayerIndex + 1) % players.Length;
-            MessageBox.Show($"{players[currentPlayerIndex]}, é a sua vez.");
-            lblVez.Text = players[currentPlayerIndex];
-            nudPlayer.Value = currentPlayerIndex;*/
 
-            //vez jogador 1
-            if (nudPlayer.Value == 0)
+            if (Jogo.GetInstance().verificaVez())
             {
                 btn1j1.Enabled = true;
                 btn2j1.Enabled = true;
                 btnEncerrar.Enabled = true;
+                Jogo.GetInstance().PassarVez();
             }
             else
             {
                 btn1j1.Enabled = false;
                 btn2j1.Enabled = false;
-                //btnEncerrar.Enabled = false;
             }
-            /*btn1j1.Enabled = false;
-            btn2j1.Enabled = false;
-            btnEncerrar.Enabled = false;*/
             pb1j1.Visible = true;
             pb2j1.Visible = true;
             btnRoubar1.Visible = false;
@@ -528,7 +417,6 @@ namespace Projeto_Integrador
             }
 
 
-            int player = (int)nudPlayer.Value;
 
             Random RandomClass = new Random();
 
@@ -536,7 +424,6 @@ namespace Projeto_Integrador
 
             if (num1.Text == "1") // mineradora
             {
-                adcCoins(player);
                 clCartas cartas = new clCartas();
                 cartas.Acao = "1";
                 cartas.Jogador_afetado = "1";
@@ -578,34 +465,8 @@ namespace Projeto_Integrador
             }
 
 
-            int player = (int)nudPlayer.Value;
 
-            if (player >= 0 && player < 4)
-            {
-                if (playerCoins[player] < 10)
-                {
-                    playerCoins[player]++;
-                    MessageBox.Show($"O jogador {player + 1} agora possui {playerCoins[player]} moeda(s).", "Moedas Atualizadas");
-
-                    //mostrar botões de roubo
-
-                    btnRoubar1.Visible = true;
-                    btnRoubar2.Visible = true;
-                    btnRoubar3.Visible = true;
-
-                    // Atualizar o rótulo correspondente
-                    Label[] coinLabels = { lblMoedaP1, lblMoedaP2, lblMoedaP3, lblMoedaP4 };
-                    coinLabels[player].Text = $"x{playerCoins[player]}";
-                }
-                else
-                {
-                    MessageBox.Show($"O Jogador {player + 1} juntou 10 moedas e ganhou o jogo, parabéns!");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Jogador inválido. Escolha um número de jogador entre 1 e 4.", "Jogador Inválido");
-            }
+            
         }
 
         private void btnOpcoes_Click(object sender, EventArgs e)
@@ -676,6 +537,11 @@ namespace Projeto_Integrador
         }
 
         private void pictureBox1_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
