@@ -154,6 +154,7 @@ namespace Projeto_Integrador
                     if(!(parametro == resposta))
                     {
                         atualizaVez(resposta);
+                        // atualizainfopartida
                     }
 
                     Thread.Sleep(1000);

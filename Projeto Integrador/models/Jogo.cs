@@ -590,6 +590,11 @@ namespace Projeto_Integrador.models
 
         }
 
+        public void AtualizaInfoPartida()
+        {
+
+        }
+
         public clUsuario getUsuarioLogado() {
                 return this.usuarioLogado;
             }
