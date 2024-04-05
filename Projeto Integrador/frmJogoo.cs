@@ -154,7 +154,7 @@ namespace Projeto_Integrador
                     if(!(parametro == resposta))
                     {
                         atualizaVez(resposta);
-                        // atualizainfopartida
+                        Jogo.GetInstance().AtualizaMoedasPartida();
                     }
 
                     Thread.Sleep(1000);
