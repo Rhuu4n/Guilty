@@ -37,16 +37,12 @@ namespace Projeto_Integrador
 
                     BD.ExecutaComando(false, out id);
 
-                    if (id >= 0)
-                    {
-                        MessageBox.Show("Sala criada com sucesso!", " Sucesso",
-                                         MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
+                    if (!(id >= 0))
                     {
                         MessageBox.Show("Erro ao criar sala", "Erro", MessageBoxButtons.OK,
                                          MessageBoxIcon.Error);
-                    }
+                }
+
                 }
 
                 catch (Exception ex)
