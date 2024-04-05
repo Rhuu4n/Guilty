@@ -85,11 +85,7 @@ namespace Projeto_Integrador
 
 
 
-                    if (exOK == 1)  
-                    {
-                        MessageBox.Show("Entrou na sala!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
+                    if (!(exOK == 1))
                     {
                         MessageBox.Show("Erro ao alterar Usuario, contate o desenvolvedor!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
