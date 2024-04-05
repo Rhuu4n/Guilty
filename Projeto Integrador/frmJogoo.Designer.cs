@@ -32,7 +32,6 @@
             this.lblVez = new System.Windows.Forms.Label();
             this.lblMP1 = new System.Windows.Forms.Label();
             this.lblMP4 = new System.Windows.Forms.Label();
-            this.nudPlayer = new System.Windows.Forms.NumericUpDown();
             this.pb1j4 = new System.Windows.Forms.PictureBox();
             this.pb2j4 = new System.Windows.Forms.PictureBox();
             this.pbMoeda4 = new System.Windows.Forms.PictureBox();
@@ -70,9 +69,6 @@
             this.pbfundoJ4 = new System.Windows.Forms.PictureBox();
             this.pbfundoJ3 = new System.Windows.Forms.PictureBox();
             this.pbFundoJatual = new System.Windows.Forms.PictureBox();
-            this.lblMP3 = new System.Windows.Forms.Label();
-            this.lblMP2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPlayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb1j4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb2j4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMoeda4)).BeginInit();
@@ -105,7 +101,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbfundoJ4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbfundoJ3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFundoJatual)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPlayer)).BeginInit();
             this.SuspendLayout();
             // 
             // lblVez
@@ -590,10 +585,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1401, 800);
-            this.Controls.Add(this.lblMP2);
-            this.Controls.Add(this.lblMP3);
             this.Controls.Add(this.num1);
-            this.Controls.Add(this.nudPlayer);
             this.Controls.Add(this.lblVez);
             this.Controls.Add(this.pbFundoJatual);
             this.Controls.Add(this.lblNomej3);
@@ -671,7 +663,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbfundoJ4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbfundoJ3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFundoJatual)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPlayer)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
