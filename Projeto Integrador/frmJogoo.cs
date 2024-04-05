@@ -183,7 +183,7 @@ namespace Projeto_Integrador
                     MessageBox.Show($"O jogador {player + 1} agora possui {playerCoins[player]} moeda(s).", "Moedas Atualizadas");
 
                     // Atualizar o rótulo correspondente
-                    Label[] coinLabels = { lblMoedaP1, lblMoedaP4, lblMoedaP3, lblMoedaP2 };
+                    Label[] coinLabels = { lblMP1, lblMP4, lblMoedaP3, lblMoedaP2 };
                     coinLabels[player].Text = $"x{playerCoins[player]}";
 
                     //números aleatórios
@@ -212,7 +212,7 @@ namespace Projeto_Integrador
                     MessageBox.Show($"O jogador {player + 1} agora possui {playerCoins[player]} moeda(s).", "Moedas Atualizadas");
 
                     // Atualizar o rótulo correspondente
-                    Label[] coinLabels = { lblMoedaP1, lblMoedaP4, lblMoedaP3, lblMoedaP2 };
+                    Label[] coinLabels = { lblMP1, lblMP4, lblMoedaP3, lblMoedaP2 };
                     coinLabels[player].Text = $"x{playerCoins[player]}";
 
                     //números aleatórios
@@ -347,7 +347,7 @@ namespace Projeto_Integrador
                     btnRoubar3.Visible = true;
 
                     // Atualizar o rótulo correspondente
-                    Label[] coinLabels = { lblMoedaP1, lblMoedaP4, lblMoedaP3, lblMoedaP2 };
+                    Label[] coinLabels = { lblMP1, lblMP4, lblMoedaP3, lblMoedaP2 };
                     coinLabels[player].Text = $"x{playerCoins[player]}";
                 }
                 else
@@ -587,7 +587,7 @@ namespace Projeto_Integrador
                     btnRoubar3.Visible = true;
 
                     // Atualizar o rótulo correspondente
-                    Label[] coinLabels = { lblMoedaP1, lblMoedaP2, lblMoedaP3, lblMoedaP4 };
+                    Label[] coinLabels = { lblMP1, lblMoedaP2, lblMoedaP3, lblMP4 };
                     coinLabels[player].Text = $"x{playerCoins[player]}";
                 }
                 else
@@ -669,6 +669,11 @@ namespace Projeto_Integrador
         }
 
         private void pictureBox1_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

@@ -30,8 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmJogoo));
             this.lblVez = new System.Windows.Forms.Label();
-            this.lblMoedaP1 = new System.Windows.Forms.Label();
-            this.lblMoedaP4 = new System.Windows.Forms.Label();
+            this.lblMP1 = new System.Windows.Forms.Label();
+            this.lblMP4 = new System.Windows.Forms.Label();
+            this.nudPlayer = new System.Windows.Forms.NumericUpDown();
             this.pb1j4 = new System.Windows.Forms.PictureBox();
             this.pb2j4 = new System.Windows.Forms.PictureBox();
             this.pbMoeda4 = new System.Windows.Forms.PictureBox();
@@ -69,7 +70,9 @@
             this.pbfundoJ4 = new System.Windows.Forms.PictureBox();
             this.pbfundoJ3 = new System.Windows.Forms.PictureBox();
             this.pbFundoJatual = new System.Windows.Forms.PictureBox();
-            this.nudPlayer = new System.Windows.Forms.NumericUpDown();
+            this.lblMP3 = new System.Windows.Forms.Label();
+            this.lblMP2 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPlayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb1j4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb2j4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMoeda4)).BeginInit();
@@ -113,39 +116,39 @@
             this.lblVez.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblVez.Font = new System.Drawing.Font("Minecraft", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVez.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(97)))), ((int)(((byte)(40)))), ((int)(((byte)(80)))));
-            this.lblVez.Location = new System.Drawing.Point(1160, 12);
+            this.lblVez.Location = new System.Drawing.Point(1169, 12);
             this.lblVez.Name = "lblVez";
             this.lblVez.Size = new System.Drawing.Size(171, 32);
             this.lblVez.TabIndex = 40;
             this.lblVez.Text = "Jogador 1";
             // 
-            // lblMoedaP1
+            // lblMP1
             // 
-            this.lblMoedaP1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.lblMoedaP1.AutoSize = true;
-            this.lblMoedaP1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(232)))), ((int)(((byte)(208)))));
-            this.lblMoedaP1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.lblMoedaP1.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMoedaP1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(97)))), ((int)(((byte)(40)))), ((int)(((byte)(80)))));
-            this.lblMoedaP1.Location = new System.Drawing.Point(172, 663);
-            this.lblMoedaP1.Name = "lblMoedaP1";
-            this.lblMoedaP1.Size = new System.Drawing.Size(38, 21);
-            this.lblMoedaP1.TabIndex = 42;
-            this.lblMoedaP1.Text = "x0";
+            this.lblMP1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lblMP1.AutoSize = true;
+            this.lblMP1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(232)))), ((int)(((byte)(208)))));
+            this.lblMP1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lblMP1.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMP1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(97)))), ((int)(((byte)(40)))), ((int)(((byte)(80)))));
+            this.lblMP1.Location = new System.Drawing.Point(172, 663);
+            this.lblMP1.Name = "lblMP1";
+            this.lblMP1.Size = new System.Drawing.Size(38, 21);
+            this.lblMP1.TabIndex = 42;
+            this.lblMP1.Text = "x0";
             // 
-            // lblMoedaP4
+            // lblMP4
             // 
-            this.lblMoedaP4.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblMoedaP4.AutoSize = true;
-            this.lblMoedaP4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(232)))), ((int)(((byte)(208)))));
-            this.lblMoedaP4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.lblMoedaP4.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMoedaP4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(97)))), ((int)(((byte)(40)))), ((int)(((byte)(80)))));
-            this.lblMoedaP4.Location = new System.Drawing.Point(72, 191);
-            this.lblMoedaP4.Name = "lblMoedaP4";
-            this.lblMoedaP4.Size = new System.Drawing.Size(38, 21);
-            this.lblMoedaP4.TabIndex = 48;
-            this.lblMoedaP4.Text = "x0";
+            this.lblMP4.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblMP4.AutoSize = true;
+            this.lblMP4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(232)))), ((int)(((byte)(208)))));
+            this.lblMP4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lblMP4.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMP4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(97)))), ((int)(((byte)(40)))), ((int)(((byte)(80)))));
+            this.lblMP4.Location = new System.Drawing.Point(72, 191);
+            this.lblMP4.Name = "lblMP4";
+            this.lblMP4.Size = new System.Drawing.Size(38, 21);
+            this.lblMP4.TabIndex = 48;
+            this.lblMP4.Text = "x0";
             // 
             // pb1j4
             // 
@@ -194,7 +197,7 @@
             this.pbMoeda2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pbMoeda2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(232)))), ((int)(((byte)(208)))));
             this.pbMoeda2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbMoeda2.Location = new System.Drawing.Point(1160, 634);
+            this.pbMoeda2.Location = new System.Drawing.Point(1196, 634);
             this.pbMoeda2.Name = "pbMoeda2";
             this.pbMoeda2.Size = new System.Drawing.Size(50, 50);
             this.pbMoeda2.TabIndex = 43;
@@ -352,7 +355,7 @@
             // 
             // lblNomej2
             // 
-            this.lblNomej2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblNomej2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblNomej2.AutoSize = true;
             this.lblNomej2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(232)))), ((int)(((byte)(208)))));
             this.lblNomej2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -581,21 +584,14 @@
             this.pbFundoJatual.TabIndex = 86;
             this.pbFundoJatual.TabStop = false;
             // 
-            // nudPlayer
-            // 
-            this.nudPlayer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.nudPlayer.Location = new System.Drawing.Point(1270, 63);
-            this.nudPlayer.Name = "nudPlayer";
-            this.nudPlayer.Size = new System.Drawing.Size(120, 20);
-            this.nudPlayer.TabIndex = 55;
-            this.nudPlayer.Visible = false;
-            // 
             // frmJogoo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1401, 800);
+            this.Controls.Add(this.lblMP2);
+            this.Controls.Add(this.lblMP3);
             this.Controls.Add(this.num1);
             this.Controls.Add(this.nudPlayer);
             this.Controls.Add(this.lblVez);
@@ -604,11 +600,11 @@
             this.Controls.Add(this.pbMoeda3);
             this.Controls.Add(this.pbfundoJ3);
             this.Controls.Add(this.lblNomej4);
-            this.Controls.Add(this.lblMoedaP4);
+            this.Controls.Add(this.lblMP4);
             this.Controls.Add(this.pbMoeda4);
             this.Controls.Add(this.pbfundoJ4);
             this.Controls.Add(this.lblNomej1);
-            this.Controls.Add(this.lblMoedaP1);
+            this.Controls.Add(this.lblMP1);
             this.Controls.Add(this.pbMoeda1);
             this.Controls.Add(this.pbfundoJ1);
             this.Controls.Add(this.pbMoeda2);
@@ -690,8 +686,8 @@
         private System.Windows.Forms.PictureBox pb2j3;
         private System.Windows.Forms.Label lblVez;
         private System.Windows.Forms.PictureBox pbMoeda1;
-        private System.Windows.Forms.Label lblMoedaP1;
-        private System.Windows.Forms.Label lblMoedaP4;
+        private System.Windows.Forms.Label lblMP1;
+        private System.Windows.Forms.Label lblMP4;
         private System.Windows.Forms.PictureBox pbMoeda2;
         private System.Windows.Forms.Label lblMoedaP3;
         private System.Windows.Forms.PictureBox pbMoeda3;
@@ -724,6 +720,5 @@
         private System.Windows.Forms.PictureBox pbfundoJ4;
         private System.Windows.Forms.PictureBox pbfundoJ3;
         private System.Windows.Forms.PictureBox pbFundoJatual;
-        private System.Windows.Forms.NumericUpDown nudPlayer;
     }
 }
