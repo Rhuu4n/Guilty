@@ -32,7 +32,6 @@
             this.lblVez = new System.Windows.Forms.Label();
             this.lblMoedaP1 = new System.Windows.Forms.Label();
             this.lblMoedaP4 = new System.Windows.Forms.Label();
-            this.nudPlayer = new System.Windows.Forms.NumericUpDown();
             this.pb1j4 = new System.Windows.Forms.PictureBox();
             this.pb2j4 = new System.Windows.Forms.PictureBox();
             this.pbMoeda4 = new System.Windows.Forms.PictureBox();
@@ -70,7 +69,7 @@
             this.pbfundoJ4 = new System.Windows.Forms.PictureBox();
             this.pbfundoJ3 = new System.Windows.Forms.PictureBox();
             this.pbFundoJatual = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPlayer)).BeginInit();
+            this.nudPlayer = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.pb1j4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb2j4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMoeda4)).BeginInit();
@@ -103,6 +102,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbfundoJ4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbfundoJ3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFundoJatual)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPlayer)).BeginInit();
             this.SuspendLayout();
             // 
             // lblVez
@@ -146,15 +146,6 @@
             this.lblMoedaP4.Size = new System.Drawing.Size(38, 21);
             this.lblMoedaP4.TabIndex = 48;
             this.lblMoedaP4.Text = "x0";
-            // 
-            // nudPlayer
-            // 
-            this.nudPlayer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.nudPlayer.Location = new System.Drawing.Point(1270, 63);
-            this.nudPlayer.Name = "nudPlayer";
-            this.nudPlayer.Size = new System.Drawing.Size(120, 20);
-            this.nudPlayer.TabIndex = 55;
-            this.nudPlayer.Visible = false;
             // 
             // pb1j4
             // 
@@ -590,6 +581,15 @@
             this.pbFundoJatual.TabIndex = 86;
             this.pbFundoJatual.TabStop = false;
             // 
+            // nudPlayer
+            // 
+            this.nudPlayer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.nudPlayer.Location = new System.Drawing.Point(1270, 63);
+            this.nudPlayer.Name = "nudPlayer";
+            this.nudPlayer.Size = new System.Drawing.Size(120, 20);
+            this.nudPlayer.TabIndex = 55;
+            this.nudPlayer.Visible = false;
+            // 
             // frmJogoo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -643,7 +643,6 @@
             this.Text = "Guilty";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmJogoo_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.nudPlayer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb1j4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb2j4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMoeda4)).EndInit();
@@ -676,6 +675,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbfundoJ4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbfundoJ3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFundoJatual)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPlayer)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -701,7 +701,6 @@
         private System.Windows.Forms.PictureBox pb2j1;
         private System.Windows.Forms.PictureBox pb2j4;
         private System.Windows.Forms.PictureBox pb1j4;
-        private System.Windows.Forms.NumericUpDown nudPlayer;
         private System.Windows.Forms.PictureBox pbSaq1;
         private System.Windows.Forms.PictureBox pbMiner2;
         private System.Windows.Forms.PictureBox pbFundomesa;
@@ -725,5 +724,6 @@
         private System.Windows.Forms.PictureBox pbfundoJ4;
         private System.Windows.Forms.PictureBox pbfundoJ3;
         private System.Windows.Forms.PictureBox pbFundoJatual;
+        private System.Windows.Forms.NumericUpDown nudPlayer;
     }
 }
