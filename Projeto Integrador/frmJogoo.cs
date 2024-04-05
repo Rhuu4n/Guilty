@@ -25,7 +25,6 @@ namespace Projeto_Integrador
         public frmJogoo()
         {
             InitializeComponent();
-            AjustarControles();
             pbFundomesa.Load("https://i.imgur.com/Gk2e30F.jpg");
             pbFundomesa.SizeMode = PictureBoxSizeMode.StretchImage;
             pb1j1.Load("https://i.imgur.com/zx9oyXi.jpg");
@@ -110,20 +109,22 @@ namespace Projeto_Integrador
             */
         }
 
-        //ajuste
+        /*ajuste
 
         private void AjustarControles()
         {
-            float larguraInicial = 1920;
-            float alturaInicial = 1080;
+            //1300; 788
+            
+            float larguraInicial = 1300;
+            float alturaInicial = 788;
 
             float larguraFinal = this.Width;
             float alturaFinal = this.Height;
 
             //location largura e altura inicial
             
-            pb1j1.Location = new Point((int) ( 702 - (larguraInicial - larguraFinal)), 702);
-            pb1j1.Location = new Point((int)( 466 - (alturaInicial - alturaFinal)), 466);
+            pb1j1.Location = new Point((int) ( 702 - (larguraInicial - larguraFinal)), 598);
+            pb1j1.Location = new Point((int)( 466 - (alturaInicial - alturaFinal)), 322);
 
             //size largura e altura
 
@@ -135,8 +136,8 @@ namespace Projeto_Integrador
 
             //location largura e altura final
 
-            pb1j1.Location = new Point((int) (702 - (larguraInicial / 2 - larguraFinal / 2)), 1218);
-            pb1j1.Location = new Point((int) (466 - (alturaInicial / 2 - larguraFinal / 2)), 614);
+            pb1j1.Location = new Point((int) (702 - (larguraInicial / 2 - larguraFinal / 2)), 598);
+            pb1j1.Location = new Point((int) (466 - (alturaInicial / 2 - larguraFinal / 2)), 322);
 
         }
 
@@ -145,7 +146,7 @@ namespace Projeto_Integrador
             AjustarControles();
         }
 
-        //ajuste
+*/        
 
         public void atualizar_nomes(string j1, string j2, string j3, string j4, string jc)
         {
@@ -580,6 +581,11 @@ namespace Projeto_Integrador
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pb1j1_Click(object sender, EventArgs e)
         {
 
         }
