@@ -485,19 +485,16 @@ namespace Projeto_Integrador
 
             Random RandomClass = new Random();
 
-            num1.Text = RandomClass.Next(1, 4).ToString();
+            int num1 = RandomClass.Next(1, 2);
 
-            if (num1.Text == "1") // mineradora
+            if (num1 == 1) // mineradora
             {
-                clCartas cartas = new clCartas();
-                cartas.Acao = "1";
-                cartas.Jogador_afetado = "1";
-                //cartas.ID_partida = Convert.ToInt32(.id);
 
-                cartas.Mineradora();
+                Jogo.GetInstance().funçãoMineradora();
+                Jogo.GetInstance().PassarVez();
 
             }
-            else if (num1.Text == "2")
+            else if (num1 == 2)
             {
                 if (pb1j1.Visible == true)
                 {
@@ -617,6 +614,11 @@ namespace Projeto_Integrador
         }
 
         private void btnRoubar1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbFundomesa_Click_1(object sender, EventArgs e)
         {
 
         }
