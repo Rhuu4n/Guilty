@@ -4,6 +4,7 @@ using System.Data;
 using System.Diagnostics;
 using System.Linq;
 using System.Reflection.Emit;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -383,6 +384,11 @@ namespace Projeto_Integrador.models
             }
         }
 
+        public void ativarSala2()
+        {
+
+        }
+
         public string[] iniciarPartida()
         {
             clPartida partida = new clPartida();
@@ -390,18 +396,7 @@ namespace Projeto_Integrador.models
             DataTable dtPartida = partida.Pesquisar();
 
 
-            clSalas sala = new clSalas();
-            sala.idSala = id_sala;
-            DataTable dt = sala.Pesquisar();
-
-            string jogadorAtual = Convert.ToString(dt.Rows[0]["jogadorAtual"]);
-
-
-            if (jogadorAtual == id)
-            {
-                sala.AtivarSala();
-
-            }
+            
 
             int id1 = 0;
             int id2 = 0;

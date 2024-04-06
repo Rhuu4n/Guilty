@@ -180,6 +180,7 @@ namespace Projeto_Integrador
             {
                 if (Jogo.GetInstance().pesquisarNumeroPlayers() == 4)
                 {
+                    Jogo.GetInstance().ativarSala2();
                     this.Hide();
                     frmJogoo frm = new frmJogoo();
                     frm.ShowDialog();
