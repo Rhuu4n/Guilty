@@ -179,7 +179,7 @@ namespace Projeto_Integrador
                 // quando é sua vez
                 while (!Jogo.GetInstance().getMinhaVez())
                 {
-                    Debug.WriteLine("minha vez");
+                    Debug.WriteLine("Agora é sua vez");
                     Jogo.GetInstance().atualizarPartidaMinhaVez();
                     Thread.Sleep(1000);
                 }
@@ -190,7 +190,7 @@ namespace Projeto_Integrador
                 // quando não é sua vez
                 while (Jogo.GetInstance().getMinhaVez())
                 {
-                    Debug.WriteLine("n é minha vez ");
+                    Debug.WriteLine("Vez de outro jogador");
                     string parametro = lblVez.Text;
                     string resposta = Jogo.GetInstance().verificaVezAlterada(parametro);
 
@@ -604,6 +604,16 @@ namespace Projeto_Integrador
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNomej3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRoubar1_Click_1(object sender, EventArgs e)
         {
 
         }
