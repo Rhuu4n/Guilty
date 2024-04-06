@@ -647,7 +647,6 @@
             this.ClientSize = new System.Drawing.Size(1300, 788);
             this.Controls.Add(this.btn1j1);
             this.Controls.Add(this.btn2j1);
-            this.Controls.Add(this.lblCentro);
             this.Controls.Add(this.lblMP3);
             this.Controls.Add(this.lblMP2);
             this.Controls.Add(this.num1);
@@ -687,8 +686,9 @@
             this.Controls.Add(this.pbSaq2);
             this.Controls.Add(this.pbSaq1);
             this.Controls.Add(this.pbMiner2);
-            this.Controls.Add(this.pbFundomesa);
+            this.Controls.Add(this.lblCentro);
             this.Controls.Add(this.pbFfundo);
+            this.Controls.Add(this.pbFundomesa);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmJogoo";
