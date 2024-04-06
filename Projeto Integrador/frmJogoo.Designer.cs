@@ -135,7 +135,7 @@
             // 
             // lblMP4
             // 
-            this.lblMP4.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblMP4.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblMP4.AutoSize = true;
             this.lblMP4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(232)))), ((int)(((byte)(208)))));
             this.lblMP4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -582,7 +582,7 @@
             // 
             // lblMP2
             // 
-            this.lblMP2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblMP2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblMP2.AutoSize = true;
             this.lblMP2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(232)))), ((int)(((byte)(208)))));
             this.lblMP2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
