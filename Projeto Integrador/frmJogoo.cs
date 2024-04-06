@@ -339,7 +339,7 @@ namespace Projeto_Integrador
 
             Random RandomClass = new Random();
 
-            num1.Text = RandomClass.Next(1, 4).ToString();
+            num1.Text = RandomClass.Next(1, 1).ToString();
 
             if (num1.Text == "1") // mineradora
             {

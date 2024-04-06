@@ -31,7 +31,7 @@ namespace Projeto_Integrador
             {
                 int exOK = 0;
                 Jogador_afetado = Jogo.GetInstance().getID();
-                BD._sql = "UPDATE Partida SET Acao = '" + 1 + "', Afetado = '" + Jogador_afetado + "' where id_partida = " + ID_partida;
+                BD._sql = "UPDATE Partida SET Acao = 1, Afetado = '" + Jogador_afetado + "', Moedas = Moedas + 2 where id_partida = " + ID_partida;
 
                 exOK = BD.ExecutaComando(false);
 
