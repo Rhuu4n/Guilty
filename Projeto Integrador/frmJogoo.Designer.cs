@@ -141,7 +141,7 @@
             this.lblMP4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblMP4.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMP4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(97)))), ((int)(((byte)(40)))), ((int)(((byte)(80)))));
-            this.lblMP4.Location = new System.Drawing.Point(72, 185);
+            this.lblMP4.Location = new System.Drawing.Point(1051, 657);
             this.lblMP4.Name = "lblMP4";
             this.lblMP4.Size = new System.Drawing.Size(38, 21);
             this.lblMP4.TabIndex = 48;
@@ -345,9 +345,9 @@
             this.lblNomej4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(97)))), ((int)(((byte)(40)))), ((int)(((byte)(80)))));
             this.lblNomej4.Location = new System.Drawing.Point(70, 121);
             this.lblNomej4.Name = "lblNomej4";
-            this.lblNomej4.Size = new System.Drawing.Size(177, 32);
+            this.lblNomej4.Size = new System.Drawing.Size(175, 32);
             this.lblNomej4.TabIndex = 69;
-            this.lblNomej4.Text = "Jogador 4";
+            this.lblNomej4.Text = "Jogador 2";
             // 
             // lblNomej2
             // 
@@ -359,9 +359,9 @@
             this.lblNomej2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(97)))), ((int)(((byte)(40)))), ((int)(((byte)(80)))));
             this.lblNomej2.Location = new System.Drawing.Point(1049, 593);
             this.lblNomej2.Name = "lblNomej2";
-            this.lblNomej2.Size = new System.Drawing.Size(175, 32);
+            this.lblNomej2.Size = new System.Drawing.Size(177, 32);
             this.lblNomej2.TabIndex = 68;
-            this.lblNomej2.Text = "Jogador 2";
+            this.lblNomej2.Text = "Jogador 4";
             // 
             // lblNomej1
             // 
@@ -588,7 +588,7 @@
             this.lblMP2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblMP2.Font = new System.Drawing.Font("Minecraft", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMP2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(97)))), ((int)(((byte)(40)))), ((int)(((byte)(80)))));
-            this.lblMP2.Location = new System.Drawing.Point(1051, 657);
+            this.lblMP2.Location = new System.Drawing.Point(72, 185);
             this.lblMP2.Name = "lblMP2";
             this.lblMP2.Size = new System.Drawing.Size(38, 21);
             this.lblMP2.TabIndex = 87;
