@@ -261,7 +261,6 @@
             this.pb1j1.Size = new System.Drawing.Size(230, 323);
             this.pb1j1.TabIndex = 50;
             this.pb1j1.TabStop = false;
-            this.pb1j1.Click += new System.EventHandler(this.pb1j1_Click);
             // 
             // pbMiner1
             // 
