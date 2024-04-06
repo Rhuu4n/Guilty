@@ -386,7 +386,18 @@ namespace Projeto_Integrador.models
 
         public void ativarSala2()
         {
+            clSalas sala = new clSalas();
+            sala.idSala = id_sala;
+            DataTable dt = sala.Pesquisar();
 
+            string jogadorAtual = Convert.ToString(dt.Rows[0]["jogadorAtual"]);
+
+
+            if (jogadorAtual == id)
+            {
+                sala.AtivarSala();
+
+            }
         }
 
         public string[] iniciarPartida()
