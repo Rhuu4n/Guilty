@@ -180,6 +180,7 @@ namespace Projeto_Integrador
             {
                 if (Jogo.GetInstance().pesquisarNumeroPlayers() == 4)
                 {
+                    Jogo.GetInstance().ativarSala2();
                     this.Hide();
                     frmJogoo frm = new frmJogoo();
                     frm.ShowDialog();
@@ -195,6 +196,16 @@ namespace Projeto_Integrador
                 MessageBox.Show("Você não é o jogador dono da sala!");
             }
             
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblJ1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

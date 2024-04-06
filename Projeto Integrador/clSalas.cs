@@ -113,7 +113,7 @@ namespace Projeto_Integrador
 
                 if (exOK == 1)
                 {
-                    MessageBox.Show("Entrou na sala!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Jogada feita.", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {

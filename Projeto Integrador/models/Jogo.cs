@@ -4,6 +4,7 @@ using System.Data;
 using System.Diagnostics;
 using System.Linq;
 using System.Reflection.Emit;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -383,13 +384,8 @@ namespace Projeto_Integrador.models
             }
         }
 
-        public string[] iniciarPartida()
+        public void ativarSala2()
         {
-            clPartida partida = new clPartida();
-            partida.idSala = id_sala;
-            DataTable dtPartida = partida.Pesquisar();
-
-
             clSalas sala = new clSalas();
             sala.idSala = id_sala;
             DataTable dt = sala.Pesquisar();
@@ -402,6 +398,16 @@ namespace Projeto_Integrador.models
                 sala.AtivarSala();
 
             }
+        }
+
+        public string[] iniciarPartida()
+        {
+            clPartida partida = new clPartida();
+            partida.idSala = id_sala;
+            DataTable dtPartida = partida.Pesquisar();
+
+
+            
 
             int id1 = 0;
             int id2 = 0;
@@ -619,6 +625,16 @@ namespace Projeto_Integrador.models
             DataTable dt = partida.PesquisarIDPartida();
 
             return dt.Rows[0]["Moedas"].ToString();
+        }
+
+        public void funçãoMineradora()
+        {
+            clCartas carta = new clCartas();
+            carta.ID_partida = J1PTID;
+            carta.Mineradora();
+
+
+
         }
 
         public clUsuario getUsuarioLogado() {

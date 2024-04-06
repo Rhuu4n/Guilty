@@ -81,7 +81,7 @@
             this.lblJ1.Size = new System.Drawing.Size(251, 48);
             this.lblJ1.TabIndex = 42;
             this.lblJ1.Text = "Jogador 1";
-//            this.lblJ1.Click += new System.EventHandler(this.label1_Click);
+            this.lblJ1.Click += new System.EventHandler(this.lblJ1_Click);
             // 
             // lblJ2
             // 
@@ -129,12 +129,12 @@
             this.label5.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.label5.Font = new System.Drawing.Font("Minecraft", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(668, 37);
+            this.label5.Location = new System.Drawing.Point(1018, 37);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(167, 48);
             this.label5.TabIndex = 46;
             this.label5.Text = "label5";
- //           this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // lblID
             // 
@@ -144,7 +144,7 @@
             this.lblID.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblID.Font = new System.Drawing.Font("Minecraft", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblID.ForeColor = System.Drawing.Color.Black;
-            this.lblID.Location = new System.Drawing.Point(280, 37);
+            this.lblID.Location = new System.Drawing.Point(630, 37);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(274, 48);
             this.lblID.TabIndex = 47;
@@ -211,14 +211,13 @@
             this.pbJ4.Size = new System.Drawing.Size(435, 129);
             this.pbJ4.TabIndex = 70;
             this.pbJ4.TabStop = false;
- //           this.pbJ4.Click += new System.EventHandler(this.pbJ4_Click);
             // 
             // pbID
             // 
             this.pbID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbID.BackColor = System.Drawing.Color.Transparent;
             this.pbID.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbID.Location = new System.Drawing.Point(189, 12);
+            this.pbID.Location = new System.Drawing.Point(539, 12);
             this.pbID.Name = "pbID";
             this.pbID.Size = new System.Drawing.Size(435, 94);
             this.pbID.TabIndex = 71;
@@ -229,7 +228,7 @@
             this.pbLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbLbl.BackColor = System.Drawing.Color.Transparent;
             this.pbLbl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbLbl.Location = new System.Drawing.Point(621, 12);
+            this.pbLbl.Location = new System.Drawing.Point(971, 12);
             this.pbLbl.Name = "pbLbl";
             this.pbLbl.Size = new System.Drawing.Size(251, 94);
             this.pbLbl.TabIndex = 72;
@@ -241,7 +240,7 @@
             this.btnIniciar.BackColor = System.Drawing.Color.Transparent;
             this.btnIniciar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnIniciar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnIniciar.Location = new System.Drawing.Point(753, 766);
+            this.btnIniciar.Location = new System.Drawing.Point(1103, 766);
             this.btnIniciar.Name = "btnIniciar";
             this.btnIniciar.Size = new System.Drawing.Size(119, 44);
             this.btnIniciar.TabIndex = 73;
@@ -254,7 +253,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Projeto_Integrador.Properties.Resources._8_bit_factory_forest_cute_aesthetic_pc_au2735qwvpz5kiea;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(884, 822);
+            this.ClientSize = new System.Drawing.Size(1234, 822);
             this.Controls.Add(this.btnIniciar);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.lblID);

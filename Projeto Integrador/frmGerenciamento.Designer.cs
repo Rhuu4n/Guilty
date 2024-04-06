@@ -45,7 +45,7 @@
             this.dgvUsuario.BackgroundColor = System.Drawing.Color.Black;
             this.dgvUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUsuario.GridColor = System.Drawing.Color.Black;
-            this.dgvUsuario.Location = new System.Drawing.Point(12, 49);
+            this.dgvUsuario.Location = new System.Drawing.Point(184, 49);
             this.dgvUsuario.Name = "dgvUsuario";
             this.dgvUsuario.ReadOnly = true;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -62,16 +62,16 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.DarkBlue;
             this.dgvUsuario.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvUsuario.Size = new System.Drawing.Size(676, 469);
+            this.dgvUsuario.Size = new System.Drawing.Size(562, 469);
             this.dgvUsuario.TabIndex = 0;
             // 
             // txtPesquisa
             // 
             this.txtPesquisa.Font = new System.Drawing.Font("Georgia", 15.75F);
             this.txtPesquisa.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtPesquisa.Location = new System.Drawing.Point(12, 12);
+            this.txtPesquisa.Location = new System.Drawing.Point(184, 12);
             this.txtPesquisa.Name = "txtPesquisa";
-            this.txtPesquisa.Size = new System.Drawing.Size(676, 31);
+            this.txtPesquisa.Size = new System.Drawing.Size(542, 31);
             this.txtPesquisa.TabIndex = 1;
             this.txtPesquisa.Text = "Nome";
             this.txtPesquisa.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtPesquisa_MouseClick);
@@ -82,7 +82,7 @@
             this.btnExcluir.BackColor = System.Drawing.Color.Black;
             this.btnExcluir.Font = new System.Drawing.Font("Georgia", 15.75F);
             this.btnExcluir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnExcluir.Location = new System.Drawing.Point(12, 524);
+            this.btnExcluir.Location = new System.Drawing.Point(86, 524);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(125, 64);
             this.btnExcluir.TabIndex = 3;
@@ -95,7 +95,7 @@
             this.btnCancelar.BackColor = System.Drawing.Color.Black;
             this.btnCancelar.Font = new System.Drawing.Font("Georgia", 15.75F);
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCancelar.Location = new System.Drawing.Point(563, 524);
+            this.btnCancelar.Location = new System.Drawing.Point(749, 524);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(125, 64);
             this.btnCancelar.TabIndex = 4;
@@ -108,8 +108,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-           // this.BackgroundImage = global::Projeto_Integrador.Properties.Resources.Sem_Título_1_copiar;
-            this.ClientSize = new System.Drawing.Size(700, 600);
+            this.ClientSize = new System.Drawing.Size(960, 600);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.txtPesquisa);

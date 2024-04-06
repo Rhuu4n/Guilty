@@ -181,7 +181,7 @@ namespace Projeto_Integrador
                 // quando é sua vez
                 while (!Jogo.GetInstance().getMinhaVez())
                 {
-                    Debug.WriteLine("minha vez");
+                    Debug.WriteLine("Agora é sua vez");
                     Jogo.GetInstance().atualizarPartidaMinhaVez();
                     Thread.Sleep(1000);
                 }
@@ -192,7 +192,7 @@ namespace Projeto_Integrador
                 // quando não é sua vez
                 while (Jogo.GetInstance().getMinhaVez())
                 {
-                    Debug.WriteLine("n é minha vez ");
+                    Debug.WriteLine("Vez de outro jogador");
                     string parametro = lblVez.Text;
                     string resposta = Jogo.GetInstance().verificaVezAlterada(parametro);
 
@@ -239,7 +239,7 @@ namespace Projeto_Integrador
 
         public void adcCoins(int player)
         {
-
+            
         }
 
         public void removeCoins(int player, int player2)
@@ -341,7 +341,7 @@ namespace Projeto_Integrador
 
             Random RandomClass = new Random();
 
-            num1.Text = RandomClass.Next(1, 4).ToString();
+            num1.Text = RandomClass.Next(1, 1).ToString();
 
             if (num1.Text == "1") // mineradora
             {
@@ -350,7 +350,10 @@ namespace Projeto_Integrador
                 cartas.Jogador_afetado = "1";
                 //cartas.ID_partida = Convert.ToInt32(.id);
 
-                cartas.Mineradora();
+                Jogo.GetInstance().funçãoMineradora();
+
+
+                Jogo.GetInstance().PassarVez();
 
             }
             else if (num1.Text == "2")
@@ -480,8 +483,6 @@ namespace Projeto_Integrador
             {
             }
 
-
-
             Random RandomClass = new Random();
 
             num1.Text = RandomClass.Next(1, 4).ToString();
@@ -606,6 +607,16 @@ namespace Projeto_Integrador
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNomej3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRoubar1_Click_1(object sender, EventArgs e)
         {
 
         }

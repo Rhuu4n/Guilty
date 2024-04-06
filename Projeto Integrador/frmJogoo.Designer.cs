@@ -393,6 +393,7 @@
             this.lblNomej3.Size = new System.Drawing.Size(175, 32);
             this.lblNomej3.TabIndex = 71;
             this.lblNomej3.Text = "Jogador 3";
+            this.lblNomej3.Click += new System.EventHandler(this.lblNomej3_Click);
             // 
             // btnEncerrar
             // 
@@ -419,6 +420,7 @@
             this.btnRoubar1.TabIndex = 73;
             this.btnRoubar1.TabStop = false;
             this.btnRoubar1.Visible = false;
+            this.btnRoubar1.Click += new System.EventHandler(this.btnRoubar1_Click_1);
             // 
             // btnRoubar2
             // 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Projeto_Integrador.models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,13 +30,14 @@ namespace Projeto_Integrador
             try
             {
                 int exOK = 0;
-
-                BD._sql = "UPDATE Partida SET Acao = '" + Acao + "', Afetado = '" + Jogador_afetado + "' where id_partida = " + ID_partida;
+                Jogador_afetado = Jogo.GetInstance().getID();
+                BD._sql = "UPDATE Partida SET Acao = 1, Afetado = '" + Jogador_afetado + "', Moedas = Moedas + 2 where id_partida = " + ID_partida;
 
                 exOK = BD.ExecutaComando(false);
 
                 if (exOK == 1)
                 {
+
                 }
                 else
                 {
