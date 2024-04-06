@@ -200,5 +200,15 @@ namespace Projeto_Integrador
             }
             
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblJ1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

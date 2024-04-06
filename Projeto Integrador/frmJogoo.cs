@@ -175,7 +175,7 @@ namespace Projeto_Integrador
 
         public void adcCoins(int player)
         {
-
+            
         }
 
         public void removeCoins(int player, int player2)
@@ -286,7 +286,10 @@ namespace Projeto_Integrador
                 cartas.Jogador_afetado = "1";
                 //cartas.ID_partida = Convert.ToInt32(.id);
 
-                cartas.Mineradora();
+                Jogo.GetInstance().funçãoMineradora();
+
+
+                Jogo.GetInstance().PassarVez();
 
             }
             else if (num1.Text == "2")
@@ -415,8 +418,6 @@ namespace Projeto_Integrador
             else
             {
             }
-
-
 
             Random RandomClass = new Random();
 

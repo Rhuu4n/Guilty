@@ -595,6 +595,16 @@ namespace Projeto_Integrador.models
 
         }
 
+        public void funçãoMineradora()
+        {
+            clCartas carta = new clCartas();
+            carta.ID_partida = J1PTID;
+            carta.Mineradora();
+
+
+
+        }
+
         public clUsuario getUsuarioLogado() {
                 return this.usuarioLogado;
             }

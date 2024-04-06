@@ -81,7 +81,7 @@
             this.lblJ1.Size = new System.Drawing.Size(251, 48);
             this.lblJ1.TabIndex = 42;
             this.lblJ1.Text = "Jogador 1";
-//            this.lblJ1.Click += new System.EventHandler(this.label1_Click);
+            this.lblJ1.Click += new System.EventHandler(this.lblJ1_Click);
             // 
             // lblJ2
             // 
@@ -134,7 +134,7 @@
             this.label5.Size = new System.Drawing.Size(167, 48);
             this.label5.TabIndex = 46;
             this.label5.Text = "label5";
- //           this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // lblID
             // 
@@ -211,7 +211,6 @@
             this.pbJ4.Size = new System.Drawing.Size(435, 129);
             this.pbJ4.TabIndex = 70;
             this.pbJ4.TabStop = false;
- //           this.pbJ4.Click += new System.EventHandler(this.pbJ4_Click);
             // 
             // pbID
             // 

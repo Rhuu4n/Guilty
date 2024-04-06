@@ -68,10 +68,14 @@ namespace Projeto_Integrador
         {
             try
             {
+                DateTime agora = DateTime.Now;
+                DateTime dt = Convert.ToDateTime(agora);
+                string agoraFormatado = agora.ToString("yyyy-MM-dd HH:mm");
                 int exOK = 0;
 
-                BD._sql = "DELETE FROM CADASTRO WHERE ID = " + idusuario;
-                
+                BD._sql = "UPDATE CADASTRO SET Delete_At = '" + agoraFormatado + "' WHERE ID = " + idusuario ;
+                //"UPDATE CADASTRO SET Delete_At = ""WHERE ID = " + idusuario + "";
+
                 exOK = BD.ExecutaComando(false);
 
                 if (exOK == 1)
@@ -156,7 +160,8 @@ namespace Projeto_Integrador
         {
             try
             {
-                BD._sql = "SELECT * FROM CADASTRO ";
+                BD._sql = "SELECT ID, NOME, EMAIL, NASCIMENTO FROM CADASTRO " +
+                    "WHERE DELETE_AT IS NULL";
 
                 return BD.ExecutaSelect();
             }

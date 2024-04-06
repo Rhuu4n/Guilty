@@ -92,10 +92,11 @@ namespace Projeto_Integrador
             }
         }
 
-        public DataTable PesquisarIDPartida()
+        public  DataTable PesquisarIDPartida()
         {
             try
             {
+                conectaBD BD = new conectaBD();
                 BD._sql = "SELECT * FROM Partida " +
                          " WHERE id_partida = " + idPartida + "";
 
@@ -124,15 +125,14 @@ namespace Projeto_Integrador
 
                 exOK = BD.ExecutaComando(false);
 
-                
-
-                if (exOK == 1)
+                /*if (exOK == 1)
                 {
+
                 }
                 else
                 {
                     MessageBox.Show("Erro ao alterar Cliente, contate o desenvolvedor!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                }*/
 
             }
             catch (Exception ex)
@@ -143,32 +143,30 @@ namespace Projeto_Integrador
 
 
 
-        public  void removeCoins(int player, int player2)
+        public  void removeCoins(int player, int idSala, int moedas)
         {
-            if (player >= 0 && player < 4)
+            conectaBD BD = new conectaBD();
+            try
             {
-                if (playerCoins[player] < 10)
+                int exOK = 0;
+
+                BD._sql = "UPDATE Partida SET Moedas = '" + (moedas - 2) + "'where id_sala = " + idSala + "' and Jogador_ID ='" + player;
+
+                exOK = BD.ExecutaComando(false);
+
+                /*if (exOK == 1)
                 {
-                    playerCoins[player]++;
-                    MessageBox.Show($"O jogador {player + 1} agora possui {playerCoins[player]} moeda(s).", "Moedas Atualizadas");
-
-                    // Atualizar o rótulo correspondente
-                    Label[] coinLabels = {  };
-                    coinLabels[player].Text = $"x{playerCoins[player]}";
-
-                    //números aleatórios
-
-
 
                 }
                 else
                 {
-                    MessageBox.Show($"O Jogador {player + 1} juntou 10 moedas e ganhou o jogo, parabéns!");
-                }
+                    MessageBox.Show("Erro ao alterar Cliente, contate o desenvolvedor!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }*/
+
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Jogador inválido. Escolha um número de jogador entre 1 e 4.", "Jogador Inválido");
+                MessageBox.Show("Erro.: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
