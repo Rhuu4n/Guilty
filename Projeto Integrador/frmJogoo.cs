@@ -90,6 +90,8 @@ namespace Projeto_Integrador
             pbfundoJ4.SizeMode = PictureBoxSizeMode.StretchImage;
             pbFundoJatual.Load("https://i.imgur.com/8GCxhgw.png");
             pbFundoJatual.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbFfundo.Load("https://i.imgur.com/8GCxhgw.png");
+            pbFfundo.SizeMode = PictureBoxSizeMode.StretchImage;
 
 
 
