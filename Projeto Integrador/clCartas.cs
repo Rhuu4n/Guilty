@@ -49,9 +49,6 @@ namespace Projeto_Integrador
             {
                 MessageBox.Show("Erro.: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-          
-
-
         }
 
     }

@@ -140,10 +140,6 @@ namespace Projeto_Integrador
             {
                 this.BeginInvoke(new Action(fechaForm));
             }
-            else
-            {
-                MessageBox.Show("erro na thread");
-            }
 
         }
 

@@ -19,6 +19,7 @@ namespace Projeto_Integrador
     public partial class frmJogoo : Form
     {
         private string[] players;
+        string[] moedas;
         private int currentPlayerIndex;
         private int[] playerCoins = new int[4];
 
@@ -109,6 +110,45 @@ namespace Projeto_Integrador
             */
         }
 
+        /*ajuste
+
+        private void AjustarControles()
+        {
+            //1300; 788
+            
+            float larguraInicial = 1300;
+            float alturaInicial = 788;
+
+            float larguraFinal = this.Width;
+            float alturaFinal = this.Height;
+
+            //location largura e altura inicial
+            
+            pb1j1.Location = new Point((int) ( 702 - (larguraInicial - larguraFinal)), 598);
+            pb1j1.Location = new Point((int)( 466 - (alturaInicial - alturaFinal)), 322);
+
+            //size largura e altura
+
+            float proporcaoLargura = larguraFinal / larguraInicial;
+            float proporcaoAltura = alturaFinal / alturaInicial;
+            
+            pb1j1.Width = (int)(230 * proporcaoLargura);
+            pb1j1.Height = (int)(323 * proporcaoAltura);
+
+            //location largura e altura final
+
+            pb1j1.Location = new Point((int) (702 - (larguraInicial / 2 - larguraFinal / 2)), 598);
+            pb1j1.Location = new Point((int) (466 - (alturaInicial / 2 - larguraFinal / 2)), 322);
+
+        }
+
+        private void frmLogin_Resize(object sender, EventArgs e)
+        {
+            AjustarControles();
+        }
+
+*/        
+
         public void atualizar_nomes(string j1, string j2, string j3, string j4, string jc)
         {
             lblNomej1.Text = j1;
@@ -142,8 +182,11 @@ namespace Projeto_Integrador
                     Debug.WriteLine("minha vez");
                     Jogo.GetInstance().atualizarPartidaMinhaVez();
                     Thread.Sleep(1000);
-                } 
-                
+                }
+
+                moedas = Jogo.GetInstance().AtualizaMoedasPartida();
+                atualizaMoedasTela();
+
                 // quando não é sua vez
                 while (Jogo.GetInstance().getMinhaVez())
                 {
@@ -154,7 +197,8 @@ namespace Projeto_Integrador
                     if(!(parametro == resposta))
                     {
                         atualizaVez(resposta);
-                        // atualizainfopartida
+                        moedas = Jogo.GetInstance().AtualizaMoedasPartida();
+                        atualizaMoedasTela();
                     }
 
                     Thread.Sleep(1000);
@@ -170,6 +214,24 @@ namespace Projeto_Integrador
             }else
             {
                 lblVez.Text = param;
+            }
+        }
+
+        public void atualizaMoedasTela()
+        {
+            if (lblMP1.InvokeRequired)
+            {
+                lblMP1.BeginInvoke(new Action(atualizaMoedasTela));
+                lblMP2.BeginInvoke(new Action(atualizaMoedasTela));
+                lblMP3.BeginInvoke(new Action(atualizaMoedasTela));
+                lblMP4.BeginInvoke(new Action(atualizaMoedasTela));
+            }
+            else
+            {
+                lblMP1.Text = moedas[0];
+                lblMP2.Text = moedas[1];
+                lblMP3.Text = moedas[2];
+                lblMP4.Text = moedas[3];
             }
         }
 

@@ -389,26 +389,6 @@ namespace Projeto_Integrador.models
             partida.idSala = id_sala;
             DataTable dtPartida = partida.Pesquisar();
 
-            for (int i = 0; i < 4; i++)
-            {
-                int ordem = Convert.ToInt32(dtPartida.Rows[i]["ordem"]);
-                if (ordem == 1)
-                {
-                    J1PTID = Convert.ToInt32(dtPartida.Rows[i]["id_partida"]);
-                }
-                else if (ordem == 2)
-                {
-                    J2PTID = Convert.ToInt32(dtPartida.Rows[i]["id_partida"]);
-                }
-                else if (ordem == 3)
-                {
-                    J3PTID = Convert.ToInt32(dtPartida.Rows[i]["id_partida"]);
-                }
-                else if (ordem == 4)
-                {
-                    J4PTID = Convert.ToInt32(dtPartida.Rows[i]["id_partida"]);
-                }
-            }
 
             clSalas sala = new clSalas();
             sala.idSala = id_sala;
@@ -434,15 +414,37 @@ namespace Projeto_Integrador.models
 
             int idCriador = Convert.ToInt32(dt1.Rows[0]["Jogador_ID"]);
 
+            /*int contador = 0;
+            do
+            {
+
+                "J"+contador+"PTID" = Convert.ToInt32(dt1.Rows[contador]["id_partida"]);
+                contador++;
+                contador = contador % 4;
+            }
+            while (contador != minhaOrdem - 1);*/
+
 
             if (minhaOrdem == 1)
             {
+
+                J1PTID = Convert.ToInt32(dt1.Rows[0]["id_partida"]);
+                J2PTID = Convert.ToInt32(dt1.Rows[1]["id_partida"]);
+                J3PTID = Convert.ToInt32(dt1.Rows[2]["id_partida"]);
+                J4PTID = Convert.ToInt32(dt1.Rows[3]["id_partida"]);
+
                 id1 = Convert.ToInt32(id);
                 id2 = Convert.ToInt32(dt1.Rows[1]["Jogador_ID"]);
                 id3 = Convert.ToInt32(dt1.Rows[2]["Jogador_ID"]);
                 id4 = Convert.ToInt32(dt1.Rows[3]["Jogador_ID"]);
             }else if(minhaOrdem == 2)
             {
+
+                J1PTID = Convert.ToInt32(dt1.Rows[1]["id_partida"]);
+                J2PTID = Convert.ToInt32(dt1.Rows[2]["id_partida"]);
+                J3PTID = Convert.ToInt32(dt1.Rows[3]["id_partida"]);
+                J4PTID = Convert.ToInt32(dt1.Rows[0]["id_partida"]);
+
                 id1 = Convert.ToInt32(id);
                 id2 = Convert.ToInt32(dt1.Rows[2]["Jogador_ID"]);
                 id3 = Convert.ToInt32(dt1.Rows[3]["Jogador_ID"]);
@@ -450,6 +452,12 @@ namespace Projeto_Integrador.models
             }
             else if (minhaOrdem == 3)
             {
+
+                J1PTID = Convert.ToInt32(dt1.Rows[2]["id_partida"]);
+                J2PTID = Convert.ToInt32(dt1.Rows[3]["id_partida"]);
+                J3PTID = Convert.ToInt32(dt1.Rows[0]["id_partida"]);
+                J4PTID = Convert.ToInt32(dt1.Rows[1]["id_partida"]);
+
                 id1 = Convert.ToInt32(id);
                 id2 = Convert.ToInt32(dt1.Rows[3]["Jogador_ID"]);
                 id3 = Convert.ToInt32(dt1.Rows[0]["Jogador_ID"]);
@@ -457,6 +465,11 @@ namespace Projeto_Integrador.models
             }
             else if (minhaOrdem == 4)
             {
+                J1PTID = Convert.ToInt32(dt1.Rows[3]["id_partida"]);
+                J2PTID = Convert.ToInt32(dt1.Rows[0]["id_partida"]);
+                J3PTID = Convert.ToInt32(dt1.Rows[1]["id_partida"]);
+                J4PTID = Convert.ToInt32(dt1.Rows[2]["id_partida"]);
+
                 id1 = Convert.ToInt32(id);
                 id2 = Convert.ToInt32(dt1.Rows[0]["Jogador_ID"]);
                 id3 = Convert.ToInt32(dt1.Rows[1]["Jogador_ID"]);
@@ -586,13 +599,26 @@ namespace Projeto_Integrador.models
             cliente.idusuario = idProximo;
             DataTable dtProximo = cliente.PesquisaPorID();
             return Convert.ToString(dtProximo.Rows[0]["Nome"]);
-
-
         }
 
-        public void AtualizaInfoPartida()
+        public string[] AtualizaMoedasPartida()
         {
+            string[] moedas = new string[] {
+                resgataMoeda(J1PTID),
+                resgataMoeda(J2PTID),
+                resgataMoeda(J3PTID),
+                resgataMoeda(J4PTID)
+            }; 
+            return moedas;
+        }
 
+        public string resgataMoeda(int idPt)
+        {
+            clPartida partida = new clPartida();
+            partida.idPartida = idPt;
+            DataTable dt = partida.PesquisarIDPartida();
+
+            return dt.Rows[0]["Moedas"].ToString();
         }
 
         public void funçãoMineradora()
