@@ -43,11 +43,7 @@
             this.pb1j2 = new System.Windows.Forms.PictureBox();
             this.pb2j2 = new System.Windows.Forms.PictureBox();
             this.pb1j1 = new System.Windows.Forms.PictureBox();
-            this.pbMiner1 = new System.Windows.Forms.PictureBox();
             this.pb2j1 = new System.Windows.Forms.PictureBox();
-            this.pbSaq2 = new System.Windows.Forms.PictureBox();
-            this.pbSaq1 = new System.Windows.Forms.PictureBox();
-            this.pbMiner2 = new System.Windows.Forms.PictureBox();
             this.pbFundomesa = new System.Windows.Forms.PictureBox();
             this.num1 = new System.Windows.Forms.Label();
             this.lblNomej4 = new System.Windows.Forms.Label();
@@ -84,11 +80,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb1j2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb2j2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb1j1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMiner1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb2j1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSaq2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSaq1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMiner2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFundomesa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEncerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRoubar1)).BeginInit();
@@ -265,55 +257,15 @@
             this.pb1j1.TabIndex = 50;
             this.pb1j1.TabStop = false;
             // 
-            // pbMiner1
-            // 
-            this.pbMiner1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.pbMiner1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbMiner1.Location = new System.Drawing.Point(417, 453);
-            this.pbMiner1.Name = "pbMiner1";
-            this.pbMiner1.Size = new System.Drawing.Size(230, 323);
-            this.pbMiner1.TabIndex = 12;
-            this.pbMiner1.TabStop = false;
-            // 
             // pb2j1
             // 
             this.pb2j1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.pb2j1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pb2j1.Location = new System.Drawing.Point(652, 454);
+            this.pb2j1.Location = new System.Drawing.Point(652, 453);
             this.pb2j1.Name = "pb2j1";
             this.pb2j1.Size = new System.Drawing.Size(230, 323);
             this.pb2j1.TabIndex = 52;
             this.pb2j1.TabStop = false;
-            // 
-            // pbSaq2
-            // 
-            this.pbSaq2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.pbSaq2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbSaq2.Location = new System.Drawing.Point(653, 454);
-            this.pbSaq2.Name = "pbSaq2";
-            this.pbSaq2.Size = new System.Drawing.Size(230, 323);
-            this.pbSaq2.TabIndex = 13;
-            this.pbSaq2.TabStop = false;
-            // 
-            // pbSaq1
-            // 
-            this.pbSaq1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.pbSaq1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbSaq1.Location = new System.Drawing.Point(417, 453);
-            this.pbSaq1.Name = "pbSaq1";
-            this.pbSaq1.Size = new System.Drawing.Size(230, 323);
-            this.pbSaq1.TabIndex = 60;
-            this.pbSaq1.TabStop = false;
-            // 
-            // pbMiner2
-            // 
-            this.pbMiner2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.pbMiner2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbMiner2.Location = new System.Drawing.Point(653, 453);
-            this.pbMiner2.Name = "pbMiner2";
-            this.pbMiner2.Size = new System.Drawing.Size(230, 323);
-            this.pbMiner2.TabIndex = 61;
-            this.pbMiner2.TabStop = false;
             // 
             // pbFundomesa
             // 
@@ -681,11 +633,7 @@
             this.Controls.Add(this.pb2j3);
             this.Controls.Add(this.pb1j2);
             this.Controls.Add(this.pb2j2);
-            this.Controls.Add(this.pbMiner1);
             this.Controls.Add(this.pb2j1);
-            this.Controls.Add(this.pbSaq2);
-            this.Controls.Add(this.pbSaq1);
-            this.Controls.Add(this.pbMiner2);
             this.Controls.Add(this.lblCentro);
             this.Controls.Add(this.pbFfundo);
             this.Controls.Add(this.pbFundomesa);
@@ -706,11 +654,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb1j2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb2j2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb1j1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMiner1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb2j1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSaq2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSaq1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMiner2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFundomesa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEncerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRoubar1)).EndInit();
@@ -736,8 +680,6 @@
         #endregion
         private System.Windows.Forms.PictureBox pb1j2;
         private System.Windows.Forms.PictureBox pb2j2;
-        private System.Windows.Forms.PictureBox pbSaq2;
-        private System.Windows.Forms.PictureBox pbMiner1;
         private System.Windows.Forms.PictureBox pb1j3;
         private System.Windows.Forms.PictureBox pb2j3;
         private System.Windows.Forms.Label lblVez;
@@ -753,8 +695,6 @@
         private System.Windows.Forms.PictureBox pb2j1;
         private System.Windows.Forms.PictureBox pb2j4;
         private System.Windows.Forms.PictureBox pb1j4;
-        private System.Windows.Forms.PictureBox pbSaq1;
-        private System.Windows.Forms.PictureBox pbMiner2;
         private System.Windows.Forms.PictureBox pbFundomesa;
         private System.Windows.Forms.Label num1;
         private System.Windows.Forms.Label lblNomej4;
