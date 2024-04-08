@@ -71,6 +71,8 @@
             this.pbFundoJatual = new System.Windows.Forms.PictureBox();
             this.lblMP2 = new System.Windows.Forms.Label();
             this.lblMP3 = new System.Windows.Forms.Label();
+            this.pbFfundo = new System.Windows.Forms.PictureBox();
+            this.lblCentro = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pb1j4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb2j4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMoeda4)).BeginInit();
@@ -103,6 +105,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbfundoJ4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbfundoJ3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFundoJatual)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFfundo)).BeginInit();
             this.SuspendLayout();
             // 
             // lblVez
@@ -324,6 +327,7 @@
             this.pbFundomesa.Size = new System.Drawing.Size(1300, 788);
             this.pbFundomesa.TabIndex = 66;
             this.pbFundomesa.TabStop = false;
+            this.pbFundomesa.Click += new System.EventHandler(this.pbFundomesa_Click_1);
             // 
             // num1
             // 
@@ -610,12 +614,39 @@
             this.lblMP3.TabIndex = 88;
             this.lblMP3.Text = "x0";
             // 
+            // pbFfundo
+            // 
+            this.pbFfundo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pbFfundo.BackColor = System.Drawing.Color.Transparent;
+            this.pbFfundo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbFfundo.Location = new System.Drawing.Point(330, 283);
+            this.pbFfundo.Name = "pbFfundo";
+            this.pbFfundo.Size = new System.Drawing.Size(641, 222);
+            this.pbFfundo.TabIndex = 89;
+            this.pbFfundo.TabStop = false;
+            // 
+            // lblCentro
+            // 
+            this.lblCentro.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblCentro.AutoSize = true;
+            this.lblCentro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(232)))), ((int)(((byte)(208)))));
+            this.lblCentro.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lblCentro.Font = new System.Drawing.Font("Minecraft", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCentro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(97)))), ((int)(((byte)(40)))), ((int)(((byte)(80)))));
+            this.lblCentro.Location = new System.Drawing.Point(489, 373);
+            this.lblCentro.Name = "lblCentro";
+            this.lblCentro.Size = new System.Drawing.Size(323, 43);
+            this.lblCentro.TabIndex = 90;
+            this.lblCentro.Text = "Erick é hetero";
+            // 
             // frmJogoo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1300, 788);
+            this.Controls.Add(this.btn1j1);
+            this.Controls.Add(this.btn2j1);
             this.Controls.Add(this.lblMP3);
             this.Controls.Add(this.lblMP2);
             this.Controls.Add(this.num1);
@@ -639,8 +670,6 @@
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnResumir);
             this.Controls.Add(this.btnOpcoes);
-            this.Controls.Add(this.btn2j1);
-            this.Controls.Add(this.btn1j1);
             this.Controls.Add(this.btnRoubar3);
             this.Controls.Add(this.btnRoubar2);
             this.Controls.Add(this.btnRoubar1);
@@ -657,6 +686,8 @@
             this.Controls.Add(this.pbSaq2);
             this.Controls.Add(this.pbSaq1);
             this.Controls.Add(this.pbMiner2);
+            this.Controls.Add(this.lblCentro);
+            this.Controls.Add(this.pbFfundo);
             this.Controls.Add(this.pbFundomesa);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -696,6 +727,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbfundoJ4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbfundoJ3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFundoJatual)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFfundo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -746,5 +778,7 @@
         private System.Windows.Forms.PictureBox pbFundoJatual;
         private System.Windows.Forms.Label lblMP2;
         private System.Windows.Forms.Label lblMP3;
+        private System.Windows.Forms.PictureBox pbFfundo;
+        private System.Windows.Forms.Label lblCentro;
     }
 }
