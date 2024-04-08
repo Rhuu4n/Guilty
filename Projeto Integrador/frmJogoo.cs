@@ -463,7 +463,7 @@ namespace Projeto_Integrador
 
         }
 
-        private void btn1j1_Click_1(object sender, EventArgs e)
+        private async void btn1j1_Click_1(object sender, EventArgs e)
         { 
             Random RandomClass = new Random();
 
@@ -473,7 +473,13 @@ namespace Projeto_Integrador
             {
                 pb1j1.Load("https://i.imgur.com/q44KeIY.jpg");
                 Jogo.GetInstance().funçãoMineradora();
+
+                await Task.Delay(1000);
+
+                pb1j1.Load("https://i.imgur.com/zx9oyXi.jpg");
                 Jogo.GetInstance().PassarVez();
+                esconder_icones();
+
             }
 
             else if (num1 == 2) // saqueador
@@ -482,14 +488,26 @@ namespace Projeto_Integrador
                 btnRoubar1.Visible = true;
                 btnRoubar2.Visible = true;
                 btnRoubar3.Visible = true;
-                Jogo.GetInstance().PassarVez();
+
             }
             else if (num1 == 3) // nobre
             {
                 pb1j1.Load("https://i.imgur.com/jOmLsCD.jpg");
-                Jogo.GetInstance().funçãoMineradora();
+
+                await Task.Delay(1000);
+
                 Jogo.GetInstance().PassarVez();
+                esconder_icones();
             }
+        }
+
+        void esconder_icones()
+        {
+            pb1j1.Load("https://i.imgur.com/zx9oyXi.jpg");
+            pb2j1.Load("https://i.imgur.com/zx9oyXi.jpg");
+            btnRoubar1.Visible = false;
+            btnRoubar2.Visible = false;
+            btnRoubar3.Visible = false;
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
