@@ -24,7 +24,7 @@ namespace Projeto_Integrador
         {
             try
             {
-                BD._sql = "SELECT * FROM Cadastro " + " WHERE Nome LIKE '"+nome+"' and Delete_At IS NOT NULL";
+                BD._sql = "SELECT * FROM Cadastro " + " WHERE Nome LIKE '"+nome+"' and Delete_At IS NULL";
 
                 return BD.ExecutaSelect();
             }

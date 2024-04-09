@@ -58,6 +58,8 @@ namespace Projeto_Integrador
                 if (resposta == DialogResult.Yes)
                 {
                     cliente.Excluir();
+                    cliente.CarregaClientes();
+
                     //txtPesquisa_TextChanged(null, null);
                 }
             }
