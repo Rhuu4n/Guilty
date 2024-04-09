@@ -632,9 +632,32 @@ namespace Projeto_Integrador.models
             clCartas carta = new clCartas();
             carta.ID_partida = J1PTID;
             carta.Mineradora();
+        }
 
+        public void funçãoSaqueadorP2()
+        {
+            clCartas carta = new clCartas();
+            carta.ID_partida = J2PTID;
+            carta.Saqueador();
+        }
+        public void funçãoSaqueadorP3()
+        {
+            clCartas carta = new clCartas();
+            carta.ID_partida = J3PTID;
+            carta.Saqueador();
+        }
+        public void funçãoSaqueadorP4()
+        {
+            clCartas carta = new clCartas();
+            carta.ID_partida = J4PTID;
+            carta.Saqueador();
+        }
 
-
+        public void funçãoNobre()
+        {
+            clCartas carta = new clCartas();
+            carta.ID_partida = J1PTID;
+            carta.Nobre();
         }
 
         public clUsuario getUsuarioLogado() {

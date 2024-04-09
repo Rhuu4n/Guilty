@@ -401,6 +401,7 @@
             this.btnRoubar3.TabIndex = 75;
             this.btnRoubar3.TabStop = false;
             this.btnRoubar3.Visible = false;
+            this.btnRoubar3.Click += new System.EventHandler(this.btnRoubar3_Click_1);
             // 
             // btn1j1
             // 
