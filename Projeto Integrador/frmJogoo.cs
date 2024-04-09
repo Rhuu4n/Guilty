@@ -469,7 +469,7 @@ namespace Projeto_Integrador
         { 
             Random RandomClass = new Random();
 
-            int num1 = RandomClass.Next(1, 2);
+            int num1 = RandomClass.Next(1, 4);
 
             if (num1 == 1) // mineradora
             {
