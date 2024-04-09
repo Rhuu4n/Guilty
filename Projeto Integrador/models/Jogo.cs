@@ -552,7 +552,6 @@ namespace Projeto_Integrador.models
             sala.idSala = id_sala;
             DataTable dt = sala.Pesquisar();
             string atual = dt.Rows[0]["jogadorAtual"].ToString();
-            Debug.WriteLine("A: " + atual + " ID: " + id);
             if (atual == id)
             {
                 return true;
