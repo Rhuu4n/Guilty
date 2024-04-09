@@ -460,7 +460,9 @@ namespace Projeto_Integrador
 
         private void btnRoubar2_Click_1(object sender, EventArgs e)
         {
-
+            Jogo.GetInstance().funçãoSaqueadorP3();
+            esconder_icones();
+            Jogo.GetInstance().PassarVez();
         }
 
         private async void btn1j1_Click_1(object sender, EventArgs e)
@@ -510,21 +512,43 @@ namespace Projeto_Integrador
             btnRoubar3.Visible = false;
         }
 
-        private void pictureBox1_Click_1(object sender, EventArgs e)
+        private async void pictureBox1_Click_1(object sender, EventArgs e)
         {
-            if (pb1j1.Visible == true)
+            Random RandomClass = new Random();
+
+            int num1 = RandomClass.Next(1, 2);
+
+            if (num1 == 1) // mineradora
             {
-                pb2j1.Visible = false;
-                btn1j1.Enabled = false;
-                btn2j1.Enabled = false;
+                pb2j1.Load("https://i.imgur.com/q44KeIY.jpg");
+                Jogo.GetInstance().funçãoMineradora();
+
+                await Task.Delay(1000);
+
+                pb2j1.Load("https://i.imgur.com/zx9oyXi.jpg");
+                Jogo.GetInstance().PassarVez();
+                esconder_icones();
+
             }
-            else
+
+            else if (num1 == 2) // saqueador
             {
+                pb2j1.Load("https://i.imgur.com/opUd1Kc.jpg");
+                btnRoubar1.Visible = true;
+                btnRoubar2.Visible = true;
+                btnRoubar3.Visible = true;
+
             }
+            else if (num1 == 3) // nobre
+            {
+                pb2j1.Load("https://i.imgur.com/jOmLsCD.jpg");
+                Jogo.GetInstance().funçãoNobre();
 
+                await Task.Delay(1000);
 
-
-            
+                Jogo.GetInstance().PassarVez();
+                esconder_icones();
+            }
         }
 
         private void btnOpcoes_Click(object sender, EventArgs e)
@@ -611,12 +635,21 @@ namespace Projeto_Integrador
 
         private void btnRoubar1_Click_1(object sender, EventArgs e)
         {
-
+            Jogo.GetInstance().funçãoSaqueadorP4();
+            esconder_icones();
+            Jogo.GetInstance().PassarVez();
         }
 
         private void pbFundomesa_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnRoubar3_Click_1(object sender, EventArgs e)
+        {
+            Jogo.GetInstance().funçãoSaqueadorP2();
+            esconder_icones();
+            Jogo.GetInstance().PassarVez();
         }
     }
 }
