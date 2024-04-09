@@ -59,15 +59,19 @@ namespace Projeto_Integrador
                 {
                     cliente.Excluir();
                     cliente.CarregaClientes();
-
                     //txtPesquisa_TextChanged(null, null);
+                }
+                else
+                {
+                    cliente.CarregaClientes();
                 }
             }
             else
             {
                 MessageBox.Show("Você precisa selecionar um cliente para poder exclui-lo!", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                cliente.CarregaClientes();
             }
-
+            cliente.CarregaClientes();
             dgvUsuario.DataSource = cliente.PesquisaPorNome();
         }
 
@@ -97,6 +101,11 @@ namespace Projeto_Integrador
             {
             txtPesquisa.Text = "";
             }
+        }
+
+        private void dgvUsuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

@@ -117,7 +117,7 @@ namespace Projeto_Integrador
 
         private void txtUsuario_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (txtUsuario.Text.Length >= 12 && e.KeyChar != 8)
+            if (txtUsuario.Text.Length >= 8 && e.KeyChar != 8)
             {
                 e.Handled = true;
                 MessageBox.Show("Este Campo só aceita até 12 caracteres", "Erro");
