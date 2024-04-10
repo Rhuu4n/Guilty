@@ -174,7 +174,11 @@ namespace Projeto_Integrador
             {
                 Jogo.GetInstance().atualizarPartidaMinhaVez();
 
-                this.BeginInvoke(new Action(aparecer_cartas));
+                if (!Jogo.GetInstance().getMinhaVez())
+                {
+
+                    this.BeginInvoke(new Action(aparecer_cartas));
+                }
 
                 // quando é sua vez
                 while (!Jogo.GetInstance().getMinhaVez())
@@ -505,13 +509,15 @@ namespace Projeto_Integrador
             
             
         }
+        
+        Random RandomClass = new Random();
 
         async void aparecer_cartas()
         {
-            Random RandomClass = new Random();
+           
 
-            acao1 = RandomClass.Next(1, 4);
-            acao2 = RandomClass.Next(1, 4);
+            acao1 = this.RandomClass.Next(1, 4);
+            acao2 = this.RandomClass.Next(1, 4);
 
             if (acao1 == 1) // mineradora
             {
