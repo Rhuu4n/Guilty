@@ -64,6 +64,7 @@
             this.dgvUsuario.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvUsuario.Size = new System.Drawing.Size(562, 469);
             this.dgvUsuario.TabIndex = 0;
+            this.dgvUsuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuario_CellContentClick);
             // 
             // txtPesquisa
             // 
