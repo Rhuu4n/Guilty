@@ -22,6 +22,8 @@ namespace Projeto_Integrador
         string[] moedas;
         private int currentPlayerIndex;
         private int[] playerCoins = new int[4];
+        int acao1;
+        int acao2;
 
         public frmJogoo()
         {
@@ -84,6 +86,7 @@ namespace Projeto_Integrador
             pbFundoJatual.SizeMode = PictureBoxSizeMode.StretchImage;
             pbFfundo.Load("https://i.imgur.com/8GCxhgw.png");
             pbFfundo.SizeMode = PictureBoxSizeMode.StretchImage;
+            
 
 
 
@@ -470,34 +473,27 @@ namespace Projeto_Integrador
         {
             if (Jogo.GetInstance().verificaVez())
             {
-                Random RandomClass = new Random();
 
-                int num1 = RandomClass.Next(1, 4);
-
-                if (num1 == 1) // mineradora
+                if (acao1 == 1) // mineradora
                 {
-                    pb1j1.Load("https://i.imgur.com/q44KeIY.jpg");
                     Jogo.GetInstance().funçãoMineradora();
 
                     await Task.Delay(1000);
 
-                    pb1j1.Load("https://i.imgur.com/zx9oyXi.jpg");
                     Jogo.GetInstance().PassarVez();
                     esconder_icones();
 
                 }
 
-                else if (num1 == 2) // saqueador
+                else if (acao1 == 2) // saqueador
                 {
-                    pb1j1.Load("https://i.imgur.com/opUd1Kc.jpg");
                     btnRoubar1.Visible = true;
                     btnRoubar2.Visible = true;
                     btnRoubar3.Visible = true;
 
                 }
-                else if (num1 == 3) // nobre
+                else if (acao1 == 3) // nobre
                 {
-                    pb1j1.Load("https://i.imgur.com/jOmLsCD.jpg");
                     Jogo.GetInstance().funçãoNobre();
 
                     await Task.Delay(1000);
@@ -516,10 +512,10 @@ namespace Projeto_Integrador
         {
             Random RandomClass = new Random();
 
-            int num1 = RandomClass.Next(1, 4);
-            int num2 = RandomClass.Next(1, 4);
+            acao1 = RandomClass.Next(1, 4);
+            acao2 = RandomClass.Next(1, 4);
 
-            if (num1 == 1) // mineradora
+            if (acao1 == 1) // mineradora
             {
                 pb1j1.Load("https://i.imgur.com/q44KeIY.jpg");
                 Jogo.GetInstance().funçãoMineradora();
@@ -532,15 +528,12 @@ namespace Projeto_Integrador
 
             }
 
-            else if (num1 == 2) // saqueador
+            else if (acao1 == 2) // saqueador
             {
                 pb1j1.Load("https://i.imgur.com/opUd1Kc.jpg");
-                btnRoubar1.Visible = true;
-                btnRoubar2.Visible = true;
-                btnRoubar3.Visible = true;
 
             }
-            else if (num1 == 3) // nobre
+            else if (acao1 == 3) // nobre
             {
                 pb1j1.Load("https://i.imgur.com/jOmLsCD.jpg");
                 Jogo.GetInstance().funçãoNobre();
@@ -551,7 +544,7 @@ namespace Projeto_Integrador
                 esconder_icones();
             }
 
-            if (num2 == 1) // mineradora 2
+            if (acao2 == 1) // mineradora 2
             {
 
 
@@ -565,7 +558,7 @@ namespace Projeto_Integrador
 
             }
 
-            else if (num2 == 2) // saqueador 2
+            else if (acao2 == 2) // saqueador 2
             {
                 pb2j1.Load("https://i.imgur.com/opUd1Kc.jpg");
                 btnRoubar1.Visible = true;
@@ -573,7 +566,7 @@ namespace Projeto_Integrador
                 btnRoubar3.Visible = true;
 
             }
-            else if (num2 == 3) // nobre 2
+            else if (acao2 == 3) // nobre 2
             {
                 pb2j1.Load("https://i.imgur.com/jOmLsCD.jpg");
                 Jogo.GetInstance().funçãoNobre();
@@ -600,34 +593,25 @@ namespace Projeto_Integrador
 
             if (Jogo.GetInstance().verificaVez())
             {
-                Random RandomClass = new Random();
-                int num1 = RandomClass.Next(1, 4);
-
-                if (num1 == 1) // mineradora
+                if (acao2 == 1) // mineradora
                 {
-
-
-                    pb2j1.Load("https://i.imgur.com/q44KeIY.jpg");
                     Jogo.GetInstance().funçãoMineradora();
                     await Task.Delay(1000);
 
-                    pb2j1.Load("https://i.imgur.com/zx9oyXi.jpg");
                     Jogo.GetInstance().PassarVez();
                     esconder_icones();
 
                 }
 
-                else if (num1 == 2) // saqueador
+                else if (acao2 == 2) // saqueador
                 {
-                    pb2j1.Load("https://i.imgur.com/opUd1Kc.jpg");
                     btnRoubar1.Visible = true;
                     btnRoubar2.Visible = true;
                     btnRoubar3.Visible = true;
 
                 }
-                else if (num1 == 3) // nobre
+                else if (acao2 == 3) // nobre
                 {
-                    pb2j1.Load("https://i.imgur.com/jOmLsCD.jpg");
                     Jogo.GetInstance().funçãoNobre();
 
                     await Task.Delay(1000);
