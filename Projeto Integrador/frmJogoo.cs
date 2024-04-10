@@ -498,6 +498,7 @@ namespace Projeto_Integrador
                 else if (num1 == 3) // nobre
                 {
                     pb1j1.Load("https://i.imgur.com/jOmLsCD.jpg");
+                    Jogo.GetInstance().funçãoNobre();
 
                     await Task.Delay(1000);
 
