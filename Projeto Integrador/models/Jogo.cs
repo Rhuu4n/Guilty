@@ -637,18 +637,42 @@ namespace Projeto_Integrador.models
         {
             clCartas carta = new clCartas();
             carta.ID_partida = J2PTID;
+            carta.SaqueadorAlvo();
+            clPartida partida = new clPartida();
+            partida.idPartida = J2PTID;
+            DataTable dt = partida.PesquisarIDPartida();
+            string idpt = dt.Rows[0]["Jogador_ID"].ToString();
+
+            carta.ID_partida = J1PTID;
+            carta.Jogador_afetado = idpt;
             carta.Saqueador();
         }
         public void funçãoSaqueadorP3()
         {
             clCartas carta = new clCartas();
             carta.ID_partida = J3PTID;
+            carta.SaqueadorAlvo();
+            clPartida partida = new clPartida();
+            partida.idPartida = J3PTID;
+            DataTable dt = partida.PesquisarIDPartida();
+            string idpt = dt.Rows[0]["Jogador_ID"].ToString();
+
+            carta.ID_partida = J1PTID;
+            carta.Jogador_afetado = idpt;
             carta.Saqueador();
         }
         public void funçãoSaqueadorP4()
         {
             clCartas carta = new clCartas();
             carta.ID_partida = J4PTID;
+            carta.SaqueadorAlvo();
+            clPartida partida = new clPartida();
+            partida.idPartida = J4PTID;
+            DataTable dt = partida.PesquisarIDPartida();
+            string idpt = dt.Rows[0]["Jogador_ID"].ToString();
+
+            carta.ID_partida = J1PTID;
+            carta.Jogador_afetado = idpt;
             carta.Saqueador();
         }
 

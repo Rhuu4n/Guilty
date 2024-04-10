@@ -167,7 +167,8 @@ namespace Projeto_Integrador
 
         void atualizacaoPartida()
         {
-            while(!Jogo.GetInstance().getPartida()){
+            while(!Jogo.GetInstance().getPartida())
+            {
                 Jogo.GetInstance().atualizarPartidaMinhaVez();
 
                 // quando é sua vez

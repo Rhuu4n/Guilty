@@ -51,7 +51,7 @@ namespace Projeto_Integrador
             }
         }
 
-        public void Saqueador()
+        public void SaqueadorAlvo()
         {
 
             clPartida carta = new clPartida();
@@ -60,7 +60,35 @@ namespace Projeto_Integrador
             {
                 int exOK = 0;
                 Jogador_afetado = Jogo.GetInstance().getID();
-                BD._sql = "UPDATE Partida SET Acao = 2, Afetado = '" + Jogador_afetado + "', Moedas = Moedas - 3 where id_partida = " + ID_partida;
+                BD._sql = "UPDATE Partida SET Moedas = Moedas - 3 where id_partida = " + ID_partida;
+
+                exOK = BD.ExecutaComando(false);
+
+                if (exOK == 1)
+                {
+
+                }
+                else
+                {
+                    MessageBox.Show("Não foi possivel realizar essa ação", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro.: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void Saqueador()
+        {
+
+            clPartida carta = new clPartida();
+
+            try
+            {
+                int exOK = 0;
+                BD._sql = "UPDATE Partida SET Acao = 2, Afetado = '" + Jogador_afetado + "', Moedas = Moedas + 3 where id_partida = " + ID_partida;
 
                 exOK = BD.ExecutaComando(false);
 
