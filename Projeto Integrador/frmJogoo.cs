@@ -480,8 +480,6 @@ namespace Projeto_Integrador
                 {
                     Jogo.GetInstance().funçãoMineradora();
 
-                    await Task.Delay(1000);
-
                     Jogo.GetInstance().PassarVez();
                     esconder_icones();
 
@@ -497,8 +495,6 @@ namespace Projeto_Integrador
                 else if (acao1 == 3) // nobre
                 {
                     Jogo.GetInstance().funçãoNobre();
-
-                    await Task.Delay(1000);
 
                     Jogo.GetInstance().PassarVez();
                     esconder_icones();
@@ -520,14 +516,6 @@ namespace Projeto_Integrador
             if (acao1 == 1) // mineradora
             {
                 pb1j1.Load("https://i.imgur.com/q44KeIY.jpg");
-                Jogo.GetInstance().funçãoMineradora();
-
-                await Task.Delay(1000);
-
-                pb1j1.Load("https://i.imgur.com/zx9oyXi.jpg");
-                Jogo.GetInstance().PassarVez();
-                esconder_icones();
-
             }
 
             else if (acao1 == 2) // saqueador
@@ -538,12 +526,6 @@ namespace Projeto_Integrador
             else if (acao1 == 3) // nobre
             {
                 pb1j1.Load("https://i.imgur.com/jOmLsCD.jpg");
-                Jogo.GetInstance().funçãoNobre();
-
-                await Task.Delay(1000);
-
-                Jogo.GetInstance().PassarVez();
-                esconder_icones();
             }
 
             if (acao2 == 1) // mineradora 2
@@ -551,32 +533,17 @@ namespace Projeto_Integrador
 
 
                 pb2j1.Load("https://i.imgur.com/q44KeIY.jpg");
-                Jogo.GetInstance().funçãoMineradora();
-                await Task.Delay(1000);
-
-                pb2j1.Load("https://i.imgur.com/zx9oyXi.jpg");
-                Jogo.GetInstance().PassarVez();
-                esconder_icones();
 
             }
 
             else if (acao2 == 2) // saqueador 2
             {
                 pb2j1.Load("https://i.imgur.com/opUd1Kc.jpg");
-                btnRoubar1.Visible = true;
-                btnRoubar2.Visible = true;
-                btnRoubar3.Visible = true;
 
             }
             else if (acao2 == 3) // nobre 2
             {
                 pb2j1.Load("https://i.imgur.com/jOmLsCD.jpg");
-                Jogo.GetInstance().funçãoNobre();
-
-                await Task.Delay(1000);
-
-                Jogo.GetInstance().PassarVez();
-                esconder_icones();
             }
 
         }
