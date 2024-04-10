@@ -174,6 +174,8 @@ namespace Projeto_Integrador
             {
                 Jogo.GetInstance().atualizarPartidaMinhaVez();
 
+                this.BeginInvoke(new Action(aparecer_cartas));
+
                 // quando é sua vez
                 while (!Jogo.GetInstance().getMinhaVez())
                 {
