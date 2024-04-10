@@ -506,8 +506,84 @@ namespace Projeto_Integrador
                     esconder_icones();
                 }
             }
+
+
             
             
+        }
+
+        async void aparecer_cartas()
+        {
+            Random RandomClass = new Random();
+
+            int num1 = RandomClass.Next(1, 4);
+            int num2 = RandomClass.Next(1, 4);
+
+            if (num1 == 1) // mineradora
+            {
+                pb1j1.Load("https://i.imgur.com/q44KeIY.jpg");
+                Jogo.GetInstance().funçãoMineradora();
+
+                await Task.Delay(1000);
+
+                pb1j1.Load("https://i.imgur.com/zx9oyXi.jpg");
+                Jogo.GetInstance().PassarVez();
+                esconder_icones();
+
+            }
+
+            else if (num1 == 2) // saqueador
+            {
+                pb1j1.Load("https://i.imgur.com/opUd1Kc.jpg");
+                btnRoubar1.Visible = true;
+                btnRoubar2.Visible = true;
+                btnRoubar3.Visible = true;
+
+            }
+            else if (num1 == 3) // nobre
+            {
+                pb1j1.Load("https://i.imgur.com/jOmLsCD.jpg");
+                Jogo.GetInstance().funçãoNobre();
+
+                await Task.Delay(1000);
+
+                Jogo.GetInstance().PassarVez();
+                esconder_icones();
+            }
+
+            if (num2 == 1) // mineradora 2
+            {
+
+
+                pb2j1.Load("https://i.imgur.com/q44KeIY.jpg");
+                Jogo.GetInstance().funçãoMineradora();
+                await Task.Delay(1000);
+
+                pb2j1.Load("https://i.imgur.com/zx9oyXi.jpg");
+                Jogo.GetInstance().PassarVez();
+                esconder_icones();
+
+            }
+
+            else if (num2 == 2) // saqueador 2
+            {
+                pb2j1.Load("https://i.imgur.com/opUd1Kc.jpg");
+                btnRoubar1.Visible = true;
+                btnRoubar2.Visible = true;
+                btnRoubar3.Visible = true;
+
+            }
+            else if (num2 == 3) // nobre 2
+            {
+                pb2j1.Load("https://i.imgur.com/jOmLsCD.jpg");
+                Jogo.GetInstance().funçãoNobre();
+
+                await Task.Delay(1000);
+
+                Jogo.GetInstance().PassarVez();
+                esconder_icones();
+            }
+
         }
 
         void esconder_icones()
