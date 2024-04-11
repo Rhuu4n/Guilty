@@ -357,6 +357,7 @@
             this.btnEncerrar.Size = new System.Drawing.Size(137, 65);
             this.btnEncerrar.TabIndex = 72;
             this.btnEncerrar.TabStop = false;
+            this.btnEncerrar.Visible = false;
             this.btnEncerrar.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // btnRoubar1
