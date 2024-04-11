@@ -133,11 +133,11 @@ namespace Projeto_Integrador
                 moedas = Jogo.GetInstance().AtualizaMoedasPartida();
                 atualizaMoedasTela();
 
-                if (jajoguei)
+                /*if (jajoguei)
                 {
                     string mensagem = Jogo.GetInstance().AtualizaMensagemPt();
                     atualizaMensagem(mensagem);
-                }
+                }*/
 
                 // quando não é sua vez
                 while (Jogo.GetInstance().getMinhaVez())
