@@ -174,16 +174,16 @@ namespace Projeto_Integrador
             {
                 Jogo.GetInstance().atualizarPartidaMinhaVez();
 
-                if (!Jogo.GetInstance().getMinhaVez())
+                if (Jogo.GetInstance().verificaVez())
                 {
-
+                    Debug.WriteLine("Agora é sua vez");
                     this.BeginInvoke(new Action(aparecer_cartas));
                 }
 
                 // quando é sua vez
                 while (!Jogo.GetInstance().getMinhaVez())
                 {
-                    Debug.WriteLine("Agora é sua vez");
+                    //Debug.WriteLine("Agora é sua vez");
                     Jogo.GetInstance().atualizarPartidaMinhaVez();
                     Thread.Sleep(1000);
                 }
@@ -194,7 +194,7 @@ namespace Projeto_Integrador
                 // quando não é sua vez
                 while (Jogo.GetInstance().getMinhaVez())
                 {
-                    Debug.WriteLine("Vez de outro jogador");
+                    //Debug.WriteLine("Vez de outro jogador");
                     string parametro = lblVez.Text;
                     string resposta = Jogo.GetInstance().verificaVezAlterada(parametro);
 
