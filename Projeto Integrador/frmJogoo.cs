@@ -120,9 +120,11 @@ namespace Projeto_Integrador
                     this.BeginInvoke(new Action(aparecer_cartas));
                 }
 
+                bool jajoguei = false;
                 // quando é sua vez
                 while (!Jogo.GetInstance().getMinhaVez())
                 {
+                    jajoguei = true;
                     Debug.WriteLine("Agora é sua vez");
                     Jogo.GetInstance().atualizarPartidaMinhaVez();
                     Thread.Sleep(1000);
@@ -130,8 +132,12 @@ namespace Projeto_Integrador
 
                 moedas = Jogo.GetInstance().AtualizaMoedasPartida();
                 atualizaMoedasTela();
-                string mensagem = Jogo.GetInstance().AtualizaMensagemPt();
-                atualizaMensagem(mensagem);
+
+                if (jajoguei)
+                {
+                    string mensagem = Jogo.GetInstance().AtualizaMensagemPt();
+                    atualizaMensagem(mensagem);
+                }
 
                 // quando não é sua vez
                 while (Jogo.GetInstance().getMinhaVez())
