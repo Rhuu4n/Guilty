@@ -69,6 +69,7 @@
             this.lblMP3 = new System.Windows.Forms.Label();
             this.pbFfundo = new System.Windows.Forms.PictureBox();
             this.lblCentro = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pb1j4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb2j4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMoeda4)).BeginInit();
@@ -108,7 +109,7 @@
             this.lblVez.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblVez.Font = new System.Drawing.Font("Minecraft", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVez.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(97)))), ((int)(((byte)(40)))), ((int)(((byte)(80)))));
-            this.lblVez.Location = new System.Drawing.Point(1068, 12);
+            this.lblVez.Location = new System.Drawing.Point(1017, 12);
             this.lblVez.Name = "lblVez";
             this.lblVez.Size = new System.Drawing.Size(171, 32);
             this.lblVez.TabIndex = 40;
@@ -533,9 +534,9 @@
             this.pbFundoJatual.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbFundoJatual.BackColor = System.Drawing.Color.Transparent;
             this.pbFundoJatual.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbFundoJatual.Location = new System.Drawing.Point(1030, 0);
+            this.pbFundoJatual.Location = new System.Drawing.Point(809, 0);
             this.pbFundoJatual.Name = "pbFundoJatual";
-            this.pbFundoJatual.Size = new System.Drawing.Size(270, 69);
+            this.pbFundoJatual.Size = new System.Drawing.Size(491, 69);
             this.pbFundoJatual.TabIndex = 86;
             this.pbFundoJatual.TabStop = false;
             // 
@@ -592,12 +593,27 @@
             this.lblCentro.TabIndex = 90;
             this.lblCentro.Text = "Erick é hetero";
             // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(232)))), ((int)(((byte)(208)))));
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label1.Font = new System.Drawing.Font("Minecraft", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(97)))), ((int)(((byte)(40)))), ((int)(((byte)(80)))));
+            this.label1.Location = new System.Drawing.Point(878, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(133, 32);
+            this.label1.TabIndex = 91;
+            this.label1.Text = "Vez de:";
+            // 
             // frmJogoo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1300, 788);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btn1j1);
             this.Controls.Add(this.btn2j1);
             this.Controls.Add(this.lblMP3);
@@ -721,5 +737,6 @@
         private System.Windows.Forms.Label lblMP3;
         private System.Windows.Forms.PictureBox pbFfundo;
         private System.Windows.Forms.Label lblCentro;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -18,10 +18,7 @@ namespace Projeto_Integrador
 {
     public partial class frmJogoo : Form
     {
-        private string[] players;
         string[] moedas;
-        private int currentPlayerIndex;
-        private int[] playerCoins = new int[4];
         int acao1;
         int acao2;
 
@@ -86,65 +83,8 @@ namespace Projeto_Integrador
             pbFundoJatual.SizeMode = PictureBoxSizeMode.StretchImage;
             pbFfundo.Load("https://i.imgur.com/8GCxhgw.png");
             pbFfundo.SizeMode = PictureBoxSizeMode.StretchImage;
-            
 
-
-
-            /*
-            // Sistema de passar a vez
-
-            players = new string[] { "Jogador 1", "Jogador 2", "Jogador 3", "Jogador 4" };
-            currentPlayerIndex = 0;
-
-
-            // Configurar os rótulos para exibir as moedas dos jogadores
-            Label[] coinLabels = { lblMoedaP1, lblMoedaP4, lblMoedaP3, lblMoedaP2 };
-
-            for (int i = 0; i < playerCoins.Length; i++)
-            {
-                coinLabels[i].Text = $"x{playerCoins[i]}";
-            }
-            */
-        }
-
-        /*ajuste
-
-        private void AjustarControles()
-        {
-            //1300; 788
-            
-            float larguraInicial = 1300;
-            float alturaInicial = 788;
-
-            float larguraFinal = this.Width;
-            float alturaFinal = this.Height;
-
-            //location largura e altura inicial
-            
-            pb1j1.Location = new Point((int) ( 702 - (larguraInicial - larguraFinal)), 598);
-            pb1j1.Location = new Point((int)( 466 - (alturaInicial - alturaFinal)), 322);
-
-            //size largura e altura
-
-            float proporcaoLargura = larguraFinal / larguraInicial;
-            float proporcaoAltura = alturaFinal / alturaInicial;
-            
-            pb1j1.Width = (int)(230 * proporcaoLargura);
-            pb1j1.Height = (int)(323 * proporcaoAltura);
-
-            //location largura e altura final
-
-            pb1j1.Location = new Point((int) (702 - (larguraInicial / 2 - larguraFinal / 2)), 598);
-            pb1j1.Location = new Point((int) (466 - (alturaInicial / 2 - larguraFinal / 2)), 322);
-
-        }
-
-        private void frmLogin_Resize(object sender, EventArgs e)
-        {
-            AjustarControles();
-        }
-
-*/        
+        }     
 
         public void atualizar_nomes(string j1, string j2, string j3, string j4, string jc)
         {
@@ -276,33 +216,6 @@ namespace Projeto_Integrador
             btn1j1.Visible = false;
             btn2j1.Visible = false;
             btnEncerrar.Visible = false;
-
-            //frmOpcoes frm = new frmOpcoes();
-            //frm.ShowDialog();
-            //this.Show();
-
-
-
-            /*Image grayscaleImage = new Bitmap(this.BackgroundImage.Width, this.BackgroundImage.Height, this.BackgroundImage.PixelFormat);
-            ImageAttributes attributes = new ImageAttributes();
-            ColorMatrix grayscaleMatrix = new ColorMatrix(new float[][] {
-                new float[] { 0.299f, 0.299f, 0.299f, 0, 0 },
-                new float[] { 0.587f, 0.587f, 0.587f, 0, 0 },
-                new float[] { 0.114f, 0.114f, 0.114f, 0, 0 },
-                new float[] {      0,      0,      0, 1, 0 },
-                new float[] {      0,      0,      0, 0, 1 },
-            });
-
-            attributes.SetColorMatrix(grayscaleMatrix);
-
-            using (Graphics g = Graphics.FromImage(grayscaleImage))
-            {
-                g.DrawImage(this.BackgroundImage, new Rectangle(0, 0, grayscaleImage.Width, grayscaleImage.Height),
-                0, 0, grayscaleImage.Width, grayscaleImage.Height,
-                    GraphicsUnit.Pixel, attributes);
-            }
-            */
-            //this.BackgroundImage = grayscaleImage;
         }
 
             private void button4_Click(object sender, EventArgs e)
@@ -539,7 +452,7 @@ namespace Projeto_Integrador
 
             else if (acao1 == 2) // saqueador
             {
-                pb1j1.Load("https://i.imgur.com/opUd1Kc.jpg");
+                pb1j1.Load("https://i.imgur.com/rPPaxOS.jpeg");
 
             }
             else if (acao1 == 3) // nobre
@@ -554,7 +467,7 @@ namespace Projeto_Integrador
 
             else if (acao2 == 2) // saqueador 2
             {
-                pb2j1.Load("https://i.imgur.com/opUd1Kc.jpg");
+                pb2j1.Load("https://i.imgur.com/rPPaxOS.jpeg");
 
             }
             else if (acao2 == 3) // nobre 2

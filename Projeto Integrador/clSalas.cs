@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
@@ -39,7 +40,7 @@ namespace Projeto_Integrador
 
                     if (!(id >= 0))
                     {
-                        MessageBox.Show("Erro ao criar sala", "Erro", MessageBoxButtons.OK,
+                        Debug.WriteLine("Erro ao criar sala", "Erro", MessageBoxButtons.OK,
                                          MessageBoxIcon.Error);
                 }
 
@@ -47,7 +48,7 @@ namespace Projeto_Integrador
 
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Erro.: " + ex.Message, "Erro", MessageBoxButtons.OK,
+                    Debug.WriteLine("Erro.: " + ex.Message, "Erro", MessageBoxButtons.OK,
                                      MessageBoxIcon.Error);
                 }
 
@@ -68,7 +69,7 @@ namespace Projeto_Integrador
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Erro.: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Debug.WriteLine("Erro.: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return null;
                 }
             }
@@ -87,13 +88,13 @@ namespace Projeto_Integrador
 
                     if (!(exOK == 1))
                     {
-                        MessageBox.Show("Erro ao alterar Usuario, contate o desenvolvedor!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Debug.WriteLine("Erro ao alterar Usuario, contate o desenvolvedor!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
 
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Erro.: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Debug.WriteLine("Erro.: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
 
@@ -113,17 +114,17 @@ namespace Projeto_Integrador
 
                 if (exOK == 1)
                 {
-                    MessageBox.Show("Jogada feita.", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Debug.WriteLine("Jogada feita.", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show("Erro ao alterar Usuario, contate o desenvolvedor!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Debug.WriteLine("Erro ao alterar Usuario, contate o desenvolvedor!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro.: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Debug.WriteLine("Erro.: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
 
@@ -142,7 +143,7 @@ namespace Projeto_Integrador
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro.: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Debug.WriteLine("Erro.: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
 

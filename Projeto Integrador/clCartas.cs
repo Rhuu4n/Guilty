@@ -15,9 +15,6 @@ namespace Projeto_Integrador
         public string Acao;
         public string Jogador_afetado;
         public int ID_partida;
-        private string[] players;
-        private int currentPlayerIndex;
-        private int[] playerCoins = new int[4];
 
         conectaBD BD = new conectaBD();
 
