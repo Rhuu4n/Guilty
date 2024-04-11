@@ -43,7 +43,6 @@ namespace Projeto_Integrador
             this.pbLogin = new System.Windows.Forms.PictureBox();
             this.cbSenha = new System.Windows.Forms.CheckBox();
             this.txtSenha = new System.Windows.Forms.TextBox();
-            this.btnTeste = new System.Windows.Forms.Button();
             this.btnGerenciador = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.PictureBox();
             this.btnConfirmar = new System.Windows.Forms.PictureBox();
@@ -153,24 +152,6 @@ namespace Projeto_Integrador
             this.txtSenha.UseSystemPasswordChar = true;
             this.txtSenha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSenha_KeyPress);
             // 
-            // btnTeste
-            // 
-            this.btnTeste.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnTeste.BackColor = System.Drawing.Color.Black;
-            this.btnTeste.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTeste.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTeste.Font = new System.Drawing.Font("Minecraft", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTeste.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnTeste.Location = new System.Drawing.Point(30, 412);
-            this.btnTeste.Name = "btnTeste";
-            this.btnTeste.Size = new System.Drawing.Size(83, 44);
-            this.btnTeste.TabIndex = 12;
-            this.btnTeste.Text = "Teste";
-            this.btnTeste.UseVisualStyleBackColor = false;
-            this.btnTeste.Visible = false;
-            this.btnTeste.Click += new System.EventHandler(this.button1_Click_1);
-            // 
             // btnGerenciador
             // 
             this.btnGerenciador.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -254,7 +235,6 @@ namespace Projeto_Integrador
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnGerenciador);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnTeste);
             this.Controls.Add(this.pbSenha);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.pbLogin);
@@ -290,7 +270,6 @@ namespace Projeto_Integrador
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.PictureBox pbLogin;
-        private System.Windows.Forms.Button btnTeste;
         private System.Windows.Forms.Button btnGerenciador;
         private System.Windows.Forms.PictureBox pbSenha;
         private System.Windows.Forms.Label label2;
