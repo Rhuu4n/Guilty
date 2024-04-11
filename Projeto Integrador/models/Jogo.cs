@@ -24,7 +24,11 @@ namespace Projeto_Integrador.models
         public int J1PTID;
         public int J2PTID;
         public int J3PTID;
-        public int J4PTID;
+        public int J4PTID; 
+        int id1 = 0;
+        int id2 = 0;
+        int id3 = 0;
+        int id4 = 0;
         int minhaOrdem = 1;
         public bool cheio = false;
         public bool partida = false;
@@ -409,10 +413,7 @@ namespace Projeto_Integrador.models
 
             
 
-            int id1 = 0;
-            int id2 = 0;
-            int id3 = 0;
-            int id4 = 0;
+            
 
             clPartida partida1 = new clPartida();
             partida1.idSala = id_sala;
@@ -615,6 +616,69 @@ namespace Projeto_Integrador.models
                 resgataMoeda(J4PTID)
             }; 
             return moedas;
+        }
+
+        public string AtualizaMensagemPt()
+        {
+            clSalas sala = new clSalas();
+            sala.idSala = id_sala;
+            DataTable dt = sala.Pesquisar();
+            int atual = Convert.ToInt32(dt.Rows[0]["jogadorAtual"]);
+
+            string afetado;
+            string acao;
+            string nome;
+
+            if (id1 == atual)
+            {
+                clPartida partida = new clPartida();
+                partida.idPartida = id4;
+                DataTable dt4 = sala.Pesquisar();
+                nome = dt4.Rows[0]["Jogador_ID"].ToString();
+                acao = dt4.Rows[0]["Acao"].ToString();
+                afetado = dt4.Rows[0]["Afetado"].ToString();
+            }else if(id2 == atual)
+            {
+                clPartida partida = new clPartida();
+                partida.idPartida = id1;
+                DataTable dt1 = sala.Pesquisar();
+                nome = dt1.Rows[0]["Jogador_ID"].ToString();
+                acao = dt1.Rows[0]["Acao"].ToString();
+                afetado = dt1.Rows[0]["Afetado"].ToString();
+            }else if(id3 == atual)
+            {
+                clPartida partida = new clPartida();
+                partida.idPartida = id2;
+                DataTable dt2 = sala.Pesquisar();
+                nome = dt2.Rows[0]["Jogador_ID"].ToString();
+                acao = dt2.Rows[0]["Acao"].ToString();
+                afetado = dt2.Rows[0]["Afetado"].ToString();
+            }else
+            {
+                clPartida partida = new clPartida();
+                partida.idPartida = id3;
+                DataTable dt3 = sala.Pesquisar();
+                nome = dt3.Rows[0]["Jogador_ID"].ToString();
+                acao = dt3.Rows[0]["Acao"].ToString();
+                afetado = dt3.Rows[0]["Afetado"].ToString();
+            }
+
+            return retornaMensagem(nome, afetado, acao);
+        }
+        
+        public string retornaMensagem(string nome, string afetado, string acao)
+        {
+            if(acao == "1")
+            {
+                return nome + " utilizou a mineradora e pegou 2 moedas!";
+            }else if(acao == "2")
+            {
+                return nome + "utilizou o saqueador e roubou 3 moedas de: " + afetado;
+            }
+            else
+            {
+                return nome + "utilizou o nobre e pegou 4 moedas";
+            }
         }
 
         public string resgataMoeda(int idPt)

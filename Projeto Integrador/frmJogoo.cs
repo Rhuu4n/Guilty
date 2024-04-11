@@ -179,11 +179,6 @@ namespace Projeto_Integrador
                     Debug.WriteLine("Agora é sua vez");
                     this.BeginInvoke(new Action(aparecer_cartas));
                 }
-                else
-                {
-                    Debug.WriteLine("algum bug");
-
-                }
 
                 // quando é sua vez
                 while (!Jogo.GetInstance().getMinhaVez())
@@ -195,6 +190,8 @@ namespace Projeto_Integrador
 
                 moedas = Jogo.GetInstance().AtualizaMoedasPartida();
                 atualizaMoedasTela();
+                string mensagem = Jogo.GetInstance().AtualizaMensagemPt();
+                atualizaMensagem(mensagem);
 
                 // quando não é sua vez
                 while (Jogo.GetInstance().getMinhaVez())
@@ -224,6 +221,18 @@ namespace Projeto_Integrador
             }else
             {
                 lblVez.Text = param;
+            }
+        }
+
+        public void atualizaMensagem(string mensagem)
+        {
+            if (lblCentro.InvokeRequired)
+            {
+                lblCentro.BeginInvoke(new Action<string>(atualizaMensagem), mensagem);
+            }
+            else
+            {
+                lblCentro.Text = mensagem;
             }
         }
 
