@@ -81,8 +81,6 @@ namespace Projeto_Integrador
             pbfundoJ4.SizeMode = PictureBoxSizeMode.StretchImage;
             pbFundoJatual.Load("https://i.imgur.com/8GCxhgw.png");
             pbFundoJatual.SizeMode = PictureBoxSizeMode.StretchImage;
-            pbFfundo.Load("https://i.imgur.com/8GCxhgw.png");
-            pbFfundo.SizeMode = PictureBoxSizeMode.StretchImage;
 
         }     
 
@@ -170,7 +168,7 @@ namespace Projeto_Integrador
             }
         }
 
-        public void atualizaMensagem(string mensagem)
+        /*public void atualizaMensagem(string mensagem)
         {
             if (lblCentro.InvokeRequired)
             {
@@ -180,7 +178,7 @@ namespace Projeto_Integrador
             {
                 lblCentro.Text = mensagem;
             }
-        }
+        }*/
 
         public void atualizaMoedasTela()
         {
