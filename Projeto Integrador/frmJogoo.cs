@@ -179,11 +179,16 @@ namespace Projeto_Integrador
                     Debug.WriteLine("Agora é sua vez");
                     this.BeginInvoke(new Action(aparecer_cartas));
                 }
+                else
+                {
+                    Debug.WriteLine("algum bug");
+
+                }
 
                 // quando é sua vez
                 while (!Jogo.GetInstance().getMinhaVez())
                 {
-                    //Debug.WriteLine("Agora é sua vez");
+                    Debug.WriteLine("Agora é sua vez");
                     Jogo.GetInstance().atualizarPartidaMinhaVez();
                     Thread.Sleep(1000);
                 }
@@ -194,7 +199,7 @@ namespace Projeto_Integrador
                 // quando não é sua vez
                 while (Jogo.GetInstance().getMinhaVez())
                 {
-                    //Debug.WriteLine("Vez de outro jogador");
+                    Debug.WriteLine("Vez de outro jogador");
                     string parametro = lblVez.Text;
                     string resposta = Jogo.GetInstance().verificaVezAlterada(parametro);
 
@@ -205,6 +210,7 @@ namespace Projeto_Integrador
                         atualizaMoedasTela();
                     }
 
+                    Jogo.GetInstance().atualizarPartidaMinhaVez();
                     Thread.Sleep(1000);
                 }
             }
@@ -475,7 +481,7 @@ namespace Projeto_Integrador
             Jogo.GetInstance().PassarVez();
         }
 
-        private async void btn1j1_Click_1(object sender, EventArgs e)
+        private void btn1j1_Click_1(object sender, EventArgs e)
         {
             if (Jogo.GetInstance().verificaVez())
             {
@@ -512,10 +518,8 @@ namespace Projeto_Integrador
         
         Random RandomClass = new Random();
 
-        async void aparecer_cartas()
+        void aparecer_cartas()
         {
-           
-
             acao1 = this.RandomClass.Next(1, 4);
             acao2 = this.RandomClass.Next(1, 4);
 
@@ -536,10 +540,7 @@ namespace Projeto_Integrador
 
             if (acao2 == 1) // mineradora 2
             {
-
-
                 pb2j1.Load("https://i.imgur.com/q44KeIY.jpg");
-
             }
 
             else if (acao2 == 2) // saqueador 2
