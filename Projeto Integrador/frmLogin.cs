@@ -269,12 +269,12 @@ namespace Projeto_Integrador
             {
                 if (txtUsuario.Text == "admin" && txtSenha.Text == "admin" )
                 {
-                    btnTeste.Visible = true;
+                    //btnTeste.Visible = true;
                     btnGerenciador.Visible = true;
                 }
                 else
                 {
-                    btnTeste.Visible = false;
+                    //btnTeste.Visible = false;
                     btnGerenciador.Visible = false;
 
                     //ELDES{{
