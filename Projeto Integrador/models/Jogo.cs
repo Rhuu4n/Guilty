@@ -633,7 +633,7 @@ namespace Projeto_Integrador.models
             {
                 clPartida partida = new clPartida();
                 partida.idPartida = id4;
-                DataTable dt4 = sala.Pesquisar();
+                DataTable dt4 = partida.PesquisarIDPartida();
                 nome = dt4.Rows[0]["Jogador_ID"].ToString();
                 acao = dt4.Rows[0]["Acao"].ToString();
                 afetado = dt4.Rows[0]["Afetado"].ToString();
@@ -641,7 +641,7 @@ namespace Projeto_Integrador.models
             {
                 clPartida partida = new clPartida();
                 partida.idPartida = id1;
-                DataTable dt1 = sala.Pesquisar();
+                DataTable dt1 = partida.PesquisarIDPartida();
                 nome = dt1.Rows[0]["Jogador_ID"].ToString();
                 acao = dt1.Rows[0]["Acao"].ToString();
                 afetado = dt1.Rows[0]["Afetado"].ToString();
@@ -649,7 +649,7 @@ namespace Projeto_Integrador.models
             {
                 clPartida partida = new clPartida();
                 partida.idPartida = id2;
-                DataTable dt2 = sala.Pesquisar();
+                DataTable dt2 = partida.PesquisarIDPartida();
                 nome = dt2.Rows[0]["Jogador_ID"].ToString();
                 acao = dt2.Rows[0]["Acao"].ToString();
                 afetado = dt2.Rows[0]["Afetado"].ToString();
@@ -657,7 +657,7 @@ namespace Projeto_Integrador.models
             {
                 clPartida partida = new clPartida();
                 partida.idPartida = id3;
-                DataTable dt3 = sala.Pesquisar();
+                DataTable dt3 = partida.PesquisarIDPartida();
                 nome = dt3.Rows[0]["Jogador_ID"].ToString();
                 acao = dt3.Rows[0]["Acao"].ToString();
                 afetado = dt3.Rows[0]["Afetado"].ToString();
