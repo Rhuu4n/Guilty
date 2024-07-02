@@ -1,67 +1,71 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Data.SqlClient;
 using System.Data;
 using System.IO;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
-
-namespace Projeto_Integrador
+namespace Projeto_Desktop
 {
-    class conectaBD
+    public class conectaBD
     {
-        // Campo responsável pela definição da string de conexão
         public string _strConexao;
-
-        // Campo responsável pela definição da string do sql
         public string _sql;
+        private MySqlCommand _comandoSQL;
+        private MySqlConnection _conn;
+        private MySqlTransaction _transacao;
 
-        // Campo responsável pelo comando de SQL a ser executado
-        private SqlCommand _comandoSQL;
-
-        // Propriedade que expõe o campo para definição do comando de SQL a ser executado
-        private SqlCommand ComandoSQL
+        private MySqlCommand ComandoSQL
         {
             get { return _comandoSQL; }
             set { _comandoSQL = value; }
         }
 
-        // Campo que define o objeto de conexão
-        private SqlConnection _conn;
-
-        // Campo que define o objeto de transação
-        private SqlTransaction _transacao;
-
-        // Construtor que define uma string de conexão fixa e cria os objetos de conexão e comando
         public conectaBD()
-
         {
-            StreamReader str = new StreamReader("conexao.ini");
-            _strConexao = str.ReadLine() + "Initial Catalog=ProjetoIntegrador;Persist Security Info=True;User ID=sa;Password=senac";
-            _conn = new SqlConnection(_strConexao);
-            _comandoSQL = new SqlCommand();
-            _comandoSQL.Connection = _conn;
+            try
+            {
+                using (StreamReader str = new StreamReader("conexao.ini"))
+                {
+                    _strConexao = str.ReadLine();
+                    if (string.IsNullOrEmpty(_strConexao))
+                    {
+                        throw new Exception("5 String de conexão está vazia.");
+                    }
+                    _conn = new MySqlConnection(_strConexao);
+                    _comandoSQL = new MySqlCommand();
+                    _comandoSQL.Connection = _conn;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("6 Erro ao ler a string de conexão: " + ex.Message);
+            }
         }
 
-        // Construtor que recebe por parametro a string de conexão a ser utilizada e cria
-        // os objetos de comando e conexão
         public conectaBD(string stringConexao)
         {
-            _strConexao = stringConexao;
-            _conn = new SqlConnection(_strConexao);
-            _comandoSQL = new SqlCommand();
-            _comandoSQL.Connection = _conn;
+            try
+            {
+                _strConexao = stringConexao;
+                if (string.IsNullOrEmpty(_strConexao))
+                {
+                    throw new Exception("7 String de conexão está vazia.");
+                }
+                _conn = new MySqlConnection(_strConexao);
+                _comandoSQL = new MySqlCommand();
+                _comandoSQL.Connection = _conn;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("8 Erro ao inicializar a conexão: " + ex.Message);
+            }
         }
 
-        public void setParameter(String var, byte[] foto)
+        public void setParameter(String var, object foto)
         {
             _comandoSQL.Parameters.AddWithValue(var, foto);
         }
 
-        // Método para abrir a conexão com o banco de dados
-        // true -> Com transação | false -> Sem transação
         public bool AbreConexao(bool transacao)
         {
             try
@@ -74,14 +78,13 @@ namespace Projeto_Integrador
                 }
                 return true;
             }
-            catch
+            catch (Exception ex)
             {
+                MessageBox.Show("9 Erro ao abrir a conexão: " + ex.Message);
                 return false;
             }
         }
 
-        // Métodos para fechar a conexão com o banco de dados
-        //Retorna um booleano para indicar o resultado da operação
         public bool FechaConexao()
         {
             try
@@ -90,45 +93,46 @@ namespace Projeto_Integrador
                     _conn.Close();
                 return true;
             }
-            catch
+            catch (Exception ex)
             {
+                MessageBox.Show("10 Erro ao fechar a conexão: " + ex.Message);
                 return false;
             }
         }
 
-        // Finaliza uma transação
-        // true -> Executa o commit | false -. Executa o rollback
         public void FinalizaTransacao(bool commit)
         {
-            if (commit)
-                _transacao.Commit();
-            else
-                _transacao.Rollback();
-            FechaConexao();
+            try
+            {
+                if (commit)
+                    _transacao.Commit();
+                else
+                    _transacao.Rollback();
+                FechaConexao();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("11 Erro ao finalizar a transação: " + ex.Message);
+            }
         }
 
-        // Destrutor que fecha a conexão com o banco de dados
         ~conectaBD()
         {
             FechaConexao();
-
         }
 
-        // Método responsável pela execução dos comandos de Insert, Update e Delete
-        //Retorna um número inteiro que indica a quantidade de linhas afetadas
         public int ExecutaComando(bool transacao = false)
         {
-            int retorno;
-            AbreConexao(transacao);
+            int retorno = -1;
             try
             {
+                AbreConexao(transacao);
                 _comandoSQL.CommandText = _sql;
                 retorno = _comandoSQL.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("ERRO: " + ex.Message);
-                return -1;
+                MessageBox.Show("12 Erro ao executar o comando: " + ex.Message);
             }
             finally
             {
@@ -138,23 +142,20 @@ namespace Projeto_Integrador
             return retorno;
         }
 
-        //Método responsável pela execução dos comandos de Insert com retorno do último código cadastrado
-        //Retorna um número inteiro que indica a quantidade de linhas afetadas
         public int ExecutaComando(bool transacao, out int ultimoCodigo)
         {
-            int retorno;
+            int retorno = -1;
             ultimoCodigo = 0;
-            AbreConexao(transacao);
             try
             {
-                //Executa o comando de insert e já retorna o @@IDENTITY
+                AbreConexao(transacao);
                 _comandoSQL.CommandText = _sql;
                 ultimoCodigo = Convert.ToInt32(_comandoSQL.ExecuteScalar());
                 retorno = 1;
             }
-            catch
+            catch (Exception ex)
             {
-                retorno = -1;
+                MessageBox.Show("13 Erro ao executar o comando com retorno: " + ex.Message);
             }
             finally
             {
@@ -164,19 +165,18 @@ namespace Projeto_Integrador
             return retorno;
         }
 
-        //Método responsável pela execução dos comandos de Select
-        //Retorna um DataTable com o resultado da operação
         public DataTable ExecutaSelect()
         {
-            AbreConexao(false);
             DataTable dt = new DataTable();
             try
             {
+                AbreConexao(false);
                 _comandoSQL.CommandText = _sql;
                 dt.Load(_comandoSQL.ExecuteReader());
             }
-            catch
+            catch (Exception ex)
             {
+                MessageBox.Show("14 Erro ao executar o select: " + ex.Message);
                 dt = null;
             }
             finally
@@ -186,22 +186,18 @@ namespace Projeto_Integrador
             return dt;
         }
 
-        // Método que executa comandos de Select para retornos escalares, ou seja,
-        // retorna a primeira linha e primeira coluna do resultado do comando de Select.
-        // Para nosso exemplo, sempre convertemos esse valor para Double
-        //Retorna a primeira linha e primeira coluna do resultado comando de Select</returns>
         public double ExecutaScalar()
         {
-            AbreConexao(false);
-            double retorno;
+            double retorno = -1;
             try
             {
+                AbreConexao(false);
                 _comandoSQL.CommandText = _sql;
                 retorno = Convert.ToDouble(_comandoSQL.ExecuteScalar());
             }
-            catch
+            catch (Exception ex)
             {
-                retorno = -1;
+                MessageBox.Show("15 Erro ao executar o scalar: " + ex.Message);
             }
             finally
             {
@@ -209,16 +205,5 @@ namespace Projeto_Integrador
             }
             return retorno;
         }
-
-        internal int ExecutaComando(bool p, out uint Id)
-        {
-            throw new NotImplementedException();
-        }
-
-    }
-
-    public class BdException : Exception {
-        public BdException(Exception ex) : base(ex.Message) { }
-    
     }
 }

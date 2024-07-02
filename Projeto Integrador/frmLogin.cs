@@ -172,7 +172,7 @@ namespace Projeto_Integrador
             catch (LoginIncorretoException ex) {
                 MessageBox.Show("Erro, usúario ou senha inválidos", "Dados inválidos", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
-            catch (BdException ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString(), "Erro de conexão com servidor", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
@@ -292,7 +292,7 @@ namespace Projeto_Integrador
                     {
                         MessageBox.Show("Erro, usúario ou senha inválidos", "Dados inválidos", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     }
-                    catch (BdException ex)
+                    catch (Exception ex)
                     {
                         MessageBox.Show(ex.ToString(), "Erro de conexão com servidor", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     }

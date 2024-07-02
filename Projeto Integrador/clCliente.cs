@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Globalization;
 using System.Data;
+using Projeto_Desktop;
 
 namespace Projeto_Integrador
 {
@@ -34,9 +35,13 @@ namespace Projeto_Integrador
             int id = 0;
             try
             {
-                BD._sql = String.Format(new CultureInfo("en-US"), "INSERT INTO Cadastro (Nome,Nascimento, Email, Senha) " +
-                                              " values ('{0}','{1}','{2}','{3}' )",
-                                              nome, nascimento, email, senha) + "; SELECT SCOPE_IDENTITY();";
+                BD._sql = "INSERT INTO user (nome, nascimento, email, senha) VALUES (@nome, @nascimento, @email, @senha); SELECT LAST_INSERT_ID(); ";
+
+                // Definindo os parâmetros
+                BD.setParameter("@nome", nome);
+                BD.setParameter("@nascimento", nascimento);
+                BD.setParameter("@email", email);
+                BD.setParameter("@senha", senha);
 
                 id = BD.ExecutaComando(false, out id);
 
@@ -73,8 +78,11 @@ namespace Projeto_Integrador
                 string agoraFormatado = agora.ToString("yyyy-MM-dd HH:mm");
                 int exOK = 0;
 
-                BD._sql = "UPDATE CADASTRO SET Delete_At = '" + agoraFormatado + "' WHERE ID = " + idusuario ;
-                //"UPDATE CADASTRO SET Delete_At = ""WHERE ID = " + idusuario + "";
+                BD._sql = "UPDATE user SET delete_at = @agoraFormatado WHERE ID = @idusuario";
+
+                // Definindo os parâmetros
+                BD.setParameter("@agoraFormatado", agoraFormatado);
+                BD.setParameter("@idusuario", idusuario);
 
                 exOK = BD.ExecutaComando(false);
 
@@ -99,8 +107,8 @@ namespace Projeto_Integrador
             {
                 int exOK = 0;
 
-                BD._sql = "UPDATE CLIENTE SET NOME = '" + nome + "', Nascimento = '" + nascimento + "', Email = '" + email +
-                    "', Senha = '" + senha + "', where id_cliente = " + idusuario;
+                BD._sql = "UPDATE user SET nome = '" + nome + "', nascimento = '" + nascimento + "', email = '" + email +
+                    "', senha = '" + senha + "', where id = " + idusuario;
 
                 exOK = BD.ExecutaComando(false);
 
@@ -129,8 +137,10 @@ namespace Projeto_Integrador
         {
             try
             {
-                BD._sql = "SELECT * FROM CADASTRO " +
-                         " WHERE NOME LIKE '%" + nome + "%' ";
+                BD._sql = "SELECT * FROM user WHERE nome LIKE @nome";
+
+                // Definindo o parâmetro
+                BD.setParameter("@nome", "%" + nome + "%");
 
                 return BD.ExecutaSelect();
             }
@@ -145,8 +155,10 @@ namespace Projeto_Integrador
         {
             try
             {
-                BD._sql = "SELECT * FROM Cadastro " +
-                         " WHERE ID LIKE '%" + idusuario + "%' ";
+                BD._sql = "SELECT * FROM user WHERE id LIKE @idusuario";
+
+                // Definindo o parâmetro
+                BD.setParameter("@idusuario", "%" + idusuario + "%");
 
                 return BD.ExecutaSelect();
             }
@@ -160,8 +172,7 @@ namespace Projeto_Integrador
         {
             try
             {
-                BD._sql = "SELECT ID, NOME, EMAIL, NASCIMENTO FROM CADASTRO " +
-                    "WHERE DELETE_AT IS NULL";
+                BD._sql = "SELECT id, nome, email, nascimento FROM user WHERE delete_at IS NULL";
 
                 return BD.ExecutaSelect();
             }

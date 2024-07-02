@@ -1,4 +1,5 @@
-﻿using Projeto_Integrador.models;
+﻿using Projeto_Desktop;
+using Projeto_Integrador.models;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -36,9 +37,13 @@ namespace Projeto_Integrador
             try
             {
 
+                BD._sql = "INSERT INTO matches (id_sala, Jogador_ID, Ordem, Moedas) VALUES (@idSala, @Jogador_ID, @Ordem, @Moedas); SELECT LAST_INSERT_ID();";
 
-                BD._sql = String.Format(new CultureInfo("en-US"), "INSERT INTO Partida  (id_sala, Jogador_ID, Ordem, Moedas) " +
-                " values ('{0}','{1}','{2}', '{3}')", idSala, Jogador_ID, ordem, moedas) + "; SELECT SCOPE_IDENTITY();";
+                // Definindo os parâmetros
+                BD.setParameter("@idSala", idSala);
+                BD.setParameter("@Jogador_ID", Jogador_ID);
+                BD.setParameter("@Ordem", ordem);
+                BD.setParameter("@Moedas", moedas);
 
                 BD.ExecutaComando(false, out id);
 
@@ -63,8 +68,8 @@ namespace Projeto_Integrador
         {
             try
             {
-                BD._sql = "SELECT * FROM Partida " +
-                         " WHERE ID_sala = " + idSala + "order by Ordem";
+                BD._sql = "SELECT * FROM matches WHERE id_sala =" + idSala + " ORDER BY Ordem";
+
 
 
                 return BD.ExecutaSelect();
@@ -80,7 +85,11 @@ namespace Projeto_Integrador
         {
             try
             {
-                BD._sql = "SELECT * FROM Partida " + "'where id_sala = " + idSala + "' and Jogador_ID ='" + Jogador_ID;
+                BD._sql = "SELECT * FROM matches WHERE id_sala = @idSala AND Jogador_ID = @Jogador_ID";
+
+                // Definindo os parâmetros
+                BD.setParameter("@idSala", idSala);
+                BD.setParameter("@Jogador_ID", Jogador_ID);
 
 
                 return BD.ExecutaSelect();
@@ -97,7 +106,7 @@ namespace Projeto_Integrador
             try
             {
                 conectaBD BD = new conectaBD();
-                BD._sql = "SELECT * FROM Partida " +
+                BD._sql = "SELECT * FROM matches " +
                          " WHERE id_partida = " + idPartida + "";
 
 
@@ -121,7 +130,7 @@ namespace Projeto_Integrador
             {
                 int exOK = 0;
 
-                BD._sql = "UPDATE Partida SET Moedas = '" + moedas + "'where id_sala = " + idSala + "' and Jogador_ID ='" + player;
+                BD._sql = "UPDATE matches SET Moedas = '" + moedas + "'where id_sala = " + idSala + "' and Jogador_ID ='" + player;
 
                 exOK = BD.ExecutaComando(false);
 
@@ -150,7 +159,7 @@ namespace Projeto_Integrador
             {
                 int exOK = 0;
 
-                BD._sql = "UPDATE Partida SET Moedas = '" + (moedas - 2) + "'where id_sala = " + idSala + "' and Jogador_ID ='" + player;
+                BD._sql = "UPDATE matches SET Moedas = '" + (moedas - 2) + "'where id_sala = " + idSala + "' and Jogador_ID ='" + player;
 
                 exOK = BD.ExecutaComando(false);
 

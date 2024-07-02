@@ -86,7 +86,7 @@ namespace Projeto_Integrador.models
                     throw new LoginIncorretoException();
                 }
             }
-            catch (BdException ex)
+            catch (Exception ex)
             {
                 this.usuarioLogado = null;
                 throw ex;
@@ -107,7 +107,7 @@ namespace Projeto_Integrador.models
             {
                 int ret = cliente.Salvar();
             }
-            catch (BdException ex)
+            catch (Exception ex)
             {
                 this.usuarioLogado = null;
                 throw ex;
@@ -204,7 +204,7 @@ namespace Projeto_Integrador.models
         public int criaSala()
         {
             clSalas salas = new clSalas();
-            salas.jogadorAtual = Convert.ToInt32(id);
+            salas.jogadorAtual = 1;
             id_sala = salas.CriarSala();
 
             numeroJogadores = 1;
@@ -317,7 +317,7 @@ namespace Projeto_Integrador.models
             for (int i = 0; i < nj; i++)
             {
 
-                int ordem = Convert.ToInt32(dtPartida.Rows[i]["ordem"]);
+                int ordem = Convert.ToInt32(dtPartida.Rows[i]["Ordem"]);
                 if (ordem == 1)
                 {
                     idj1 = Convert.ToInt32(dtPartida.Rows[i]["Jogador_ID"]);
@@ -342,7 +342,7 @@ namespace Projeto_Integrador.models
 
                 cliente.idusuario = idj1;
                 DataTable dt1 = cliente.PesquisaPorID();
-                this.J1ID = Convert.ToString(dt1.Rows[0]["Nome"]);
+                this.J1ID = Convert.ToString(dt1.Rows[0]["nome"]);
             }
 
             if (!(idj2 == 0))
@@ -351,7 +351,7 @@ namespace Projeto_Integrador.models
 
                 cliente.idusuario = idj2;
                 DataTable dt1 = cliente.PesquisaPorID();
-                this.J2ID = Convert.ToString(dt1.Rows[0]["Nome"]);
+                this.J2ID = Convert.ToString(dt1.Rows[0]["nome"]);
             }
 
             if (!(idj3 == 0))
@@ -360,7 +360,7 @@ namespace Projeto_Integrador.models
 
                 cliente.idusuario = idj3;
                 DataTable dt1 = cliente.PesquisaPorID();
-                this.J3ID = Convert.ToString(dt1.Rows[0]["Nome"]);
+                this.J3ID = Convert.ToString(dt1.Rows[0]["nome"]);
             }
 
             if (!(idj4 == 0))
@@ -369,7 +369,7 @@ namespace Projeto_Integrador.models
 
                 cliente.idusuario = idj4;
                 DataTable dt1 = cliente.PesquisaPorID();
-                this.J4ID = Convert.ToString(dt1.Rows[0]["Nome"]);
+                this.J4ID = Convert.ToString(dt1.Rows[0]["nome"]);
             }
 
             string[] nomesJogadores = new string[] { J1ID, J2ID, J3ID, J4ID };
@@ -493,27 +493,27 @@ namespace Projeto_Integrador.models
             clCliente cliente1 = new clCliente();
             cliente1.idusuario = id1;
             DataTable dt1nome = cliente1.PesquisaPorID();
-            id1s = Convert.ToString(dt1nome.Rows[0]["Nome"]);
+            id1s = Convert.ToString(dt1nome.Rows[0]["nome"]);
 
             clCliente cliente2 = new clCliente();
             cliente2.idusuario = id2;
             DataTable dt2nome = cliente2.PesquisaPorID();
-            id2s = Convert.ToString(dt2nome.Rows[0]["Nome"]);
+            id2s = Convert.ToString(dt2nome.Rows[0]["nome"]);
 
             clCliente cliente3 = new clCliente();
             cliente3.idusuario = id3;
             DataTable dt3nome = cliente3.PesquisaPorID();
-            id3s = Convert.ToString(dt3nome.Rows[0]["Nome"]);
+            id3s = Convert.ToString(dt3nome.Rows[0]["nome"]);
 
             clCliente cliente4 = new clCliente();
             cliente4.idusuario = id4;
             DataTable dt4nome = cliente4.PesquisaPorID();
-            id4s = Convert.ToString(dt4nome.Rows[0]["Nome"]);
+            id4s = Convert.ToString(dt4nome.Rows[0]["nome"]);
 
             clCliente clienteC = new clCliente();
             clienteC.idusuario = idCriador;
             DataTable dtCriador = clienteC.PesquisaPorID();
-            idcs = Convert.ToString(dtCriador.Rows[0]["Nome"]);
+            idcs = Convert.ToString(dtCriador.Rows[0]["nome"]);
 
             string[] nomesJogadores = new string[] { id1s, id2s, id3s, id4s, idcs };
 
@@ -527,7 +527,7 @@ namespace Projeto_Integrador.models
             partida.Jogador_ID = Convert.ToInt32(id);
             DataTable dt = partida.Pesquisar();
 
-            int ordem = Convert.ToInt32(dt.Rows[0]["ordem"]);
+            int ordem = Convert.ToInt32(dt.Rows[0]["Ordem"]);
             if(ordem == 1)
             {
                 return true;
@@ -553,7 +553,7 @@ namespace Projeto_Integrador.models
             sala.idSala = id_sala;
             DataTable dt = sala.Pesquisar();
             string atual = dt.Rows[0]["jogadorAtual"].ToString();
-            if (atual == id)
+            if (atual == Convert.ToString(minhaOrdem))
             {
                 return true;
             }
@@ -570,7 +570,7 @@ namespace Projeto_Integrador.models
             cliente.idusuario = Convert.ToInt32(dt.Rows[0]["jogadorAtual"]);
             DataTable dtProximo = cliente.PesquisaPorID();
 
-            string novo = Convert.ToString(dtProximo.Rows[0]["Nome"]);
+            string novo = Convert.ToString(dtProximo.Rows[0]["nome"]);
 
             if (novo == atual)
             {
@@ -590,11 +590,11 @@ namespace Projeto_Integrador.models
 
             if(minhaOrdem == 4)
             {
-                idProximo = Convert.ToInt32(dt.Rows[0]["Jogador_ID"]);
+                idProximo = 1;
             }
             else
             {
-                idProximo = Convert.ToInt32(dt.Rows[minhaOrdem]["Jogador_ID"]);
+                idProximo = minhaOrdem + 1;
             }
 
             clSalas sala = new clSalas();
@@ -604,7 +604,7 @@ namespace Projeto_Integrador.models
             clCliente cliente = new clCliente();
             cliente.idusuario = idProximo;
             DataTable dtProximo = cliente.PesquisaPorID();
-            return Convert.ToString(dtProximo.Rows[0]["Nome"]);
+            return Convert.ToString(dtProximo.Rows[0]["nome"]);
         }
 
         public string[] AtualizaMoedasPartida()

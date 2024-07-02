@@ -7,6 +7,7 @@ using System.Data;
 using System.Windows.Forms;
 using System.Globalization;
 using System.Runtime.ConstrainedExecution;
+using Projeto_Desktop;
 
 namespace Projeto_Integrador
 {
@@ -24,31 +25,37 @@ namespace Projeto_Integrador
         {
             try
             {
-                BD._sql = "SELECT * FROM Cadastro " + " WHERE Nome LIKE '"+nome+"' and Delete_At IS NULL";
+                // Definindo a consulta SQL com parâmetros para evitar SQL Injection
+                BD._sql = "SELECT * FROM user WHERE nome = @nome AND delete_at IS NULL";
 
+                // Definindo o parâmetro para a consulta
+                BD.setParameter("@nome", nome);
+
+                // Executando a consulta e retornando o resultado
                 return BD.ExecutaSelect();
             }
             catch (Exception ex)
             {
-                //ELDES{{
-                throw new BdException(ex);
-                
+                // Lidando com exceções e encapsulando-as em BdException
+                throw new Exception();
+
+                // Exibindo uma mensagem de erro (este código não será alcançado devido ao throw anterior)
                 MessageBox.Show("Erro.: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
-                
-                //}}ELDES
-
             }
         }
 
 
-    public int Salvar()
+        public int Salvar()
         {
             int id = 0;
             try
             {
-                BD._sql = String.Format(new CultureInfo("en-US"), "INSERT INTO Cadastro  ( Nome, Senha ) " +
-                " values ('{0}','{1}')", nome, senha ) + "; SELECT SCOPE_IDENTITY();";
+                BD._sql = "INSERT INTO user (nome, senha) VALUES (@nome, @senha); SELECT LAST_INSERT_ID();";
+
+                // Definindo os parâmetros
+                BD.setParameter("@nome", nome);
+                BD.setParameter("@senha", senha);
 
                 BD.ExecutaComando(false, out id);
 
