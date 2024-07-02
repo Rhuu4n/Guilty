@@ -216,6 +216,7 @@ namespace Projeto_Integrador
             this.btnCadastro.Size = new System.Drawing.Size(119, 44);
             this.btnCadastro.TabIndex = 51;
             this.btnCadastro.TabStop = false;
+            this.btnCadastro.Visible = false;
             this.btnCadastro.Click += new System.EventHandler(this.btnCadastro_Click_1);
             // 
             // frmLogin

@@ -58,7 +58,7 @@ namespace Projeto_Integrador
             {
                 int exOK = 0;
                 Jogador_afetado = Jogo.GetInstance().getID();
-                BD._sql = "UPDATE matches SET Moedas = Moedas - 3 where id_partida = " + ID_partida;
+                BD._sql = "UPDATE matches SET Moedas = Moedas - 1 where id_partida = " + ID_partida;
 
                 exOK = BD.ExecutaComando(false);
 
@@ -86,7 +86,7 @@ namespace Projeto_Integrador
             try
             {
                 int exOK = 0;
-                BD._sql = "UPDATE matches SET Acao = 2, Afetado = '" + Jogador_afetado + "', Moedas = Moedas + 3 where id_partida = " + ID_partida;
+                BD._sql = "UPDATE matches SET Acao = 2, Afetado = '" + Jogador_afetado + "', Moedas = Moedas + 1 where id_partida = " + ID_partida;
 
                 exOK = BD.ExecutaComando(false);
 

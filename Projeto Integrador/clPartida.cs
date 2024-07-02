@@ -37,7 +37,7 @@ namespace Projeto_Integrador
             try
             {
 
-                BD._sql = "INSERT INTO matches (id_sala, Jogador_ID, Ordem, Moedas) VALUES (@idSala, @Jogador_ID, @Ordem, @Moedas); SELECT LAST_INSERT_ID();";
+                BD._sql = "INSERT INTO matches (id_sala, Jogador_ID, Ordem, Moedas) VALUES (@idSala, @Jogador_ID, @Ordem, 2); SELECT LAST_INSERT_ID();";
 
                 // Definindo os parâmetros
                 BD.setParameter("@idSala", idSala);

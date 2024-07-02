@@ -111,6 +111,7 @@
             this.lblVez.Size = new System.Drawing.Size(146, 27);
             this.lblVez.TabIndex = 40;
             this.lblVez.Text = "Jogador 1";
+            this.lblVez.Visible = false;
             // 
             // lblMP1
             // 
@@ -124,7 +125,7 @@
             this.lblMP1.Name = "lblMP1";
             this.lblMP1.Size = new System.Drawing.Size(30, 29);
             this.lblMP1.TabIndex = 42;
-            this.lblMP1.Text = "0";
+            this.lblMP1.Text = "2";
             // 
             // lblMP4
             // 
@@ -138,7 +139,7 @@
             this.lblMP4.Name = "lblMP4";
             this.lblMP4.Size = new System.Drawing.Size(30, 29);
             this.lblMP4.TabIndex = 48;
-            this.lblMP4.Text = "0";
+            this.lblMP4.Text = "2";
             // 
             // pb1j4
             // 
@@ -537,6 +538,7 @@
             this.pbFundoJatual.Size = new System.Drawing.Size(329, 69);
             this.pbFundoJatual.TabIndex = 86;
             this.pbFundoJatual.TabStop = false;
+            this.pbFundoJatual.Visible = false;
             // 
             // lblMP2
             // 
@@ -550,7 +552,7 @@
             this.lblMP2.Name = "lblMP2";
             this.lblMP2.Size = new System.Drawing.Size(30, 29);
             this.lblMP2.TabIndex = 87;
-            this.lblMP2.Text = "0";
+            this.lblMP2.Text = "2";
             // 
             // lblMP3
             // 
@@ -564,7 +566,7 @@
             this.lblMP3.Name = "lblMP3";
             this.lblMP3.Size = new System.Drawing.Size(30, 29);
             this.lblMP3.TabIndex = 88;
-            this.lblMP3.Text = "0";
+            this.lblMP3.Text = "2";
             // 
             // label1
             // 
@@ -579,6 +581,7 @@
             this.label1.Size = new System.Drawing.Size(113, 27);
             this.label1.TabIndex = 91;
             this.label1.Text = "Vez de:";
+            this.label1.Visible = false;
             // 
             // frmJogoo
             // 
